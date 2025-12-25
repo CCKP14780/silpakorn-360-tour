@@ -2,7 +2,7 @@ var APP_DATA = {
   "scenes": [
     {
       "id": "0-map06_p360_wtp001",
-      "name": "MAP06_p360_wtp001",
+      "name": "ประตูวังท่าพระ",
       "levels": [
         {
           "tileSize": 256,
@@ -41,13 +41,13 @@ var APP_DATA = {
           "yaw": -1.6066650421392931,
           "pitch": -0.650693378751637894,
           "title": "SU Gate",
-          "text": "Foo bar"
+          "text": "Entrance to Silpakorn University, Wang Tha Phra Campus"
         }
       ]
     },
     {
       "id": "1-map05_p360_wtp001",
-      "name": "MAP05_p360_wtp001",
+      "name": "หอศิลป์",
       "levels": [
         {
           "tileSize": 256,
@@ -128,7 +128,7 @@ var APP_DATA = {
     },
     {
       "id": "2-map04_p360_wtp001",
-      "name": "MAP04_p360_wtp001",
+      "name": "ตึกเหลือง",
       "levels": [
         {
           "tileSize": 256,
@@ -172,7 +172,7 @@ var APP_DATA = {
     },
     {
       "id": "3-map03_p360_wtp001",
-      "name": "MAP03_p360_wtp001",
+      "name": "ต้นโพธ์",
       "levels": [
         {
           "tileSize": 256,
@@ -235,7 +235,7 @@ var APP_DATA = {
     },
     {
       "id": "4-map02_p360_wtp001",
-      "name": "MAP02_p360_wtp001",
+      "name": "สนามบาสเก็ตบอล",
       "levels": [
         {
           "tileSize": 256,
@@ -304,7 +304,7 @@ var APP_DATA = {
     },
     {
       "id": "5-map01_p360_wtp001",
-      "name": "MAP01_p360_wtp001",
+      "name": "ศาลาแก้ว",
       "levels": [
         {
           "tileSize": 256,
@@ -361,7 +361,7 @@ var APP_DATA = {
     },
     {
       "id": "6-map07_p360_wtp001",
-      "name": "MAP07_p360_wtp001",
+      "name": "คณะสถาปัตยกรรมศาสตร์",
       "levels": [
         {
           "tileSize": 256,
@@ -418,7 +418,7 @@ var APP_DATA = {
     },
     {
       "id": "7-map08_p360_wtp001",
-      "name": "MAP08_p360_wtp001",
+      "name": "คณะจิตรกรรมประติมากรรมและภาพพิมพ์",
       "levels": [
         {
           "tileSize": 256,
@@ -469,7 +469,7 @@ var APP_DATA = {
     },
     {
       "id": "8-map09_p360_wtp001",
-      "name": "MAP09_p360_wtp001",
+      "name": "รูปปั้นอาจารย์ศิลป์ พีระศรี",
       "levels": [
         {
           "tileSize": 256,
