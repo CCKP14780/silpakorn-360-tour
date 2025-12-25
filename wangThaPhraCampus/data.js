@@ -31,12 +31,19 @@ var APP_DATA = {
       "linkHotspots": [
         {
           "yaw": -1.5766650421392931,
-          "pitch": -0.010693378751637894,
+          "pitch": 0.010693378751637894,
           "rotation": 0,
           "target": "1-map05_p360_wtp001"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw": -1.6066650421392931,
+          "pitch": -0.650693378751637894,
+          "title": "SU Gate",
+          "text": "Foo bar"
+        }
+      ]
     },
     {
       "id": "1-map05_p360_wtp001",
@@ -345,34 +352,10 @@ var APP_DATA = {
           "text": "Green Pavilion, Silpakorn University"
         },
         {
-          "yaw": 0.3916788609008677,
-          "pitch": 0.24801111939627063,
-          "title": "Statue III",
-          "text": "SU Statue 3"
-        },
-        {
           "yaw": -1.375594090442938,
           "pitch": 0.24090267986368374,
           "title": "Statue II",
           "text": "SU Statue 2"
-        },
-        {
-          "yaw": -1.8408497905448513,
-          "pitch": 0.14147867128334113,
-          "title": "Statue I",
-          "text": "SU Statue 1"
-        },
-        {
-          "yaw": 2.6771781318806847,
-          "pitch": 0.30629318418451845,
-          "title": "Statue IV",
-          "text": "SU Statue 4"
-        },
-        {
-          "yaw": 2.97558931701726,
-          "pitch": 0.08934962157542081,
-          "title": "Statue V",
-          "text": "SU Statue 5"
         }
       ]
     },
