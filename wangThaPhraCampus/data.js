@@ -218,18 +218,6 @@ var APP_DATA = {
           "pitch": -0.21203671824054382,
           "title": "SU Tree",
           "text": "Main Attraction of the campus"
-        },
-        {
-          "yaw": -0.6332355681158504,
-          "pitch": -0.47477021963595334,
-          "title": "Conference Building",
-          "text": "Conference building, Silpakorn University"
-        },
-        {
-          "yaw": -2.4369607218911344,
-          "pitch": -0.17017636376598944,
-          "title": "Fine Art Building",
-          "text": "Building for faculty of Fine Art"
         }
       ]
     },
@@ -291,8 +279,8 @@ var APP_DATA = {
         {
           "yaw": -2.5276089181528185,
           "pitch": -0.3730744146991327,
-          "title": "Silpa Bhirasri Building",
-          "text": "Silpa Bhirasri Building, Silpakorn University"
+          "title": "Conference Building",
+          "text": "Conference building, Silpakorn University"
         },
         {
           "yaw": -2.8235549634121444,
