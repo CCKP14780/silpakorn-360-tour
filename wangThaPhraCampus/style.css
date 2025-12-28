@@ -16,13 +16,43 @@
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+@font-face {
+  font-family: "Silpakorn72";
+  /* Using the exact folder names from your error message */
+  src: url("../Assets/su_font/SU72_PC_TTF/Silapakorn72-Regular_Beta05.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Silpakorn72";
+  src: url("../Assets/su_font/SU72_PC_TTF/Silapakorn72-Bold_Beta05.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Silpakorn72";
+  src: url("../Assets/su_font/SU72_PC_TTF/Silapakorn72-Light_Beta05.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Silpakorn72";
+  src: url("../Assets/su_font/SU72_PC_TTF/Silapakorn72-Italic_Beta05.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
 html, body {
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
   overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Silpakorn72", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
   font-size: 16px;
   background-color: #000;
   color: #fff;
