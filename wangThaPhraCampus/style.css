@@ -16,6 +16,38 @@
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+.university-header {
+  position: absolute;
+  top: 28px;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    #04BF9D,
+    #038C73
+  );
+  z-index: 10;
+}
+
+/* Center circular logo */
+.uni-logo {
+  position: absolute;
+  top: -26px; /* half of logo height */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right,
+    #04BF9D,
+    #038C73
+  );
+  padding: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
 @font-face {
   font-family: "Silpakorn72";
   /* Using the exact folder names from your error message */
@@ -74,7 +106,7 @@ a, a:hover, a:active, a:visited {
 
 #titleBar {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 40px;
   height: 40px;
@@ -113,15 +145,15 @@ body.multiple-scenes.mobile #titleBar {
   height: 100%;
   line-height: 30px;
   padding: 5px;
-  background-color: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105),
-    rgba(7, 93, 84)
+  background: linear-gradient(
+    to right,
+    #04BF9D,
+    #038C73
   );
   background: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105, 0.85),
-    rgba(7, 93, 84, 0.85)
+    to right,
+    #04BF9D,
+    #038C73
   );
   overflow: hidden;
   text-overflow: ellipsis;
@@ -145,15 +177,15 @@ body.multiple-scenes.mobile #titleBar {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background-color: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105),
-    rgba(7, 93, 84)
+  background: linear-gradient(
+    to right,
+    #04BF9D,
+    #038C73
   );
   background: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105, 0.85),
-    rgba(7, 93, 84, 0.85)
+    to right,
+    #04BF9D,
+    #038C73
   );
 }
 
@@ -203,15 +235,15 @@ body.fullscreen-enabled #fullscreenToggle {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background-color: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105),
-    rgba(7, 93, 84)
+  background: linear-gradient(
+    to right,
+    #04BF9D,
+    #038C73
   );
   background: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105, 0.85),
-    rgba(7, 93, 84, 0.85)
+    to right,
+    #04BF9D,
+    #038C73
   );
 }
 
@@ -265,15 +297,15 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background-color: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105),
-    rgba(7, 93, 84)
+  background: linear-gradient(
+    to right,
+    #04BF9D,
+    #038C73
   );
   background: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105, 0.85),
-    rgba(7, 93, 84, 0.85)
+    to right,
+    #04BF9D,
+    #038C73
   );
 }
 
@@ -339,15 +371,15 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 
 #sceneList .scenes {
   width: 100%;
-  background-color: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105),
-    rgba(7, 93, 84)
+  background: linear-gradient(
+    to right,
+    #04BF9D,
+    #038C73
   );
   background: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105, 0.85),
-    rgba(7, 93, 84, 0.85)
+    to right,
+    #04BF9D,
+    #038C73
   );
 }
 
@@ -394,28 +426,28 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 }
 
 .no-touch #sceneList .scene:hover {
-  background-color: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105),
-    rgba(7, 93, 84)
+  background: linear-gradient(
+    to right,
+    #04BF9D,
+    #038C73
   );
   background: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105, 0.85),
-    rgba(7, 93, 84, 0.85)
+    to right,
+    #04BF9D,
+    #038C73
   );
 }
 
 #sceneList .scene.current {
-  background-color: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105),
-    rgba(7, 93, 84)
+  background: linear-gradient(
+    to right,
+    #04BF9D,
+    #038C73
   );
   background: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105, 0.85),
-    rgba(7, 93, 84, 0.85)
+    to right,
+    #04BF9D,
+    #038C73
   );
 }
 
@@ -466,8 +498,16 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 
   border-radius: 5px;
 
-  background-color: rgb(58,68,84);
-  background-color: rgba(58,68,84,0.8);
+  background: linear-gradient(
+    to right,
+    #04BF9D,
+    #038C73
+  );
+  background: linear-gradient(
+    to right,
+    #04BF9D,
+    #038C73
+  );
 
   color: #fff;
 
@@ -543,7 +583,11 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background-color: rgb(103,115,131);
+  background: linear-gradient(
+    to right,
+    #04BF9D,
+    #038C73
+  );
   cursor: pointer;
   -webkit-transition: width 0.3s ease-in-out 0.5s,
                       border-radius 0.3s ease-in-out 0.5s;
@@ -643,7 +687,11 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   height: 40px;
   width: 40px;
   border-top-right-radius: 5px;
-  background-color: rgb(78,88,104);
+  background: linear-gradient(
+    to right,
+    #04BF9D,
+    #038C73
+  );
   visibility: hidden;
   -ms-transform: perspective(200px) rotateY(90deg);
   -webkit-transform: perspective(200px) rotateY(90deg);
@@ -917,4 +965,65 @@ body.view-control-buttons .viewControlButton {
 }
 .viewControlButton-6 {
   margin-left: 105px;
+}
+
+#sceneNavigator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 10px 18px;
+  background: rgba(0, 0, 0, 0.65);
+  border: 2px solid #2ec4b6;
+
+  z-index: 10;
+}
+
+#sceneTitle {
+  width: 220px;
+  text-align: center;
+
+  font-size: 16px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-btn {
+  width: 32px;
+  text-align: center;
+
+  font-size: 20px;
+  color: #2ec4b6;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  color: #ffffff;
+}
+
+#sceneNavigator::after {
+  content: "";
+  position: absolute;
+
+  bottom: -10px;           /* space below the box */
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 140%;             /* wider than the box */
+  height: 2px;
+
+  background: linear-gradient(
+    to right,
+    #04BF9D,
+    #038C73
+  );
 }

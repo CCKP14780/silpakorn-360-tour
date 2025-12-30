@@ -23,7 +23,7 @@
 
   // Grab elements from DOM.
   var panoElement = document.querySelector('#pano');
-  var sceneNameElement = document.querySelector('#titleBar .sceneName');
+  var sceneNameElement = document.querySelector('#sceneTitle');
   var sceneListElement = document.querySelector('#sceneList');
   var sceneElements = document.querySelectorAll('#sceneList .scene');
   var sceneListToggleElement = document.querySelector('#sceneListToggle');
@@ -106,6 +106,12 @@
       view: view
     };
   });
+    // Track which scene is currently active (by index)
+  var currentSceneIndex = 0;
+
+  // Get the scene title element for the collapsed navigator
+  var collapsedSceneTitle = document.getElementById('sceneTitle');
+
 
   // Set up autorotate, if enabled.
   var autorotate = Marzipano.autorotate({
@@ -182,14 +188,27 @@
     return s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;');
   }
 
-  function switchScene(scene) {
+    function switchScene(scene) {
     stopAutorotate();
+
+    // Update current scene index
+    currentSceneIndex = scenes.findIndex(function(s) {
+      return s === scene;
+    });
+
     scene.view.setParameters(scene.data.initialViewParameters);
     scene.scene.switchTo();
+
     startAutorotate();
     updateSceneName(scene);
     updateSceneList(scene);
+
+    // Update collapsed navigator title
+    if (collapsedSceneTitle) {
+      collapsedSceneTitle.textContent = scene.data.name;
+    }
   }
+
 
   function updateSceneName(scene) {
     sceneNameElement.innerHTML = sanitize(scene.data.name);
@@ -384,6 +403,23 @@
       }
     }
     return null;
+  }
+  // Collapsed scene navigation (prev / next)
+  var prevBtn = document.getElementById('prevScene');
+  var nextBtn = document.getElementById('nextScene');
+
+  if (prevBtn && nextBtn) {
+
+    prevBtn.addEventListener('click', function () {
+      var prevIndex = (currentSceneIndex - 1 + scenes.length) % scenes.length;
+      switchScene(scenes[prevIndex]);
+    });
+
+    nextBtn.addEventListener('click', function () {
+      var nextIndex = (currentSceneIndex + 1) % scenes.length;
+      switchScene(scenes[nextIndex]);
+    });
+
   }
 
   // Display the initial scene.
