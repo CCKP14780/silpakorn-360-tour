@@ -19,8 +19,8 @@
 .university-header {
   position: absolute;
   top: 28px;
-  left: 10%;
-  width: 80%;
+  left: 5%;
+  width: 90%;
   height: 2px;
   background: linear-gradient(
     to right,
@@ -172,8 +172,8 @@ body.multiple-scenes.mobile #titleBar {
 #fullscreenToggle {
   display: none;
   position: absolute;
-  top: 0;
-  right: 0;
+  bottom: 10%;
+  right: 5%;
   width: 40px;
   height: 40px;
   padding: 5px;
@@ -230,8 +230,8 @@ body.fullscreen-enabled #fullscreenToggle {
 #autorotateToggle {
   display: block;
   position: absolute;
-  top: 0;
-  right: 0;
+  bottom: 10%;
+  right: 100px;
   width: 40px;
   height: 40px;
   padding: 5px;
@@ -254,7 +254,7 @@ body.fullscreen-enabled #fullscreenToggle {
 
 /* If there is a fullscreen button, autorotate must placed a bit to the left */
 body.fullscreen-enabled #autorotateToggle {
-  right: 40px;
+  right: 8%;
 }
 
 body.fullscreen-enabled.mobile #autorotateToggle {
@@ -292,8 +292,8 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 
 #sceneListToggle {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 10%;
+  left: 5%;
   width: 40px;
   height: 40px;
   padding: 5px;
@@ -967,6 +967,24 @@ body.view-control-buttons .viewControlButton {
   margin-left: 105px;
 }
 
+#sceneNavLine {
+  position: absolute;
+  bottom: 44px; /* align vertically with navigator center */
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 90%;
+  height: 2px;
+
+  background: linear-gradient(
+    to right,
+    #04BF9D,
+    #038C73
+  );
+
+  z-index: 5;
+}
+
 #sceneNavigator {
   position: absolute;
   bottom: 24px;
@@ -977,17 +995,19 @@ body.view-control-buttons .viewControlButton {
   align-items: center;
   gap: 16px;
 
+  width: 320px;           
+  justify-content: center;
+
   padding: 10px 18px;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.85);
   border: 2px solid #2ec4b6;
 
   z-index: 10;
 }
 
 #sceneTitle {
-  width: 220px;
+  flex: 1;
   text-align: center;
-
   font-size: 16px;
   color: #fff;
   white-space: nowrap;
@@ -996,9 +1016,6 @@ body.view-control-buttons .viewControlButton {
 }
 
 .nav-btn {
-  width: 32px;
-  text-align: center;
-
   font-size: 20px;
   color: #2ec4b6;
   background: none;
@@ -1008,22 +1025,4 @@ body.view-control-buttons .viewControlButton {
 
 .nav-btn:hover {
   color: #ffffff;
-}
-
-#sceneNavigator::after {
-  content: "";
-  position: absolute;
-
-  bottom: -10px;           /* space below the box */
-  left: 50%;
-  transform: translateX(-50%);
-
-  width: 140%;             /* wider than the box */
-  height: 2px;
-
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
 }

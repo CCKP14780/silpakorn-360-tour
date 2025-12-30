@@ -106,12 +106,12 @@
       view: view
     };
   });
-    // Track which scene is currently active (by index)
+
+  // Track which scene is currently active (by index)
   var currentSceneIndex = 0;
 
   // Get the scene title element for the collapsed navigator
   var collapsedSceneTitle = document.getElementById('sceneTitle');
-
 
   // Set up autorotate, if enabled.
   var autorotate = Marzipano.autorotate({
@@ -404,6 +404,7 @@
     }
     return null;
   }
+  
   // Collapsed scene navigation (prev / next)
   var prevBtn = document.getElementById('prevScene');
   var nextBtn = document.getElementById('nextScene');
