@@ -176,17 +176,7 @@ body.multiple-scenes.mobile #titleBar {
   right: 5%;
   width: 40px;
   height: 40px;
-  padding: 5px;
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
+  padding: 0px;
 }
 
 .mobile #fullscreenToggle {
@@ -235,16 +225,6 @@ body.fullscreen-enabled #fullscreenToggle {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
 }
 
 .mobile #autorotateToggle {
@@ -297,16 +277,6 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
 }
 
 .mobile #sceneListToggle {
