@@ -306,11 +306,11 @@
 
 function createInfoHotspotElement(hotspot) {
     var wrapper = document.createElement('div');
-    wrapper.classList.add('hotspot', 'info-hotspot');
+    wrapper.classList.add('hotspot', 'info-hotspot-static');
 
     // Create the icon (this is what you see in the panorama)
     var header = document.createElement('div');
-    header.classList.add('info-hotspot-header');
+    header.classList.add('info-hotspot-trigger');
 
     var iconWrapper = document.createElement('div');
     iconWrapper.classList.add('info-hotspot-icon-wrapper');
