@@ -112,39 +112,49 @@
 </a>
 
 <!-- Info Hotspot Modal -->
-<div class="modal fade" id="infoHotspotModal" tabindex="-1" aria-hidden="true">
+<div class="modal fade info-hotspot-ui" id="infoHotspotModal" tabindex="-1">
+
   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content bg-dark text-light">
 
+      <!-- Header: CLOSE BUTTON ONLY -->
       <div class="modal-header border-0">
-        <h5 class="modal-title" id="infoHotspotTitle"></h5>
-        <button type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="modal"
-                aria-label="Close"></button>
-      </div>
+        <button
+        type="button"
+        class="info-hotspot-close"
+        data-bs-dismiss="modal"
+        aria-label="Close">
+  <img src="../wangThaPhraCampus/img/modalClose.png" alt="Close">
+</button>
+</div>
 
-      <div class="modal-body">
-        <div class="row g-3 align-items-start">
+      <!-- Custom Body Layout -->
+      <div class="modal-body info-hotspot-body">
 
-          <!-- Image (LEFT) -->
-          <div class="col-md-5">
-            <img id="infoHotspotImage"
-                 class="img-fluid rounded"
-                 alt="">
-          </div>
-
-          <!-- Text (RIGHT) -->
-          <div class="col-md-7">
-            <div id="infoHotspotText"></div>
-          </div>
-
+        <!-- LEFT SIDE: IMAGE -->
+        <div class="info-hotspot-left">
+          <img id="infoHotspotImage" alt="">
         </div>
+
+        <!-- RIGHT SIDE: TEXT -->
+        <div class="info-hotspot-right">
+          <h2 class="info-hotspot-title">
+            <img
+              src="../wangThaPhraCampus/img/modalInfo.png"
+              class="info-hotspot-title-icon"
+              alt="">
+            <span>รายละเอียดสถานที่</span>
+          </h2>
+          <h3 class="info-hotspot-subtitle" id="infoHotspotTitle"></h3>
+          <div class="info-hotspot-text" id="infoHotspotText"></div>
+        </div>
+
       </div>
 
     </div>
   </div>
 </div>
+
 
 <script src="vendor/screenfull.min.js" ></script>
 <script src="vendor/bowser.min.js" ></script>

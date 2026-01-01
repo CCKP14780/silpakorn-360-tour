@@ -750,11 +750,13 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
               visibility 0s 0s;
 }
 
-/* Info hotspot modal */
+
+/* Info hotspot modal 
 
 .desktop .info-hotspot-modal {
   display: none;
 }
+*/
 
 .info-hotspot-modal {
   top: 0;
@@ -774,6 +776,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
               visibility 0s 0.7s;
 }
 
+/*
 .info-hotspot-modal.visible {
   opacity: 1;
   visibility: visible;
@@ -781,8 +784,9 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
                       visibility 0s 0s;
   transition: opacity 0.2s ease-in-out,
               visibility 0s 0s;
-}
+}*/
 
+/*
 .info-hotspot-modal .info-hotspot-header {
   position: absolute;
   top: 60px;
@@ -795,7 +799,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out 0.2s;
   transition: opacity 0.3s ease-in-out 0.2s;
-}
+}*/
 
 .info-hotspot-modal.visible .info-hotspot-header {
   opacity: 1;
@@ -841,6 +845,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   user-select: text;
 }
 
+/*
 .info-hotspot-modal .info-hotspot-close-wrapper {
   position: absolute;
   top: 0;
@@ -850,7 +855,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   background-color: rgb(78,88,104);
   background-color: rgba(78,88,104,0.8);
   cursor: pointer;
-}
+}*/
 
 .info-hotspot-modal .info-hotspot-close-icon {
   width: 70%;
@@ -858,6 +863,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   margin: 15%;
 }
 
+/*
 .info-hotspot-modal .info-hotspot-text {
   position: absolute;
   top: 110px;
@@ -876,7 +882,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   -webkit-user-select: text;
   -ms-user-select: text;
   user-select: text;
-}
+}*/
 
 .info-hotspot-modal.visible .info-hotspot-text {
   opacity: 1;
@@ -997,3 +1003,171 @@ body.view-control-buttons .viewControlButton {
   color: #ffffff;
 }
 
+/* ===============================
+   INFO HOTSPOT MODAL – BASE PANEL
+   =============================== */
+
+.info-hotspot-ui .modal-dialog {
+  max-width: 920px;
+}
+
+.info-hotspot-ui .modal-content {
+  position: relative;
+  background: rgba(16, 20, 26, 0.96);
+  border-radius: 0 !important;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.75),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+/* Header */
+.info-hotspot-ui .modal-header {
+  padding: 0px !important;
+  border: none;
+  min-height: 0;
+}
+
+.info-hotspot-ui .modal-title {
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #2ec4b6;
+}
+
+.info-hotspot-ui .modal-body {
+  padding: 0px !important;
+}
+
+.info-hotspot-ui .btn-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  z-index: 10;
+}
+
+
+/* Image panel */
+
+#infoHotspotImage {
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #000;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+  /* ===============================
+    INFO HOTSPOT MODAL – SPLIT LAYOUT
+    =============================== */
+
+  .info-hotspot-body {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    height: 100%;
+    min-height: 320px;
+  }
+
+  /* LEFT IMAGE */
+  .info-hotspot-left {
+    height: 100%;
+  }
+
+  .info-hotspot-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px !important;
+  }
+
+  /* RIGHT TEXT */
+  .info-hotspot-right {
+    padding: 0.6rem 1.6rem 2.2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  /* TITLE */
+  .info-hotspot-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    margin: 0;
+    padding-top: 0.15rem;
+    padding-bottom: 0.5rem;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2ec4b6;
+
+    border-bottom: 2px solid rgba(46, 196, 182, 0.4);
+  }
+
+  /* Icon scales with text */
+  .info-hotspot-title-icon {
+    height: 1.4em;     /* scales with text */
+    width: auto;
+    display: block;
+
+    /* optional micro-adjustment */
+    transform: translateY(0.05em);
+  }
+
+  /* BODY TEXT */
+  .info-hotspot-subtitle {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #ffffff;
+    opacity: 0.9;
+  }
+
+  .info-hotspot-subtitle {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+
+  .info-hotspot-text {
+    margin-top: -0.6rem;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #e6e6e6;
+  }
+
+  /*CLOSING BUTTON*/
+  .info-hotspot-close {
+    position: absolute;
+    top: 0.8rem;
+    right: 1.2rem;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  .info-hotspot-close img {
+    height: 2rem;   /* match title scale */
+    width: auto;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .info-hotspot-close:hover img {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  /* MOBILE FALLBACK */
+  @media (max-width: 768px) {
+    .info-hotspot-body {
+      grid-template-columns: 1fr;
+    }
+
+    .info-hotspot-left img {
+      max-height: 260px;
+    }
+  }
