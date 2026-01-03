@@ -1274,3 +1274,80 @@ body.view-control-buttons .viewControlButton {
       max-height: 260px;
     }
   }
+
+  /* ===============================
+  SCENE CARDS
+   =============================== */
+    .scene-list-content {
+      flex: 1;
+      overflow-x: auto;
+    }
+  
+    .scene-list-row {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+    }
+  
+    .scene-card {
+      min-width: 200px;
+      background: #f3f3f3;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+  
+    .scene-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+  
+    .scene-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+  
+    .scene-card-title {
+      padding: 0.6rem;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .scene-card.active {
+      outline: 3px solid #2ec4b6;
+      outline-offset: -3px;
+      background: #ffffff;
+    }
+
+    .scene-card.active .scene-card-title {
+      font-weight: 600;
+      color: #0f766e;
+    }
+
+  /* Panigation*/
+    .scene-pagination {
+      position: absolute;
+      top: 1.4rem;
+      right: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #333;
+    }
+  
+    .scene-page-btn {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      padding: 0 0.3rem;
+      color: #111;
+    }
+  
+    .scene-page-btn:hover {
+      opacity: 0.6;
+    }

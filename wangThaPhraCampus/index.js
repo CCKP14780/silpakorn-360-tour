@@ -148,29 +148,31 @@
   // OLD: sceneListToggleElement.addEventListener('click', toggleSceneList);
   sceneListToggleElement.addEventListener('click', function () {
     document.getElementById('sceneListModal').classList.add('visible');
+    updateActiveSceneCard();
+    updateScenePagination();
   });
 
   document.getElementById('sceneListClose').addEventListener('click', function () {
     document.getElementById('sceneListModal').classList.remove('visible');
   });
 
+// PUKAN: Hide old Scene List code
+  // // Start with the scene list open on desktop.
+  // if (!document.body.classList.contains('mobile')) {
+  //   showSceneList();
+  // }
 
-  // Start with the scene list open on desktop.
-  if (!document.body.classList.contains('mobile')) {
-    showSceneList();
-  }
-
-  // Set handler for scene switch.
-  scenes.forEach(function(scene) {
-    var el = document.querySelector('#sceneList .scene[data-id="' + scene.data.id + '"]');
-    el.addEventListener('click', function() {
-      switchScene(scene);
-      // On mobile, hide scene list after selecting a scene.
-      if (document.body.classList.contains('mobile')) {
-        hideSceneList();
-      }
-    });
-  });
+  // // Set handler for scene switch.
+  // scenes.forEach(function(scene) {
+  //   var el = document.querySelector('#sceneList .scene[data-id="' + scene.data.id + '"]');
+  //   el.addEventListener('click', function() {
+  //     switchScene(scene);
+  //     // On mobile, hide scene list after selecting a scene.
+  //     if (document.body.classList.contains('mobile')) {
+  //       hideSceneList();
+  //     }
+  //   });
+  // });
 
   // DOM elements for view controls.
   var viewUpElement = document.querySelector('#viewUp');
@@ -216,8 +218,13 @@
     if (collapsedSceneTitle) {
       collapsedSceneTitle.textContent = scene.data.name;
     }
-  }
 
+    // Update active scene card in modal
+    updateActiveSceneCard();
+
+    // Update scene pagination
+    updateScenePagination();
+  }
 
   function updateSceneName(scene) {
     sceneNameElement.innerHTML = sanitize(scene.data.name);
@@ -404,8 +411,81 @@ function createInfoHotspotElement(hotspot) {
     });
 
   }
+  function populateSceneListModal() {
+    var container = document.getElementById('sceneListModalContent');
+    container.innerHTML = '';
+
+    var row = document.createElement('div');
+    row.className = 'scene-list-row';
+
+    scenes.forEach(function (sceneObj, index) {
+      var data = sceneObj.data;
+
+      var card = document.createElement('div');
+      card.className = 'scene-card';
+      card.dataset.sceneId = data.id;
+
+      // Preview image
+      var img = document.createElement('img');
+      img.src = 'tiles/' + data.id + '/preview.jpg';
+      img.alt = data.name;
+
+      // Title
+      var title = document.createElement('div');
+      title.className = 'scene-card-title';
+      title.textContent = data.name;
+
+      // Click behavior
+      card.addEventListener('click', function () {
+        switchScene(sceneObj);
+        document.getElementById('sceneListModal').classList.remove('visible');
+      });
+
+      card.appendChild(img);
+      card.appendChild(title);
+      row.appendChild(card);
+    });
+
+    container.appendChild(row);
+  }
+
+  function updateActiveSceneCard() {
+    var cards = document.querySelectorAll('.scene-card');
+
+    cards.forEach(function (card) {
+      if (card.dataset.sceneId === scenes[currentSceneIndex].data.id) {
+        card.classList.add('active');
+      } else {
+        card.classList.remove('active');
+      }
+    });
+  }
+
+  function updateScenePagination() {
+    var indicator = document.getElementById('scenePageIndicator');
+    if (!indicator) return;
+
+    indicator.textContent =
+      (currentSceneIndex + 1) + ' / ' + scenes.length;
+  }
+
+  var scenePrevBtn = document.getElementById('scenePrevBtn');
+  var sceneNextBtn = document.getElementById('sceneNextBtn');
+
+  if (scenePrevBtn && sceneNextBtn) {
+    scenePrevBtn.addEventListener('click', function () {
+      var prevIndex = (currentSceneIndex - 1 + scenes.length) % scenes.length;
+      switchScene(scenes[prevIndex]);
+    });
+
+    sceneNextBtn.addEventListener('click', function () {
+      var nextIndex = (currentSceneIndex + 1) % scenes.length;
+      switchScene(scenes[nextIndex]);
+    });
+  }
 
   // Display the initial scene.
   switchScene(scenes[0]);
+  populateSceneListModal();
 
 })();
