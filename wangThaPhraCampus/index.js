@@ -145,7 +145,15 @@
   }
 
   // Set handler for scene list toggle.
-  sceneListToggleElement.addEventListener('click', toggleSceneList);
+  // OLD: sceneListToggleElement.addEventListener('click', toggleSceneList);
+  sceneListToggleElement.addEventListener('click', function () {
+    document.getElementById('sceneListModal').classList.add('visible');
+  });
+
+  document.getElementById('sceneListClose').addEventListener('click', function () {
+    document.getElementById('sceneListModal').classList.remove('visible');
+  });
+
 
   // Start with the scene list open on desktop.
   if (!document.body.classList.contains('mobile')) {

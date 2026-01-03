@@ -1004,7 +1004,7 @@ body.view-control-buttons .viewControlButton {
 }
 
 /* ===============================
-   STATIC INFO HOTSPOT (NO ANIMATION)
+  STATIC INFO HOTSPOT
    =============================== */
 
 .info-hotspot-static {
@@ -1036,7 +1036,7 @@ body.view-control-buttons .viewControlButton {
 
 
 /* ===============================
-   INFO HOTSPOT MODAL – BASE PANEL
+  INFO HOTSPOT MODAL – BASE PANEL
    =============================== */
 
 .info-hotspot-ui .modal-dialog {
@@ -1192,6 +1192,77 @@ body.view-control-buttons .viewControlButton {
     opacity: 1;
     transform: scale(1.05);
   }
+
+/* ===============================
+  SCENE LIST BOTTOM MODAL
+   =============================== */
+
+.scene-list-modal {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50vh;
+
+  background: #ffffff;
+  color: #000;
+
+  transform: translateY(100%);
+  transition: transform 0.35s ease;
+  z-index: 12000;
+
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+
+  box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.scene-list-modal.visible {
+  transform: translateY(0);
+}
+
+.scene-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.scene-list-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.scene-list-close {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.scene-list-tabs {
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+
+.scene-list-tabs button {
+  flex: 1;
+  padding: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.scene-list-tabs button.active {
+  border-bottom: 3px solid #04BF9D;
+  font-weight: 600;
+}
 
   /* MOBILE FALLBACK */
   @media (max-width: 768px) {
