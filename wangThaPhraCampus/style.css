@@ -1199,42 +1199,57 @@ body.view-control-buttons .viewControlButton {
 
 .scene-list-modal {
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 50vh;
-
+  left: 5vw;
+  right: 5vw;
+  bottom: 4vh;          /* controls how close to bottom */
+  max-height: 70vh;
   background: #ffffff;
   color: #000;
-
-  transform: translateY(100%);
-  transition: transform 0.35s ease;
   z-index: 12000;
 
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
-
-  box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
 
   display: flex;
   flex-direction: column;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
 }
 
 .scene-list-modal.visible {
-  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.scene-list-header {
+/* ROW 1 — top navigation */
+.scene-topbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
   padding: 1rem 1.5rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e5e5e5;
 }
 
-.scene-list-title {
-  font-size: 1.1rem;
+.scene-brand {
+  font-weight: 600;
+}
+
+.scene-tabs {
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.scene-tabs button {
+  background: none;
+  border: none;
+  padding-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.scene-tabs button.active {
+  border-bottom: 3px solid #04BF9D;
   font-weight: 600;
 }
 
@@ -1243,6 +1258,67 @@ body.view-control-buttons .viewControlButton {
   border: none;
   font-size: 1.4rem;
   cursor: pointer;
+}
+
+.scene-list-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.scene-list-title {
+  flex: 1; /* pushes pagination + close to the right */
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.scene-pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.scene-list-close {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.scene-controls {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.scene-campus {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.scene-filters {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scene-pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.scene-list-content {
+  flex: 1;
+  overflow-y: auto;
 }
 
 .scene-list-tabs {
@@ -1284,19 +1360,24 @@ body.view-control-buttons .viewControlButton {
     }
   
     .scene-list-row {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
       padding: 1rem;
     }
-  
+
     .scene-card {
-      min-width: 200px;
+      flex: 0 0 calc((100% - 3rem) / 4);
+      /* 3rem = 3 gaps × 1rem */
+
       background: #f3f3f3;
       border-radius: 12px;
       overflow: hidden;
       cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
   
     .scene-card:hover {
       transform: translateY(-2px);
@@ -1305,12 +1386,12 @@ body.view-control-buttons .viewControlButton {
   
     .scene-card img {
       width: 100%;
-      height: 120px;
+      height: 140px;
       object-fit: cover;
     }
   
     .scene-card-title {
-      padding: 0.6rem;
+      padding: 2rem; 
       font-size: 0.95rem;
       text-align: center;
     }
@@ -1325,29 +1406,54 @@ body.view-control-buttons .viewControlButton {
       font-weight: 600;
       color: #0f766e;
     }
+  
+  .scene-page-btn {
+    width: 36px;
+    height: 36px;
 
-  /* Panigation*/
-    .scene-pagination {
-      position: absolute;
-      top: 1.4rem;
-      right: 1.6rem;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      font-size: 1rem;
-      font-weight: 500;
-      color: #333;
-    }
-  
-    .scene-page-btn {
-      background: none;
-      border: none;
-      font-size: 1.4rem;
-      cursor: pointer;
-      padding: 0 0.3rem;
-      color: #111;
-    }
-  
-    .scene-page-btn:hover {
-      opacity: 0.6;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #ddd;
+
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    color: #111;
+}
+
+.scene-page-btn:hover {
+  background: #f3f3f3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.scene-page-btn:active {
+  transform: scale(0.95);
+}
+
+/* Scene list row animations */
+  .scene-list-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.scene-list-row.slide-out-left {
+  transform: translateX(-40px);
+  opacity: 0;
+}
+
+.scene-list-row.slide-out-right {
+  transform: translateX(40px);
+  opacity: 0;
+}
+
+.scene-list-row.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}

@@ -158,31 +158,41 @@
 <!-- Scene List Bottom Modal -->
 <div id="sceneListModal" class="scene-list-modal">
 
-  <!-- Header -->
-  <div class="scene-list-header">
-    <span class="scene-list-title">มหาวิทยาลัยศิลปากร</span>
+  <!-- ROW 1: TOP NAV -->
+  <div class="scene-topbar">
+    <span class="scene-brand">มหาวิทยาลัยศิลปากร</span>
+
+    <div class="scene-tabs">
+      <button class="active">ทัวร์ปัจจุบัน</button>
+      <button>สำรวจวิทยาเขตอื่น</button>
+    </div>
+
     <button id="sceneListClose" class="scene-list-close">✕</button>
   </div>
-  
-  <!-- Pagination -->
-  <div class="scene-pagination">
-    <button id="scenePrevBtn" class="scene-page-btn">‹</button>
-    <span id="scenePageIndicator">1 / 1</span>
-    <button id="sceneNextBtn" class="scene-page-btn">›</button>
+
+  <!-- ROW 2: CONTROLS -->
+  <div class="scene-controls">
+    <span class="scene-campus">วิทยาเขต วังท่าพระ</span>
+
+    <div class="scene-filters">
+      <label>แสดง:</label>
+      <select>
+        <option>ทั้งหมด</option>
+      </select>
+    </div>
+
+    <div class="scene-pagination">
+      <button id="scenePrevBtn">‹</button>
+      <span id="scenePageIndicator">1 / 3</span>
+      <button id="sceneNextBtn">›</button>
+    </div>
   </div>
 
-  <!-- Tabs (static for now) -->
-  <div class="scene-list-tabs">
-    <button class="active">ทัวร์ปัจจุบัน</button>
-    <button>สำรวจวิทยาเขตอื่น</button>
-  </div>
-
-  <!-- Content -->
-  <div class="scene-list-content" id="sceneListModalContent">
-    <!-- Scene cards will go here -->
-  </div>
+  <!-- ROW 3: CARDS -->
+  <div class="scene-list-content" id="sceneListModalContent"></div>
 
 </div>
+
 
 <script src="vendor/screenfull.min.js" ></script>
 <script src="vendor/bowser.min.js" ></script>

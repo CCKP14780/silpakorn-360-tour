@@ -29,6 +29,9 @@
   var sceneListToggleElement = document.querySelector('#sceneListToggle');
   var autorotateToggleElement = document.querySelector('#autorotateToggle');
   var fullscreenToggleElement = document.querySelector('#fullscreenToggle');
+  var prevSceneBtn = document.querySelector('#prevScene');
+  var nextSceneBtn = document.querySelector('#nextScene');
+
 
   // Detect desktop or mobile mode.
   if (window.matchMedia) {
@@ -71,6 +74,21 @@
   // Initialize viewer.
   var viewer = new Marzipano.Viewer(panoElement, viewerOpts);
 
+  // Collapsed scene navigation (prev / next buttons)
+  if (prevSceneBtn && nextSceneBtn) {
+    prevSceneBtn.addEventListener('click', goToPrevScene);
+    nextSceneBtn.addEventListener('click', goToNextScene);
+  }
+
+  // Scene List Modal pagination buttons
+  var scenePrevBtn = document.getElementById('scenePrevBtn');
+  var sceneNextBtn = document.getElementById('sceneNextBtn');
+
+  if (scenePrevBtn && sceneNextBtn) {
+    scenePrevBtn.addEventListener('click', prevScenePage);
+    sceneNextBtn.addEventListener('click', nextScenePage);
+  }
+
   // Create scenes.
   var scenes = data.scenes.map(function(data) {
     var urlPrefix = "tiles";
@@ -110,9 +128,11 @@
 
   // Track which scene is currently active (by index)
   var currentSceneIndex = 0;
+  var SCENES_PER_PAGE = 4;
+  var currentPage = 0;
 
   // Get the scene title element for the collapsed navigator
-  var collapsedSceneTitle = document.getElementById('sceneTitle');
+  // var collapsedSceneTitle = document.getElementById('sceneTitle');
 
   // Set up autorotate, if enabled.
   var autorotate = Marzipano.autorotate({
@@ -147,10 +167,10 @@
   // Set handler for scene list toggle.
   // OLD: sceneListToggleElement.addEventListener('click', toggleSceneList);
   sceneListToggleElement.addEventListener('click', function () {
-    document.getElementById('sceneListModal').classList.add('visible');
-    updateActiveSceneCard();
-    updateScenePagination();
-  });
+  currentPage = Math.floor(currentSceneIndex / SCENES_PER_PAGE);
+  document.getElementById('sceneListModal').classList.add('visible');
+  populateSceneListModal();
+});
 
   document.getElementById('sceneListClose').addEventListener('click', function () {
     document.getElementById('sceneListModal').classList.remove('visible');
@@ -199,32 +219,75 @@
     return s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;');
   }
 
-    function switchScene(scene) {
-    stopAutorotate();
+  function switchScene(scene) {
+  stopAutorotate();
 
-    // Update current scene index
-    currentSceneIndex = scenes.findIndex(function(s) {
-      return s === scene;
-    });
+  // Update current scene index (ONLY ONCE)
+  currentSceneIndex = scenes.findIndex(function(s) {
+    return s.data.id === scene.data.id;
+  });
 
-    scene.view.setParameters(scene.data.initialViewParameters);
-    scene.scene.switchTo();
+  scene.view.setParameters(scene.data.initialViewParameters);
+  scene.scene.switchTo();
 
-    startAutorotate();
-    updateSceneName(scene);
-    updateSceneList(scene);
+  startAutorotate();
+  updateSceneName(scene);
+  updateSceneList(scene);
 
-    // Update collapsed navigator title
-    if (collapsedSceneTitle) {
-      collapsedSceneTitle.textContent = scene.data.name;
-    }
+  // Update collapsed navigator title
+  // if (collapsedSceneTitle) {
+  //   collapsedSceneTitle.textContent = scene.data.name;
+  // }
 
-    // Update active scene card in modal
-    updateActiveSceneCard();
+  // Update modal UI
+  updateActiveSceneCard();
+  updateScenePagination();
+}
 
-    // Update scene pagination
-    updateScenePagination();
+
+  function goToNextScene() {
+  var nextIndex = currentSceneIndex + 1;
+
+  if (nextIndex >= scenes.length) {
+    nextIndex = 0; // loop to first
   }
+
+  switchScene(scenes[nextIndex]);
+}
+
+function goToPrevScene() {
+  var prevIndex = currentSceneIndex - 1;
+
+  if (prevIndex < 0) {
+    prevIndex = scenes.length - 1; // loop to last
+  }
+
+  switchScene(scenes[prevIndex]);
+}
+
+// keyboard navigation
+document.addEventListener('keydown', function (e) {
+  // Ignore keyboard when typing in inputs (future-proof)
+  const tag = document.activeElement.tagName;
+  if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+
+  switch (e.key) {
+    case 'ArrowLeft':
+      goToPrevScene();
+      break;
+
+    case 'ArrowRight':
+      goToNextScene();
+      break;
+
+    case 'Escape':
+      const modal = document.getElementById('sceneListModal');
+      if (modal.classList.contains('visible')) {
+        modal.classList.remove('visible');
+      }
+      break;
+  }
+});
 
   function updateSceneName(scene) {
     sceneNameElement.innerHTML = sanitize(scene.data.name);
@@ -393,61 +456,92 @@ function createInfoHotspotElement(hotspot) {
     }
     return null;
   }
-  
-  // Collapsed scene navigation (prev / next)
-  var prevBtn = document.getElementById('prevScene');
-  var nextBtn = document.getElementById('nextScene');
 
-  if (prevBtn && nextBtn) {
+  // Scene List Modal population
+  function populateSceneListModal(direction) {
+  var container = document.getElementById('sceneListModalContent');
 
-    prevBtn.addEventListener('click', function () {
-      var prevIndex = (currentSceneIndex - 1 + scenes.length) % scenes.length;
-      switchScene(scenes[prevIndex]);
-    });
+  var oldRow = container.querySelector('.scene-list-row');
 
-    nextBtn.addEventListener('click', function () {
-      var nextIndex = (currentSceneIndex + 1) % scenes.length;
-      switchScene(scenes[nextIndex]);
-    });
+  if (oldRow) {
+    oldRow.classList.add(
+      direction === 'next' ? 'slide-out-left' : 'slide-out-right'
+    );
 
+    setTimeout(function () {
+      renderNewScenePage(container, direction);
+    }, 300);
+  } else {
+    renderNewScenePage(container, direction);
   }
-  function populateSceneListModal() {
-    var container = document.getElementById('sceneListModalContent');
-    container.innerHTML = '';
+}
 
-    var row = document.createElement('div');
-    row.className = 'scene-list-row';
+function renderNewScenePage(container, direction) {
+  container.innerHTML = '';
 
-    scenes.forEach(function (sceneObj, index) {
-      var data = sceneObj.data;
+  var row = document.createElement('div');
+  row.className = 'scene-list-row';
 
-      var card = document.createElement('div');
-      card.className = 'scene-card';
-      card.dataset.sceneId = data.id;
+  // Start slightly offset for slide-in
+  row.style.transform =
+    direction === 'next' ? 'translateX(40px)' : 'translateX(-40px)';
+  row.style.opacity = '0';
 
-      // Preview image
-      var img = document.createElement('img');
-      img.src = 'tiles/' + data.id + '/preview.jpg';
-      img.alt = data.name;
+  var start = currentPage * SCENES_PER_PAGE;
+  var end = start + SCENES_PER_PAGE;
 
-      // Title
-      var title = document.createElement('div');
-      title.className = 'scene-card-title';
-      title.textContent = data.name;
+  scenes.slice(start, end).forEach(function (sceneObj) {
+    var data = sceneObj.data;
 
-      // Click behavior
-      card.addEventListener('click', function () {
-        switchScene(sceneObj);
-        document.getElementById('sceneListModal').classList.remove('visible');
-      });
+    var card = document.createElement('div');
+    card.className = 'scene-card';
+    card.dataset.sceneId = data.id;
 
-      card.appendChild(img);
-      card.appendChild(title);
-      row.appendChild(card);
+    var img = document.createElement('img');
+    img.src = 'tiles/' + data.id + '/preview.jpg';
+
+    var title = document.createElement('div');
+    title.className = 'scene-card-title';
+    title.textContent = data.name;
+
+    card.addEventListener('click', function () {
+      switchScene(sceneObj);
+      document.getElementById('sceneListModal').classList.remove('visible');
     });
 
-    container.appendChild(row);
+    card.appendChild(img);
+    card.appendChild(title);
+    row.appendChild(card);
+  });
+
+  container.appendChild(row);
+
+  requestAnimationFrame(function () {
+    row.classList.add('slide-in');
+    row.style.transform = 'translateX(0)';
+    row.style.opacity = '1';
+  });
+
+  updateScenePagination();
+  updateActiveSceneCard();
+}
+
+
+function nextScenePage() {
+  var maxPage = Math.ceil(scenes.length / SCENES_PER_PAGE) - 1;
+  if (currentPage < maxPage) {
+    currentPage++;
+    populateSceneListModal('next');
   }
+}
+
+function prevScenePage() {
+  if (currentPage > 0) {
+    currentPage--;
+    populateSceneListModal('prev');
+  }
+}
+
 
   function updateActiveSceneCard() {
     var cards = document.querySelectorAll('.scene-card');
@@ -462,26 +556,11 @@ function createInfoHotspotElement(hotspot) {
   }
 
   function updateScenePagination() {
-    var indicator = document.getElementById('scenePageIndicator');
-    if (!indicator) return;
+  var indicator = document.getElementById('scenePageIndicator');
+  if (!indicator) return;
 
-    indicator.textContent =
-      (currentSceneIndex + 1) + ' / ' + scenes.length;
-  }
-
-  var scenePrevBtn = document.getElementById('scenePrevBtn');
-  var sceneNextBtn = document.getElementById('sceneNextBtn');
-
-  if (scenePrevBtn && sceneNextBtn) {
-    scenePrevBtn.addEventListener('click', function () {
-      var prevIndex = (currentSceneIndex - 1 + scenes.length) % scenes.length;
-      switchScene(scenes[prevIndex]);
-    });
-
-    sceneNextBtn.addEventListener('click', function () {
-      var nextIndex = (currentSceneIndex + 1) % scenes.length;
-      switchScene(scenes[nextIndex]);
-    });
+  var totalPages = Math.ceil(scenes.length / SCENES_PER_PAGE);
+  indicator.textContent = (currentPage + 1) + ' / ' + totalPages;
   }
 
   // Display the initial scene.
