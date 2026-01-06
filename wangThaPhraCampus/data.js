@@ -3,6 +3,7 @@ var APP_DATA = {
     {
       "id": "0-map06_p360_wtp001",
       "name": "ประตูวังท่าพระ",
+      "card_image": "../wangThaPhraCampus/img/stillImages/gate_wtp001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -42,13 +43,14 @@ var APP_DATA = {
           "pitch": -0.650693378751637894,
           "title": "ซุ้มประตูวังท่าพระ",
           "text": "ฝีพระหัตถ์สมเด็จพระเจ้าบรมวงศ์เธอเจ้าฟ้ากรมพระยานริศรานุวัดติวงศ์ทรงออกแบบ เป็นประตูหลักทางเข้าฝั่งถนนหน้าพระลานตั้งอยู่ตรงข้ามกับพระบรมมหาราชวังในพื้นที่เกาะรัตนโกสินทร์ ชั้นในและถือเป็นหนึ่งในสัญลักษณ์สำคัญของมหาวิทยาลัยศิลปากร วังท่าพระ",
-          "image": "../wangThaPhraCampus/img/stillImages/amazon_wtp001.jpg" // Need to replace image
+          "image": "../wangThaPhraCampus/img/stillImages/gate_wtp001.jpg"
         }
       ]
     },
     {
       "id": "1-map05_p360_wtp001",
       "name": "หอศิลป์",
+      "card_image": "../wangThaPhraCampus/img/stillImages/artCenter_wtp001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -128,6 +130,7 @@ var APP_DATA = {
     {
       "id": "2-map04_p360_wtp001",
       "name": "ตำหนักพรรณราย",
+      "card_image": "../wangThaPhraCampus/img/stillImages/yellowBuilding02_wtp001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -172,6 +175,7 @@ var APP_DATA = {
     {
       "id": "3-map03_p360_wtp001",
       "name": "ต้นกร่าง",
+      "card_image": "../wangThaPhraCampus/img/stillImages/tree_wtp001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -224,6 +228,7 @@ var APP_DATA = {
     {
       "id": "4-map02_p360_wtp001",
       "name": "ลานสนามบาสเก็ตบอล",
+      "card_image": "../wangThaPhraCampus/img/stillImages/court_wtp001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -290,20 +295,20 @@ var APP_DATA = {
           "title": "ตำหนักพรรณราย",
           "text": "ตำหนักพรรณราย ตึกฝรั่งสไตล์โคโลเนียลสีเหลือง เดิมทีเป็นหนึ่งในอาคารเรียนของคณะโบราณคดี ปัจจุบันคือสำนักงานของสำนักศิลปวัฒนธรรมและการสร้างสรรค์แห่งมหาวิทยาลัยศิลปากร",
           "image": "../wangThaPhraCampus/img/stillImages/yellowBuilding02_wtp001.jpg"
-        }
-        /* No Basketball Court Image Available for now
+        },
         {
           "yaw": -3.2235549634121444,
           "pitch": 0.09651531611583169,
           "title": "ลานสนามบาสเก็ตบอล",
           "text": "ลานกลางแจ้งอเนกประสงค์ เป็นพื้นที่ให้นักศึกษาใช้สำหรับเล่นกีฬา รวมถึงจัดกิจกรรมต่าง ๆ ภายในมหาวิทยาลัย",
-          "image": "../wangThaPhraCampus/img/stillImages/basketballCourt_wtp001.jpg"
-        }*/
+          "image": "../wangThaPhraCampus/img/stillImages/court_wtp001.jpg"
+        }
       ]
     },
     {
       "id": "5-map01_p360_wtp001",
       "name": "ศาลาแก้ว",
+      "card_image": "../wangThaPhraCampus/img/stillImages/palace_wtp001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -356,6 +361,7 @@ var APP_DATA = {
     {
       "id": "6-map07_p360_wtp001",
       "name": "คณะสถาปัตยกรรมศาสตร์",
+      "card_image": "../wangThaPhraCampus/img/stillImages/architecture_wtp001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -408,6 +414,7 @@ var APP_DATA = {
     {
       "id": "7-map08_p360_wtp001",
       "name": "คณะมัณฑนศิลป์",
+      "card_image": "../wangThaPhraCampus/img/stillImages/artGallery02_wtp001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -460,6 +467,7 @@ var APP_DATA = {
     {
       "id": "8-map09_p360_wtp001",
       "name": "ลานอาจารย์ศิลป์",
+      "card_image": "../wangThaPhraCampus/img/stillImages/ferrociStatue_wtp001.jpg",
       "levels": [
         {
           "tileSize": 256,

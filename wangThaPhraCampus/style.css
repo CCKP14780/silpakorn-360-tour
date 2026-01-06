@@ -13,7 +13,7 @@
   -webkit-user-drag: none;
   -webkit-touch-callout: none;
   -ms-content-zooming: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .university-header {
@@ -22,11 +22,7 @@
   left: 5%;
   width: 90%;
   height: 2px;
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
+  background: linear-gradient(to right, #04BF9D, #038C73);
   z-index: 10;
 }
 
@@ -39,13 +35,9 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
+  background: linear-gradient(to right, #04BF9D, #038C73);
   padding: 6px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 @font-face {
@@ -77,7 +69,8 @@
   font-style: italic;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   padding: 0;
@@ -90,7 +83,10 @@ html, body {
   color: #fff;
 }
 
-a, a:hover, a:active, a:visited {
+a,
+a:hover,
+a:active,
+a:visited {
   text-decoration: none;
   color: inherit;
 }
@@ -145,20 +141,10 @@ body.multiple-scenes.mobile #titleBar {
   height: 100%;
   line-height: 30px;
   padding: 5px;
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
+  background: linear-gradient(to right, #04BF9D, #038C73);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-
   -moz-user-select: text;
   -webkit-user-select: text;
   -ms-user-select: text;
@@ -337,26 +323,14 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 
 .mobile #sceneList {
   padding-top: 50px;
+  width: 100%;
+  height: 100%;
+  left: -100%;
 }
 
 #sceneList .scenes {
   width: 100%;
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
-}
-
-.mobile #sceneList {
-  width: 100%;
-  height: 100%;
-  left: -100%;
+  background: linear-gradient(to right, #04BF9D, #038C73);
 }
 
 .mobile #sceneList.enabled {
@@ -396,38 +370,20 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 }
 
 .no-touch #sceneList .scene:hover {
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
+  background: linear-gradient(to right, #04BF9D, #038C73);
 }
 
 #sceneList .scene.current {
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
+  background: linear-gradient(to right, #04BF9D, #038C73);
 }
 
 /* Hide scene list when only a single scene exists */
-body.single-scene #sceneList, body.single-scene #sceneListToggle {
+body.single-scene #sceneList,
+body.single-scene #sceneListToggle {
   display: none;
 }
 
 /* Link hotspot */
-
 .link-hotspot {
   width: 60px;
   height: 60px;
@@ -457,53 +413,26 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   position: absolute;
   left: 100%;
   top: 14px; /* ( 60 - (16 + 2*8) ) / 2 */
-
   margin-left: 3px;
-
   font-size: 16px;
-
   max-width: 300px;
-
   padding: 8px 10px;
-
   border-radius: 5px;
-
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
-
+  background: linear-gradient(to right, #04BF9D, #038C73);
   color: #fff;
-
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-
   cursor: pointer;
-
   opacity: 0;
-
   -ms-transform: translateX(-8px);
   -webkit-transform: translateX(-8px);
   transform: translateX(-8px);
-
-  -webkit-transition: -ms-transform 0.3s,
-                      -webkit-transform 0.3s,
-                      transform 0.3s,
-                      opacity 0.3s;
-  transition: -ms-transform 0.3s,
-              -webkit-transform 0.3s,
-              transform 0.3s,
-              opacity 0.3s;
+  -webkit-transition: -ms-transform 0.3s, -webkit-transform 0.3s, transform 0.3s, opacity 0.3s;
+  transition: -ms-transform 0.3s, -webkit-transform 0.3s, transform 0.3s, opacity 0.3s;
 }
 
-.mobile .link-hotspot {
+.mobile .link-hotspot .link-hotspot-tooltip {
   top: 19px; /* ( 70 - (16 + 2*8) ) / 2 */
 }
 
@@ -518,6 +447,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 .link-hotspot-tooltip {
   pointer-events: none;
 }
+
 .no-touch .link-hotspot:hover .link-hotspot-tooltip {
   pointer-events: all;
 }
@@ -526,12 +456,12 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 .tooltip-fallback .link-hotspot-tooltip {
   display: none;
 }
+
 .no-touch .tooltip-fallback .link-hotspot:hover .link-hotspot-tooltip {
   display: block;
 }
 
 /* Info hotspot */
-
 .info-hotspot {
   line-height: 1.2em;
   opacity: 0.9;
@@ -553,16 +483,10 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
+  background: linear-gradient(to right, #04BF9D, #038C73);
   cursor: pointer;
-  -webkit-transition: width 0.3s ease-in-out 0.5s,
-                      border-radius 0.3s ease-in-out 0.5s;
-  transition: width 0.3s ease-in-out 0.5s,
-              border-radius 0.3s ease-in-out 0.5s;
+  -webkit-transition: width 0.3s ease-in-out 0.5s, border-radius 0.3s ease-in-out 0.5s;
+  transition: width 0.3s ease-in-out 0.5s, border-radius 0.3s ease-in-out 0.5s;
 }
 
 .mobile .info-hotspot .info-hotspot-header {
@@ -574,10 +498,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 .desktop.no-touch .info-hotspot .info-hotspot-header:hover {
   width: 260px;
   border-radius: 5px;
-  -webkit-transition: width 0.3s ease-in-out,
-                      border-radius 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out,
-              border-radius 0.3s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
 }
 
 .desktop .info-hotspot.visible .info-hotspot-header,
@@ -587,10 +509,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
-  -webkit-transition: width 0.3s ease-in-out,
-                      border-radius 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out,
-              border-radius 0.3s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
 }
 
 .info-hotspot .info-hotspot-icon-wrapper {
@@ -617,20 +537,16 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   height: 40px;
   padding: 0;
   overflow: hidden;
-  -webkit-transition: width 0s 0.4s,
-                      padding 0s 0.4s;
-  transition: width 0s 0.4s,
-              padding 0s 0.4s;
+  -webkit-transition: width 0s 0.4s, padding 0s 0.4s;
+  transition: width 0s 0.4s, padding 0s 0.4s;
 }
 
 .desktop .info-hotspot.visible .info-hotspot-title-wrapper,
 .desktop.no-touch .info-hotspot .info-hotspot-header:hover .info-hotspot-title-wrapper {
   width: 220px;
   padding: 0 5px;
-  -webkit-transition: width 0s 0.4s,
-                      padding 0s 0.4s;
-  transition: width 0s 0.4s,
-              padding 0s 0.4s;
+  -webkit-transition: width 0s 0.4s, padding 0s 0.4s;
+  transition: width 0s 0.4s, padding 0s 0.4s;
 }
 
 .info-hotspot .info-hotspot-title-wrapper:before {
@@ -643,7 +559,6 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 .info-hotspot .info-hotspot-title {
   display: inline-block;
   vertical-align: middle;
-
   -moz-user-select: text;
   -webkit-user-select: text;
   -ms-user-select: text;
@@ -657,11 +572,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   height: 40px;
   width: 40px;
   border-top-right-radius: 5px;
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
+  background: linear-gradient(to right, #04BF9D, #038C73);
   visibility: hidden;
   -ms-transform: perspective(200px) rotateY(90deg);
   -webkit-transform: perspective(200px) rotateY(90deg);
@@ -669,14 +580,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   -ms-transform-origin: 0 50% 0;
   -webkit-transform-origin: 0 50% 0;
   transform-origin: 0 50% 0;
-  -webkit-transition: -ms-transform 0.3s 0.3s,
-                      -webkit-transform 0.3s 0.3s,
-                      transform 0.3s 0.3s,
-                      visibility 0s 0.6s;
-  transition: -ms-transform 0.3s 0.3s,
-              -webkit-transform 0.3s 0.3s,
-              transform 0.3s 0.3s,
-              visibility 0s 0.6s;
+  -webkit-transition: -ms-transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s, transform 0.3s 0.3s, visibility 0s 0.6s;
+  transition: -ms-transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s, transform 0.3s 0.3s, visibility 0s 0.6s;
 }
 
 .desktop .info-hotspot.visible .info-hotspot-close-wrapper {
@@ -684,14 +589,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   -ms-transform: perspective(200px) rotateY(0deg);
   -webkit-transform: perspective(200px) rotateY(0deg);
   transform: perspective(200px) rotateY(0deg);
-  -webkit-transition: -ms-transform 0.3s,
-                      -webkit-transform 0.3s,
-                      transform 0.3s,
-                      visibility 0s 0s;
-  transition: -ms-transform 0.3s,
-              -webkit-transform 0.3s,
-              transform 0.3s,
-              visibility 0s 0s;
+  -webkit-transition: -ms-transform 0.3s, -webkit-transform 0.3s, transform 0.3s, visibility 0s 0s;
+  transition: -ms-transform 0.3s, -webkit-transform 0.3s, transform 0.3s, visibility 0s 0s;
 }
 
 .info-hotspot .info-hotspot-close-icon {
@@ -708,7 +607,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   top: 40px;
   left: 0;
   padding: 10px;
-  background-color: rgb(58,68,84);
+  background-color: rgb(58, 68, 84);
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   overflow-y: auto;
@@ -720,15 +619,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   -ms-transform-origin: 50% 0 0;
   -webkit-transform-origin: 50% 0 0;
   transform-origin: 50% 0 0;
-  -webkit-transition: -ms-transform 0.3s,
-                      -webkit-transform 0.3s,
-                      transform 0.3s,
-                      visibility 0s 0.3s;
-  transition: -ms-transform 0.3s,
-              -webkit-transform 0.3s,
-              transform 0.3s,
-              visibility 0s 0.3s;
-
+  -webkit-transition: -ms-transform 0.3s, -webkit-transform 0.3s, transform 0.3s, visibility 0s 0.3s;
+  transition: -ms-transform 0.3s, -webkit-transform 0.3s, transform 0.3s, visibility 0s 0.3s;
   -moz-user-select: text;
   -webkit-user-select: text;
   -ms-user-select: text;
@@ -740,24 +632,15 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   -ms-transform: perspective(200px) rotateX(0deg);
   -webkit-transform: perspective(200px) rotateX(0deg);
   transform: perspective(200px) rotateX(0deg);
-  -webkit-transition: -ms-transform 0.3s 0.3s,
-                      -webkit-transform 0.3s 0.3s,
-                      transform 0.3s 0.3s,
-                      visibility 0s 0s;
-  transition: -ms-transform 0.3s 0.3s,
-              -webkit-transform 0.3s 0.3s,
-              transform 0.3s 0.3s,
-              visibility 0s 0s;
+  -webkit-transition: -ms-transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s, transform 0.3s 0.3s, visibility 0s 0s;
+  transition: -ms-transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s, transform 0.3s 0.3s, visibility 0s 0s;
 }
 
-
 /* Info hotspot modal 
-
 .desktop .info-hotspot-modal {
   display: none;
 }
 */
-
 .info-hotspot-modal {
   top: 0;
   left: 0;
@@ -766,26 +649,21 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   height: 100%;
   overflow: hidden;
   z-index: 11000 !important;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0, 0, 0, .5);
   line-height: 1.2em;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.2s ease-in-out 0.5s,
-                      visibility 0s 0.7s;
-  transition: opacity 0.2s ease-in-out 0.5s,
-              visibility 0s 0.7s;
+  -webkit-transition: opacity 0.2s ease-in-out 0.5s, visibility 0s 0.7s;
+  transition: opacity 0.2s ease-in-out 0.5s, visibility 0s 0.7s;
 }
 
 /*
 .info-hotspot-modal.visible {
   opacity: 1;
   visibility: visible;
-  -webkit-transition: opacity 0.2s ease-in-out,
-                      visibility 0s 0s;
-  transition: opacity 0.2s ease-in-out,
-              visibility 0s 0s;
+  -webkit-transition: opacity 0.2s ease-in-out, visibility 0s 0s;
+  transition: opacity 0.2s ease-in-out, visibility 0s 0s;
 }*/
-
 /*
 .info-hotspot-modal .info-hotspot-header {
   position: absolute;
@@ -800,7 +678,6 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   -webkit-transition: opacity 0.3s ease-in-out 0.2s;
   transition: opacity 0.3s ease-in-out 0.2s;
 }*/
-
 .info-hotspot-modal.visible .info-hotspot-header {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out 0.2s;
@@ -838,7 +715,6 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 .info-hotspot-modal .info-hotspot-title {
   display: inline-block;
   vertical-align: middle;
-
   -moz-user-select: text;
   -webkit-user-select: text;
   -ms-user-select: text;
@@ -856,7 +732,6 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   background-color: rgba(78,88,104,0.8);
   cursor: pointer;
 }*/
-
 .info-hotspot-modal .info-hotspot-close-icon {
   width: 70%;
   height: 70%;
@@ -883,7 +758,6 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   -ms-user-select: text;
   user-select: text;
 }*/
-
 .info-hotspot-modal.visible .info-hotspot-text {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out 0.4s;
@@ -891,7 +765,6 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 }
 
 /* View control buttons */
-
 .viewControlButton {
   display: none;
   position: absolute;
@@ -900,8 +773,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
+  background-color: rgb(103, 115, 131);
+  background-color: rgba(103, 115, 131, 0.8);
 }
 
 body.view-control-buttons .viewControlButton {
@@ -924,40 +797,21 @@ body.view-control-buttons .viewControlButton {
 }
 
 /* Center is at margin-left: -20px */
-.viewControlButton-1 {
-  margin-left: -145px;
-}
-.viewControlButton-2 {
-  margin-left: -95px;
-}
-.viewControlButton-3 {
-  margin-left: -45px;
-}
-.viewControlButton-4 {
-  margin-left: 5px;
-}
-.viewControlButton-5 {
-  margin-left: 55px;
-}
-.viewControlButton-6 {
-  margin-left: 105px;
-}
+.viewControlButton-1 { margin-left: -145px; }
+.viewControlButton-2 { margin-left: -95px; }
+.viewControlButton-3 { margin-left: -45px; }
+.viewControlButton-4 { margin-left: 5px; }
+.viewControlButton-5 { margin-left: 55px; }
+.viewControlButton-6 { margin-left: 105px; }
 
 #sceneNavLine {
   position: absolute;
   bottom: 44px; /* align vertically with navigator center */
   left: 50%;
   transform: translateX(-50%);
-
   width: 90%;
   height: 2px;
-
-  background: linear-gradient(
-    to right,
-    #04BF9D,
-    #038C73
-  );
-
+  background: linear-gradient(to right, #04BF9D, #038C73);
   z-index: 5;
 }
 
@@ -966,18 +820,14 @@ body.view-control-buttons .viewControlButton {
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
-
   display: flex;
   align-items: center;
   gap: 16px;
-
-  width: 320px;           
+  width: 320px;
   justify-content: center;
-
   padding: 10px 18px;
   background: rgba(0, 0, 0, 0.85);
   border: 2px solid #2ec4b6;
-
   z-index: 10;
 }
 
@@ -1006,7 +856,6 @@ body.view-control-buttons .viewControlButton {
 /* ===============================
   STATIC INFO HOTSPOT
    =============================== */
-
 .info-hotspot-static {
   width: 85px;
   height: 85px;
@@ -1034,11 +883,9 @@ body.view-control-buttons .viewControlButton {
   transform: none;
 }
 
-
 /* ===============================
   INFO HOTSPOT MODAL – BASE PANEL
    =============================== */
-
 .info-hotspot-ui .modal-dialog {
   max-width: 920px;
 }
@@ -1047,9 +894,7 @@ body.view-control-buttons .viewControlButton {
   position: relative;
   background: rgba(16, 20, 26, 0.96);
   border-radius: 0 !important;
-  box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.75),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.75), inset 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
 /* Header */
@@ -1077,9 +922,7 @@ body.view-control-buttons .viewControlButton {
   z-index: 10;
 }
 
-
 /* Image panel */
-
 #infoHotspotImage {
   width: 100%;
   height: 100%;
@@ -1087,132 +930,121 @@ body.view-control-buttons .viewControlButton {
   object-fit: cover;
   border-radius: 10px;
   background: #000;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-  /* ===============================
-    INFO HOTSPOT MODAL – SPLIT LAYOUT
-    =============================== */
+/* ===============================
+  INFO HOTSPOT MODAL – SPLIT LAYOUT
+  =============================== */
+.info-hotspot-body {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  height: 100%;
+  min-height: 320px;
+}
 
-  .info-hotspot-body {
-    display: grid;
-    grid-template-columns: 1.25fr 1fr;
-    height: 100%;
-    min-height: 320px;
-  }
+/* LEFT IMAGE */
+.info-hotspot-left {
+  height: 100%;
+}
 
-  /* LEFT IMAGE */
-  .info-hotspot-left {
-    height: 100%;
-  }
+.info-hotspot-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0px !important;
+}
 
-  .info-hotspot-left img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0px !important;
-  }
+/* RIGHT TEXT */
+.info-hotspot-right {
+  padding: 0.6rem 1.6rem 2.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
 
-  /* RIGHT TEXT */
-  .info-hotspot-right {
-    padding: 0.6rem 1.6rem 2.2rem 1.2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-  }
+/* TITLE */
+.info-hotspot-right .info-hotspot-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0;
+  padding-top: 0.15rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2ec4b6;
+  border-bottom: 2px solid rgba(46, 196, 182, 0.4);
+}
 
-  /* TITLE */
-  .info-hotspot-title {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
+/* Icon scales with text */
+.info-hotspot-title-icon {
+  height: 1.4em; /* scales with text */
+  width: auto;
+  display: block;
+  /* optional micro-adjustment */
+  transform: translateY(0.05em);
+}
 
-    margin: 0;
-    padding-top: 0.15rem;
-    padding-bottom: 0.5rem;
+/* BODY TEXT */
+.info-hotspot-subtitle {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #ffffff;
+  opacity: 0.9;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
 
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #2ec4b6;
+.info-hotspot-text {
+  margin-top: -0.6rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #e6e6e6;
+}
 
-    border-bottom: 2px solid rgba(46, 196, 182, 0.4);
-  }
+/*CLOSING BUTTON*/
+.info-hotspot-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 20;
+}
 
-  /* Icon scales with text */
-  .info-hotspot-title-icon {
-    height: 1.4em;     /* scales with text */
-    width: auto;
-    display: block;
+.info-hotspot-close img {
+  height: 2rem; /* match title scale */
+  width: auto;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
 
-    /* optional micro-adjustment */
-    transform: translateY(0.05em);
-  }
-
-  /* BODY TEXT */
-  .info-hotspot-subtitle {
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: #ffffff;
-    opacity: 0.9;
-  }
-
-  .info-hotspot-subtitle {
-    margin-top: 0rem;
-    margin-bottom: 0rem;
-  }
-
-  .info-hotspot-text {
-    margin-top: -0.6rem;
-    font-size: 1rem;
-    line-height: 1.65;
-    color: #e6e6e6;
-  }
-
-  /*CLOSING BUTTON*/
-  .info-hotspot-close {
-    position: absolute;
-    top: 0.8rem;
-    right: 1.2rem;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    z-index: 20;
-  }
-
-  .info-hotspot-close img {
-    height: 2rem;   /* match title scale */
-    width: auto;
-    opacity: 0.85;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-  }
-
-  .info-hotspot-close:hover img {
-    opacity: 1;
-    transform: scale(1.05);
-  }
+.info-hotspot-close:hover img {
+  opacity: 1;
+  transform: scale(1.05);
+}
 
 /* ===============================
   SCENE LIST BOTTOM MODAL
    =============================== */
-
 .scene-list-modal {
   position: fixed;
   left: 5vw;
   right: 5vw;
-  bottom: 4vh;          /* controls how close to bottom */
+  bottom: 4vh; /* controls how close to bottom */
+  height: 50vh;
   max-height: 70vh;
   background: #ffffff;
   color: #000;
   z-index: 12000;
-
   border-radius: 12px;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
-
   display: flex;
   flex-direction: column;
-
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
@@ -1250,7 +1082,7 @@ body.view-control-buttons .viewControlButton {
 
 .scene-tabs button.active {
   border-bottom: 3px solid #04BF9D;
-  font-weight: 600;
+  font-weight: 00;
 }
 
 .scene-list-close {
@@ -1283,13 +1115,6 @@ body.view-control-buttons .viewControlButton {
   color: #333;
 }
 
-.scene-list-close {
-  background: none;
-  border: none;
-  font-size: 1.4rem;
-  cursor: pointer;
-}
-
 .scene-controls {
   display: flex;
   align-items: center;
@@ -1308,12 +1133,6 @@ body.view-control-buttons .viewControlButton {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-.scene-pagination {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
 }
 
 .scene-list-content {
@@ -1340,89 +1159,99 @@ body.view-control-buttons .viewControlButton {
   font-weight: 600;
 }
 
-  /* MOBILE FALLBACK */
-  @media (max-width: 768px) {
-    .info-hotspot-body {
-      grid-template-columns: 1fr;
-    }
-
-    .info-hotspot-left img {
-      max-height: 260px;
-    }
+/* MOBILE FALLBACK */
+@media (max-width: 768px) {
+  .info-hotspot-body {
+    grid-template-columns: 1fr;
   }
-
-  /* ===============================
-  SCENE CARDS
-   =============================== */
-    .scene-list-content {
-      flex: 1;
-      overflow-x: auto;
-    }
-  
-    .scene-list-row {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      padding: 1rem;
-    }
-
-    .scene-card {
-      flex: 0 0 calc((100% - 3rem) / 4);
-      /* 3rem = 3 gaps × 1rem */
-
-      background: #f3f3f3;
-      border-radius: 12px;
-      overflow: hidden;
-      cursor: pointer;
-
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  .info-hotspot-left img {
+    max-height: 260px;
+  }
 }
 
-  
-    .scene-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    }
-  
-    .scene-card img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-    }
-  
-    .scene-card-title {
-      padding: 2rem; 
-      font-size: 0.95rem;
-      text-align: center;
-    }
+/* ===============================
+  SCENE CARDS
+   =============================== */
+.scene-list-content {
+  flex: 1;
+  overflow-x: auto;
+}
 
-    .scene-card.active {
-      outline: 3px solid #2ec4b6;
-      outline-offset: -3px;
-      background: #ffffff;
-    }
+.scene-list-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
 
-    .scene-card.active .scene-card-title {
-      font-weight: 600;
-      color: #0f766e;
-    }
-  
-  .scene-page-btn {
-    width: 36px;
-    height: 36px;
+.scene-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  background: none;
+  border-radius: 0;
+  overflow: visible;
+  transition: transform 0.2s ease;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.scene-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
 
-    border-radius: 50%;
-    background: #ffffff;
-    border: 1px solid #ddd;
+.scene-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #eee;
+}
 
-    font-size: 1.2rem;
-    cursor: pointer;
+.scene-card-image img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
 
-    color: #111;
+/*IMPORTANT: For Controling card box size*/
+.scene-card img {
+  width: 100%;
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.scene-card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  padding-left: 4px;
+}
+
+.scene-card.active {
+  background: #ffffff;
+}
+
+.scene-card.active .scene-card-title {
+  font-weight: 600;
+  color: #0f766e;
+}
+
+.scene-page-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #111;
 }
 
 .scene-page-btn:hover {
@@ -1435,7 +1264,7 @@ body.view-control-buttons .viewControlButton {
 }
 
 /* Scene list row animations */
-  .scene-list-row {
+.scene-list-row {
   display: grid;
   grid-template-columns: repeat(4, minmax(220px, 1fr));
   justify-content: center;

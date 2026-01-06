@@ -498,7 +498,10 @@ function renderNewScenePage(container, direction) {
     card.dataset.sceneId = data.id;
 
     var img = document.createElement('img');
-    img.src = 'tiles/' + data.id + '/preview.jpg';
+    // CHANGE THIS LINE:
+    // From: img.src = 'tiles/' + data.id + '/preview.jpg';
+    // To: 
+    img.src = data.card_image;
 
     var title = document.createElement('div');
     title.className = 'scene-card-title';
