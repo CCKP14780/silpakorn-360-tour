@@ -20,6 +20,7 @@
   var bowser = window.bowser;
   var screenfull = window.screenfull;
   var data = window.APP_DATA;
+  var campusData = window.CAMPUS_DATA || [];
 
   // Grab elements from DOM.
   var panoElement = document.querySelector('#pano');
@@ -130,6 +131,7 @@
   var currentSceneIndex = 0;
   var SCENES_PER_PAGE = 5;
   var currentPage = 0;
+  var currentModalMode = 'scenes'; // 'scenes' | 'campus'
 
   // Get the scene title element for the collapsed navigator
   // var collapsedSceneTitle = document.getElementById('sceneTitle');
@@ -204,6 +206,33 @@
   var viewRightElement = document.querySelector('#viewRight');
   var viewInElement = document.querySelector('#viewIn');
   var viewOutElement = document.querySelector('#viewOut');
+  // Scene list tabs
+  var tabButtons = document.querySelectorAll('.scene-tabs button');
+  function setActiveTab(index) {
+    tabButtons.forEach(function (btn, i) {
+      btn.classList.toggle('active', i === index);
+    });
+  }
+
+  if (tabButtons.length === 2) {
+
+    // Tab 1: Current tour
+    tabButtons[0].addEventListener('click', function () {
+      setActiveTab(0);
+      currentModalMode = 'scenes';
+      currentPage = Math.floor(currentSceneIndex / SCENES_PER_PAGE);
+      populateSceneListModal();
+    });
+
+    // Tab 2: Other campuses
+    tabButtons[1].addEventListener('click', function () {
+      setActiveTab(1);
+      currentModalMode = 'campus';
+      currentPage = 0;
+      populateSceneListModal();
+    });
+  }
+
 
   // Dynamic parameters for controls.
   var velocity = 0.7;
@@ -472,35 +501,60 @@
       direction === 'next' ? 'translateX(40px)' : 'translateX(-40px)';
     row.style.opacity = '0';
 
-    var start = currentPage * SCENES_PER_PAGE;
-    var end = start + SCENES_PER_PAGE;
+    if (currentModalMode === 'scenes') {
 
-    scenes.slice(start, end).forEach(function (sceneObj) {
-      var data = sceneObj.data;
+      var start = currentPage * SCENES_PER_PAGE;
+      var end = start + SCENES_PER_PAGE;
 
-      var card = document.createElement('div');
-      card.className = 'scene-card';
-      card.dataset.sceneId = data.id;
+      scenes.slice(start, end).forEach(function (sceneObj) {
+        var data = sceneObj.data;
 
-      var img = document.createElement('img');
-      // CHANGE THIS LINE:
-      // From: img.src = 'tiles/' + data.id + '/preview.jpg';
-      // To: 
-      img.src = data.card_image;
+        var card = document.createElement('div');
+        card.className = 'scene-card';
+        card.dataset.sceneId = data.id;
 
-      var title = document.createElement('div');
-      title.className = 'scene-card-title';
-      title.textContent = data.name;
+        var img = document.createElement('img');
+        img.src = data.card_image;
 
-      card.addEventListener('click', function () {
-        switchScene(sceneObj);
-        document.getElementById('sceneListModal').classList.remove('visible');
+        var title = document.createElement('div');
+        title.className = 'scene-card-title';
+        title.textContent = data.name;
+
+        card.addEventListener('click', function () {
+          switchScene(sceneObj);
+          document.getElementById('sceneListModal').classList.remove('visible');
+        });
+
+        card.appendChild(img);
+        card.appendChild(title);
+        row.appendChild(card);
       });
 
-      card.appendChild(img);
-      card.appendChild(title);
-      row.appendChild(card);
-    });
+    } else {
+      // ===== Campus cards =====
+      campusData.forEach(function (campus) {
+
+        var card = document.createElement('div');
+        card.className = 'scene-card';
+
+        var img = document.createElement('img');
+        img.src = campus.image;
+
+        var title = document.createElement('div');
+        title.className = 'scene-card-title';
+        title.textContent = campus.name;
+
+        card.addEventListener('click', function () {
+          if (campus.url && campus.url !== '#') {
+            window.open(campus.url, '_blank');
+          }
+        });
+
+        card.appendChild(img);
+        card.appendChild(title);
+        row.appendChild(card);
+      });
+    }
 
     container.appendChild(row);
 
@@ -553,39 +607,47 @@
 
   function updateScenePagination() {
     var indicator = document.getElementById('scenePageIndicator');
-
     if (!indicator) return;
 
-    var totalPages = Math.ceil(scenes.length / SCENES_PER_PAGE);
+    var totalItems =
+      currentModalMode === 'scenes'
+        ? scenes.length
+        : campusData.length;
+
+    var totalPages = Math.max(1, Math.ceil(totalItems / SCENES_PER_PAGE));
     indicator.textContent = (currentPage + 1) + ' / ' + totalPages;
   }
 
   function updatePaginationButtons() {
     var prevBtn = document.getElementById('scenePrevBtn');
     var nextBtn = document.getElementById('sceneNextBtn');
-
     if (!prevBtn || !nextBtn) return;
+
+    // Campus mode → no pagination
+    if (currentModalMode === 'campus') {
+      prevBtn.disabled = true;
+      nextBtn.disabled = true;
+      prevBtn.style.opacity = '0.3';
+      nextBtn.style.opacity = '0.3';
+      prevBtn.style.pointerEvents = 'none';
+      nextBtn.style.pointerEvents = 'none';
+      return;
+    }
 
     var totalPages = Math.ceil(scenes.length / SCENES_PER_PAGE);
 
-    // FIRST PAGE (1 / X)
     prevBtn.disabled = currentPage === 0;
-
-    // LAST PAGE (X / X)
     nextBtn.disabled = currentPage === totalPages - 1;
 
-    // Visual feedback
     prevBtn.style.opacity = prevBtn.disabled ? '0.4' : '1';
-    prevBtn.style.pointerEvents = prevBtn.disabled ? 'none' : 'auto';
-
     nextBtn.style.opacity = nextBtn.disabled ? '0.4' : '1';
+
+    prevBtn.style.pointerEvents = prevBtn.disabled ? 'none' : 'auto';
     nextBtn.style.pointerEvents = nextBtn.disabled ? 'none' : 'auto';
   }
-
 
 
   // Display the initial scene.
   switchScene(scenes[0]);
   populateSceneListModal();
-
 })();

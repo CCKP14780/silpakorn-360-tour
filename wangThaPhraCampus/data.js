@@ -527,3 +527,36 @@ var APP_DATA = {
     "viewControlButtons": false
   }
 };
+
+var CAMPUS_DATA = [
+  {
+    id: 'wangthapra',
+    name: 'วิทยาเขตวังท่าพระ',
+    image: '../Assets/campus/wangthapra.jpg',
+    url: 'https://www.su.ac.th'
+  },
+  {
+    id: 'sanamchandra',
+    name: 'วิทยาเขตสนามจันทร์',
+    image: '../Assets/campus/sanamchandra.jpg',
+    url: 'https://www.su.ac.th'
+  },
+  {
+    id: 'phetchaburi',
+    name: 'วิทยาเขตสารสนเทศเพชรบุรี',
+    image: '../Assets/campus/phetchaburi.jpg',
+    url: 'https://www.su.ac.th'
+  },
+  {
+    id: 'muangthong',
+    name: 'วิทยาเขตเมืองทองธานี',
+    image: '../Assets/campus/muangthong.jpg',
+    url: 'https://www.su.ac.th'
+  },
+  {
+    id: 'talingchan',
+    name: 'วิทยาเขตตลิ่งชัน',
+    image: '../Assets/campus/talingchan.jpg',
+    url: 'https://www.su.ac.th'
+  }
+];

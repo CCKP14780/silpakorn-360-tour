@@ -187,18 +187,20 @@
     <div class="scene-controls">
       <span class="scene-campus">วิทยาเขต วังท่าพระ</span>
 
-      <div class="scene-filters">
-        <label>แสดง:</label>
-        <select>
-          <option>ทั้งหมด</option>
-        </select>
-      </div>
+      <div class="scene-filters d-flex align-items-center gap-2">
+        <label for="sceneFilter" class="mb-0">แสดง:</label>
+          <select id="sceneFilter" class="form-select form-select-sm w-auto rounded-40">
+            <option value="all">ทั้งหมด</option>
+            <option value="landmark">สถานที่สำคัญ</option>
+            <option value="faculty">คณะ</option>
+          </select>
+    </div>
 
       <div class="scene-pagination">
         <button id="scenePrevBtn">
           <i class="fa-solid fa-chevron-left"></i>
         </button>
-        <span id="scenePageIndicator">1 / 3</span>
+        <span id="scenePageIndicator">1 / 2</span>
         <button id="sceneNextBtn">
           <i class="fa-solid fa-chevron-right"></i>
         </button>
