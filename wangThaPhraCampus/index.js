@@ -128,7 +128,7 @@
 
   // Track which scene is currently active (by index)
   var currentSceneIndex = 0;
-  var SCENES_PER_PAGE = 4;
+  var SCENES_PER_PAGE = 5;
   var currentPage = 0;
 
   // Get the scene title element for the collapsed navigator
@@ -169,11 +169,14 @@
   sceneListToggleElement.addEventListener('click', function () {
     currentPage = Math.floor(currentSceneIndex / SCENES_PER_PAGE);
     document.getElementById('sceneListModal').classList.add('visible');
+    sceneListToggleElement.classList.add('enabled');
     populateSceneListModal();
+    updatePaginationButtons();
   });
 
   document.getElementById('sceneListClose').addEventListener('click', function () {
     document.getElementById('sceneListModal').classList.remove('visible');
+    sceneListToggleElement.classList.remove('enabled');
   });
 
   // PUKAN: Hide old Scene List code
@@ -509,23 +512,31 @@
 
     updateScenePagination();
     updateActiveSceneCard();
+    updatePaginationButtons();
   }
 
 
   function nextScenePage() {
     var maxPage = Math.ceil(scenes.length / SCENES_PER_PAGE) - 1;
+
     if (currentPage < maxPage) {
       currentPage++;
       populateSceneListModal('next');
     }
+
+    updatePaginationButtons();
   }
+
 
   function prevScenePage() {
     if (currentPage > 0) {
       currentPage--;
       populateSceneListModal('prev');
     }
+
+    updatePaginationButtons();
   }
+
 
 
   function updateActiveSceneCard() {
@@ -542,11 +553,36 @@
 
   function updateScenePagination() {
     var indicator = document.getElementById('scenePageIndicator');
+
     if (!indicator) return;
 
     var totalPages = Math.ceil(scenes.length / SCENES_PER_PAGE);
     indicator.textContent = (currentPage + 1) + ' / ' + totalPages;
   }
+
+  function updatePaginationButtons() {
+    var prevBtn = document.getElementById('scenePrevBtn');
+    var nextBtn = document.getElementById('sceneNextBtn');
+
+    if (!prevBtn || !nextBtn) return;
+
+    var totalPages = Math.ceil(scenes.length / SCENES_PER_PAGE);
+
+    // FIRST PAGE (1 / X)
+    prevBtn.disabled = currentPage === 0;
+
+    // LAST PAGE (X / X)
+    nextBtn.disabled = currentPage === totalPages - 1;
+
+    // Visual feedback
+    prevBtn.style.opacity = prevBtn.disabled ? '0.4' : '1';
+    prevBtn.style.pointerEvents = prevBtn.disabled ? 'none' : 'auto';
+
+    nextBtn.style.opacity = nextBtn.disabled ? '0.4' : '1';
+    nextBtn.style.pointerEvents = nextBtn.disabled ? 'none' : 'auto';
+  }
+
+
 
   // Display the initial scene.
   switchScene(scenes[0]);

@@ -36,7 +36,7 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: linear-gradient(to right, #007468, #00DAC3);
+  background: linear-gradient(to right, #00DAC3, #007468);
   padding: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
@@ -161,9 +161,44 @@ body.multiple-scenes.mobile #titleBar {
   position: absolute;
   bottom: 10%;
   right: 5%;
-  width: 40px;
-  height: 40px;
-  padding: 0px;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  color: #63E6BE;
+  padding: 0;
+}
+
+#fullscreenToggle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(to bottom right, #007468, #00DAC3);
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  padding: 2px;
+  pointer-events: none;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+body.fullscreen-enabled #fullscreenToggle {
+  display: flex;
 }
 
 .mobile #fullscreenToggle {
@@ -171,23 +206,18 @@ body.multiple-scenes.mobile #titleBar {
   height: 50px;
 }
 
-body.fullscreen-enabled #fullscreenToggle {
-  display: block;
-}
-
+/* Icon behavior */
 #fullscreenToggle .icon {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 30px;
-  height: 30px;
+  position: relative;
+  font-size: 22px;
+  transition: transform 0.25s ease;
 }
 
 .mobile #fullscreenToggle .icon {
-  top: 10px;
-  right: 10px;
+  font-size: 26px;
 }
 
+/* Icon switching */
 #fullscreenToggle .icon.on {
   display: none;
 }
@@ -202,6 +232,16 @@ body.fullscreen-enabled #fullscreenToggle {
 
 #fullscreenToggle.enabled .icon.off {
   display: none;
+}
+
+/* Hover */
+.no-touch #fullscreenToggle:hover::before {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(0, 218, 195, 0.4);
+}
+
+.no-touch #fullscreenToggle:hover .icon {
+  transform: scale(1.15);
 }
 
 #autorotateToggle {
@@ -257,13 +297,68 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   display: none;
 }
 
+#autorotateToggle {
+  display: none !important;
+}
+
 #sceneListToggle {
   position: absolute;
   bottom: 10%;
   left: 5%;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  color: #63E6BE;
+
+  padding: 0;
+}
+
+#sceneListToggle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(to right, #007468, #00DAC3);
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  padding: 2px;
+  /* border thickness */
+  pointer-events: none;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#sceneListToggle .icon {
+  position: relative;
+  /* ← not absolute */
+  font-size: 22px;
+  z-index: 1;
+  transition: transform 0.25s ease;
+}
+
+/* Hover effect */
+.no-touch #sceneListToggle:hover::before {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(0, 218, 195, 0.4);
+}
+
+.no-touch #sceneListToggle:hover .icon {
+  transform: scale(1.15);
 }
 
 .mobile #sceneListToggle {
@@ -271,25 +366,8 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   height: 50px;
 }
 
-#sceneListToggle .text {
-  position: absolute;
-  top: 5px;
-  left: 15px;
-  width: 100%;
-  line-height: 30px;
-}
-
-#sceneListToggle .icon {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 30px;
-  height: 30px;
-}
-
 .mobile #sceneListToggle .icon {
-  top: 10px;
-  right: 10px;
+  font-size: 26px;
 }
 
 #sceneListToggle .icon.on {
@@ -708,32 +786,42 @@ body.view-control-buttons .viewControlButton {
   margin-left: 105px;
 }
 
-#sceneNavLine {
-  position: absolute;
-  bottom: 44px;
-  /* align vertically with navigator center */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  height: 2px;
-  background: linear-gradient(to right, #007468, #00DAC3);
-  z-index: 5;
-}
-
-#sceneNavigator {
+#sceneNavWrapper {
   position: absolute;
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
+  width: 90%;
+  z-index: 10;
+}
+
+#sceneNavigator {
+  display: flex;
+  align-items: center;
   gap: 16px;
-  width: 320px;
-  justify-content: center;
+
   padding: 10px 18px;
   background: rgba(0, 0, 0, 0.85);
   border: 2px solid #2ec4b6;
-  z-index: 10;
+
+  width: 320px;
+  justify-content: center;
+}
+
+.sceneNavLine {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, #007468, #00DAC3);
+}
+
+.sceneNavLine.left {
+  margin-right: 0.5px;
+}
+
+.sceneNavLine.right {
+  margin-left: 0.5px;
 }
 
 #sceneTitle {
@@ -741,6 +829,7 @@ body.view-control-buttons .viewControlButton {
   text-align: center;
   font-size: 16px;
   color: #fff;
+
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -752,10 +841,15 @@ body.view-control-buttons .viewControlButton {
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 
 .nav-btn:hover {
   color: #ffffff;
+}
+
+.mobile .scene-nav-line {
+  display: none;
 }
 
 /* ===============================
@@ -972,7 +1066,8 @@ body.view-control-buttons .viewControlButton {
 }
 
 .scene-brand {
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 24px;
 }
 
 .scene-tabs {
@@ -984,13 +1079,18 @@ body.view-control-buttons .viewControlButton {
 .scene-tabs button {
   background: none;
   border: none;
-  padding-bottom: 0.4rem;
-  font-size: 0.95rem;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  /* padding-bottom: 0.4rem;
+  font-size: 0.95rem; */
 }
 
 .scene-tabs button.active {
-  border-bottom: 3px solid #04BF9D;
-  font-weight: 00;
+  /* border-bottom: 3px solid #007468; */
+  font-weight: 700;
+  font-size: 16px;
+  font-style: bold;
 }
 
 .scene-list-close {
@@ -1024,17 +1124,78 @@ body.view-control-buttons .viewControlButton {
   color: #333;
 }
 
+/* Pagination buttons */
+.scene-pagination button {
+  position: relative;
+  width: 36px;
+  height: 36px;
+
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon */
+.scene-pagination button i {
+  font-size: 20px;
+  color: #454C56;
+  z-index: 1;
+  transition: transform 0.2s ease;
+}
+
+/* Circular ring */
+.scene-pagination button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+
+  background: #454C56;
+
+  -webkit-mask:
+    radial-gradient(circle at center, transparent 62%, black 63%);
+  mask:
+    radial-gradient(circle at center, transparent 62%, black 63%);
+
+  pointer-events: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover effect (desktop only) */
+.no-touch .scene-pagination button:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #454C56;
+}
+
+.no-touch .scene-pagination button:hover i {
+  transform: scale(1.15);
+}
+
+.mobile .scene-pagination button {
+  width: 44px;
+  height: 44px;
+}
+
+.mobile .scene-pagination button i {
+  font-size: 24px;
+}
+
 .scene-controls {
   display: flex;
   align-items: center;
   gap: 2rem;
   padding: 1rem 1.5rem;
-  border-bottom: 1px solid #eee;
+  /* border-bottom: 1px solid #eee; */
 }
 
 .scene-campus {
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .scene-filters {
@@ -1064,7 +1225,7 @@ body.view-control-buttons .viewControlButton {
 }
 
 .scene-list-tabs button.active {
-  border-bottom: 3px solid #04BF9D;
+  border-bottom: 3px solid #454C56;
   font-weight: 600;
 }
 
@@ -1079,19 +1240,20 @@ body.view-control-buttons .viewControlButton {
   }
 }
 
+.scene-list-close i {
+  color: #454C56;
+}
+
+.scene-list-close i:hover {
+  transform: scale(1.15);
+}
+
 /* ===============================
   SCENE CARDS
    =============================== */
 .scene-list-content {
   flex: 1;
   overflow-x: auto;
-}
-
-.scene-list-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  padding: 1rem;
 }
 
 .scene-card {
@@ -1107,7 +1269,6 @@ body.view-control-buttons .viewControlButton {
 
 .scene-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
 }
 
@@ -1176,7 +1337,7 @@ body.view-control-buttons .viewControlButton {
 /* Scene list row animations */
 .scene-list-row {
   display: grid;
-  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
   justify-content: center;
   gap: 1rem;
   padding: 1rem;

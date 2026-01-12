@@ -26,6 +26,8 @@
 
   <div class="university-header">
     <img src="../Assets/su_logo/suLogo.png" class="uni-logo" alt="Silpakorn Logo">
+    <!-- Empty Div For Future Development -->
+    <div></div>
   </div>
 
   <!-- <div id="sceneList">
@@ -74,12 +76,24 @@
   <h1 class="sceneName"></h1>
 </div> -->
 
-  <div id="sceneNavLine"></div>
+<div id="sceneNavWrapper">
+    <div class="sceneNavLine left"></div>
+
   <div id="sceneNavigator">
-    <button id="prevScene" class="nav-btn">‹</button>
+    <button id="prevScene" class="nav-btn">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
     <span id="sceneTitle"></span>
-    <button id="nextScene" class="nav-btn">›</button>
+
+    <button id="nextScene" class="nav-btn">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
   </div>
+
+    <div class="sceneNavLine right"></div>
+</div>
+
 
   <a href="javascript:void(0)" id="autorotateToggle">
     <img class="icon off" src="img/play.png">
@@ -87,16 +101,13 @@
   </a>
 
   <a href="javascript:void(0)" id="fullscreenToggle">
-    <!-- <img class="icon off" src="img/fullscreen.png"> -->
-    <i class="fa-solid fa-expand" style="color: #63E6BE;"></i>
-    <img class="icon on" src="img/windowed.png">
+    <i class="icon off fa-solid fa-expand"></i>
+    <i class="icon on fa-solid fa-compress"></i>
   </a>
 
   <a href="javascript:void(0)" id="sceneListToggle">
-    <!-- <img class="icon off" src="img/expand.png"> -->
-    <i class="fa-solid fa-bars" style="color: #63E6BE;"></i>
-    <!-- <img class="icon on" src="img/collapse.png"> -->
-    <i class="fa-solid fa-compress" style="color: #63E6BE;"></i>
+    <i class="icon off fa-solid fa-bars"></i>
+    <i class="icon on fa-solid fa-bars"></i>
   </a>
 
   <a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
@@ -167,7 +178,9 @@
         <button>สำรวจวิทยาเขตอื่น</button>
       </div>
 
-      <button id="sceneListClose" class="scene-list-close">✕</button>
+      <button id="sceneListClose" class="scene-list-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
     </div>
 
     <!-- ROW 2: CONTROLS -->
@@ -182,9 +195,13 @@
       </div>
 
       <div class="scene-pagination">
-        <button id="scenePrevBtn">‹</button>
+        <button id="scenePrevBtn">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
         <span id="scenePageIndicator">1 / 3</span>
-        <button id="sceneNextBtn">›</button>
+        <button id="sceneNextBtn">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
       </div>
     </div>
 
