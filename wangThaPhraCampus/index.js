@@ -15,7 +15,7 @@
  */
 'use strict';
 
-(function() {
+(function () {
   var Marzipano = window.Marzipano;
   var bowser = window.bowser;
   var screenfull = window.screenfull;
@@ -36,7 +36,7 @@
   // Detect desktop or mobile mode.
   if (window.matchMedia) {
     var mql = matchMedia("(max-width: 500px), (max-height: 500px)");
-    var setMode = function() {
+    var setMode = function () {
       if (mql.matches) {
         document.body.classList.remove('desktop');
         document.body.classList.add('mobile');
@@ -45,7 +45,7 @@
         document.body.classList.add('desktop');
       }
     };
-    
+
     setMode();
     mql.addListener(setMode);
   } else {
@@ -54,7 +54,7 @@
 
   // Detect whether we are on a touch device.
   document.body.classList.add('no-touch');
-  window.addEventListener('touchstart', function() {
+  window.addEventListener('touchstart', function () {
     document.body.classList.remove('no-touch');
     document.body.classList.add('touch');
   });
@@ -90,14 +90,14 @@
   }
 
   // Create scenes.
-  var scenes = data.scenes.map(function(data) {
+  var scenes = data.scenes.map(function (data) {
     var urlPrefix = "tiles";
     var source = Marzipano.ImageUrlSource.fromString(
       urlPrefix + "/" + data.id + "/{z}/{f}/{y}/{x}.jpg",
       { cubeMapPreviewUrl: urlPrefix + "/" + data.id + "/preview.jpg" });
     var geometry = new Marzipano.CubeGeometry(data.levels);
 
-    var limiter = Marzipano.RectilinearView.limit.traditional(data.faceSize, 100*Math.PI/180, 120*Math.PI/180);
+    var limiter = Marzipano.RectilinearView.limit.traditional(data.faceSize, 100 * Math.PI / 180, 120 * Math.PI / 180);
     var view = new Marzipano.RectilinearView(data.initialViewParameters, limiter);
 
     var scene = viewer.createScene({
@@ -108,13 +108,13 @@
     });
 
     // Create link hotspots.
-    data.linkHotspots.forEach(function(hotspot) {
+    data.linkHotspots.forEach(function (hotspot) {
       var element = createLinkHotspotElement(hotspot);
       scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
     });
 
     // Create info hotspots.
-    data.infoHotspots.forEach(function(hotspot) {
+    data.infoHotspots.forEach(function (hotspot) {
       var element = createInfoHotspotElement(hotspot);
       scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
     });
@@ -138,7 +138,7 @@
   var autorotate = Marzipano.autorotate({
     yawSpeed: 0.03,
     targetPitch: 0,
-    targetFov: Math.PI/2
+    targetFov: Math.PI / 2
   });
   if (data.settings.autorotateEnabled) {
     autorotateToggleElement.classList.add('enabled');
@@ -150,10 +150,10 @@
   // Set up fullscreen mode, if supported.
   if (screenfull.enabled && data.settings.fullscreenButton) {
     document.body.classList.add('fullscreen-enabled');
-    fullscreenToggleElement.addEventListener('click', function() {
+    fullscreenToggleElement.addEventListener('click', function () {
       screenfull.toggle();
     });
-    screenfull.on('change', function() {
+    screenfull.on('change', function () {
       if (screenfull.isFullscreen) {
         fullscreenToggleElement.classList.add('enabled');
       } else {
@@ -167,16 +167,16 @@
   // Set handler for scene list toggle.
   // OLD: sceneListToggleElement.addEventListener('click', toggleSceneList);
   sceneListToggleElement.addEventListener('click', function () {
-  currentPage = Math.floor(currentSceneIndex / SCENES_PER_PAGE);
-  document.getElementById('sceneListModal').classList.add('visible');
-  populateSceneListModal();
-});
+    currentPage = Math.floor(currentSceneIndex / SCENES_PER_PAGE);
+    document.getElementById('sceneListModal').classList.add('visible');
+    populateSceneListModal();
+  });
 
   document.getElementById('sceneListClose').addEventListener('click', function () {
     document.getElementById('sceneListModal').classList.remove('visible');
   });
 
-// PUKAN: Hide old Scene List code
+  // PUKAN: Hide old Scene List code
   // // Start with the scene list open on desktop.
   // if (!document.body.classList.contains('mobile')) {
   //   showSceneList();
@@ -208,86 +208,86 @@
 
   // Associate view controls with elements.
   var controls = viewer.controls();
-  controls.registerMethod('upElement',    new Marzipano.ElementPressControlMethod(viewUpElement,     'y', -velocity, friction), true);
-  controls.registerMethod('downElement',  new Marzipano.ElementPressControlMethod(viewDownElement,   'y',  velocity, friction), true);
-  controls.registerMethod('leftElement',  new Marzipano.ElementPressControlMethod(viewLeftElement,   'x', -velocity, friction), true);
-  controls.registerMethod('rightElement', new Marzipano.ElementPressControlMethod(viewRightElement,  'x',  velocity, friction), true);
-  controls.registerMethod('inElement',    new Marzipano.ElementPressControlMethod(viewInElement,  'zoom', -velocity, friction), true);
-  controls.registerMethod('outElement',   new Marzipano.ElementPressControlMethod(viewOutElement, 'zoom',  velocity, friction), true);
+  controls.registerMethod('upElement', new Marzipano.ElementPressControlMethod(viewUpElement, 'y', -velocity, friction), true);
+  controls.registerMethod('downElement', new Marzipano.ElementPressControlMethod(viewDownElement, 'y', velocity, friction), true);
+  controls.registerMethod('leftElement', new Marzipano.ElementPressControlMethod(viewLeftElement, 'x', -velocity, friction), true);
+  controls.registerMethod('rightElement', new Marzipano.ElementPressControlMethod(viewRightElement, 'x', velocity, friction), true);
+  controls.registerMethod('inElement', new Marzipano.ElementPressControlMethod(viewInElement, 'zoom', -velocity, friction), true);
+  controls.registerMethod('outElement', new Marzipano.ElementPressControlMethod(viewOutElement, 'zoom', velocity, friction), true);
 
   function sanitize(s) {
     return s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;');
   }
 
   function switchScene(scene) {
-  stopAutorotate();
+    stopAutorotate();
 
-  // Update current scene index (ONLY ONCE)
-  currentSceneIndex = scenes.findIndex(function(s) {
-    return s.data.id === scene.data.id;
-  });
+    // Update current scene index (ONLY ONCE)
+    currentSceneIndex = scenes.findIndex(function (s) {
+      return s.data.id === scene.data.id;
+    });
 
-  scene.view.setParameters(scene.data.initialViewParameters);
-  scene.scene.switchTo();
+    scene.view.setParameters(scene.data.initialViewParameters);
+    scene.scene.switchTo();
 
-  startAutorotate();
-  updateSceneName(scene);
-  updateSceneList(scene);
+    startAutorotate();
+    updateSceneName(scene);
+    updateSceneList(scene);
 
-  // Update collapsed navigator title
-  // if (collapsedSceneTitle) {
-  //   collapsedSceneTitle.textContent = scene.data.name;
-  // }
+    // Update collapsed navigator title
+    // if (collapsedSceneTitle) {
+    //   collapsedSceneTitle.textContent = scene.data.name;
+    // }
 
-  // Update modal UI
-  updateActiveSceneCard();
-  updateScenePagination();
-}
+    // Update modal UI
+    updateActiveSceneCard();
+    updateScenePagination();
+  }
 
 
   function goToNextScene() {
-  var nextIndex = currentSceneIndex + 1;
+    var nextIndex = currentSceneIndex + 1;
 
-  if (nextIndex >= scenes.length) {
-    nextIndex = 0; // loop to first
+    if (nextIndex >= scenes.length) {
+      nextIndex = 0; // loop to first
+    }
+
+    switchScene(scenes[nextIndex]);
   }
 
-  switchScene(scenes[nextIndex]);
-}
+  function goToPrevScene() {
+    var prevIndex = currentSceneIndex - 1;
 
-function goToPrevScene() {
-  var prevIndex = currentSceneIndex - 1;
+    if (prevIndex < 0) {
+      prevIndex = scenes.length - 1; // loop to last
+    }
 
-  if (prevIndex < 0) {
-    prevIndex = scenes.length - 1; // loop to last
+    switchScene(scenes[prevIndex]);
   }
 
-  switchScene(scenes[prevIndex]);
-}
+  // keyboard navigation
+  document.addEventListener('keydown', function (e) {
+    // Ignore keyboard when typing in inputs (future-proof)
+    const tag = document.activeElement.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA') return;
 
-// keyboard navigation
-document.addEventListener('keydown', function (e) {
-  // Ignore keyboard when typing in inputs (future-proof)
-  const tag = document.activeElement.tagName;
-  if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+    switch (e.key) {
+      case 'ArrowLeft':
+        goToPrevScene();
+        break;
 
-  switch (e.key) {
-    case 'ArrowLeft':
-      goToPrevScene();
-      break;
+      case 'ArrowRight':
+        goToNextScene();
+        break;
 
-    case 'ArrowRight':
-      goToNextScene();
-      break;
-
-    case 'Escape':
-      const modal = document.getElementById('sceneListModal');
-      if (modal.classList.contains('visible')) {
-        modal.classList.remove('visible');
-      }
-      break;
-  }
-});
+      case 'Escape':
+        const modal = document.getElementById('sceneListModal');
+        if (modal.classList.contains('visible')) {
+          modal.classList.remove('visible');
+        }
+        break;
+    }
+  });
 
   function updateSceneName(scene) {
     sceneNameElement.innerHTML = sanitize(scene.data.name);
@@ -343,70 +343,56 @@ document.addEventListener('keydown', function (e) {
   }
 
   function createLinkHotspotElement(hotspot) {
-
-    // Create wrapper element to hold icon and tooltip.
     var wrapper = document.createElement('div');
-    wrapper.classList.add('hotspot');
-    wrapper.classList.add('link-hotspot');
+    wrapper.classList.add('hotspot', 'link-hotspot', 'link-hotspot-static');
 
-    // Create image element.
-    var icon = document.createElement('img');
-    icon.src = 'img/link.png';
-    icon.classList.add('link-hotspot-icon');
+    var iconWrapper = document.createElement('div');
+    iconWrapper.classList.add('link-hotspot-icon-wrapper');
 
-    // Set rotation transform.
-    var transformProperties = [ '-ms-transform', '-webkit-transform', 'transform' ];
+    var icon = document.createElement('i');
+    icon.classList.add('fa-solid', 'fa-circle-chevron-up', 'link-hotspot-fa');
+
+    var transformProperties = ['-ms-transform', '-webkit-transform', 'transform'];
     for (var i = 0; i < transformProperties.length; i++) {
       var property = transformProperties[i];
-      icon.style[property] = 'rotate(' + hotspot.rotation + 'rad)';
+      iconWrapper.style[property] = 'rotate(' + hotspot.rotation + 'rad)';
     }
 
-    // Add click event handler.
-    wrapper.addEventListener('click', function() {
+    iconWrapper.appendChild(icon);
+    wrapper.appendChild(iconWrapper);
+
+    var tooltip = document.createElement('div');
+    tooltip.classList.add('hotspot-tooltip', 'link-hotspot-tooltip');
+    tooltip.innerHTML = findSceneDataById(hotspot.target).name;
+    wrapper.appendChild(tooltip);
+
+    wrapper.addEventListener('click', function () {
       switchScene(findSceneById(hotspot.target));
     });
-
-    // Prevent touch and scroll events from reaching the parent element.
-    // This prevents the view control logic from interfering with the hotspot.
     stopTouchAndScrollEventPropagation(wrapper);
-
-    // Create tooltip element.
-    var tooltip = document.createElement('div');
-    tooltip.classList.add('hotspot-tooltip');
-    tooltip.classList.add('link-hotspot-tooltip');
-    tooltip.innerHTML = findSceneDataById(hotspot.target).name;
-
-    wrapper.appendChild(icon);
-    wrapper.appendChild(tooltip);
 
     return wrapper;
   }
 
-function createInfoHotspotElement(hotspot) {
+  function createInfoHotspotElement(hotspot) {
     var wrapper = document.createElement('div');
     wrapper.classList.add('hotspot', 'info-hotspot-static');
 
-    // Create the icon (this is what you see in the panorama)
     var header = document.createElement('div');
     header.classList.add('info-hotspot-trigger');
 
+    // 1. The Icon Wrapper
     var iconWrapper = document.createElement('div');
     iconWrapper.classList.add('info-hotspot-icon-wrapper');
-    var icon = document.createElement('img');
-    icon.src = 'img/info.png'; // Ensure this file exists in your /img folder!
-    icon.classList.add('info-hotspot-icon');
+    var icon = document.createElement('i');
+    icon.classList.add('fa-solid', 'fa-circle-info', 'info-hotspot-fa');
     iconWrapper.appendChild(icon);
     header.appendChild(iconWrapper);
 
-    // Bootstrap Modal Trigger
-    header.addEventListener('click', function() {
-      // 1. Set Title
+    // 3. Click Handler for the Modal
+    header.addEventListener('click', function () {
       document.getElementById('infoHotspotTitle').innerText = hotspot.title;
-      
-      // 2. Set Text Content
       document.getElementById('infoHotspotText').innerText = hotspot.text;
-      
-      // 3. Set Image (if exists in data.js)
       var modalImg = document.getElementById('infoHotspotImage');
       if (hotspot.image) {
         modalImg.src = hotspot.image;
@@ -414,8 +400,6 @@ function createInfoHotspotElement(hotspot) {
       } else {
         modalImg.style.display = 'none';
       }
-
-      // 4. Show Modal
       var modalElement = document.getElementById('infoHotspotModal');
       var myModal = bootstrap.Modal.getOrCreateInstance(modalElement);
       myModal.show();
@@ -423,17 +407,15 @@ function createInfoHotspotElement(hotspot) {
 
     wrapper.appendChild(header);
     stopTouchAndScrollEventPropagation(wrapper);
-
     return wrapper;
   }
 
-
   // Prevent touch and scroll events from reaching the parent element.
   function stopTouchAndScrollEventPropagation(element, eventList) {
-    var eventList = [ 'touchstart', 'touchmove', 'touchend', 'touchcancel',
-                      'wheel', 'mousewheel' ];
+    var eventList = ['touchstart', 'touchmove', 'touchend', 'touchcancel',
+      'wheel', 'mousewheel'];
     for (var i = 0; i < eventList.length; i++) {
-      element.addEventListener(eventList[i], function(event) {
+      element.addEventListener(eventList[i], function (event) {
         event.stopPropagation();
       });
     }
@@ -459,91 +441,91 @@ function createInfoHotspotElement(hotspot) {
 
   // Scene List Modal population
   function populateSceneListModal(direction) {
-  var container = document.getElementById('sceneListModalContent');
+    var container = document.getElementById('sceneListModalContent');
 
-  var oldRow = container.querySelector('.scene-list-row');
+    var oldRow = container.querySelector('.scene-list-row');
 
-  if (oldRow) {
-    oldRow.classList.add(
-      direction === 'next' ? 'slide-out-left' : 'slide-out-right'
-    );
+    if (oldRow) {
+      oldRow.classList.add(
+        direction === 'next' ? 'slide-out-left' : 'slide-out-right'
+      );
 
-    setTimeout(function () {
+      setTimeout(function () {
+        renderNewScenePage(container, direction);
+      }, 300);
+    } else {
       renderNewScenePage(container, direction);
-    }, 300);
-  } else {
-    renderNewScenePage(container, direction);
+    }
   }
-}
 
-function renderNewScenePage(container, direction) {
-  container.innerHTML = '';
+  function renderNewScenePage(container, direction) {
+    container.innerHTML = '';
 
-  var row = document.createElement('div');
-  row.className = 'scene-list-row';
+    var row = document.createElement('div');
+    row.className = 'scene-list-row';
 
-  // Start slightly offset for slide-in
-  row.style.transform =
-    direction === 'next' ? 'translateX(40px)' : 'translateX(-40px)';
-  row.style.opacity = '0';
+    // Start slightly offset for slide-in
+    row.style.transform =
+      direction === 'next' ? 'translateX(40px)' : 'translateX(-40px)';
+    row.style.opacity = '0';
 
-  var start = currentPage * SCENES_PER_PAGE;
-  var end = start + SCENES_PER_PAGE;
+    var start = currentPage * SCENES_PER_PAGE;
+    var end = start + SCENES_PER_PAGE;
 
-  scenes.slice(start, end).forEach(function (sceneObj) {
-    var data = sceneObj.data;
+    scenes.slice(start, end).forEach(function (sceneObj) {
+      var data = sceneObj.data;
 
-    var card = document.createElement('div');
-    card.className = 'scene-card';
-    card.dataset.sceneId = data.id;
+      var card = document.createElement('div');
+      card.className = 'scene-card';
+      card.dataset.sceneId = data.id;
 
-    var img = document.createElement('img');
-    // CHANGE THIS LINE:
-    // From: img.src = 'tiles/' + data.id + '/preview.jpg';
-    // To: 
-    img.src = data.card_image;
+      var img = document.createElement('img');
+      // CHANGE THIS LINE:
+      // From: img.src = 'tiles/' + data.id + '/preview.jpg';
+      // To: 
+      img.src = data.card_image;
 
-    var title = document.createElement('div');
-    title.className = 'scene-card-title';
-    title.textContent = data.name;
+      var title = document.createElement('div');
+      title.className = 'scene-card-title';
+      title.textContent = data.name;
 
-    card.addEventListener('click', function () {
-      switchScene(sceneObj);
-      document.getElementById('sceneListModal').classList.remove('visible');
+      card.addEventListener('click', function () {
+        switchScene(sceneObj);
+        document.getElementById('sceneListModal').classList.remove('visible');
+      });
+
+      card.appendChild(img);
+      card.appendChild(title);
+      row.appendChild(card);
     });
 
-    card.appendChild(img);
-    card.appendChild(title);
-    row.appendChild(card);
-  });
+    container.appendChild(row);
 
-  container.appendChild(row);
+    requestAnimationFrame(function () {
+      row.classList.add('slide-in');
+      row.style.transform = 'translateX(0)';
+      row.style.opacity = '1';
+    });
 
-  requestAnimationFrame(function () {
-    row.classList.add('slide-in');
-    row.style.transform = 'translateX(0)';
-    row.style.opacity = '1';
-  });
-
-  updateScenePagination();
-  updateActiveSceneCard();
-}
-
-
-function nextScenePage() {
-  var maxPage = Math.ceil(scenes.length / SCENES_PER_PAGE) - 1;
-  if (currentPage < maxPage) {
-    currentPage++;
-    populateSceneListModal('next');
+    updateScenePagination();
+    updateActiveSceneCard();
   }
-}
 
-function prevScenePage() {
-  if (currentPage > 0) {
-    currentPage--;
-    populateSceneListModal('prev');
+
+  function nextScenePage() {
+    var maxPage = Math.ceil(scenes.length / SCENES_PER_PAGE) - 1;
+    if (currentPage < maxPage) {
+      currentPage++;
+      populateSceneListModal('next');
+    }
   }
-}
+
+  function prevScenePage() {
+    if (currentPage > 0) {
+      currentPage--;
+      populateSceneListModal('prev');
+    }
+  }
 
 
   function updateActiveSceneCard() {
@@ -559,11 +541,11 @@ function prevScenePage() {
   }
 
   function updateScenePagination() {
-  var indicator = document.getElementById('scenePageIndicator');
-  if (!indicator) return;
+    var indicator = document.getElementById('scenePageIndicator');
+    if (!indicator) return;
 
-  var totalPages = Math.ceil(scenes.length / SCENES_PER_PAGE);
-  indicator.textContent = (currentPage + 1) + ' / ' + totalPages;
+    var totalPages = Math.ceil(scenes.length / SCENES_PER_PAGE);
+    indicator.textContent = (currentPage + 1) + ' / ' + totalPages;
   }
 
   // Display the initial scene.

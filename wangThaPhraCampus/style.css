@@ -22,20 +22,21 @@
   left: 5%;
   width: 90%;
   height: 2px;
-  background: linear-gradient(to right, #04BF9D, #038C73);
+  background: linear-gradient(to right, #007468, #00DAC3);
   z-index: 10;
 }
 
 /* Center circular logo */
 .uni-logo {
   position: absolute;
-  top: -26px; /* half of logo height */
+  top: -26px;
+  /* half of logo height */
   left: 50%;
   transform: translateX(-50%);
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: linear-gradient(to right, #04BF9D, #038C73);
+  background: linear-gradient(to right, #007468, #00DAC3);
   padding: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
@@ -141,7 +142,7 @@ body.multiple-scenes.mobile #titleBar {
   height: 100%;
   line-height: 30px;
   padding: 5px;
-  background: linear-gradient(to right, #04BF9D, #038C73);
+  background: linear-gradient(to right, #007468, #00DAC3);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -330,7 +331,7 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 
 #sceneList .scenes {
   width: 100%;
-  background: linear-gradient(to right, #04BF9D, #038C73);
+  background: linear-gradient(to right, #007468, #00DAC3);
 }
 
 .mobile #sceneList.enabled {
@@ -370,11 +371,11 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 }
 
 .no-touch #sceneList .scene:hover {
-  background: linear-gradient(to right, #04BF9D, #038C73);
+  background: linear-gradient(to right, #007468, #00DAC3);
 }
 
 #sceneList .scene.current {
-  background: linear-gradient(to right, #04BF9D, #038C73);
+  background: linear-gradient(to right, #007468, #00DAC3);
 }
 
 /* Hide scene list when only a single scene exists */
@@ -383,19 +384,19 @@ body.single-scene #sceneListToggle {
   display: none;
 }
 
+
 /* Link hotspot */
 .link-hotspot {
-  width: 60px;
-  height: 60px;
-  margin-left: -30px;
-  margin-top: -30px;
+  line-height: 1.2em;
   opacity: 0.9;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  -webkit-transition: opacity 0.2s 0.2s;
+  transition: opacity 0.2s 0.2s;
 }
 
 .no-touch .link-hotspot:hover {
   opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 
 .mobile .link-hotspot {
@@ -403,244 +404,182 @@ body.single-scene #sceneListToggle {
   height: 70px;
 }
 
-.link-hotspot-icon {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
+/* Tooltip */
 .link-hotspot-tooltip {
   position: absolute;
   left: 100%;
-  top: 14px; /* ( 60 - (16 + 2*8) ) / 2 */
+  top: 14px;
   margin-left: 3px;
   font-size: 16px;
   max-width: 300px;
   padding: 8px 10px;
   border-radius: 5px;
-  background: linear-gradient(to right, #04BF9D, #038C73);
+  background: linear-gradient(to right, #007468, #00DAC3);
   color: #fff;
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
-  cursor: pointer;
   opacity: 0;
-  -ms-transform: translateX(-8px);
-  -webkit-transform: translateX(-8px);
   transform: translateX(-8px);
-  -webkit-transition: -ms-transform 0.3s, -webkit-transform 0.3s, transform 0.3s, opacity 0.3s;
-  transition: -ms-transform 0.3s, -webkit-transform 0.3s, transform 0.3s, opacity 0.3s;
-}
-
-.mobile .link-hotspot .link-hotspot-tooltip {
-  top: 19px; /* ( 70 - (16 + 2*8) ) / 2 */
-}
-
-.no-touch .link-hotspot:hover .link-hotspot-tooltip {
-  opacity: 1;
-  -ms-transform: translateX(0);
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-}
-
-/* Prevent tooltip from triggering */
-.link-hotspot-tooltip {
+  transition: transform 0.3s, opacity 0.3s;
   pointer-events: none;
 }
 
 .no-touch .link-hotspot:hover .link-hotspot-tooltip {
+  opacity: 1;
+  transform: translateX(0);
   pointer-events: all;
 }
 
-/* Fallback mode without pointer-events (IE8-10) */
-.tooltip-fallback .link-hotspot-tooltip {
-  display: none;
+/* Icon wrapper */
+.link-hotspot-icon-wrapper {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.25s ease;
 }
 
-.no-touch .tooltip-fallback .link-hotspot:hover .link-hotspot-tooltip {
+.link-hotspot-icon-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(to right, #007468, #00DAC3);
+
+  -webkit-mask: radial-gradient(transparent 19px, #000 21px);
+  mask: radial-gradient(transparent 19px, #000 21px);
+
+  z-index: 1;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Icon */
+.link-hotspot-fa {
+  font-size: 36px;
+  line-height: 1;
+  position: absolute;
   display: block;
+
+  background: linear-gradient(to right, #007468, #00DAC3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  z-index: 10;
+  transition: transform 0.25s ease;
+  user-select: none;
+  pointer-events: none;
 }
 
-/* Info hotspot */
+/* Hover */
+.link-hotspot-static:hover .link-hotspot-icon-wrapper {
+  transform: scale(1.2);
+}
+
+.link-hotspot-static:hover .link-hotspot-icon-wrapper::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 218, 195, 0.4);
+}
+
+.link-hotspot-static:hover .link-hotspot-fa {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 5px rgba(0, 218, 195, 0.5));
+}
+
+/* Mobile */
+.mobile .link-hotspot-icon-wrapper {
+  width: 50px;
+  height: 50px;
+}
+
+.mobile .link-hotspot-icon-wrapper::before {
+  -webkit-mask: radial-gradient(transparent 18px, #000 19px);
+  mask: radial-gradient(transparent 18px, #000 19px);
+}
+
+.mobile .link-hotspot-fa {
+  font-size: 28px;
+}
+
+/* Info Hotspot */
 .info-hotspot {
   line-height: 1.2em;
   opacity: 0.9;
-  -webkit-transition: opacity 0.2s 0.2s;
-  transition: opacity 0.2s 0.2s;
-}
-
-.no-touch .info-hotspot:hover {
-  opacity: 1;
-  -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
 
-.info-hotspot.visible {
-  opacity: 1;
-}
-
+/* Header*/
 .info-hotspot .info-hotspot-header {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  background: linear-gradient(to right, #04BF9D, #038C73);
+  width: 46px;
+  height: 46px;
+  background: none;
   cursor: pointer;
-  -webkit-transition: width 0.3s ease-in-out 0.5s, border-radius 0.3s ease-in-out 0.5s;
-  transition: width 0.3s ease-in-out 0.5s, border-radius 0.3s ease-in-out 0.5s;
 }
 
-.mobile .info-hotspot .info-hotspot-header {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
+/*Icon Wrapper*/
+.info-hotspot-icon-wrapper {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.25s ease;
 }
 
-.desktop.no-touch .info-hotspot .info-hotspot-header:hover {
-  width: 260px;
-  border-radius: 5px;
-  -webkit-transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
-}
-
-.desktop .info-hotspot.visible .info-hotspot-header,
-.desktop.no-touch .info-hotspot.visible .info-hotspot-header:hover {
-  width: 260px;
-  border-radius: 5px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  -webkit-transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
-}
-
-.info-hotspot .info-hotspot-icon-wrapper {
-  width: 40px;
-  height: 40px;
-}
-
-.mobile .info-hotspot .info-hotspot-icon-wrapper {
-  width: 50px;
-  height: 50px;
-}
-
-.info-hotspot .info-hotspot-icon {
-  width: 90%;
-  height: 90%;
-  margin: 5%;
-}
-
-.info-hotspot .info-hotspot-title-wrapper {
+.info-hotspot-icon-wrapper::before {
+  content: "";
   position: absolute;
-  left: 40px;
-  top: 0;
-  width: 0;
-  height: 40px;
-  padding: 0;
-  overflow: hidden;
-  -webkit-transition: width 0s 0.4s, padding 0s 0.4s;
-  transition: width 0s 0.4s, padding 0s 0.4s;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(to right, #007468, #00DAC3);
+  -webkit-mask: radial-gradient(transparent 19px, #000 21px);
+  mask: radial-gradient(transparent 19px, #000 21px);
+  z-index: 1;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.desktop .info-hotspot.visible .info-hotspot-title-wrapper,
-.desktop.no-touch .info-hotspot .info-hotspot-header:hover .info-hotspot-title-wrapper {
-  width: 220px;
-  padding: 0 5px;
-  -webkit-transition: width 0s 0.4s, padding 0s 0.4s;
-  transition: width 0s 0.4s, padding 0s 0.4s;
-}
-
-.info-hotspot .info-hotspot-title-wrapper:before {
-  content: '';
+.info-hotspot-fa {
+  font-size: 36px;
+  line-height: 1;
   display: inline-block;
-  vertical-align: middle;
-  height: 100%;
+
+  background: linear-gradient(to right, #007468, #00DAC3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  z-index: 10;
+  transition: transform 0.25s ease;
+  pointer-events: none;
 }
 
-.info-hotspot .info-hotspot-title {
-  display: inline-block;
-  vertical-align: middle;
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
+/* Hover */
+.info-hotspot-static:hover .info-hotspot-icon-wrapper {
+  transform: scale(1.02);
 }
 
-.info-hotspot .info-hotspot-close-wrapper {
-  position: absolute;
-  left: 260px;
-  top: 0;
-  height: 40px;
-  width: 40px;
-  border-top-right-radius: 5px;
-  background: linear-gradient(to right, #04BF9D, #038C73);
-  visibility: hidden;
-  -ms-transform: perspective(200px) rotateY(90deg);
-  -webkit-transform: perspective(200px) rotateY(90deg);
-  transform: perspective(200px) rotateY(90deg);
-  -ms-transform-origin: 0 50% 0;
-  -webkit-transform-origin: 0 50% 0;
-  transform-origin: 0 50% 0;
-  -webkit-transition: -ms-transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s, transform 0.3s 0.3s, visibility 0s 0.6s;
-  transition: -ms-transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s, transform 0.3s 0.3s, visibility 0s 0.6s;
+.info-hotspot-static:hover .info-hotspot-icon-wrapper::before {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(0, 218, 195, 0.4);
 }
 
-.desktop .info-hotspot.visible .info-hotspot-close-wrapper {
-  visibility: visible;
-  -ms-transform: perspective(200px) rotateY(0deg);
-  -webkit-transform: perspective(200px) rotateY(0deg);
-  transform: perspective(200px) rotateY(0deg);
-  -webkit-transition: -ms-transform 0.3s, -webkit-transform 0.3s, transform 0.3s, visibility 0s 0s;
-  transition: -ms-transform 0.3s, -webkit-transform 0.3s, transform 0.3s, visibility 0s 0s;
+.info-hotspot-static:hover .info-hotspot-fa {
+  transform: scale(1.02);
+  filter: drop-shadow(0 0 5px rgba(0, 218, 195, 0.5));
 }
 
-.info-hotspot .info-hotspot-close-icon {
-  width: 70%;
-  height: 70%;
-  margin: 15%;
-}
 
-.info-hotspot .info-hotspot-text {
-  position: absolute;
-  width: 300px;
-  height: auto;
-  max-height: 200px;
-  top: 40px;
-  left: 0;
-  padding: 10px;
-  background-color: rgb(58, 68, 84);
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  overflow-y: auto;
-  visibility: hidden;
-  /* rotate(90deg) causes transition flicker on Firefox 58 */
-  -ms-transform: perspective(200px) rotateX(-89.999deg);
-  -webkit-transform: perspective(200px) rotateX(-89.999deg);
-  transform: perspective(200px) rotateX(-89.999deg);
-  -ms-transform-origin: 50% 0 0;
-  -webkit-transform-origin: 50% 0 0;
-  transform-origin: 50% 0 0;
-  -webkit-transition: -ms-transform 0.3s, -webkit-transform 0.3s, transform 0.3s, visibility 0s 0.3s;
-  transition: -ms-transform 0.3s, -webkit-transform 0.3s, transform 0.3s, visibility 0s 0.3s;
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
-}
+/* ===============================
+  INFO HOTSPOT MODAL – OVERLAY
+   =============================== */
 
-.desktop .info-hotspot.visible .info-hotspot-text {
-  visibility: visible;
-  -ms-transform: perspective(200px) rotateX(0deg);
-  -webkit-transform: perspective(200px) rotateX(0deg);
-  transform: perspective(200px) rotateX(0deg);
-  -webkit-transition: -ms-transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s, transform 0.3s 0.3s, visibility 0s 0s;
-  transition: -ms-transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s, transform 0.3s 0.3s, visibility 0s 0s;
-}
-
-/* Info hotspot modal 
-.desktop .info-hotspot-modal {
-  display: none;
-}
-*/
 .info-hotspot-modal {
   top: 0;
   left: 0;
@@ -657,27 +596,6 @@ body.single-scene #sceneListToggle {
   transition: opacity 0.2s ease-in-out 0.5s, visibility 0s 0.7s;
 }
 
-/*
-.info-hotspot-modal.visible {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: opacity 0.2s ease-in-out, visibility 0s 0s;
-  transition: opacity 0.2s ease-in-out, visibility 0s 0s;
-}*/
-/*
-.info-hotspot-modal .info-hotspot-header {
-  position: absolute;
-  top: 60px;
-  left: 10px;
-  right: 10px;
-  width: auto;
-  height: 50px;
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out 0.2s;
-  transition: opacity 0.3s ease-in-out 0.2s;
-}*/
 .info-hotspot-modal.visible .info-hotspot-header {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out 0.2s;
@@ -721,43 +639,12 @@ body.single-scene #sceneListToggle {
   user-select: text;
 }
 
-/*
-.info-hotspot-modal .info-hotspot-close-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  background-color: rgb(78,88,104);
-  background-color: rgba(78,88,104,0.8);
-  cursor: pointer;
-}*/
 .info-hotspot-modal .info-hotspot-close-icon {
   width: 70%;
   height: 70%;
   margin: 15%;
 }
 
-/*
-.info-hotspot-modal .info-hotspot-text {
-  position: absolute;
-  top: 110px;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
-  padding: 10px;
-  background-color: rgb(58,68,84);
-  background-color: rgba(58,68,84,0.8);
-  overflow-y: auto;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
-}*/
 .info-hotspot-modal.visible .info-hotspot-text {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out 0.4s;
@@ -797,21 +684,39 @@ body.view-control-buttons .viewControlButton {
 }
 
 /* Center is at margin-left: -20px */
-.viewControlButton-1 { margin-left: -145px; }
-.viewControlButton-2 { margin-left: -95px; }
-.viewControlButton-3 { margin-left: -45px; }
-.viewControlButton-4 { margin-left: 5px; }
-.viewControlButton-5 { margin-left: 55px; }
-.viewControlButton-6 { margin-left: 105px; }
+.viewControlButton-1 {
+  margin-left: -145px;
+}
+
+.viewControlButton-2 {
+  margin-left: -95px;
+}
+
+.viewControlButton-3 {
+  margin-left: -45px;
+}
+
+.viewControlButton-4 {
+  margin-left: 5px;
+}
+
+.viewControlButton-5 {
+  margin-left: 55px;
+}
+
+.viewControlButton-6 {
+  margin-left: 105px;
+}
 
 #sceneNavLine {
   position: absolute;
-  bottom: 44px; /* align vertically with navigator center */
+  bottom: 44px;
+  /* align vertically with navigator center */
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
   height: 2px;
-  background: linear-gradient(to right, #04BF9D, #038C73);
+  background: linear-gradient(to right, #007468, #00DAC3);
   z-index: 5;
 }
 
@@ -979,7 +884,8 @@ body.view-control-buttons .viewControlButton {
 
 /* Icon scales with text */
 .info-hotspot-title-icon {
-  height: 1.4em; /* scales with text */
+  height: 1.4em;
+  /* scales with text */
   width: auto;
   display: block;
   /* optional micro-adjustment */
@@ -1017,7 +923,8 @@ body.view-control-buttons .viewControlButton {
 }
 
 .info-hotspot-close img {
-  height: 2rem; /* match title scale */
+  height: 2rem;
+  /* match title scale */
   width: auto;
   opacity: 0.85;
   transition: opacity 0.2s ease, transform 0.2s ease;
@@ -1035,7 +942,8 @@ body.view-control-buttons .viewControlButton {
   position: fixed;
   left: 5vw;
   right: 5vw;
-  bottom: 4vh; /* controls how close to bottom */
+  bottom: 4vh;
+  /* controls how close to bottom */
   height: 50vh;
   max-height: 70vh;
   background: #ffffff;
@@ -1101,7 +1009,8 @@ body.view-control-buttons .viewControlButton {
 }
 
 .scene-list-title {
-  flex: 1; /* pushes pagination + close to the right */
+  flex: 1;
+  /* pushes pagination + close to the right */
   font-size: 1.1rem;
   font-weight: 600;
 }
@@ -1164,6 +1073,7 @@ body.view-control-buttons .viewControlButton {
   .info-hotspot-body {
     grid-template-columns: 1fr;
   }
+
   .info-hotspot-left img {
     max-height: 260px;
   }
