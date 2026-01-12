@@ -560,3 +560,8 @@ var CAMPUS_DATA = [
     url: 'https://www.su.ac.th'
   }
 ];
+
+var TAB_CONFIG = [
+  { mode: 'scenes', label: 'วิทยาเขต วังท่าพระ' },
+  { mode: 'campus', label: 'สำรวจวิทยาเขตอื่น' }
+];

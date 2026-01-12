@@ -21,6 +21,7 @@
   var screenfull = window.screenfull;
   var data = window.APP_DATA;
   var campusData = window.CAMPUS_DATA || [];
+  var TAB_CONFIG = window.TAB_CONFIG || [];
 
   // Grab elements from DOM.
   var panoElement = document.querySelector('#pano');
@@ -174,6 +175,7 @@
     sceneListToggleElement.classList.add('enabled');
     populateSceneListModal();
     updatePaginationButtons();
+    updateTabUnderline();
   });
 
   document.getElementById('sceneListClose').addEventListener('click', function () {
@@ -206,33 +208,64 @@
   var viewRightElement = document.querySelector('#viewRight');
   var viewInElement = document.querySelector('#viewIn');
   var viewOutElement = document.querySelector('#viewOut');
-  // Scene list tabs
   var tabButtons = document.querySelectorAll('.scene-tabs button');
-  function setActiveTab(index) {
-    tabButtons.forEach(function (btn, i) {
-      btn.classList.toggle('active', i === index);
-    });
+
+  function updateTabUnderline() {
+    const activeBtn = document.querySelector('.scene-tabs button.active');
+    const underline = document.querySelector('.scene-tab-underline');
+    const tabs = document.querySelector('.scene-tabs');
+
+    if (!activeBtn || !underline || !tabs) return;
+
+    const btnRect = activeBtn.getBoundingClientRect();
+    const tabsRect = tabs.getBoundingClientRect();
+
+    const UNDERLINE_WIDTH = 180; // same for both tabs
+
+    underline.style.width = UNDERLINE_WIDTH + 'px';
+
+    // Center underline under the button
+    underline.style.left =
+      (btnRect.left - tabsRect.left) +
+      (btnRect.width / 2) -
+      (UNDERLINE_WIDTH / 2) +
+      'px';
   }
 
-  if (tabButtons.length === 2) {
+const sceneCampusLabel = document.getElementById("sceneCampusLabel");
 
+function setActiveTab(index) {
+  if (!TAB_CONFIG[index]) return;
+
+  tabButtons.forEach(function (btn, i) {
+    btn.classList.toggle('active', i === index);
+  });
+
+  const config = TAB_CONFIG[index];
+
+  currentModalMode = config.mode;
+  sceneCampusLabel.textContent = config.label;
+
+  updateTabUnderline();
+}
+
+
+  if (tabButtons.length === 2) {
     // Tab 1: Current tour
     tabButtons[0].addEventListener('click', function () {
       setActiveTab(0);
-      currentModalMode = 'scenes';
       currentPage = Math.floor(currentSceneIndex / SCENES_PER_PAGE);
       populateSceneListModal();
+      updatePaginationButtons();
     });
 
-    // Tab 2: Other campuses
     tabButtons[1].addEventListener('click', function () {
       setActiveTab(1);
-      currentModalMode = 'campus';
       currentPage = 0;
       populateSceneListModal();
-    });
+      updatePaginationButtons();
+});
   }
-
 
   // Dynamic parameters for controls.
   var velocity = 0.7;
@@ -336,20 +369,20 @@
     }
   }
 
-  function showSceneList() {
-    sceneListElement.classList.add('enabled');
-    sceneListToggleElement.classList.add('enabled');
-  }
+  // function showSceneList() {
+  //   sceneListElement.classList.add('enabled');
+  //   sceneListToggleElement.classList.add('enabled');
+  // }
 
-  function hideSceneList() {
-    sceneListElement.classList.remove('enabled');
-    sceneListToggleElement.classList.remove('enabled');
-  }
+  // function hideSceneList() {
+  //   sceneListElement.classList.remove('enabled');
+  //   sceneListToggleElement.classList.remove('enabled');
+  // }
 
-  function toggleSceneList() {
-    sceneListElement.classList.toggle('enabled');
-    sceneListToggleElement.classList.toggle('enabled');
-  }
+  // function toggleSceneList() {
+  //   sceneListElement.classList.toggle('enabled');
+  //   sceneListToggleElement.classList.toggle('enabled');
+  // }
 
   function startAutorotate() {
     if (!autorotateToggleElement.classList.contains('enabled')) {
