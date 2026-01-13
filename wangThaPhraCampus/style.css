@@ -514,12 +514,12 @@ body.single-scene #sceneListToggle {
 /* Icon wrapper */
 .link-hotspot-icon-wrapper {
   position: relative;
-  width: 46px;
-  height: 46px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 100%;
   transition: transform 0.25s ease;
 }
 
@@ -527,12 +527,10 @@ body.single-scene #sceneListToggle {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 50%;
+  border-radius: 100%;
   background: linear-gradient(to right, #007468, #00DAC3);
-
-  -webkit-mask: radial-gradient(transparent 19px, #000 21px);
-  mask: radial-gradient(transparent 19px, #000 21px);
-
+  -webkit-mask: radial-gradient(transparent 21px, #000 21px);
+  mask: radial-gradient(transparent 21px, #000 21px);
   z-index: 1;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -595,8 +593,8 @@ body.single-scene #sceneListToggle {
 
 /* Header*/
 .info-hotspot .info-hotspot-header {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   background: none;
   cursor: pointer;
 }
@@ -604,12 +602,12 @@ body.single-scene #sceneListToggle {
 /*Icon Wrapper*/
 .info-hotspot-icon-wrapper {
   position: relative;
-  width: 46px;
-  height: 46px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 100%;
   transition: transform 0.25s ease;
 }
 
@@ -617,10 +615,10 @@ body.single-scene #sceneListToggle {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 50%;
+  border-radius: 100%;
   background: linear-gradient(to right, #007468, #00DAC3);
-  -webkit-mask: radial-gradient(transparent 19px, #000 21px);
-  mask: radial-gradient(transparent 19px, #000 21px);
+  -webkit-mask: radial-gradient(transparent 21px, #000 21px);
+  mask: radial-gradient(transparent 21px, #000 21px);
   z-index: 1;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -628,7 +626,8 @@ body.single-scene #sceneListToggle {
 .info-hotspot-fa {
   font-size: 36px;
   line-height: 1;
-  display: inline-block;
+  position: absolute;
+  display: block;
 
   background: linear-gradient(to right, #007468, #00DAC3);
   -webkit-background-clip: text;
@@ -638,21 +637,22 @@ body.single-scene #sceneListToggle {
 
   z-index: 10;
   transition: transform 0.25s ease;
+  user-select: none;
   pointer-events: none;
 }
 
 /* Hover */
 .info-hotspot-static:hover .info-hotspot-icon-wrapper {
-  transform: scale(1.02);
+  transform: scale(1.04);
 }
 
 .info-hotspot-static:hover .info-hotspot-icon-wrapper::before {
-  transform: scale(1.02);
+  transform: scale(1.04);
   box-shadow: 0 0 15px rgba(0, 218, 195, 0.4);
 }
 
 .info-hotspot-static:hover .info-hotspot-fa {
-  transform: scale(1.02);
+  transform: scale(1.04);
   filter: drop-shadow(0 0 5px rgba(0, 218, 195, 0.5));
 }
 
@@ -1167,7 +1167,8 @@ body.view-control-buttons .viewControlButton {
   height: 36px;
 
   background: none;
-  border: none;
+  border-radius: 100%;
+  border: 1px solid #454C56;
   padding: 0;
   cursor: pointer;
 
@@ -1191,12 +1192,12 @@ body.view-control-buttons .viewControlButton {
   inset: 0;
   border-radius: 50%;
 
-  background: #454C56;
+  /* background: #454C56; */
 
-  -webkit-mask:
+  /* -webkit-mask:
     radial-gradient(circle at center, transparent 62%, black 63%);
   mask:
-    radial-gradient(circle at center, transparent 62%, black 63%);
+    radial-gradient(circle at center, transparent 62%, black 63%); */
 
   pointer-events: none;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
