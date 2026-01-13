@@ -135,13 +135,6 @@
     <div class="modal-dialog modal-xl info-hotspot-wide modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content bg-dark text-light">
 
-        <!-- Header: CLOSE BUTTON ONLY -->
-        <div class="modal-header border-0">
-          <button type="button" class="info-hotspot-close" data-bs-dismiss="modal" aria-label="Close">
-            <img src="../wangThaPhraCampus/img/modalClose.png" alt="Close">
-          </button>
-        </div>
-
         <!-- Custom Body Layout -->
         <div class="modal-body info-hotspot-body">
 
@@ -153,11 +146,20 @@
           <!-- RIGHT SIDE: TEXT -->
           <div class="info-hotspot-right">
             <h2 class="info-hotspot-title">
-              <img src="../wangThaPhraCampus/img/modalInfo.png" class="info-hotspot-title-icon" alt="">
+              <i class="fa-solid fa-circle-info"></i>
               <span>รายละเอียดสถานที่</span>
             </h2>
-            <h3 class="info-hotspot-subtitle" id="infoHotspotTitle"></h3>
-            <div class="info-hotspot-text" id="infoHotspotText"></div>
+
+          <!-- Header: CLOSE BUTTON -->
+          <div class="modal-header border-0">
+            <button type="button" class="info-hotspot-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+          </div>
+            <div class="info-hotspot-main-body">
+              <h3 class="info-hotspot-subtitle" id="infoHotspotTitle"></h3>
+              <div class="info-hotspot-text" id="infoHotspotText"></div>
+            </div>
           </div>
 
         </div>

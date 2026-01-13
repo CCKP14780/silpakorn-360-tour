@@ -172,6 +172,8 @@ body.multiple-scenes.mobile #titleBar {
   font-size: 22px;
   color: #63E6BE;
   padding: 0;
+
+  z-index: 100;
 }
 
 #fullscreenToggle::before {
@@ -317,6 +319,7 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   color: #63E6BE;
 
   padding: 0;
+  z-index: 100;
 }
 
 #sceneListToggle::before {
@@ -976,14 +979,9 @@ body.view-control-buttons .viewControlButton {
   border-bottom: 2px solid rgba(46, 196, 182, 0.4);
 }
 
-/* Icon scales with text */
-.info-hotspot-title-icon {
-  height: 1.4em;
-  /* scales with text */
-  width: auto;
-  display: block;
-  /* optional micro-adjustment */
-  transform: translateY(0.05em);
+.info-hotspot-close:hover i {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 /* BODY TEXT */
@@ -1004,6 +1002,18 @@ body.view-control-buttons .viewControlButton {
   color: #e6e6e6;
 }
 
+.info-hotspot-main-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* space between subtitle and text */
+  margin-top: 0.5rem;
+  /* adjust vertical position */
+  padding-right: 1rem;
+  /* prevent text from touching the edge */
+  transform: translateY(-30px);
+}
+
 /*CLOSING BUTTON*/
 .info-hotspot-close {
   position: absolute;
@@ -1016,17 +1026,32 @@ body.view-control-buttons .viewControlButton {
   z-index: 20;
 }
 
-.info-hotspot-close img {
-  height: 2rem;
-  /* match title scale */
-  width: auto;
-  opacity: 0.85;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+/* INFO ICON IN TITLE */
+.info-hotspot-title i {
+  font-size: 1.4rem;
+  /* same as text */
+  font-weight: 900;
+  /* optional for thicker icon */
+  background: linear-gradient(to right, #007468, #00DAC3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-right: 0.5rem;
+  /* spacing between icon and text */
 }
 
-.info-hotspot-close:hover img {
-  opacity: 1;
-  transform: scale(1.05);
+/* CLOSE BUTTON */
+.info-hotspot-close i {
+  font-size: 1.6rem;
+  /* slightly bigger than text */
+  background: linear-gradient(to right, #007468, #00DAC3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 /* ===============================
@@ -1097,7 +1122,8 @@ body.view-control-buttons .viewControlButton {
 
 .scene-tab-underline {
   position: absolute;
-  bottom: -22px; /* adjust vertical distance */
+  bottom: -22px;
+  /* adjust vertical distance */
   height: 3px;
   background-color: #007468;
   transition: left 0.25s ease, width 0.25s ease;
@@ -1239,23 +1265,101 @@ body.view-control-buttons .viewControlButton {
   font-weight: 600;
 }
 
-/* MOBILE FALLBACK */
-@media (max-width: 768px) {
-  .info-hotspot-body {
-    grid-template-columns: 1fr;
-  }
-
-  .info-hotspot-left img {
-    max-height: 260px;
-  }
-}
-
 .scene-list-close i {
   color: #454C56;
 }
 
 .scene-list-close i:hover {
   transform: scale(1.15);
+}
+
+/* Mobile responsive for bottom scene list modal */
+@media (max-width: 768px) {
+  .scene-list-modal {
+    left: 0.5rem;       /* smaller margin */
+    right: 0.5rem;      /* smaller margin */
+    bottom: 0.5rem;     /* closer to bottom */
+    height: 60vh;        /* taller on small screens */
+    max-height: 90vh;    /* allow almost full screen */
+    border-radius: 10px;
+    padding: 0.5rem;
+  }
+
+  .scene-topbar {
+    flex-direction: column;   /* stack brand + tabs */
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .scene-tabs {
+    flex-wrap: wrap;          /* wrap tabs if too many */
+    gap: 0.5rem;
+    margin: 0 auto;
+  }
+
+  .scene-tabs button {
+    width: auto;              /* buttons scale naturally */
+    font-size: 14px;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .scene-pagination {
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .scene-pagination button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .scene-pagination button::before {
+    border-width: 2.5px; /* slightly thicker for bigger button */
+  }
+
+  .scene-pagination button i {
+    font-size: 24px;
+  }
+
+  .scene-card {
+    gap: 6px;
+  }
+
+  .scene-card img,
+  .scene-card-image img {
+    height: 120px;
+  }
+
+  .scene-list-row {
+    grid-template-columns: repeat(2, 1fr);  /* fewer columns on mobile */
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .scene-list-close {
+    position: absolute;   /* make it float inside header */
+    right: 1rem;           /* distance from right edge */
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .scene-list-title {
+    font-size: 1rem;
+  }
+
+  .scene-campus {
+    font-size: 20px;
+  }
+
+  .scene-tabs {
+    position: relative;
+    display: flex;
+    gap: 6rem;  /* ← this is the spacing between tabs */
+    margin: 0 auto;
+  }
 }
 
 /* ===============================
@@ -1370,12 +1474,15 @@ body.view-control-buttons .viewControlButton {
 
 /* Dark Vignette Overlay */
 .vignette-overlay {
-  position: fixed; /* cover whole viewport */
+  position: fixed;
+  /* cover whole viewport */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* let clicks go through */
-  background: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,0.5) 100%);
-  z-index: 10000; /* just below modals but above panorama */
+  pointer-events: none;
+  /* let clicks go through */
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 0;
+  /* just below modals but above panorama */
 }
