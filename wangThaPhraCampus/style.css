@@ -1487,3 +1487,312 @@ body.view-control-buttons .viewControlButton {
   z-index: 0;
   /* just below modals but above panorama */
 }
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+   =============================== */
+
+/* Tablet & small laptop */
+@media (max-width: 1024px) {
+
+  /* ---------- PANORAMA CONTROLS ---------- */
+  #fullscreenToggle,
+  #sceneListToggle {
+    width: 48px;
+    height: 48px;
+  }
+
+  #fullscreenToggle .icon,
+  #sceneListToggle .icon {
+    font-size: 24px;
+  }
+
+  #fullscreenToggle {
+    bottom: 12%;
+    right: 6%;
+  }
+
+  #sceneListToggle {
+    bottom: 12%;
+    left: 6%;
+  }
+
+  /* ---------- SCENE NAV ---------- */
+  #sceneNavigator {
+    width: 420px;
+    padding: 10px 14px;
+    gap: 12px;
+  }
+
+  #sceneTitle {
+    font-size: 15px;
+  }
+
+  /* ---------- INFO HOTSPOT MODAL ---------- */
+  .info-hotspot-ui .modal-dialog {
+    max-width: 90%;
+  }
+
+  .info-hotspot-body {
+    grid-template-columns: 1fr 1fr; /* still split */
+  }
+
+  .info-hotspot-left img {
+    max-height: 280px;
+  }
+
+  .info-hotspot-title {
+    font-size: 1.3rem;
+  }
+
+  .info-hotspot-text {
+    font-size: 0.95rem;
+  }
+
+  /* ---------- SCENE LIST BOTTOM MODAL ---------- */
+  .scene-list-modal {
+    height: 60vh;
+    max-height: 75vh;
+    left: 1vw;
+    right: 1vw;
+  }
+
+  .scene-tabs button {
+    width: auto;
+    font-size: 15px;
+  }
+
+  .scene-tabs {
+    gap: 3rem;
+  }
+
+  /* ---------- SCENE GRID ---------- */
+  .scene-list-row {
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+  }
+
+  .scene-card img {
+    height: 130px;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+/* ===== PANO CONTROLS ===== */
+
+#fullscreenToggle {
+  bottom: 12%;
+  right: 6%;
+}
+
+#sceneListToggle {
+  bottom: 12%;
+  left: 6%;
+}
+
+#fullscreenToggle,
+#sceneListToggle {
+  width: 52px;
+  height: 52px;
+}
+
+#fullscreenToggle .icon,
+#sceneListToggle .icon {
+  font-size: 26px;
+}
+
+  .info-hotspot-body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .info-hotspot-left img {
+    max-height: 220px;
+  }
+
+  .info-hotspot-right {
+    padding: 1rem;
+  }
+
+  .info-hotspot-title {
+    font-size: 1.2rem;
+  }
+
+  .info-hotspot-main-body {
+    transform: none; /* remove upward shift on mobile */
+  }
+
+  .info-hotspot-close {
+  position: absolute;
+  top: 21.5rem;
+}
+
+    .scene-list-modal {
+    height: 65vh;
+  }
+
+  .scene-tabs {
+    gap: 3rem; /* reduce from 6rem */
+  }
+
+  .scene-tabs button {
+    font-size: 14px;
+  }
+
+  .scene-list-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+
+  /* ---------- GENERAL ---------- */
+  body {
+    font-size: 15px;
+  }
+
+  /* ---------- PANORAMA CONTROLS ---------- */
+  #fullscreenToggle,
+  #sceneListToggle {
+    width: 56px;
+    height: 56px;
+  }
+
+  #fullscreenToggle {
+    bottom: 14%;
+    right: 6%;
+  }
+
+  #sceneListToggle {
+    bottom: 14%;
+    left: 6%;
+  }
+
+  #fullscreenToggle .icon,
+  #sceneListToggle .icon {
+    font-size: 28px;
+  }
+
+  /* ---------- SCENE NAV (BOTTOM CENTER) ---------- */
+  #sceneNavWrapper {
+    bottom: 18px;
+  }
+
+  #sceneNavigator {
+    width: 94%;
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  #sceneTitle {
+    font-size: 13px;
+  }
+
+  .nav-btn {
+    font-size: 18px;
+  }
+
+  .sceneNavLine {
+    height: 1.5px;
+  }
+
+  /* ---------- INFO HOTSPOT MODAL ---------- */
+  .info-hotspot-ui .modal-content {
+    border-radius: 10px;
+  }
+
+  .info-hotspot-body {
+    grid-template-columns: 1fr;
+  }
+
+  .info-hotspot-left img {
+    max-height: 200px;
+  }
+
+  .info-hotspot-right {
+    padding: 1rem 1rem 1.4rem;
+    gap: 0.8rem;
+  }
+
+  .info-hotspot-title {
+    font-size: 1.15rem;
+  }
+
+  .info-hotspot-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .info-hotspot-text {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .info-hotspot-main-body {
+    transform: none; /* remove desktop lift */
+    padding-right: 0;
+  }
+
+  /* Close button bigger for thumb */
+  .info-hotspot-close i {
+    font-size: 1.8rem;
+  }
+
+  /* ---------- SCENE LIST BOTTOM MODAL ---------- */
+  .scene-list-modal {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 75vh;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .scene-topbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .scene-tabs {
+    gap: 2rem;
+  }
+
+  .scene-tabs button {
+    font-size: 14px;
+    width: auto;
+  }
+
+  .scene-tab-underline {
+    bottom: -18px;
+    height: 2px;
+  }
+
+  /* ---------- SCENE GRID ---------- */
+  .scene-list-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .scene-card img {
+    height: 120px;
+  }
+
+  .scene-card-title {
+    font-size: 13px;
+  }
+
+  /* ---------- PAGINATION ---------- */
+  .scene-pagination button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .scene-pagination button::before {
+    -webkit-mask:
+      radial-gradient(circle at center, transparent 60%, black 61%);
+    mask:
+      radial-gradient(circle at center, transparent 60%, black 61%);
+  }
+
+}

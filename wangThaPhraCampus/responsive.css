@@ -1,0 +1,451 @@
+/* ===================================
+   RESPONSIVE IMPROVEMENTS FOR MARZIPANO
+   =================================== */
+
+/* Base styles remain mostly the same, but add these responsive enhancements */
+
+/* ===== MOBILE-FIRST BREAKPOINTS ===== */
+
+/* Small phones: 0-480px */
+@media (max-width: 480px) {
+  
+  /* University Header */
+  .university-header {
+    top: 16px;
+    left: 3%;
+    width: 94%;
+  }
+  
+  .uni-logo {
+    width: 48px;
+    height: 48px;
+    top: -20px;
+    padding: 4px;
+  }
+  
+  /* Scene Navigator */
+  #sceneNavWrapper {
+    width: 95%;
+    bottom: 16px;
+  }
+  
+  #sceneNavigator {
+    width: 100%;
+    max-width: 280px;
+    padding: 8px 12px;
+    gap: 10px;
+  }
+  
+  #sceneTitle {
+    font-size: 14px;
+  }
+  
+  .nav-btn {
+    font-size: 18px;
+  }
+  
+  /* Control buttons */
+  #fullscreenToggle,
+  #sceneListToggle {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  #fullscreenToggle {
+    bottom: 8%;
+    right: 4%;
+  }
+  
+  #sceneListToggle {
+    bottom: 8%;
+    left: 4%;
+  }
+  
+  /* Hotspots */
+  .link-hotspot-icon-wrapper,
+  .info-hotspot-icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .link-hotspot-icon-wrapper::before,
+  .info-hotspot-icon-wrapper::before {
+    -webkit-mask: radial-gradient(transparent 16px, #000 17px);
+    mask: radial-gradient(transparent 16px, #000 17px);
+  }
+  
+  .link-hotspot-fa,
+  .info-hotspot-fa {
+    font-size: 28px;
+  }
+  
+  /* Info Modal */
+  .info-hotspot-body {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  .info-hotspot-left {
+    max-height: 200px;
+  }
+  
+  .info-hotspot-right {
+    padding: 1rem;
+  }
+  
+  .info-hotspot-title {
+    font-size: 1.1rem;
+  }
+  
+  .info-hotspot-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .info-hotspot-text {
+    font-size: 0.9rem;
+  }
+  
+  /* Scene List Modal */
+  .scene-list-modal {
+    left: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    height: 65vh;
+    max-height: 85vh;
+    border-radius: 8px;
+  }
+  
+  .scene-topbar {
+    padding: 0.75rem 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .scene-brand {
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .scene-tabs {
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .scene-tabs button {
+    width: auto;
+    min-width: 120px;
+    font-size: 14px;
+    padding: 0.3rem 0.5rem;
+  }
+  
+  .scene-tab-underline {
+    bottom: -18px;
+  }
+  
+  .scene-list-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .scene-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .scene-campus {
+    font-size: 18px;
+  }
+  
+  .scene-filters {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .scene-filters select {
+    flex: 1;
+  }
+  
+  .scene-pagination {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .scene-list-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .scene-card img {
+    height: 100px;
+  }
+  
+  .scene-card-title {
+    font-size: 12px;
+  }
+}
+
+/* Tablets portrait: 481px-768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  
+  .university-header {
+    top: 20px;
+    left: 4%;
+    width: 92%;
+  }
+  
+  .uni-logo {
+    width: 56px;
+    height: 56px;
+    top: -24px;
+  }
+  
+  #sceneNavWrapper {
+    width: 92%;
+    bottom: 20px;
+  }
+  
+  #sceneNavigator {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  #sceneTitle {
+    font-size: 15px;
+  }
+  
+  #fullscreenToggle,
+  #sceneListToggle {
+    width: 46px;
+    height: 46px;
+  }
+  
+  .info-hotspot-body {
+    grid-template-columns: 1fr;
+  }
+  
+  .info-hotspot-left {
+    max-height: 250px;
+  }
+  
+  .scene-list-modal {
+    height: 55vh;
+    max-height: 75vh;
+  }
+  
+  .scene-topbar {
+    padding: 1rem;
+  }
+  
+  .scene-brand {
+    font-size: 20px;
+  }
+  
+  .scene-tabs button {
+    width: auto;
+    min-width: 180px;
+  }
+  
+  .scene-list-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .scene-card img {
+    height: 120px;
+  }
+}
+
+/* Tablets landscape: 769px-1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  
+  #sceneNavigator {
+    width: 360px;
+  }
+  
+  .scene-list-modal {
+    height: 50vh;
+    max-height: 70vh;
+  }
+  
+  .scene-list-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .info-hotspot-body {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+/* Desktop small: 1025px-1440px */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  
+  .scene-list-row {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .scene-tabs button {
+    width: 350px;
+  }
+}
+
+/* Desktop large: 1441px+ */
+@media (min-width: 1441px) {
+  
+  .scene-list-modal {
+    left: 5vw;
+    right: 5vw;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  .scene-list-row {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  .scene-tabs button {
+    width: 400px;
+  }
+}
+
+/* ===== LANDSCAPE ORIENTATION ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+  
+  .university-header {
+    top: 12px;
+  }
+  
+  .uni-logo {
+    width: 44px;
+    height: 44px;
+    top: -18px;
+  }
+  
+  #sceneNavWrapper {
+    bottom: 12px;
+  }
+  
+  #sceneNavigator {
+    padding: 6px 12px;
+  }
+  
+  #fullscreenToggle,
+  #sceneListToggle {
+    bottom: 12%;
+  }
+  
+  .scene-list-modal {
+    height: 70vh;
+    max-height: 90vh;
+  }
+  
+  .info-hotspot-body {
+    grid-template-columns: 1.5fr 1fr;
+  }
+  
+  .info-hotspot-left {
+    max-height: 100%;
+  }
+}
+
+/* ===== TOUCH DEVICE OPTIMIZATIONS ===== */
+@media (hover: none) and (pointer: coarse) {
+  
+  /* Increase touch targets */
+  .nav-btn,
+  .scene-pagination button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* Remove hover effects on touch devices */
+  .link-hotspot-tooltip {
+    display: none;
+  }
+  
+  /* Larger hotspot hit areas */
+  .link-hotspot,
+  .info-hotspot-static {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* ===== HIGH DPI DISPLAYS ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  
+  .uni-logo {
+    border-width: 4px;
+  }
+  
+  .university-header {
+    height: 3px;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  
+  #fullscreenToggle,
+  #sceneListToggle,
+  #sceneNavigator,
+  .scene-list-modal,
+  .vignette-overlay {
+    display: none !important;
+  }
+  
+  #pano {
+    position: relative;
+    height: 100vh;
+  }
+}
+
+/* ===== ACCESSIBILITY: REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .scene-list-row {
+    transition: none !important;
+  }
+}
+
+/* ===== FIX FOR VERY SMALL SCREENS ===== */
+@media (max-width: 320px) {
+  
+  .scene-tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .scene-tabs button {
+    width: 100%;
+  }
+  
+  .scene-list-row {
+    grid-template-columns: 1fr;
+  }
+  
+  #sceneNavigator {
+    max-width: 240px;
+    padding: 6px 8px;
+    gap: 8px;
+  }
+  
+  #sceneTitle {
+    font-size: 12px;
+  }
+}
