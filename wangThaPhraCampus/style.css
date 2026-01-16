@@ -1095,13 +1095,14 @@ body.view-control-buttons .viewControlButton {
 .scene-controls {
   display: flex;
   align-items: center;
-  gap: 900px;
+  justify-content: space-between;
 }
 
 .scene-filter-pagination {
   display: flex;
   align-items: center;
-  gap: 20px;
+  margin-left: auto;   /* 🔑 pushes it to the right */
+  gap: 16px;
 }
 
 .scene-brand {
