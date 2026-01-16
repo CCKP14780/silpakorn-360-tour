@@ -168,54 +168,59 @@
     </div>
   </div>
 
-  <!-- Scene List Bottom Modal -->
+<!-- Scene List Bottom Modal -->
   <div id="sceneListModal" class="scene-list-modal">
-
     <!-- ROW 1: TOP NAV -->
-    <div class="scene-topbar">
-      <span class="scene-brand"><strong>มหาวิทยาลัยศิลปากร</strong></span>
+    <div class="scene-list-header">
+          <span class="scene-brand"><strong>มหาวิทยาลัยศิลปากร</strong></span>
 
-      <div class="scene-tabs">
-        <button class="active">ทัวร์ปัจจุบัน</button>
-        <button>สำรวจวิทยาเขตอื่น</button>
-        
-        <!-- underline -->
-        <div class="scene-tab-underline"></div>
-      </div>
+          <div class="scene-tabs">
+            <button class="active">ทัวร์ปัจจุบัน</button>
+            <button>สำรวจวิทยาเขตอื่น</button>
+            
+            <!-- underline -->
+            <div class="scene-tab-underline"></div>
+          </div>
 
-      <button id="sceneListClose" class="scene-list-close">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
+          <button id="sceneListClose" class="scene-list-close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
     </div>
 
-    <!-- ROW 2: CONTROLS -->
-    <div class="scene-controls">
-      <span id="sceneCampusLabel" class="scene-campus">วิทยาเขต วังท่าพระ</span>
+    <div class="scene-list-body">    
+      <!-- ROW 2: CONTROLS -->
+        <div class="scene-controls">
+          <span id="sceneCampusLabel" class="scene-campus">วิทยาเขต วังท่าพระ</span>
 
-      <div class="scene-filters d-flex align-items-center gap-2">
-        <label for="sceneFilter" class="mb-0">แสดง:</label>
-          <select id="sceneFilter" class="form-select form-select-sm w-auto rounded-40">
-            <option value="all">ทั้งหมด</option>
-            <option value="landmark">สถานที่สำคัญ</option>
-            <option value="faculty">คณะ</option>
-          </select>
+          <div class="scene-filter-pagination">
+            <div class="scene-filters d-flex align-items-center gap-2">
+              <label for="sceneFilter" class="mb-0">แสดง:</label>
+                <select id="sceneFilter" class="form-select form-select-sm w-auto rounded-40">
+                  <option value="all">ทั้งหมด</option>
+                  <option value="landmark">สถานที่สำคัญ</option>
+                  <option value="faculty">คณะ</option>
+                </select>
+            </div>
+
+            <div class="scene-pagination">
+              <button id="scenePrevBtn">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <span id="scenePageIndicator">1 / 2</span>
+              <button id="sceneNextBtn">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 3: CARDS -->
+        <div class="scene-list-content" id="sceneListModalContent"></div>
+
     </div>
-
-      <div class="scene-pagination">
-        <button id="scenePrevBtn">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <span id="scenePageIndicator">1 / 2</span>
-        <button id="sceneNextBtn">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- ROW 3: CARDS -->
-    <div class="scene-list-content" id="sceneListModalContent"></div>
-
   </div>
+
+ 
 
   <script src="https://kit.fontawesome.com/b538aabb45.js" crossorigin="anonymous"></script>
   <script src="vendor/screenfull.min.js"></script>

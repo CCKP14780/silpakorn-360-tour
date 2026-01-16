@@ -570,19 +570,19 @@ body.single-scene #sceneListToggle {
 }
 
 /* Mobile */
-.mobile .link-hotspot-icon-wrapper {
+/* .mobile .link-hotspot-icon-wrapper {
   width: 50px;
   height: 50px;
 }
 
 .mobile .link-hotspot-icon-wrapper::before {
   -webkit-mask: radial-gradient(transparent 18px, #000 19px);
-  mask: radial-gradient(transparent 18px, #000 19px);
+  mask: radial-gradient(transparent 21px, #000 21px);
 }
 
-.mobile .link-hotspot-fa {
-  font-size: 28px;
-}
+ .mobile .link-hotspot-fa {
+  font-size: 36px;
+}  */
 
 /* Info Hotspot */
 .info-hotspot {
@@ -747,13 +747,6 @@ body.single-scene #sceneListToggle {
 
 body.view-control-buttons .viewControlButton {
   display: block;
-}
-
-/* Hide controls when width is too small */
-@media (max-width: 600px) {
-  body.view-control-buttons .viewControlButton {
-    display: none;
-  }
 }
 
 .viewControlButton .icon {
@@ -1062,7 +1055,6 @@ body.view-control-buttons .viewControlButton {
   left: 0.5vw;
   right: 0.5vw;
   bottom: 0.5vh;
-  /* controls how close to bottom */
   height: 50vh;
   max-height: 70vh;
   background: #ffffff;
@@ -1082,13 +1074,34 @@ body.view-control-buttons .viewControlButton {
   pointer-events: auto;
 }
 
-/* ROW 1 — top navigation */
-.scene-topbar {
+.scene-list-header {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   padding: 1rem 1.5rem;
   border-bottom: 1px solid #e5e5e5;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+
+.scene-list-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px 16px;
+}
+
+.scene-controls {
+  display: flex;
+  align-items: center;
+  gap: 900px;
+}
+
+.scene-filter-pagination {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .scene-brand {
@@ -1099,13 +1112,12 @@ body.view-control-buttons .viewControlButton {
 .scene-tabs {
   position: relative;
   display: flex;
-  gap: 2rem;
-  margin: 0 auto;
+  gap: 100px;
+  margin: auto;
 }
 
-
 .scene-tabs button {
-  width: 400px;
+  width: 140px;
   background: none;
   border: none;
   font-weight: 400;
@@ -1117,36 +1129,36 @@ body.view-control-buttons .viewControlButton {
 .scene-tabs button.active {
   font-weight: 700;
   font-size: 16px;
-  font-style: bold;
 }
 
 .scene-tab-underline {
   position: absolute;
   bottom: -22px;
-  /* adjust vertical distance */
   height: 3px;
   background-color: #007468;
   transition: left 0.25s ease, width 0.25s ease;
 }
 
 .scene-list-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
   background: none;
   border: none;
   font-size: 1.4rem;
   cursor: pointer;
 }
 
-.scene-list-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid #ddd;
+.scene-list-close i {
+  color: #454C56;
+}
+
+.scene-list-close i:hover {
+  transform: scale(1.15);
 }
 
 .scene-list-title {
   flex: 1;
-  /* pushes pagination + close to the right */
   font-size: 1.1rem;
   font-weight: 600;
 }
@@ -1154,30 +1166,27 @@ body.view-control-buttons .viewControlButton {
 .scene-pagination {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.8rem;
   font-size: 1rem;
   font-weight: 500;
   color: #333;
 }
 
-/* Pagination buttons */
 .scene-pagination button {
   position: relative;
   width: 36px;
   height: 36px;
-
   background: none;
   border-radius: 100%;
   border: 1px solid #454C56;
   padding: 0;
   cursor: pointer;
-
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Icon */
 .scene-pagination button i {
   font-size: 20px;
   color: #454C56;
@@ -1185,25 +1194,15 @@ body.view-control-buttons .viewControlButton {
   transition: transform 0.2s ease;
 }
 
-/* Circular ring */
 .scene-pagination button::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 50%;
-
-  /* background: #454C56; */
-
-  /* -webkit-mask:
-    radial-gradient(circle at center, transparent 62%, black 63%);
-  mask:
-    radial-gradient(circle at center, transparent 62%, black 63%); */
-
   pointer-events: none;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Hover effect (desktop only) */
 .no-touch .scene-pagination button:hover::before {
   transform: scale(1.1);
   box-shadow: 0 0 10px #454C56;
@@ -1222,29 +1221,22 @@ body.view-control-buttons .viewControlButton {
   font-size: 24px;
 }
 
-.scene-controls {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 1rem 1.5rem;
-  /* border-bottom: 1px solid #eee; */
-}
-
 .scene-campus {
   font-size: 24px;
   font-weight: 700;
 }
 
 .scene-filters {
-  margin-left: auto;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  gap: 0.5rem;
+  gap: 2px;
 }
 
 .scene-list-content {
   flex: 1;
   overflow-y: auto;
+  overflow-x: auto;
 }
 
 .scene-list-tabs {
@@ -1266,111 +1258,9 @@ body.view-control-buttons .viewControlButton {
   font-weight: 600;
 }
 
-.scene-list-close i {
-  color: #454C56;
-}
-
-.scene-list-close i:hover {
-  transform: scale(1.15);
-}
-
-/* Mobile responsive for bottom scene list modal */
-@media (max-width: 768px) {
-  .scene-list-modal {
-    left: 0.5rem;       /* smaller margin */
-    right: 0.5rem;      /* smaller margin */
-    bottom: 0.5rem;     /* closer to bottom */
-    height: 60vh;        /* taller on small screens */
-    max-height: 90vh;    /* allow almost full screen */
-    border-radius: 10px;
-    padding: 0.5rem;
-  }
-
-  .scene-topbar {
-    flex-direction: column;   /* stack brand + tabs */
-    gap: 0.5rem;
-    padding: 0.5rem;
-  }
-
-  .scene-tabs {
-    flex-wrap: wrap;          /* wrap tabs if too many */
-    gap: 0.5rem;
-    margin: 0 auto;
-  }
-
-  .scene-tabs button {
-    width: auto;              /* buttons scale naturally */
-    font-size: 14px;
-    padding: 0.4rem 0.6rem;
-  }
-
-  .scene-pagination {
-    gap: 0.5rem;
-    font-size: 0.85rem;
-  }
-
-  .scene-pagination button {
-    width: 44px;
-    height: 44px;
-  }
-
-  .scene-pagination button::before {
-    border-width: 2.5px; /* slightly thicker for bigger button */
-  }
-
-  .scene-pagination button i {
-    font-size: 24px;
-  }
-
-  .scene-card {
-    gap: 6px;
-  }
-
-  .scene-card img,
-  .scene-card-image img {
-    height: 120px;
-  }
-
-  .scene-list-row {
-    grid-template-columns: repeat(2, 1fr);  /* fewer columns on mobile */
-    gap: 0.5rem;
-    padding: 0.5rem;
-  }
-
-  .scene-list-close {
-    position: absolute;   /* make it float inside header */
-    right: 1rem;           /* distance from right edge */
-    font-size: 1.2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 10;
-  }
-
-  .scene-list-title {
-    font-size: 1rem;
-  }
-
-  .scene-campus {
-    font-size: 20px;
-  }
-
-  .scene-tabs {
-    position: relative;
-    display: flex;
-    gap: 6rem;  /* ← this is the spacing between tabs */
-    margin: 0 auto;
-  }
-}
-
 /* ===============================
   SCENE CARDS
    =============================== */
-.scene-list-content {
-  flex: 1;
-  overflow-x: auto;
-}
-
 .scene-card {
   display: flex;
   flex-direction: column;
@@ -1384,7 +1274,6 @@ body.view-control-buttons .viewControlButton {
 
 .scene-card:hover {
   transform: translateY(-2px);
-  border-radius: 12px;
 }
 
 .scene-card-image {
@@ -1395,19 +1284,12 @@ body.view-control-buttons .viewControlButton {
   background: #eee;
 }
 
-.scene-card-image img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  display: block;
-}
-
-/*IMPORTANT: For Controling card box size*/
 .scene-card img {
   width: 100%;
   height: 140px;
   border-radius: 12px;
   object-fit: cover;
+  display: block;
 }
 
 .scene-card-title {
@@ -1449,7 +1331,6 @@ body.view-control-buttons .viewControlButton {
   transform: scale(0.95);
 }
 
-/* Scene list row animations */
 .scene-list-row {
   display: grid;
   grid-template-columns: repeat(5, minmax(150px, 1fr));
@@ -1471,6 +1352,8 @@ body.view-control-buttons .viewControlButton {
 .scene-list-row.slide-in {
   transform: translateX(0);
   opacity: 1;
+  padding: 4px 0;
+  gap: 14px; 
 }
 
 /* Dark Vignette Overlay */
@@ -1529,32 +1412,28 @@ body.view-control-buttons .viewControlButton {
   }
 
   /* ---------- INFO HOTSPOT MODAL ---------- */
-  .info-hotspot-ui .modal-dialog {
-    max-width: 90%;
-  }
+@media (max-width: 1024px) {
 
-  .info-hotspot-body {
-    grid-template-columns: 1fr 1fr; /* still split */
-  }
-
-  .info-hotspot-left img {
-    max-height: 280px;
-  }
-
-  .info-hotspot-title {
-    font-size: 1.3rem;
-  }
-
-  .info-hotspot-text {
-    font-size: 0.95rem;
-  }
-
-  /* ---------- SCENE LIST BOTTOM MODAL ---------- */
   .scene-list-modal {
-    height: 60vh;
-    max-height: 75vh;
     left: 1vw;
     right: 1vw;
+    height: 60vh;
+    max-height: 75vh;
+    border-radius: 14px;
+  }
+
+  /* HEADER */
+  .scene-list-header {
+    gap: 24px;
+    padding: 0.9rem 1.2rem;
+  }
+
+  .scene-brand {
+    font-size: 20px;
+  }
+
+  .scene-tabs {
+    gap: 48px;
   }
 
   .scene-tabs button {
@@ -1562,13 +1441,24 @@ body.view-control-buttons .viewControlButton {
     font-size: 15px;
   }
 
-  .scene-tabs {
-    gap: 3rem;
+  /* CONTROLS */
+  .scene-controls {
+    gap: 520px; /* remove 900px */
   }
 
-  /* ---------- SCENE GRID ---------- */
+  .scene-filter-pagination {
+    gap: 18px; /* remove 500px */
+  }
+
+  .scene-campus {
+    font-size: 20px;
+  }
+
+  /* CARDS */
   .scene-list-row {
     grid-template-columns: repeat(3, minmax(160px, 1fr));
+    gap: 16px;
+    padding: 0.75rem;
   }
 
   .scene-card img {
@@ -1577,71 +1467,60 @@ body.view-control-buttons .viewControlButton {
 
 }
 
+}
+
 /* Mobile */
 @media (max-width: 768px) {
-/* ===== PANO CONTROLS ===== */
 
-#fullscreenToggle {
-  bottom: 12%;
-  right: 6%;
-}
-
-#sceneListToggle {
-  bottom: 12%;
-  left: 6%;
-}
-
-#fullscreenToggle,
-#sceneListToggle {
-  width: 52px;
-  height: 52px;
-}
-
-#fullscreenToggle .icon,
-#sceneListToggle .icon {
-  font-size: 26px;
-}
-
-  .info-hotspot-body {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+  .scene-list-modal {
+    left: 1vw;
+    right: 1vw;
+    height: 60vh;
+    max-height: 75vh;
+    border-radius: 14px;
   }
 
-  .info-hotspot-left img {
-    max-height: 220px;
+  /* HEADER */
+  .scene-list-header {
+    gap: 24px;
+    padding: 0.9rem 1.2rem;
   }
 
-  .info-hotspot-right {
-    padding: 1rem;
-  }
-
-  .info-hotspot-title {
-    font-size: 1.2rem;
-  }
-
-  .info-hotspot-main-body {
-    transform: none; /* remove upward shift on mobile */
-  }
-
-  .info-hotspot-close {
-  position: absolute;
-  top: 21.5rem;
-}
-
-    .scene-list-modal {
-    height: 65vh;
+  .scene-brand {
+    font-size: 20px;
   }
 
   .scene-tabs {
-    gap: 3rem; /* reduce from 6rem */
+    gap: 48px;
   }
 
   .scene-tabs button {
-    font-size: 14px;
+    width: auto;
+    font-size: 15px;
   }
 
+  /* CONTROLS */
+  .scene-controls {
+    gap: 265px; /* remove 900px */
+  }
+
+  .scene-filter-pagination {
+    gap: 18px; /* remove 500px */
+  }
+
+  .scene-campus {
+    font-size: 20px;
+  }
+
+  /* CARDS */
   .scene-list-row {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+    gap: 16px;
+    padding: 0.75rem;
+  }
+
+  .scene-card img {
+    height: 130px;
   }
 
 }
@@ -1652,6 +1531,10 @@ body.view-control-buttons .viewControlButton {
   /* ---------- GENERAL ---------- */
   body {
     font-size: 15px;
+  }
+
+  * {
+    touch-action: manipulation;
   }
 
   /* ---------- PANORAMA CONTROLS ---------- */
@@ -1731,11 +1614,10 @@ body.view-control-buttons .viewControlButton {
   }
 
   .info-hotspot-main-body {
-    transform: none; /* remove desktop lift */
+    transform: none;
     padding-right: 0;
   }
 
-  /* Close button bigger for thumb */
   .info-hotspot-close i {
     font-size: 1.8rem;
   }
@@ -1747,45 +1629,107 @@ body.view-control-buttons .viewControlButton {
     bottom: 0;
     height: 75vh;
     border-radius: 16px 16px 0 0;
+    padding: 0;
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
-  .scene-topbar {
-    padding: 0.8rem 1rem;
+  /* Header: give hierarchy & air */
+  .scene-list-header {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 14px 16px 10px;
   }
 
+  .scene-brand {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  /* Tabs: less cramped */
   .scene-tabs {
-    gap: 2rem;
+    gap: 24px;
+    margin-top: 4px;
   }
 
   .scene-tabs button {
     font-size: 14px;
     width: auto;
+    padding-bottom: 8px;
   }
 
   .scene-tab-underline {
-    bottom: -18px;
+    bottom: -12px;
     height: 2px;
+  }
+
+  /* Body spacing */
+  .scene-list-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px 16px;
+    overflow: scroll;
+  }
+
+  /* Controls: STACK instead of squeeze */
+  .scene-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .scene-filters,
+  .scene-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .scene-filter-pagination {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-content: center;
+  }
+
+  /* Divider before cards */
+  .scene-list-body::after {
+    content: "";
+    height: 1px;
+    background: rgba(0,0,0,0.08);
+    margin: 4px 0 12px;
   }
 
   /* ---------- SCENE GRID ---------- */
   .scene-list-row {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-    padding: 0.75rem;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 8px;
+  }
+
+.scene-card {
+    min-height: 72px;
+    height: auto;           
+    grid-template-columns: 96px 1fr;
+    border-radius: 10px;
+    align-items: center;
   }
 
   .scene-card img {
-    height: 120px;
+    height: 100%;
+    object-fit: cover;
   }
 
   .scene-card-title {
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.2;
   }
 
   /* ---------- PAGINATION ---------- */
   .scene-pagination button {
-    width: 44px;
-    height: 44px;
+    width: 30px;
+    height: 30px;
   }
 
   .scene-pagination button::before {

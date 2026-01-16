@@ -3,6 +3,7 @@ var APP_DATA = {
     {
       "id": "0-map06_p360_wtp001",
       "name": "ประตูวังท่าพระ",
+      "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/gate_wtp001.jpg",
       "levels": [
         {
@@ -50,6 +51,7 @@ var APP_DATA = {
     {
       "id": "1-map05_p360_wtp001",
       "name": "หอศิลป์",
+      "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/artCenter_wtp001.jpg",
       "levels": [
         {
@@ -130,6 +132,7 @@ var APP_DATA = {
     {
       "id": "2-map04_p360_wtp001",
       "name": "ตำหนักพรรณราย",
+      "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/yellowBuilding02_wtp001.jpg",
       "levels": [
         {
@@ -175,6 +178,7 @@ var APP_DATA = {
     {
       "id": "3-map03_p360_wtp001",
       "name": "ต้นกร่าง",
+      "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/tree_wtp001.jpg",
       "levels": [
         {
@@ -228,6 +232,7 @@ var APP_DATA = {
     {
       "id": "4-map02_p360_wtp001",
       "name": "ลานสนามบาสเก็ตบอล",
+      "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/court_wtp001.jpg",
       "levels": [
         {
@@ -308,6 +313,7 @@ var APP_DATA = {
     {
       "id": "5-map01_p360_wtp001",
       "name": "ศาลาแก้ว",
+      "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/palace_wtp001.jpg",
       "levels": [
         {
@@ -361,6 +367,7 @@ var APP_DATA = {
     {
       "id": "6-map07_p360_wtp001",
       "name": "คณะสถาปัตยกรรมศาสตร์",
+      "category": "faculty",
       "card_image": "../wangThaPhraCampus/img/stillImages/architecture_wtp001.jpg",
       "levels": [
         {
@@ -414,6 +421,7 @@ var APP_DATA = {
     {
       "id": "7-map08_p360_wtp001",
       "name": "คณะมัณฑนศิลป์",
+      "category": "faculty",
       "card_image": "../wangThaPhraCampus/img/stillImages/artGallery02_wtp001.jpg",
       "levels": [
         {
@@ -467,6 +475,7 @@ var APP_DATA = {
     {
       "id": "8-map09_p360_wtp001",
       "name": "ลานอาจารย์ศิลป์",
+      "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/ferrociStatue_wtp001.jpg",
       "levels": [
         {

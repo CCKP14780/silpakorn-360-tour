@@ -210,27 +210,29 @@
   var viewOutElement = document.querySelector('#viewOut');
   var tabButtons = document.querySelectorAll('.scene-tabs button');
 
-  function updateTabUnderline() {
-    const activeBtn = document.querySelector('.scene-tabs button.active');
-    const underline = document.querySelector('.scene-tab-underline');
-    const tabs = document.querySelector('.scene-tabs');
+function updateTabUnderline() {
+  const activeBtn = document.querySelector('.scene-tabs button.active');
+  const underline = document.querySelector('.scene-tab-underline');
+  const tabs = document.querySelector('.scene-tabs');
 
-    if (!activeBtn || !underline || !tabs) return;
+  if (!activeBtn || !underline || !tabs) return;
 
-    const btnRect = activeBtn.getBoundingClientRect();
-    const tabsRect = tabs.getBoundingClientRect();
+  // Get width of the LONGEST tab (สำรวจวิทยาเขตอื่น)
+  const allButtons = Array.from(tabs.querySelectorAll('button'));
+  const maxWidth = Math.max(...allButtons.map(btn => btn.offsetWidth));
 
-    const UNDERLINE_WIDTH = 180; // same for both tabs
+  const btnRect = activeBtn.getBoundingClientRect();
+  const tabsRect = tabs.getBoundingClientRect();
 
-    underline.style.width = UNDERLINE_WIDTH + 'px';
+  underline.style.width = maxWidth + 'px';
 
-    // Center underline under the button
-    underline.style.left =
-      (btnRect.left - tabsRect.left) +
-      (btnRect.width / 2) -
-      (UNDERLINE_WIDTH / 2) +
-      'px';
-  }
+  // Center underline under active button
+  underline.style.left =
+    (btnRect.left - tabsRect.left) +
+    (btnRect.width / 2) -
+    (maxWidth / 2) +
+    'px';
+}
 
 const sceneCampusLabel = document.getElementById("sceneCampusLabel");
 
