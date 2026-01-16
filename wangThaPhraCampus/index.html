@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>wangThaPhraTour</title>
-<meta charset="utf-8">
-<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
-<style> @-ms-viewport { width: device-width; } </style>
-<link rel="stylesheet" href="vendor/reset.min.css">
-<link rel="stylesheet" href="style.css">
+  <title>wangThaPhraTour</title>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+  <style>
+    @-ms-viewport {
+      width: device-width;
+    }
+  </style>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="vendor/reset.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="multiple-scenes ">
 
-<div id="pano"></div>
+  <div id="pano"></div>
 
-<div id="sceneList">
+  <div class="university-header">
+    <img src="../Assets/su_logo/suLogo.png" class="uni-logo" alt="Silpakorn Logo">
+    <!-- Empty Div For Future Development -->
+    <div></div>
+  </div>
+
+  <!-- <div id="sceneList">
   <ul class="scenes">
     
       <a href="javascript:void(0)" class="scene" data-id="0-map06_p360_wtp001">
@@ -52,52 +70,174 @@
       </a>
     
   </ul>
-</div>
+</div> -->
 
-<div id="titleBar">
+  <!--  <div id="titleBar">
   <h1 class="sceneName"></h1>
+</div> -->
+
+<div id="sceneNavWrapper">
+    <div class="sceneNavLine left"></div>
+
+  <div id="sceneNavigator">
+    <button id="prevScene" class="nav-btn">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <span id="sceneTitle"></span>
+
+    <button id="nextScene" class="nav-btn">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
+    <div class="sceneNavLine right"></div>
 </div>
 
-<a href="javascript:void(0)" id="autorotateToggle">
-  <img class="icon off" src="img/play.png">
-  <img class="icon on" src="img/pause.png">
-</a>
 
-<a href="javascript:void(0)" id="fullscreenToggle">
-  <img class="icon off" src="img/fullscreen.png">
-  <img class="icon on" src="img/windowed.png">
-</a>
+  <a href="javascript:void(0)" id="autorotateToggle">
+    <img class="icon off" src="img/play.png">
+    <img class="icon on" src="img/pause.png">
+  </a>
 
-<a href="javascript:void(0)" id="sceneListToggle">
-  <img class="icon off" src="img/expand.png">
-  <img class="icon on" src="img/collapse.png">
-</a>
+  <a href="javascript:void(0)" id="fullscreenToggle">
+    <i class="icon off fa-solid fa-expand"></i>
+    <i class="icon on fa-solid fa-compress"></i>
+  </a>
 
-<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
-  <img class="icon" src="img/up.png">
-</a>
-<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
-  <img class="icon" src="img/down.png">
-</a>
-<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
-  <img class="icon" src="img/left.png">
-</a>
-<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
-  <img class="icon" src="img/right.png">
-</a>
-<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
-  <img class="icon" src="img/plus.png">
-</a>
-<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
-  <img class="icon" src="img/minus.png">
-</a>
+  <a href="javascript:void(0)" id="sceneListToggle">
+    <i class="icon off fa-solid fa-bars"></i>
+    <i class="icon on fa-solid fa-bars"></i>
+  </a>
 
-<script src="vendor/screenfull.min.js" ></script>
-<script src="vendor/bowser.min.js" ></script>
-<script src="vendor/marzipano.js" ></script>
+  <a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+    <img class="icon" src="img/up.png">
+  </a>
+  <a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+    <img class="icon" src="img/down.png">
+  </a>
+  <a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+    <img class="icon" src="img/left.png">
+  </a>
+  <a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+    <img class="icon" src="img/right.png">
+  </a>
+  <a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+    <img class="icon" src="img/plus.png">
+  </a>
+  <a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+    <img class="icon" src="img/minus.png">
+  </a>
 
-<script src="data.js"></script>
-<script src="index.js"></script>
+  <!-- Info Hotspot Modal -->
+  <div class="modal fade info-hotspot-ui" id="infoHotspotModal" tabindex="-1">
+
+    <div class="modal-dialog modal-xl info-hotspot-wide modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content bg-dark text-light">
+
+        <!-- Custom Body Layout -->
+        <div class="modal-body info-hotspot-body">
+
+          <!-- LEFT SIDE: IMAGE -->
+          <div class="info-hotspot-left">
+            <img id="infoHotspotImage" alt="">
+          </div>
+
+          <!-- RIGHT SIDE: TEXT -->
+          <div class="info-hotspot-right">
+            <h2 class="info-hotspot-title">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>รายละเอียดสถานที่</span>
+            </h2>
+
+          <!-- Header: CLOSE BUTTON -->
+          <div class="modal-header border-0">
+            <button type="button" class="info-hotspot-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+          </div>
+            <div class="info-hotspot-main-body">
+              <h3 class="info-hotspot-subtitle" id="infoHotspotTitle"></h3>
+              <div class="info-hotspot-text" id="infoHotspotText"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+<!-- Scene List Bottom Modal -->
+  <div id="sceneListModal" class="scene-list-modal">
+    <!-- ROW 1: TOP NAV -->
+    <div class="scene-list-header">
+          <span class="scene-brand"><strong>มหาวิทยาลัยศิลปากร</strong></span>
+
+          <div class="scene-tabs">
+            <button class="active">ทัวร์ปัจจุบัน</button>
+            <button>สำรวจวิทยาเขตอื่น</button>
+            
+            <!-- underline -->
+            <div class="scene-tab-underline"></div>
+          </div>
+
+          <button id="sceneListClose" class="scene-list-close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+    </div>
+
+    <div class="scene-list-body">    
+      <!-- ROW 2: CONTROLS -->
+        <div class="scene-controls">
+          <span id="sceneCampusLabel" class="scene-campus">วิทยาเขต วังท่าพระ</span>
+
+          <div class="scene-filter-pagination">
+            <div class="scene-filters d-flex align-items-center gap-2">
+              <label for="sceneFilter" class="mb-0">แสดง:</label>
+                <select id="sceneFilter" class="form-select form-select-sm w-auto rounded-40">
+                  <option value="all">ทั้งหมด</option>
+                  <option value="landmark">สถานที่สำคัญ</option>
+                  <option value="faculty">คณะ</option>
+                </select>
+            </div>
+
+            <div class="scene-pagination">
+              <button id="scenePrevBtn">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <span id="scenePageIndicator">1 / 2</span>
+              <button id="sceneNextBtn">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 3: CARDS -->
+        <div class="scene-list-content" id="sceneListModalContent"></div>
+
+    </div>
+  </div>
+
+ 
+
+  <script src="https://kit.fontawesome.com/b538aabb45.js" crossorigin="anonymous"></script>
+  <script src="vendor/screenfull.min.js"></script>
+  <script src="vendor/bowser.min.js"></script>
+  <script src="vendor/marzipano.js"></script>
+
+  <!-- Vignette Overlay -->
+  <div class="vignette-overlay"></div>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script src="data.js"></script>
+  <script src="index.js"></script>
 
 </body>
+
 </html>

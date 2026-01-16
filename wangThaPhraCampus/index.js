@@ -15,24 +15,30 @@
  */
 'use strict';
 
-(function() {
+(function () {
   var Marzipano = window.Marzipano;
   var bowser = window.bowser;
   var screenfull = window.screenfull;
   var data = window.APP_DATA;
+  var campusData = window.CAMPUS_DATA || [];
+  var TAB_CONFIG = window.TAB_CONFIG || [];
 
   // Grab elements from DOM.
   var panoElement = document.querySelector('#pano');
-  var sceneNameElement = document.querySelector('#titleBar .sceneName');
+  var sceneNameElement = document.querySelector('#sceneTitle');
   var sceneListElement = document.querySelector('#sceneList');
   var sceneElements = document.querySelectorAll('#sceneList .scene');
   var sceneListToggleElement = document.querySelector('#sceneListToggle');
   var autorotateToggleElement = document.querySelector('#autorotateToggle');
   var fullscreenToggleElement = document.querySelector('#fullscreenToggle');
+  var prevSceneBtn = document.querySelector('#prevScene');
+  var nextSceneBtn = document.querySelector('#nextScene');
+
 
   // Detect desktop or mobile mode.
   if (window.matchMedia) {
-    var setMode = function() {
+    var mql = matchMedia("(max-width: 500px), (max-height: 500px)");
+    var setMode = function () {
       if (mql.matches) {
         document.body.classList.remove('desktop');
         document.body.classList.add('mobile');
@@ -41,7 +47,7 @@
         document.body.classList.add('desktop');
       }
     };
-    var mql = matchMedia("(max-width: 500px), (max-height: 500px)");
+
     setMode();
     mql.addListener(setMode);
   } else {
@@ -50,7 +56,7 @@
 
   // Detect whether we are on a touch device.
   document.body.classList.add('no-touch');
-  window.addEventListener('touchstart', function() {
+  window.addEventListener('touchstart', function () {
     document.body.classList.remove('no-touch');
     document.body.classList.add('touch');
   });
@@ -70,15 +76,30 @@
   // Initialize viewer.
   var viewer = new Marzipano.Viewer(panoElement, viewerOpts);
 
+  // Collapsed scene navigation (prev / next buttons)
+  if (prevSceneBtn && nextSceneBtn) {
+    prevSceneBtn.addEventListener('click', goToPrevScene);
+    nextSceneBtn.addEventListener('click', goToNextScene);
+  }
+
+  // Scene List Modal pagination buttons
+  var scenePrevBtn = document.getElementById('scenePrevBtn');
+  var sceneNextBtn = document.getElementById('sceneNextBtn');
+
+  if (scenePrevBtn && sceneNextBtn) {
+    scenePrevBtn.addEventListener('click', prevScenePage);
+    sceneNextBtn.addEventListener('click', nextScenePage);
+  }
+
   // Create scenes.
-  var scenes = data.scenes.map(function(data) {
+  var scenes = data.scenes.map(function (data) {
     var urlPrefix = "tiles";
     var source = Marzipano.ImageUrlSource.fromString(
       urlPrefix + "/" + data.id + "/{z}/{f}/{y}/{x}.jpg",
       { cubeMapPreviewUrl: urlPrefix + "/" + data.id + "/preview.jpg" });
     var geometry = new Marzipano.CubeGeometry(data.levels);
 
-    var limiter = Marzipano.RectilinearView.limit.traditional(data.faceSize, 100*Math.PI/180, 120*Math.PI/180);
+    var limiter = Marzipano.RectilinearView.limit.traditional(data.faceSize, 100 * Math.PI / 180, 120 * Math.PI / 180);
     var view = new Marzipano.RectilinearView(data.initialViewParameters, limiter);
 
     var scene = viewer.createScene({
@@ -89,13 +110,13 @@
     });
 
     // Create link hotspots.
-    data.linkHotspots.forEach(function(hotspot) {
+    data.linkHotspots.forEach(function (hotspot) {
       var element = createLinkHotspotElement(hotspot);
       scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
     });
 
     // Create info hotspots.
-    data.infoHotspots.forEach(function(hotspot) {
+    data.infoHotspots.forEach(function (hotspot) {
       var element = createInfoHotspotElement(hotspot);
       scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
     });
@@ -107,11 +128,20 @@
     };
   });
 
+  // Track which scene is currently active (by index)
+  var currentSceneIndex = 0;
+  var SCENES_PER_PAGE = 5;
+  var currentPage = 0;
+  var currentModalMode = 'scenes'; // 'scenes' | 'campus'
+
+  // Get the scene title element for the collapsed navigator
+  // var collapsedSceneTitle = document.getElementById('sceneTitle');
+
   // Set up autorotate, if enabled.
   var autorotate = Marzipano.autorotate({
     yawSpeed: 0.03,
     targetPitch: 0,
-    targetFov: Math.PI/2
+    targetFov: Math.PI / 2
   });
   if (data.settings.autorotateEnabled) {
     autorotateToggleElement.classList.add('enabled');
@@ -123,10 +153,10 @@
   // Set up fullscreen mode, if supported.
   if (screenfull.enabled && data.settings.fullscreenButton) {
     document.body.classList.add('fullscreen-enabled');
-    fullscreenToggleElement.addEventListener('click', function() {
+    fullscreenToggleElement.addEventListener('click', function () {
       screenfull.toggle();
     });
-    screenfull.on('change', function() {
+    screenfull.on('change', function () {
       if (screenfull.isFullscreen) {
         fullscreenToggleElement.classList.add('enabled');
       } else {
@@ -138,24 +168,38 @@
   }
 
   // Set handler for scene list toggle.
-  sceneListToggleElement.addEventListener('click', toggleSceneList);
-
-  // Start with the scene list open on desktop.
-  if (!document.body.classList.contains('mobile')) {
-    showSceneList();
-  }
-
-  // Set handler for scene switch.
-  scenes.forEach(function(scene) {
-    var el = document.querySelector('#sceneList .scene[data-id="' + scene.data.id + '"]');
-    el.addEventListener('click', function() {
-      switchScene(scene);
-      // On mobile, hide scene list after selecting a scene.
-      if (document.body.classList.contains('mobile')) {
-        hideSceneList();
-      }
-    });
+  // OLD: sceneListToggleElement.addEventListener('click', toggleSceneList);
+  sceneListToggleElement.addEventListener('click', function () {
+    currentPage = Math.floor(currentSceneIndex / SCENES_PER_PAGE);
+    document.getElementById('sceneListModal').classList.add('visible');
+    sceneListToggleElement.classList.add('enabled');
+    populateSceneListModal();
+    updatePaginationButtons();
+    updateTabUnderline();
   });
+
+  document.getElementById('sceneListClose').addEventListener('click', function () {
+    document.getElementById('sceneListModal').classList.remove('visible');
+    sceneListToggleElement.classList.remove('enabled');
+  });
+
+  // PUKAN: Hide old Scene List code
+  // // Start with the scene list open on desktop.
+  // if (!document.body.classList.contains('mobile')) {
+  //   showSceneList();
+  // }
+
+  // // Set handler for scene switch.
+  // scenes.forEach(function(scene) {
+  //   var el = document.querySelector('#sceneList .scene[data-id="' + scene.data.id + '"]');
+  //   el.addEventListener('click', function() {
+  //     switchScene(scene);
+  //     // On mobile, hide scene list after selecting a scene.
+  //     if (document.body.classList.contains('mobile')) {
+  //       hideSceneList();
+  //     }
+  //   });
+  // });
 
   // DOM elements for view controls.
   var viewUpElement = document.querySelector('#viewUp');
@@ -164,6 +208,66 @@
   var viewRightElement = document.querySelector('#viewRight');
   var viewInElement = document.querySelector('#viewIn');
   var viewOutElement = document.querySelector('#viewOut');
+  var tabButtons = document.querySelectorAll('.scene-tabs button');
+
+function updateTabUnderline() {
+  const activeBtn = document.querySelector('.scene-tabs button.active');
+  const underline = document.querySelector('.scene-tab-underline');
+  const tabs = document.querySelector('.scene-tabs');
+
+  if (!activeBtn || !underline || !tabs) return;
+
+  // Get width of the LONGEST tab (สำรวจวิทยาเขตอื่น)
+  const allButtons = Array.from(tabs.querySelectorAll('button'));
+  const maxWidth = Math.max(...allButtons.map(btn => btn.offsetWidth));
+
+  const btnRect = activeBtn.getBoundingClientRect();
+  const tabsRect = tabs.getBoundingClientRect();
+
+  underline.style.width = maxWidth + 'px';
+
+  // Center underline under active button
+  underline.style.left =
+    (btnRect.left - tabsRect.left) +
+    (btnRect.width / 2) -
+    (maxWidth / 2) +
+    'px';
+}
+
+const sceneCampusLabel = document.getElementById("sceneCampusLabel");
+
+function setActiveTab(index) {
+  if (!TAB_CONFIG[index]) return;
+
+  tabButtons.forEach(function (btn, i) {
+    btn.classList.toggle('active', i === index);
+  });
+
+  const config = TAB_CONFIG[index];
+
+  currentModalMode = config.mode;
+  sceneCampusLabel.textContent = config.label;
+
+  updateTabUnderline();
+}
+
+
+  if (tabButtons.length === 2) {
+    // Tab 1: Current tour
+    tabButtons[0].addEventListener('click', function () {
+      setActiveTab(0);
+      currentPage = Math.floor(currentSceneIndex / SCENES_PER_PAGE);
+      populateSceneListModal();
+      updatePaginationButtons();
+    });
+
+    tabButtons[1].addEventListener('click', function () {
+      setActiveTab(1);
+      currentPage = 0;
+      populateSceneListModal();
+      updatePaginationButtons();
+});
+  }
 
   // Dynamic parameters for controls.
   var velocity = 0.7;
@@ -171,12 +275,12 @@
 
   // Associate view controls with elements.
   var controls = viewer.controls();
-  controls.registerMethod('upElement',    new Marzipano.ElementPressControlMethod(viewUpElement,     'y', -velocity, friction), true);
-  controls.registerMethod('downElement',  new Marzipano.ElementPressControlMethod(viewDownElement,   'y',  velocity, friction), true);
-  controls.registerMethod('leftElement',  new Marzipano.ElementPressControlMethod(viewLeftElement,   'x', -velocity, friction), true);
-  controls.registerMethod('rightElement', new Marzipano.ElementPressControlMethod(viewRightElement,  'x',  velocity, friction), true);
-  controls.registerMethod('inElement',    new Marzipano.ElementPressControlMethod(viewInElement,  'zoom', -velocity, friction), true);
-  controls.registerMethod('outElement',   new Marzipano.ElementPressControlMethod(viewOutElement, 'zoom',  velocity, friction), true);
+  controls.registerMethod('upElement', new Marzipano.ElementPressControlMethod(viewUpElement, 'y', -velocity, friction), true);
+  controls.registerMethod('downElement', new Marzipano.ElementPressControlMethod(viewDownElement, 'y', velocity, friction), true);
+  controls.registerMethod('leftElement', new Marzipano.ElementPressControlMethod(viewLeftElement, 'x', -velocity, friction), true);
+  controls.registerMethod('rightElement', new Marzipano.ElementPressControlMethod(viewRightElement, 'x', velocity, friction), true);
+  controls.registerMethod('inElement', new Marzipano.ElementPressControlMethod(viewInElement, 'zoom', -velocity, friction), true);
+  controls.registerMethod('outElement', new Marzipano.ElementPressControlMethod(viewOutElement, 'zoom', velocity, friction), true);
 
   function sanitize(s) {
     return s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;');
@@ -184,12 +288,73 @@
 
   function switchScene(scene) {
     stopAutorotate();
+
+    // Update current scene index (ONLY ONCE)
+    currentSceneIndex = scenes.findIndex(function (s) {
+      return s.data.id === scene.data.id;
+    });
+
     scene.view.setParameters(scene.data.initialViewParameters);
     scene.scene.switchTo();
+
     startAutorotate();
     updateSceneName(scene);
     updateSceneList(scene);
+
+    // Update collapsed navigator title
+    // if (collapsedSceneTitle) {
+    //   collapsedSceneTitle.textContent = scene.data.name;
+    // }
+
+    // Update modal UI
+    updateActiveSceneCard();
+    updateScenePagination();
   }
+
+
+  function goToNextScene() {
+    var nextIndex = currentSceneIndex + 1;
+
+    if (nextIndex >= scenes.length) {
+      nextIndex = 0; // loop to first
+    }
+
+    switchScene(scenes[nextIndex]);
+  }
+
+  function goToPrevScene() {
+    var prevIndex = currentSceneIndex - 1;
+
+    if (prevIndex < 0) {
+      prevIndex = scenes.length - 1; // loop to last
+    }
+
+    switchScene(scenes[prevIndex]);
+  }
+
+  // keyboard navigation
+  document.addEventListener('keydown', function (e) {
+    // Ignore keyboard when typing in inputs (future-proof)
+    const tag = document.activeElement.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+
+    switch (e.key) {
+      case 'ArrowLeft':
+        goToPrevScene();
+        break;
+
+      case 'ArrowRight':
+        goToNextScene();
+        break;
+
+      case 'Escape':
+        const modal = document.getElementById('sceneListModal');
+        if (modal.classList.contains('visible')) {
+          modal.classList.remove('visible');
+        }
+        break;
+    }
+  });
 
   function updateSceneName(scene) {
     sceneNameElement.innerHTML = sanitize(scene.data.name);
@@ -206,20 +371,20 @@
     }
   }
 
-  function showSceneList() {
-    sceneListElement.classList.add('enabled');
-    sceneListToggleElement.classList.add('enabled');
-  }
+  // function showSceneList() {
+  //   sceneListElement.classList.add('enabled');
+  //   sceneListToggleElement.classList.add('enabled');
+  // }
 
-  function hideSceneList() {
-    sceneListElement.classList.remove('enabled');
-    sceneListToggleElement.classList.remove('enabled');
-  }
+  // function hideSceneList() {
+  //   sceneListElement.classList.remove('enabled');
+  //   sceneListToggleElement.classList.remove('enabled');
+  // }
 
-  function toggleSceneList() {
-    sceneListElement.classList.toggle('enabled');
-    sceneListToggleElement.classList.toggle('enabled');
-  }
+  // function toggleSceneList() {
+  //   sceneListElement.classList.toggle('enabled');
+  //   sceneListToggleElement.classList.toggle('enabled');
+  // }
 
   function startAutorotate() {
     if (!autorotateToggleElement.classList.contains('enabled')) {
@@ -245,124 +410,79 @@
   }
 
   function createLinkHotspotElement(hotspot) {
-
-    // Create wrapper element to hold icon and tooltip.
     var wrapper = document.createElement('div');
-    wrapper.classList.add('hotspot');
-    wrapper.classList.add('link-hotspot');
+    wrapper.classList.add('hotspot', 'link-hotspot', 'link-hotspot-static');
 
-    // Create image element.
-    var icon = document.createElement('img');
-    icon.src = 'img/link.png';
-    icon.classList.add('link-hotspot-icon');
+    var iconWrapper = document.createElement('div');
+    iconWrapper.classList.add('link-hotspot-icon-wrapper');
 
-    // Set rotation transform.
-    var transformProperties = [ '-ms-transform', '-webkit-transform', 'transform' ];
+    var icon = document.createElement('i');
+    icon.classList.add('fa-solid', 'fa-circle-chevron-up', 'link-hotspot-fa');
+
+    var transformProperties = ['-ms-transform', '-webkit-transform', 'transform'];
     for (var i = 0; i < transformProperties.length; i++) {
       var property = transformProperties[i];
-      icon.style[property] = 'rotate(' + hotspot.rotation + 'rad)';
+      iconWrapper.style[property] = 'rotate(' + hotspot.rotation + 'rad)';
     }
 
-    // Add click event handler.
-    wrapper.addEventListener('click', function() {
+    iconWrapper.appendChild(icon);
+    wrapper.appendChild(iconWrapper);
+
+    var tooltip = document.createElement('div');
+    tooltip.classList.add('hotspot-tooltip', 'link-hotspot-tooltip');
+    tooltip.innerHTML = findSceneDataById(hotspot.target).name;
+    wrapper.appendChild(tooltip);
+
+    wrapper.addEventListener('click', function () {
       switchScene(findSceneById(hotspot.target));
     });
-
-    // Prevent touch and scroll events from reaching the parent element.
-    // This prevents the view control logic from interfering with the hotspot.
     stopTouchAndScrollEventPropagation(wrapper);
-
-    // Create tooltip element.
-    var tooltip = document.createElement('div');
-    tooltip.classList.add('hotspot-tooltip');
-    tooltip.classList.add('link-hotspot-tooltip');
-    tooltip.innerHTML = findSceneDataById(hotspot.target).name;
-
-    wrapper.appendChild(icon);
-    wrapper.appendChild(tooltip);
 
     return wrapper;
   }
 
   function createInfoHotspotElement(hotspot) {
-
-    // Create wrapper element to hold icon and tooltip.
     var wrapper = document.createElement('div');
-    wrapper.classList.add('hotspot');
-    wrapper.classList.add('info-hotspot');
+    wrapper.classList.add('hotspot', 'info-hotspot-static');
 
-    // Create hotspot/tooltip header.
     var header = document.createElement('div');
-    header.classList.add('info-hotspot-header');
+    header.classList.add('info-hotspot-trigger');
 
-    // Create image element.
+    // 1. The Icon Wrapper
     var iconWrapper = document.createElement('div');
     iconWrapper.classList.add('info-hotspot-icon-wrapper');
-    var icon = document.createElement('img');
-    icon.src = 'img/info.png';
-    icon.classList.add('info-hotspot-icon');
+    var icon = document.createElement('i');
+    icon.classList.add('fa-solid', 'fa-circle-info', 'info-hotspot-fa');
     iconWrapper.appendChild(icon);
-
-    // Create title element.
-    var titleWrapper = document.createElement('div');
-    titleWrapper.classList.add('info-hotspot-title-wrapper');
-    var title = document.createElement('div');
-    title.classList.add('info-hotspot-title');
-    title.innerHTML = hotspot.title;
-    titleWrapper.appendChild(title);
-
-    // Create close element.
-    var closeWrapper = document.createElement('div');
-    closeWrapper.classList.add('info-hotspot-close-wrapper');
-    var closeIcon = document.createElement('img');
-    closeIcon.src = 'img/close.png';
-    closeIcon.classList.add('info-hotspot-close-icon');
-    closeWrapper.appendChild(closeIcon);
-
-    // Construct header element.
     header.appendChild(iconWrapper);
-    header.appendChild(titleWrapper);
-    header.appendChild(closeWrapper);
 
-    // Create text element.
-    var text = document.createElement('div');
-    text.classList.add('info-hotspot-text');
-    text.innerHTML = hotspot.text;
+    // 3. Click Handler for the Modal
+    header.addEventListener('click', function () {
+      document.getElementById('infoHotspotTitle').innerText = hotspot.title;
+      document.getElementById('infoHotspotText').innerText = hotspot.text;
+      var modalImg = document.getElementById('infoHotspotImage');
+      if (hotspot.image) {
+        modalImg.src = hotspot.image;
+        modalImg.style.display = 'block';
+      } else {
+        modalImg.style.display = 'none';
+      }
+      var modalElement = document.getElementById('infoHotspotModal');
+      var myModal = bootstrap.Modal.getOrCreateInstance(modalElement);
+      myModal.show();
+    });
 
-    // Place header and text into wrapper element.
     wrapper.appendChild(header);
-    wrapper.appendChild(text);
-
-    // Create a modal for the hotspot content to appear on mobile mode.
-    var modal = document.createElement('div');
-    modal.innerHTML = wrapper.innerHTML;
-    modal.classList.add('info-hotspot-modal');
-    document.body.appendChild(modal);
-
-    var toggle = function() {
-      wrapper.classList.toggle('visible');
-      modal.classList.toggle('visible');
-    };
-
-    // Show content when hotspot is clicked.
-    wrapper.querySelector('.info-hotspot-header').addEventListener('click', toggle);
-
-    // Hide content when close icon is clicked.
-    modal.querySelector('.info-hotspot-close-wrapper').addEventListener('click', toggle);
-
-    // Prevent touch and scroll events from reaching the parent element.
-    // This prevents the view control logic from interfering with the hotspot.
     stopTouchAndScrollEventPropagation(wrapper);
-
     return wrapper;
   }
 
   // Prevent touch and scroll events from reaching the parent element.
   function stopTouchAndScrollEventPropagation(element, eventList) {
-    var eventList = [ 'touchstart', 'touchmove', 'touchend', 'touchcancel',
-                      'wheel', 'mousewheel' ];
+    var eventList = ['touchstart', 'touchmove', 'touchend', 'touchcancel',
+      'wheel', 'mousewheel'];
     for (var i = 0; i < eventList.length; i++) {
-      element.addEventListener(eventList[i], function(event) {
+      element.addEventListener(eventList[i], function (event) {
         event.stopPropagation();
       });
     }
@@ -386,7 +506,183 @@
     return null;
   }
 
+  // Scene List Modal population
+  function populateSceneListModal(direction) {
+    var container = document.getElementById('sceneListModalContent');
+
+    var oldRow = container.querySelector('.scene-list-row');
+
+    if (oldRow) {
+      oldRow.classList.add(
+        direction === 'next' ? 'slide-out-left' : 'slide-out-right'
+      );
+
+      setTimeout(function () {
+        renderNewScenePage(container, direction);
+      }, 300);
+    } else {
+      renderNewScenePage(container, direction);
+    }
+  }
+
+  function renderNewScenePage(container, direction) {
+    container.innerHTML = '';
+
+    var row = document.createElement('div');
+    row.className = 'scene-list-row';
+
+    // Start slightly offset for slide-in
+    row.style.transform =
+      direction === 'next' ? 'translateX(40px)' : 'translateX(-40px)';
+    row.style.opacity = '0';
+
+    if (currentModalMode === 'scenes') {
+
+      var start = currentPage * SCENES_PER_PAGE;
+      var end = start + SCENES_PER_PAGE;
+
+      scenes.slice(start, end).forEach(function (sceneObj) {
+        var data = sceneObj.data;
+
+        var card = document.createElement('div');
+        card.className = 'scene-card';
+        card.dataset.sceneId = data.id;
+
+        var img = document.createElement('img');
+        img.src = data.card_image;
+
+        var title = document.createElement('div');
+        title.className = 'scene-card-title';
+        title.textContent = data.name;
+
+        card.addEventListener('click', function () {
+          switchScene(sceneObj);
+          document.getElementById('sceneListModal').classList.remove('visible');
+        });
+
+        card.appendChild(img);
+        card.appendChild(title);
+        row.appendChild(card);
+      });
+
+    } else {
+      // ===== Campus cards =====
+      campusData.forEach(function (campus) {
+
+        var card = document.createElement('div');
+        card.className = 'scene-card';
+
+        var img = document.createElement('img');
+        img.src = campus.image;
+
+        var title = document.createElement('div');
+        title.className = 'scene-card-title';
+        title.textContent = campus.name;
+
+        card.addEventListener('click', function () {
+          if (campus.url && campus.url !== '#') {
+            window.open(campus.url, '_blank');
+          }
+        });
+
+        card.appendChild(img);
+        card.appendChild(title);
+        row.appendChild(card);
+      });
+    }
+
+    container.appendChild(row);
+
+    requestAnimationFrame(function () {
+      row.classList.add('slide-in');
+      row.style.transform = 'translateX(0)';
+      row.style.opacity = '1';
+    });
+
+    updateScenePagination();
+    updateActiveSceneCard();
+    updatePaginationButtons();
+  }
+
+
+  function nextScenePage() {
+    var maxPage = Math.ceil(scenes.length / SCENES_PER_PAGE) - 1;
+
+    if (currentPage < maxPage) {
+      currentPage++;
+      populateSceneListModal('next');
+    }
+
+    updatePaginationButtons();
+  }
+
+
+  function prevScenePage() {
+    if (currentPage > 0) {
+      currentPage--;
+      populateSceneListModal('prev');
+    }
+
+    updatePaginationButtons();
+  }
+
+
+
+  function updateActiveSceneCard() {
+    var cards = document.querySelectorAll('.scene-card');
+
+    cards.forEach(function (card) {
+      if (card.dataset.sceneId === scenes[currentSceneIndex].data.id) {
+        card.classList.add('active');
+      } else {
+        card.classList.remove('active');
+      }
+    });
+  }
+
+  function updateScenePagination() {
+    var indicator = document.getElementById('scenePageIndicator');
+    if (!indicator) return;
+
+    var totalItems =
+      currentModalMode === 'scenes'
+        ? scenes.length
+        : campusData.length;
+
+    var totalPages = Math.max(1, Math.ceil(totalItems / SCENES_PER_PAGE));
+    indicator.textContent = (currentPage + 1) + ' / ' + totalPages;
+  }
+
+  function updatePaginationButtons() {
+    var prevBtn = document.getElementById('scenePrevBtn');
+    var nextBtn = document.getElementById('sceneNextBtn');
+    if (!prevBtn || !nextBtn) return;
+
+    // Campus mode → no pagination
+    if (currentModalMode === 'campus') {
+      prevBtn.disabled = true;
+      nextBtn.disabled = true;
+      prevBtn.style.opacity = '0.3';
+      nextBtn.style.opacity = '0.3';
+      prevBtn.style.pointerEvents = 'none';
+      nextBtn.style.pointerEvents = 'none';
+      return;
+    }
+
+    var totalPages = Math.ceil(scenes.length / SCENES_PER_PAGE);
+
+    prevBtn.disabled = currentPage === 0;
+    nextBtn.disabled = currentPage === totalPages - 1;
+
+    prevBtn.style.opacity = prevBtn.disabled ? '0.4' : '1';
+    nextBtn.style.opacity = nextBtn.disabled ? '0.4' : '1';
+
+    prevBtn.style.pointerEvents = prevBtn.disabled ? 'none' : 'auto';
+    nextBtn.style.pointerEvents = nextBtn.disabled ? 'none' : 'auto';
+  }
+
+
   // Display the initial scene.
   switchScene(scenes[0]);
-
+  populateSceneListModal();
 })();

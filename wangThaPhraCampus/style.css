@@ -13,22 +13,81 @@
   -webkit-user-drag: none;
   -webkit-touch-callout: none;
   -ms-content-zooming: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-html, body {
+.university-header {
+  position: absolute;
+  top: 28px;
+  left: 5%;
+  width: 90%;
+  height: 2px;
+  background: linear-gradient(to right, #007468, #00DAC3);
+  z-index: 10;
+}
+
+/* Center circular logo */
+.uni-logo {
+  position: absolute;
+  top: -26px;
+  /* half of logo height */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #00DAC3, #007468);
+  padding: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@font-face {
+  font-family: "Silpakorn72";
+  /* Using the exact folder names from your error message */
+  src: url("../Assets/su_font/SU72_PC_TTF/Silapakorn72-Regular_Beta05.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Silpakorn72";
+  src: url("../Assets/su_font/SU72_PC_TTF/Silapakorn72-Bold_Beta05.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Silpakorn72";
+  src: url("../Assets/su_font/SU72_PC_TTF/Silapakorn72-Light_Beta05.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Silpakorn72";
+  src: url("../Assets/su_font/SU72_PC_TTF/Silapakorn72-Italic_Beta05.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+html,
+body {
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
   overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Silpakorn72", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
   font-size: 16px;
   background-color: #000;
   color: #fff;
 }
 
-a, a:hover, a:active, a:visited {
+a,
+a:hover,
+a:active,
+a:visited {
   text-decoration: none;
   color: inherit;
 }
@@ -44,7 +103,7 @@ a, a:hover, a:active, a:visited {
 
 #titleBar {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 40px;
   height: 40px;
@@ -83,20 +142,10 @@ body.multiple-scenes.mobile #titleBar {
   height: 100%;
   line-height: 30px;
   padding: 5px;
-  background-color: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105),
-    rgba(7, 93, 84)
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105, 0.85),
-    rgba(7, 93, 84, 0.85)
-  );
+  background: linear-gradient(to right, #007468, #00DAC3);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-
   -moz-user-select: text;
   -webkit-user-select: text;
   -ms-user-select: text;
@@ -110,21 +159,48 @@ body.multiple-scenes.mobile #titleBar {
 #fullscreenToggle {
   display: none;
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-  background-color: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105),
-    rgba(7, 93, 84)
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105, 0.85),
-    rgba(7, 93, 84, 0.85)
-  );
+  bottom: 10%;
+  right: 5%;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  color: #63E6BE;
+  padding: 0;
+
+  z-index: 100;
+}
+
+#fullscreenToggle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(to bottom right, #007468, #00DAC3);
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  padding: 2px;
+  pointer-events: none;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+body.fullscreen-enabled #fullscreenToggle {
+  display: flex;
 }
 
 .mobile #fullscreenToggle {
@@ -132,23 +208,18 @@ body.multiple-scenes.mobile #titleBar {
   height: 50px;
 }
 
-body.fullscreen-enabled #fullscreenToggle {
-  display: block;
-}
-
+/* Icon behavior */
 #fullscreenToggle .icon {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 30px;
-  height: 30px;
+  position: relative;
+  font-size: 22px;
+  transition: transform 0.25s ease;
 }
 
 .mobile #fullscreenToggle .icon {
-  top: 10px;
-  right: 10px;
+  font-size: 26px;
 }
 
+/* Icon switching */
 #fullscreenToggle .icon.on {
   display: none;
 }
@@ -165,24 +236,24 @@ body.fullscreen-enabled #fullscreenToggle {
   display: none;
 }
 
+/* Hover */
+.no-touch #fullscreenToggle:hover::before {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(0, 218, 195, 0.4);
+}
+
+.no-touch #fullscreenToggle:hover .icon {
+  transform: scale(1.15);
+}
+
 #autorotateToggle {
   display: block;
   position: absolute;
-  top: 0;
-  right: 0;
+  bottom: 10%;
+  right: 100px;
   width: 40px;
   height: 40px;
   padding: 5px;
-  background-color: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105),
-    rgba(7, 93, 84)
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105, 0.85),
-    rgba(7, 93, 84, 0.85)
-  );
 }
 
 .mobile #autorotateToggle {
@@ -192,7 +263,7 @@ body.fullscreen-enabled #fullscreenToggle {
 
 /* If there is a fullscreen button, autorotate must placed a bit to the left */
 body.fullscreen-enabled #autorotateToggle {
-  right: 40px;
+  right: 8%;
 }
 
 body.fullscreen-enabled.mobile #autorotateToggle {
@@ -228,23 +299,69 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   display: none;
 }
 
+#autorotateToggle {
+  display: none !important;
+}
+
 #sceneListToggle {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-  background-color: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105),
-    rgba(7, 93, 84)
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105, 0.85),
-    rgba(7, 93, 84, 0.85)
-  );
+  bottom: 10%;
+  left: 5%;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  color: #63E6BE;
+
+  padding: 0;
+  z-index: 100;
+}
+
+#sceneListToggle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(to right, #007468, #00DAC3);
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  padding: 2px;
+  /* border thickness */
+  pointer-events: none;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#sceneListToggle .icon {
+  position: relative;
+  /* ← not absolute */
+  font-size: 22px;
+  z-index: 1;
+  transition: transform 0.25s ease;
+}
+
+/* Hover effect */
+.no-touch #sceneListToggle:hover::before {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(0, 218, 195, 0.4);
+}
+
+.no-touch #sceneListToggle:hover .icon {
+  transform: scale(1.15);
 }
 
 .mobile #sceneListToggle {
@@ -252,25 +369,8 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   height: 50px;
 }
 
-#sceneListToggle .text {
-  position: absolute;
-  top: 5px;
-  left: 15px;
-  width: 100%;
-  line-height: 30px;
-}
-
-#sceneListToggle .icon {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 30px;
-  height: 30px;
-}
-
 .mobile #sceneListToggle .icon {
-  top: 10px;
-  right: 10px;
+  font-size: 26px;
 }
 
 #sceneListToggle .icon.on {
@@ -305,26 +405,14 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 
 .mobile #sceneList {
   padding-top: 50px;
+  width: 100%;
+  height: 100%;
+  left: -100%;
 }
 
 #sceneList .scenes {
   width: 100%;
-  background-color: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105),
-    rgba(7, 93, 84)
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105, 0.85),
-    rgba(7, 93, 84, 0.85)
-  );
-}
-
-.mobile #sceneList {
-  width: 100%;
-  height: 100%;
-  left: -100%;
+  background: linear-gradient(to right, #007468, #00DAC3);
 }
 
 .mobile #sceneList.enabled {
@@ -364,50 +452,32 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 }
 
 .no-touch #sceneList .scene:hover {
-  background-color: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105),
-    rgba(7, 93, 84)
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105, 0.85),
-    rgba(7, 93, 84, 0.85)
-  );
+  background: linear-gradient(to right, #007468, #00DAC3);
 }
 
 #sceneList .scene.current {
-  background-color: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105),
-    rgba(7, 93, 84)
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 116, 105, 0.85),
-    rgba(7, 93, 84, 0.85)
-  );
+  background: linear-gradient(to right, #007468, #00DAC3);
 }
 
 /* Hide scene list when only a single scene exists */
-body.single-scene #sceneList, body.single-scene #sceneListToggle {
+body.single-scene #sceneList,
+body.single-scene #sceneListToggle {
   display: none;
 }
 
-/* Link hotspot */
 
+/* Link hotspot */
 .link-hotspot {
-  width: 60px;
-  height: 60px;
-  margin-left: -30px;
-  margin-top: -30px;
+  line-height: 1.2em;
   opacity: 0.9;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  -webkit-transition: opacity 0.2s 0.2s;
+  transition: opacity 0.2s 0.2s;
 }
 
 .no-touch .link-hotspot:hover {
   opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 
 .mobile .link-hotspot {
@@ -415,298 +485,181 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   height: 70px;
 }
 
-.link-hotspot-icon {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
+/* Tooltip */
 .link-hotspot-tooltip {
   position: absolute;
   left: 100%;
-  top: 14px; /* ( 60 - (16 + 2*8) ) / 2 */
-
+  top: 14px;
   margin-left: 3px;
-
   font-size: 16px;
-
   max-width: 300px;
-
   padding: 8px 10px;
-
   border-radius: 5px;
-
-  background-color: rgb(58,68,84);
-  background-color: rgba(58,68,84,0.8);
-
+  background: linear-gradient(to right, #007468, #00DAC3);
   color: #fff;
-
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
-
-  cursor: pointer;
-
   opacity: 0;
-
-  -ms-transform: translateX(-8px);
-  -webkit-transform: translateX(-8px);
   transform: translateX(-8px);
-
-  -webkit-transition: -ms-transform 0.3s,
-                      -webkit-transform 0.3s,
-                      transform 0.3s,
-                      opacity 0.3s;
-  transition: -ms-transform 0.3s,
-              -webkit-transform 0.3s,
-              transform 0.3s,
-              opacity 0.3s;
-}
-
-.mobile .link-hotspot {
-  top: 19px; /* ( 70 - (16 + 2*8) ) / 2 */
+  transition: transform 0.3s, opacity 0.3s;
+  pointer-events: none;
 }
 
 .no-touch .link-hotspot:hover .link-hotspot-tooltip {
   opacity: 1;
-  -ms-transform: translateX(0);
-  -webkit-transform: translateX(0);
   transform: translateX(0);
-}
-
-/* Prevent tooltip from triggering */
-.link-hotspot-tooltip {
-  pointer-events: none;
-}
-.no-touch .link-hotspot:hover .link-hotspot-tooltip {
   pointer-events: all;
 }
 
-/* Fallback mode without pointer-events (IE8-10) */
-.tooltip-fallback .link-hotspot-tooltip {
-  display: none;
+/* Icon wrapper */
+.link-hotspot-icon-wrapper {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  transition: transform 0.25s ease;
 }
-.no-touch .tooltip-fallback .link-hotspot:hover .link-hotspot-tooltip {
+
+.link-hotspot-icon-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 100%;
+  background: linear-gradient(to right, #007468, #00DAC3);
+  -webkit-mask: radial-gradient(transparent 21px, #000 21px);
+  mask: radial-gradient(transparent 21px, #000 21px);
+  z-index: 1;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Icon */
+.link-hotspot-fa {
+  font-size: 36px;
+  line-height: 1;
+  position: absolute;
   display: block;
+
+  background: linear-gradient(to right, #007468, #00DAC3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  z-index: 10;
+  transition: transform 0.25s ease;
+  user-select: none;
+  pointer-events: none;
 }
 
-/* Info hotspot */
+/* Hover */
+.link-hotspot-static:hover .link-hotspot-icon-wrapper {
+  transform: scale(1.2);
+}
 
+.link-hotspot-static:hover .link-hotspot-icon-wrapper::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 218, 195, 0.4);
+}
+
+.link-hotspot-static:hover .link-hotspot-fa {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 5px rgba(0, 218, 195, 0.5));
+}
+
+/* Mobile */
+/* .mobile .link-hotspot-icon-wrapper {
+  width: 50px;
+  height: 50px;
+}
+
+.mobile .link-hotspot-icon-wrapper::before {
+  -webkit-mask: radial-gradient(transparent 18px, #000 19px);
+  mask: radial-gradient(transparent 21px, #000 21px);
+}
+
+ .mobile .link-hotspot-fa {
+  font-size: 36px;
+}  */
+
+/* Info Hotspot */
 .info-hotspot {
   line-height: 1.2em;
   opacity: 0.9;
-  -webkit-transition: opacity 0.2s 0.2s;
-  transition: opacity 0.2s 0.2s;
-}
-
-.no-touch .info-hotspot:hover {
-  opacity: 1;
-  -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
 
-.info-hotspot.visible {
-  opacity: 1;
-}
-
+/* Header*/
 .info-hotspot .info-hotspot-header {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  background-color: rgb(103,115,131);
+  width: 48px;
+  height: 48px;
+  background: none;
   cursor: pointer;
-  -webkit-transition: width 0.3s ease-in-out 0.5s,
-                      border-radius 0.3s ease-in-out 0.5s;
-  transition: width 0.3s ease-in-out 0.5s,
-              border-radius 0.3s ease-in-out 0.5s;
 }
 
-.mobile .info-hotspot .info-hotspot-header {
+/*Icon Wrapper*/
+.info-hotspot-icon-wrapper {
+  position: relative;
   width: 50px;
   height: 50px;
-  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  transition: transform 0.25s ease;
 }
 
-.desktop.no-touch .info-hotspot .info-hotspot-header:hover {
-  width: 260px;
-  border-radius: 5px;
-  -webkit-transition: width 0.3s ease-in-out,
-                      border-radius 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out,
-              border-radius 0.3s ease-in-out;
-}
-
-.desktop .info-hotspot.visible .info-hotspot-header,
-.desktop.no-touch .info-hotspot.visible .info-hotspot-header:hover {
-  width: 260px;
-  border-radius: 5px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  -webkit-transition: width 0.3s ease-in-out,
-                      border-radius 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out,
-              border-radius 0.3s ease-in-out;
-}
-
-.info-hotspot .info-hotspot-icon-wrapper {
-  width: 40px;
-  height: 40px;
-}
-
-.mobile .info-hotspot .info-hotspot-icon-wrapper {
-  width: 50px;
-  height: 50px;
-}
-
-.info-hotspot .info-hotspot-icon {
-  width: 90%;
-  height: 90%;
-  margin: 5%;
-}
-
-.info-hotspot .info-hotspot-title-wrapper {
+.info-hotspot-icon-wrapper::before {
+  content: "";
   position: absolute;
-  left: 40px;
-  top: 0;
-  width: 0;
-  height: 40px;
-  padding: 0;
-  overflow: hidden;
-  -webkit-transition: width 0s 0.4s,
-                      padding 0s 0.4s;
-  transition: width 0s 0.4s,
-              padding 0s 0.4s;
+  inset: 0;
+  border-radius: 100%;
+  background: linear-gradient(to right, #007468, #00DAC3);
+  -webkit-mask: radial-gradient(transparent 21px, #000 21px);
+  mask: radial-gradient(transparent 21px, #000 21px);
+  z-index: 1;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.desktop .info-hotspot.visible .info-hotspot-title-wrapper,
-.desktop.no-touch .info-hotspot .info-hotspot-header:hover .info-hotspot-title-wrapper {
-  width: 220px;
-  padding: 0 5px;
-  -webkit-transition: width 0s 0.4s,
-                      padding 0s 0.4s;
-  transition: width 0s 0.4s,
-              padding 0s 0.4s;
-}
-
-.info-hotspot .info-hotspot-title-wrapper:before {
-  content: '';
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-}
-
-.info-hotspot .info-hotspot-title {
-  display: inline-block;
-  vertical-align: middle;
-
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
-}
-
-.info-hotspot .info-hotspot-close-wrapper {
+.info-hotspot-fa {
+  font-size: 36px;
+  line-height: 1;
   position: absolute;
-  left: 260px;
-  top: 0;
-  height: 40px;
-  width: 40px;
-  border-top-right-radius: 5px;
-  background-color: rgb(78,88,104);
-  visibility: hidden;
-  -ms-transform: perspective(200px) rotateY(90deg);
-  -webkit-transform: perspective(200px) rotateY(90deg);
-  transform: perspective(200px) rotateY(90deg);
-  -ms-transform-origin: 0 50% 0;
-  -webkit-transform-origin: 0 50% 0;
-  transform-origin: 0 50% 0;
-  -webkit-transition: -ms-transform 0.3s 0.3s,
-                      -webkit-transform 0.3s 0.3s,
-                      transform 0.3s 0.3s,
-                      visibility 0s 0.6s;
-  transition: -ms-transform 0.3s 0.3s,
-              -webkit-transform 0.3s 0.3s,
-              transform 0.3s 0.3s,
-              visibility 0s 0.6s;
+  display: block;
+
+  background: linear-gradient(to right, #007468, #00DAC3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  z-index: 10;
+  transition: transform 0.25s ease;
+  user-select: none;
+  pointer-events: none;
 }
 
-.desktop .info-hotspot.visible .info-hotspot-close-wrapper {
-  visibility: visible;
-  -ms-transform: perspective(200px) rotateY(0deg);
-  -webkit-transform: perspective(200px) rotateY(0deg);
-  transform: perspective(200px) rotateY(0deg);
-  -webkit-transition: -ms-transform 0.3s,
-                      -webkit-transform 0.3s,
-                      transform 0.3s,
-                      visibility 0s 0s;
-  transition: -ms-transform 0.3s,
-              -webkit-transform 0.3s,
-              transform 0.3s,
-              visibility 0s 0s;
+/* Hover */
+.info-hotspot-static:hover .info-hotspot-icon-wrapper {
+  transform: scale(1.04);
 }
 
-.info-hotspot .info-hotspot-close-icon {
-  width: 70%;
-  height: 70%;
-  margin: 15%;
+.info-hotspot-static:hover .info-hotspot-icon-wrapper::before {
+  transform: scale(1.04);
+  box-shadow: 0 0 15px rgba(0, 218, 195, 0.4);
 }
 
-.info-hotspot .info-hotspot-text {
-  position: absolute;
-  width: 300px;
-  height: auto;
-  max-height: 200px;
-  top: 40px;
-  left: 0;
-  padding: 10px;
-  background-color: rgb(58,68,84);
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  overflow-y: auto;
-  visibility: hidden;
-  /* rotate(90deg) causes transition flicker on Firefox 58 */
-  -ms-transform: perspective(200px) rotateX(-89.999deg);
-  -webkit-transform: perspective(200px) rotateX(-89.999deg);
-  transform: perspective(200px) rotateX(-89.999deg);
-  -ms-transform-origin: 50% 0 0;
-  -webkit-transform-origin: 50% 0 0;
-  transform-origin: 50% 0 0;
-  -webkit-transition: -ms-transform 0.3s,
-                      -webkit-transform 0.3s,
-                      transform 0.3s,
-                      visibility 0s 0.3s;
-  transition: -ms-transform 0.3s,
-              -webkit-transform 0.3s,
-              transform 0.3s,
-              visibility 0s 0.3s;
-
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
+.info-hotspot-static:hover .info-hotspot-fa {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 5px rgba(0, 218, 195, 0.5));
 }
 
-.desktop .info-hotspot.visible .info-hotspot-text {
-  visibility: visible;
-  -ms-transform: perspective(200px) rotateX(0deg);
-  -webkit-transform: perspective(200px) rotateX(0deg);
-  transform: perspective(200px) rotateX(0deg);
-  -webkit-transition: -ms-transform 0.3s 0.3s,
-                      -webkit-transform 0.3s 0.3s,
-                      transform 0.3s 0.3s,
-                      visibility 0s 0s;
-  transition: -ms-transform 0.3s 0.3s,
-              -webkit-transform 0.3s 0.3s,
-              transform 0.3s 0.3s,
-              visibility 0s 0s;
-}
 
-/* Info hotspot modal */
-
-.desktop .info-hotspot-modal {
-  display: none;
-}
+/* ===============================
+  INFO HOTSPOT MODAL – OVERLAY
+   =============================== */
 
 .info-hotspot-modal {
   top: 0;
@@ -716,37 +669,12 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   height: 100%;
   overflow: hidden;
   z-index: 11000 !important;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0, 0, 0, .5);
   line-height: 1.2em;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.2s ease-in-out 0.5s,
-                      visibility 0s 0.7s;
-  transition: opacity 0.2s ease-in-out 0.5s,
-              visibility 0s 0.7s;
-}
-
-.info-hotspot-modal.visible {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: opacity 0.2s ease-in-out,
-                      visibility 0s 0s;
-  transition: opacity 0.2s ease-in-out,
-              visibility 0s 0s;
-}
-
-.info-hotspot-modal .info-hotspot-header {
-  position: absolute;
-  top: 60px;
-  left: 10px;
-  right: 10px;
-  width: auto;
-  height: 50px;
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out 0.2s;
-  transition: opacity 0.3s ease-in-out 0.2s;
+  -webkit-transition: opacity 0.2s ease-in-out 0.5s, visibility 0s 0.7s;
+  transition: opacity 0.2s ease-in-out 0.5s, visibility 0s 0.7s;
 }
 
 .info-hotspot-modal.visible .info-hotspot-header {
@@ -786,48 +714,16 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 .info-hotspot-modal .info-hotspot-title {
   display: inline-block;
   vertical-align: middle;
-
   -moz-user-select: text;
   -webkit-user-select: text;
   -ms-user-select: text;
   user-select: text;
-}
-
-.info-hotspot-modal .info-hotspot-close-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  background-color: rgb(78,88,104);
-  background-color: rgba(78,88,104,0.8);
-  cursor: pointer;
 }
 
 .info-hotspot-modal .info-hotspot-close-icon {
   width: 70%;
   height: 70%;
   margin: 15%;
-}
-
-.info-hotspot-modal .info-hotspot-text {
-  position: absolute;
-  top: 110px;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
-  padding: 10px;
-  background-color: rgb(58,68,84);
-  background-color: rgba(58,68,84,0.8);
-  overflow-y: auto;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
 }
 
 .info-hotspot-modal.visible .info-hotspot-text {
@@ -837,7 +733,6 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 }
 
 /* View control buttons */
-
 .viewControlButton {
   display: none;
   position: absolute;
@@ -846,19 +741,12 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
+  background-color: rgb(103, 115, 131);
+  background-color: rgba(103, 115, 131, 0.8);
 }
 
 body.view-control-buttons .viewControlButton {
   display: block;
-}
-
-/* Hide controls when width is too small */
-@media (max-width: 600px) {
-  body.view-control-buttons .viewControlButton {
-    display: none;
-  }
 }
 
 .viewControlButton .icon {
@@ -873,18 +761,983 @@ body.view-control-buttons .viewControlButton {
 .viewControlButton-1 {
   margin-left: -145px;
 }
+
 .viewControlButton-2 {
   margin-left: -95px;
 }
+
 .viewControlButton-3 {
   margin-left: -45px;
 }
+
 .viewControlButton-4 {
   margin-left: 5px;
 }
+
 .viewControlButton-5 {
   margin-left: 55px;
 }
+
 .viewControlButton-6 {
   margin-left: 105px;
+}
+
+#sceneNavWrapper {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  width: 90%;
+  z-index: 10;
+}
+
+#sceneNavigator {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 10px 18px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #2ec4b6;
+
+  width: 320px;
+  justify-content: center;
+}
+
+.sceneNavLine {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, #007468, #00DAC3);
+}
+
+.sceneNavLine.left {
+  margin-right: 0.5px;
+}
+
+.sceneNavLine.right {
+  margin-left: 0.5px;
+}
+
+#sceneTitle {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-btn {
+  font-size: 20px;
+  color: #2ec4b6;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-btn:hover {
+  color: #ffffff;
+}
+
+.mobile .scene-nav-line {
+  display: none;
+}
+
+/* ===============================
+  STATIC INFO HOTSPOT
+   =============================== */
+.info-hotspot-static {
+  width: 85px;
+  height: 85px;
+  cursor: pointer;
+}
+
+.info-hotspot-static .info-hotspot-trigger {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-hotspot-static img {
+  width: 70%;
+  height: 70%;
+  pointer-events: none;
+}
+
+/* Disable ALL hover effects */
+.info-hotspot-static:hover {
+  opacity: 1;
+  transform: none;
+}
+
+/* ===============================
+  INFO HOTSPOT MODAL – BASE PANEL
+   =============================== */
+.info-hotspot-ui .modal-dialog {
+  max-width: 920px;
+}
+
+.info-hotspot-ui .modal-content {
+  position: relative;
+  background: rgba(16, 20, 26, 0.96);
+  border-radius: 0 !important;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.75), inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+/* Header */
+.info-hotspot-ui .modal-header {
+  padding: 0px !important;
+  border: none;
+  min-height: 0;
+}
+
+.info-hotspot-ui .modal-title {
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #2ec4b6;
+}
+
+.info-hotspot-ui .modal-body {
+  padding: 0px !important;
+}
+
+.info-hotspot-ui .btn-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  z-index: 10;
+}
+
+/* Image panel */
+#infoHotspotImage {
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ===============================
+  INFO HOTSPOT MODAL – SPLIT LAYOUT
+  =============================== */
+.info-hotspot-body {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  height: 100%;
+  min-height: 320px;
+}
+
+/* LEFT IMAGE */
+.info-hotspot-left {
+  height: 100%;
+}
+
+.info-hotspot-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0px !important;
+}
+
+/* RIGHT TEXT */
+.info-hotspot-right {
+  padding: 0.6rem 1.6rem 2.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* TITLE */
+.info-hotspot-right .info-hotspot-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0;
+  padding-top: 0.15rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2ec4b6;
+  border-bottom: 2px solid rgba(46, 196, 182, 0.4);
+}
+
+.info-hotspot-close:hover i {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* BODY TEXT */
+.info-hotspot-subtitle {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #ffffff;
+  opacity: 0.9;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.info-hotspot-text {
+  margin-top: -0.6rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #e6e6e6;
+}
+
+.info-hotspot-main-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* space between subtitle and text */
+  margin-top: 0.5rem;
+  /* adjust vertical position */
+  padding-right: 1rem;
+  /* prevent text from touching the edge */
+  transform: translateY(-30px);
+}
+
+/*CLOSING BUTTON*/
+.info-hotspot-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 20;
+}
+
+/* INFO ICON IN TITLE */
+.info-hotspot-title i {
+  font-size: 1.4rem;
+  /* same as text */
+  font-weight: 900;
+  /* optional for thicker icon */
+  background: linear-gradient(to right, #007468, #00DAC3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-right: 0.5rem;
+  /* spacing between icon and text */
+}
+
+/* CLOSE BUTTON */
+.info-hotspot-close i {
+  font-size: 1.6rem;
+  /* slightly bigger than text */
+  background: linear-gradient(to right, #007468, #00DAC3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* ===============================
+  SCENE LIST BOTTOM MODAL
+   =============================== */
+.scene-list-modal {
+  position: fixed;
+  left: 0.5vw;
+  right: 0.5vw;
+  bottom: 0.5vh;
+  height: 50vh;
+  max-height: 70vh;
+  background: #ffffff;
+  color: #000;
+  z-index: 12000;
+  border-radius: 12px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.scene-list-modal.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scene-list-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+}
+
+.scene-list-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px 16px;
+}
+
+.scene-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scene-filter-pagination {
+  display: flex;
+  align-items: center;
+  margin-left: auto;   /* 🔑 pushes it to the right */
+  gap: 16px;
+}
+
+.scene-brand {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.scene-tabs {
+  position: relative;
+  display: flex;
+  gap: 100px;
+  margin: auto;
+}
+
+.scene-tabs button {
+  width: 140px;
+  background: none;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+.scene-tabs button.active {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.scene-tab-underline {
+  position: absolute;
+  bottom: -22px;
+  height: 3px;
+  background-color: #007468;
+  transition: left 0.25s ease, width 0.25s ease;
+}
+
+.scene-list-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.scene-list-close i {
+  color: #454C56;
+}
+
+.scene-list-close i:hover {
+  transform: scale(1.15);
+}
+
+.scene-list-title {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.scene-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.scene-pagination button {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border-radius: 100%;
+  border: 1px solid #454C56;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scene-pagination button i {
+  font-size: 20px;
+  color: #454C56;
+  z-index: 1;
+  transition: transform 0.2s ease;
+}
+
+.scene-pagination button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.no-touch .scene-pagination button:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #454C56;
+}
+
+.no-touch .scene-pagination button:hover i {
+  transform: scale(1.15);
+}
+
+.mobile .scene-pagination button {
+  width: 44px;
+  height: 44px;
+}
+
+.mobile .scene-pagination button i {
+  font-size: 24px;
+}
+
+.scene-campus {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.scene-filters {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2px;
+}
+
+.scene-list-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.scene-list-tabs {
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+
+.scene-list-tabs button {
+  flex: 1;
+  padding: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.scene-list-tabs button.active {
+  border-bottom: 3px solid #454C56;
+  font-weight: 600;
+}
+
+/* ===============================
+  SCENE CARDS
+   =============================== */
+.scene-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  background: none;
+  border-radius: 0;
+  overflow: visible;
+  transition: transform 0.2s ease;
+}
+
+.scene-card:hover {
+  transform: translateY(-2px);
+}
+
+.scene-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.scene-card img {
+  width: 100%;
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+.scene-card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  padding-left: 4px;
+}
+
+.scene-card.active {
+  background: #ffffff;
+}
+
+.scene-card.active .scene-card-title {
+  font-weight: 600;
+  color: #0f766e;
+}
+
+.scene-page-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #111;
+}
+
+.scene-page-btn:hover {
+  background: #f3f3f3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.scene-page-btn:active {
+  transform: scale(0.95);
+}
+
+.scene-list-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.scene-list-row.slide-out-left {
+  transform: translateX(-40px);
+  opacity: 0;
+}
+
+.scene-list-row.slide-out-right {
+  transform: translateX(40px);
+  opacity: 0;
+}
+
+.scene-list-row.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+  padding: 4px 0;
+  gap: 14px; 
+}
+
+/* Dark Vignette Overlay */
+.vignette-overlay {
+  position: fixed;
+  /* cover whole viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* let clicks go through */
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 0;
+  /* just below modals but above panorama */
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+   =============================== */
+
+/* Tablet & small laptop */
+@media (max-width: 1024px) {
+
+  /* ---------- PANORAMA CONTROLS ---------- */
+  #fullscreenToggle,
+  #sceneListToggle {
+    width: 48px;
+    height: 48px;
+  }
+
+  #fullscreenToggle .icon,
+  #sceneListToggle .icon {
+    font-size: 24px;
+  }
+
+  #fullscreenToggle {
+    bottom: 12%;
+    right: 6%;
+  }
+
+  #sceneListToggle {
+    bottom: 12%;
+    left: 6%;
+  }
+
+  /* ---------- SCENE NAV ---------- */
+  #sceneNavigator {
+    width: 420px;
+    padding: 10px 14px;
+    gap: 12px;
+  }
+
+  #sceneTitle {
+    font-size: 15px;
+  }
+
+  /* ---------- INFO HOTSPOT MODAL ---------- */
+@media (max-width: 1024px) {
+
+  .scene-list-modal {
+    left: 1vw;
+    right: 1vw;
+    height: 60vh;
+    max-height: 75vh;
+    border-radius: 14px;
+  }
+
+  /* HEADER */
+  .scene-list-header {
+    gap: 24px;
+    padding: 0.9rem 1.2rem;
+  }
+
+  .scene-brand {
+    font-size: 20px;
+  }
+
+  .scene-tabs {
+    gap: 48px;
+  }
+
+  .scene-tabs button {
+    width: auto;
+    font-size: 15px;
+  }
+
+  /* CONTROLS */
+  .scene-controls {
+    gap: 520px; /* remove 900px */
+  }
+
+  .scene-filter-pagination {
+    gap: 18px; /* remove 500px */
+  }
+
+  .scene-campus {
+    font-size: 20px;
+  }
+
+  /* CARDS */
+  .scene-list-row {
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+    gap: 16px;
+    padding: 0.75rem;
+  }
+
+  .scene-card img {
+    height: 130px;
+  }
+
+}
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .scene-list-modal {
+    left: 1vw;
+    right: 1vw;
+    height: 60vh;
+    max-height: 75vh;
+    border-radius: 14px;
+  }
+
+  /* HEADER */
+  .scene-list-header {
+    gap: 24px;
+    padding: 0.9rem 1.2rem;
+  }
+
+  .scene-brand {
+    font-size: 20px;
+  }
+
+  .scene-tabs {
+    gap: 48px;
+  }
+
+  .scene-tabs button {
+    width: auto;
+    font-size: 15px;
+  }
+
+  /* CONTROLS */
+  .scene-controls {
+    gap: 265px; /* remove 900px */
+  }
+
+  .scene-filter-pagination {
+    gap: 18px; /* remove 500px */
+  }
+
+  .scene-campus {
+    font-size: 20px;
+  }
+
+  /* CARDS */
+  .scene-list-row {
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+    gap: 16px;
+    padding: 0.75rem;
+  }
+
+  .scene-card img {
+    height: 130px;
+  }
+
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+
+  /* ---------- GENERAL ---------- */
+  body {
+    font-size: 15px;
+  }
+
+  * {
+    touch-action: manipulation;
+  }
+
+  /* ---------- PANORAMA CONTROLS ---------- */
+  #fullscreenToggle,
+  #sceneListToggle {
+    width: 56px;
+    height: 56px;
+  }
+
+  #fullscreenToggle {
+    bottom: 14%;
+    right: 6%;
+  }
+
+  #sceneListToggle {
+    bottom: 14%;
+    left: 6%;
+  }
+
+  #fullscreenToggle .icon,
+  #sceneListToggle .icon {
+    font-size: 28px;
+  }
+
+  /* ---------- SCENE NAV (BOTTOM CENTER) ---------- */
+  #sceneNavWrapper {
+    bottom: 18px;
+  }
+
+  #sceneNavigator {
+    width: 94%;
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  #sceneTitle {
+    font-size: 13px;
+  }
+
+  .nav-btn {
+    font-size: 18px;
+  }
+
+  .sceneNavLine {
+    height: 1.5px;
+  }
+
+  /* ---------- INFO HOTSPOT MODAL ---------- */
+  .info-hotspot-ui .modal-content {
+    border-radius: 10px;
+  }
+
+  .info-hotspot-body {
+    grid-template-columns: 1fr;
+  }
+
+  .info-hotspot-left img {
+    max-height: 200px;
+  }
+
+  .info-hotspot-right {
+    padding: 1rem 1rem 1.4rem;
+    gap: 0.8rem;
+  }
+
+  .info-hotspot-title {
+    font-size: 1.15rem;
+  }
+
+  .info-hotspot-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .info-hotspot-text {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .info-hotspot-main-body {
+    transform: none;
+    padding-right: 0;
+  }
+
+  .info-hotspot-close i {
+    font-size: 1.8rem;
+  }
+
+  /* ---------- SCENE LIST BOTTOM MODAL ---------- */
+  .scene-list-modal {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 75vh;
+    border-radius: 16px 16px 0 0;
+    padding: 0;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Header: give hierarchy & air */
+  .scene-list-header {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 14px 16px 10px;
+  }
+
+  .scene-brand {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  /* Tabs: less cramped */
+  .scene-tabs {
+    gap: 24px;
+    margin-top: 4px;
+  }
+
+  .scene-tabs button {
+    font-size: 14px;
+    width: auto;
+    padding-bottom: 8px;
+  }
+
+  .scene-tab-underline {
+    bottom: -12px;
+    height: 2px;
+  }
+
+  /* Body spacing */
+  .scene-list-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px 16px;
+    overflow: scroll;
+  }
+
+  /* Controls: STACK instead of squeeze */
+  .scene-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .scene-filters,
+  .scene-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .scene-filter-pagination {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-content: center;
+  }
+
+  /* Divider before cards */
+  .scene-list-body::after {
+    content: "";
+    height: 1px;
+    background: rgba(0,0,0,0.08);
+    margin: 4px 0 12px;
+  }
+
+  /* ---------- SCENE GRID ---------- */
+  .scene-list-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 8px;
+  }
+
+.scene-card {
+    min-height: 72px;
+    height: auto;           
+    grid-template-columns: 96px 1fr;
+    border-radius: 10px;
+    align-items: center;
+  }
+
+  .scene-card img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .scene-card-title {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  /* ---------- PAGINATION ---------- */
+  .scene-pagination button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .scene-pagination button::before {
+    -webkit-mask:
+      radial-gradient(circle at center, transparent 60%, black 61%);
+    mask:
+      radial-gradient(circle at center, transparent 60%, black 61%);
+  }
+
 }
