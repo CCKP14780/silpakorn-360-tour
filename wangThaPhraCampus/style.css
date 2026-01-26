@@ -1262,6 +1262,49 @@ body.view-control-buttons .viewControlButton {
 /* ===============================
   SCENE CARDS
    =============================== */
+.scene-card-coming-soon img {
+  filter: grayscale(100%) brightness(0.2) blur(0.5px);
+  opacity: 0.8;
+  width: 100%;
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+.scene-card-coming-soon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  background: none;
+  border-radius: 0;
+  overflow: visible;
+  transition: transform 0.2s ease;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Overlay Text */
+.scene-card-coming-soon::after {
+  content: "(Coming Soon)";
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-radius: 12px;
+
+  transform: translateY(-10px);
+}
+
 .scene-card {
   display: flex;
   flex-direction: column;
@@ -1413,8 +1456,6 @@ body.view-control-buttons .viewControlButton {
   }
 
   /* ---------- INFO HOTSPOT MODAL ---------- */
-@media (max-width: 1024px) {
-
   .scene-list-modal {
     left: 1vw;
     right: 1vw;
@@ -1466,10 +1507,10 @@ body.view-control-buttons .viewControlButton {
     height: 130px;
   }
 
+  .scene-card-coming-soon img {
+    height: 130px;
+  }
 }
-
-}
-
 /* Mobile */
 @media (max-width: 768px) {
 
@@ -1709,16 +1750,19 @@ body.view-control-buttons .viewControlButton {
     padding: 8px;
   }
 
-.scene-card {
+.scene-card,
+.scene-card-coming-soon {
     min-height: 72px;
     height: auto;           
-    grid-template-columns: 96px 1fr;
+    /* grid-template-columns: 96px 1fr; */
     border-radius: 10px;
     align-items: center;
   }
 
-  .scene-card img {
-    height: 100%;
+  .scene-card img, 
+  .scene-card-coming-soon img {
+    aspect-ratio: 16 / 9;
+    height: auto;
     object-fit: cover;
   }
 
