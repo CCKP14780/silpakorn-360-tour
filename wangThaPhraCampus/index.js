@@ -564,14 +564,19 @@ function setActiveTab(index) {
         card.appendChild(title);
         row.appendChild(card);
       });
-
     } else {
       // ===== Campus cards =====
+      let validCampusCards = ["วิทยาเขตวังท่าพระ"];
       campusData.forEach(function (campus) {
 
         var card = document.createElement('div');
-        card.className = 'scene-card';
-
+        if (validCampusCards.includes(campus.name)) {
+          card.className = 'scene-card';
+        } else {
+          card.className = 'scene-card-coming-soon';
+        }
+        
+        // if validCampusCards.includes(campus.name) --> make img darker
         var img = document.createElement('img');
         img.src = campus.image;
 
@@ -579,11 +584,11 @@ function setActiveTab(index) {
         title.className = 'scene-card-title';
         title.textContent = campus.name;
 
-        card.addEventListener('click', function () {
-          if (campus.url && campus.url !== '#') {
-            window.open(campus.url, '_blank');
-          }
-        });
+        // card.addEventListener('click', function () {
+        //   if (campus.url && campus.url !== '#') {
+        //     window.open(campus.url, '_blank');
+        //   }
+        // });
 
         card.appendChild(img);
         card.appendChild(title);
