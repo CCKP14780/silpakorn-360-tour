@@ -1660,8 +1660,32 @@ body.view-control-buttons .viewControlButton {
     padding-right: 0;
   }
 
+  .info-hotspot-close {
+    top: 328px;   /* closing button size */
+  }
+
   .info-hotspot-close i {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 375px) {
+  .info-hotspot-close {
+    top: 290px;   /* closing button size */
+  }
+
+  .info-hotspot-close i {
+    font-size: 1.4rem;
+  }
+  }
+
+  @media (max-width: 320px) {
+  .info-hotspot-close {
+    top: 250px;   /* closing button size */
+  }
+
+  .info-hotspot-close i {
+    font-size: 1.4rem;
+  }
   }
 
   /* ---------- SCENE LIST BOTTOM MODAL ---------- */
