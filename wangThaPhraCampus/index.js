@@ -22,6 +22,7 @@
   var data = window.APP_DATA;
   var campusData = window.CAMPUS_DATA || [];
   var TAB_CONFIG = window.TAB_CONFIG || [];
+  var currentLanguage = 'zh'; // default language
 
   // Grab elements from DOM.
   var panoElement = document.querySelector('#pano');
@@ -210,46 +211,46 @@
   var viewOutElement = document.querySelector('#viewOut');
   var tabButtons = document.querySelectorAll('.scene-tabs button');
 
-function updateTabUnderline() {
-  const activeBtn = document.querySelector('.scene-tabs button.active');
-  const underline = document.querySelector('.scene-tab-underline');
-  const tabs = document.querySelector('.scene-tabs');
+  function updateTabUnderline() {
+    const activeBtn = document.querySelector('.scene-tabs button.active');
+    const underline = document.querySelector('.scene-tab-underline');
+    const tabs = document.querySelector('.scene-tabs');
 
-  if (!activeBtn || !underline || !tabs) return;
+    if (!activeBtn || !underline || !tabs) return;
 
-  // Get width of the LONGEST tab (สำรวจวิทยาเขตอื่น)
-  const allButtons = Array.from(tabs.querySelectorAll('button'));
-  const maxWidth = Math.max(...allButtons.map(btn => btn.offsetWidth));
+    // Get width of the LONGEST tab (สำรวจวิทยาเขตอื่น)
+    const allButtons = Array.from(tabs.querySelectorAll('button'));
+    const maxWidth = Math.max(...allButtons.map(btn => btn.offsetWidth));
 
-  const btnRect = activeBtn.getBoundingClientRect();
-  const tabsRect = tabs.getBoundingClientRect();
+    const btnRect = activeBtn.getBoundingClientRect();
+    const tabsRect = tabs.getBoundingClientRect();
 
-  underline.style.width = maxWidth + 'px';
+    underline.style.width = maxWidth + 'px';
 
-  // Center underline under active button
-  underline.style.left =
-    (btnRect.left - tabsRect.left) +
-    (btnRect.width / 2) -
-    (maxWidth / 2) +
-    'px';
-}
+    // Center underline under active button
+    underline.style.left =
+      (btnRect.left - tabsRect.left) +
+      (btnRect.width / 2) -
+      (maxWidth / 2) +
+      'px';
+  }
 
-const sceneCampusLabel = document.getElementById("sceneCampusLabel");
+  const sceneCampusLabel = document.getElementById("sceneCampusLabel");
 
-function setActiveTab(index) {
-  if (!TAB_CONFIG[index]) return;
+  function setActiveTab(index) {
+    if (!TAB_CONFIG[index]) return;
 
-  tabButtons.forEach(function (btn, i) {
-    btn.classList.toggle('active', i === index);
-  });
+    tabButtons.forEach(function (btn, i) {
+      btn.classList.toggle('active', i === index);
+    });
 
-  const config = TAB_CONFIG[index];
+    const config = TAB_CONFIG[index];
 
-  currentModalMode = config.mode;
-  sceneCampusLabel.textContent = config.label;
+    currentModalMode = config.mode;
+    sceneCampusLabel.textContent = config.label;
 
-  updateTabUnderline();
-}
+    updateTabUnderline();
+  }
 
 
   if (tabButtons.length === 2) {
@@ -266,7 +267,7 @@ function setActiveTab(index) {
       currentPage = 0;
       populateSceneListModal();
       updatePaginationButtons();
-});
+    });
   }
 
   // Dynamic parameters for controls.
@@ -458,8 +459,8 @@ function setActiveTab(index) {
 
     // 3. Click Handler for the Modal
     header.addEventListener('click', function () {
-      document.getElementById('infoHotspotTitle').innerText = hotspot.title;
-      document.getElementById('infoHotspotText').innerText = hotspot.text;
+      document.getElementById('infoHotspotTitle').innerText = hotspot.title[currentLanguage];
+      document.getElementById('infoHotspotText').innerText = hotspot.text[currentLanguage];
       var modalImg = document.getElementById('infoHotspotImage');
       if (hotspot.image) {
         modalImg.src = hotspot.image;
@@ -575,7 +576,7 @@ function setActiveTab(index) {
         } else {
           card.className = 'scene-card-coming-soon';
         }
-        
+
         // if validCampusCards.includes(campus.name) --> make img darker
         var img = document.createElement('img');
         img.src = campus.image;

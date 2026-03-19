@@ -42,7 +42,12 @@
 }
 
 @font-face {
-  font-family: "Silpakorn72";
+  font-family: 
+  "Silpakorn72",
+  "Noto Sans SC",
+  "PingFang SC",
+  "Microsoft YaHei",
+  sans-serif;
   /* Using the exact folder names from your error message */
   src: url("../Assets/su_font/SU72_PC_TTF/Silapakorn72-Regular_Beta05.ttf") format("truetype");
   font-weight: normal;
@@ -50,21 +55,36 @@
 }
 
 @font-face {
-  font-family: "Silpakorn72";
+  font-family: 
+  "Silpakorn72",
+  "Noto Sans SC",
+  "PingFang SC",
+  "Microsoft YaHei",
+  sans-serif;
   src: url("../Assets/su_font/SU72_PC_TTF/Silapakorn72-Bold_Beta05.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Silpakorn72";
+  font-family: 
+  "Silpakorn72",
+  "Noto Sans SC",
+  "PingFang SC",
+  "Microsoft YaHei",
+  sans-serif;
   src: url("../Assets/su_font/SU72_PC_TTF/Silapakorn72-Light_Beta05.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Silpakorn72";
+  font-family: 
+  "Silpakorn72",
+  "Noto Sans SC",
+  "PingFang SC",
+  "Microsoft YaHei",
+  sans-serif;
   src: url("../Assets/su_font/SU72_PC_TTF/Silapakorn72-Italic_Beta05.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
@@ -77,7 +97,12 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  font-family: "Silpakorn72", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 
+    "Silpakorn72",
+    "Noto Sans SC",
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
   line-height: 1.6;
   font-size: 16px;
   background-color: #000;
@@ -1101,7 +1126,8 @@ body.view-control-buttons .viewControlButton {
 .scene-filter-pagination {
   display: flex;
   align-items: center;
-  margin-left: auto;   /* 🔑 pushes it to the right */
+  margin-left: auto;
+  /* 🔑 pushes it to the right */
   gap: 16px;
 }
 
@@ -1397,7 +1423,7 @@ body.view-control-buttons .viewControlButton {
   transform: translateX(0);
   opacity: 1;
   padding: 4px 0;
-  gap: 14px; 
+  gap: 14px;
 }
 
 /* Dark Vignette Overlay */
@@ -1485,11 +1511,13 @@ body.view-control-buttons .viewControlButton {
 
   /* CONTROLS */
   .scene-controls {
-    gap: 520px; /* remove 900px */
+    gap: 520px;
+    /* remove 900px */
   }
 
   .scene-filter-pagination {
-    gap: 18px; /* remove 500px */
+    gap: 18px;
+    /* remove 500px */
   }
 
   .scene-campus {
@@ -1511,6 +1539,7 @@ body.view-control-buttons .viewControlButton {
     height: 130px;
   }
 }
+
 /* Mobile */
 @media (max-width: 768px) {
 
@@ -1543,11 +1572,13 @@ body.view-control-buttons .viewControlButton {
 
   /* CONTROLS */
   .scene-controls {
-    gap: 265px; /* remove 900px */
+    gap: 265px;
+    /* remove 900px */
   }
 
   .scene-filter-pagination {
-    gap: 18px; /* remove 500px */
+    gap: 18px;
+    /* remove 500px */
   }
 
   .scene-campus {
@@ -1661,7 +1692,8 @@ body.view-control-buttons .viewControlButton {
   }
 
   .info-hotspot-close {
-    top: 328px;   /* closing button size */
+    top: 328px;
+    /* closing button size */
   }
 
   .info-hotspot-close i {
@@ -1669,23 +1701,25 @@ body.view-control-buttons .viewControlButton {
   }
 
   @media (max-width: 375px) {
-  .info-hotspot-close {
-    top: 290px;   /* closing button size */
-  }
+    .info-hotspot-close {
+      top: 290px;
+      /* closing button size */
+    }
 
-  .info-hotspot-close i {
-    font-size: 1.4rem;
-  }
+    .info-hotspot-close i {
+      font-size: 1.4rem;
+    }
   }
 
   @media (max-width: 320px) {
-  .info-hotspot-close {
-    top: 250px;   /* closing button size */
-  }
+    .info-hotspot-close {
+      top: 250px;
+      /* closing button size */
+    }
 
-  .info-hotspot-close i {
-    font-size: 1.4rem;
-  }
+    .info-hotspot-close i {
+      font-size: 1.4rem;
+    }
   }
 
   /* ---------- SCENE LIST BOTTOM MODAL ---------- */
@@ -1763,7 +1797,7 @@ body.view-control-buttons .viewControlButton {
   .scene-list-body::after {
     content: "";
     height: 1px;
-    background: rgba(0,0,0,0.08);
+    background: rgba(0, 0, 0, 0.08);
     margin: 4px 0 12px;
   }
 
@@ -1774,16 +1808,16 @@ body.view-control-buttons .viewControlButton {
     padding: 8px;
   }
 
-.scene-card,
-.scene-card-coming-soon {
+  .scene-card,
+  .scene-card-coming-soon {
     min-height: 72px;
-    height: auto;           
+    height: auto;
     /* grid-template-columns: 96px 1fr; */
     border-radius: 10px;
     align-items: center;
   }
 
-  .scene-card img, 
+  .scene-card img,
   .scene-card-coming-soon img {
     aspect-ratio: 16 / 9;
     height: auto;
