@@ -42,49 +42,28 @@
 }
 
 @font-face {
-  font-family: 
-  "Silpakorn72",
-  "Noto Sans SC",
-  "PingFang SC",
-  "Microsoft YaHei",
-  sans-serif;
-  /* Using the exact folder names from your error message */
+  font-family: "Silpakorn72";
   src: url("../Assets/su_font/SU72_PC_TTF/Silapakorn72-Regular_Beta05.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 
-  "Silpakorn72",
-  "Noto Sans SC",
-  "PingFang SC",
-  "Microsoft YaHei",
-  sans-serif;
+  font-family: "Silpakorn72";
   src: url("../Assets/su_font/SU72_PC_TTF/Silapakorn72-Bold_Beta05.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 
-  "Silpakorn72",
-  "Noto Sans SC",
-  "PingFang SC",
-  "Microsoft YaHei",
-  sans-serif;
+  font-family: "Silpakorn72";
   src: url("../Assets/su_font/SU72_PC_TTF/Silapakorn72-Light_Beta05.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 
-  "Silpakorn72",
-  "Noto Sans SC",
-  "PingFang SC",
-  "Microsoft YaHei",
-  sans-serif;
+  font-family: "Silpakorn72";
   src: url("../Assets/su_font/SU72_PC_TTF/Silapakorn72-Italic_Beta05.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
@@ -97,7 +76,7 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  font-family: 
+  font-family:
     "Silpakorn72",
     "Noto Sans SC",
     "PingFang SC",
@@ -107,6 +86,23 @@ body {
   font-size: 16px;
   background-color: #000;
   color: #fff;
+}
+
+.btn-group{
+  position: absolute;
+  top: 35px;
+  right: 95px;
+  border-radius: 0%;
+}
+
+.btn{
+  --bs-btn-font-size:16px;
+}
+
+
+.btn-outline-success {
+  --bs-btn-active-bg: #00DAC3;
+  --bs-btn-border-color: #007468;
 }
 
 a,
