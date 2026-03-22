@@ -656,11 +656,11 @@
       });
     } else {
       // ===== Campus cards =====
-      let validCampusCards = ["wang_tha_phra"]; ///////////////////////////
+      let validCampusCards = ["wangthapra"]; ///////////////////////////
       campusData.forEach(function (campus) {
 
         var card = document.createElement('div');
-        if (validCampusCards.includes(campus.name)) {
+        if (validCampusCards.includes(campus.id)) {
           card.className = 'scene-card';
         } else {
           card.className = 'scene-card-coming-soon';

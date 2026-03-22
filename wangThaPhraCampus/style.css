@@ -1317,7 +1317,7 @@ body.view-control-buttons .viewControlButton {
   SCENE CARDS
    =============================== */
 .scene-card-coming-soon img {
-  filter: grayscale(100%) brightness(0.2) blur(0.5px);
+  filter: grayscale(100%) brightness(0) blur(0.5px);
   opacity: 0.8;
   width: 100%;
   height: 140px;
