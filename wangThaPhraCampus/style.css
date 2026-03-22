@@ -1168,6 +1168,7 @@ body.view-control-buttons .viewControlButton {
   display: flex;
   gap: 100px;
   margin: auto;
+  white-space: nowrap;
 }
 
 .scene-tabs button {
