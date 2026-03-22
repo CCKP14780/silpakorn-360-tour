@@ -113,7 +113,7 @@
           <div class="info-hotspot-right">
             <h2 class="info-hotspot-title">
               <i class="fa-solid fa-circle-info"></i>
-              <span>รายละเอียดสถานที่</span>
+              <span data-i18n="details">รายละเอียดสถานที่</span>
             </h2>
 
             <!-- Header: CLOSE BUTTON -->
@@ -138,11 +138,11 @@
   <div id="sceneListModal" class="scene-list-modal">
     <!-- ROW 1: TOP NAV -->
     <div class="scene-list-header">
-      <span class="scene-brand"><strong>มหาวิทยาลัยศิลปากร</strong></span>
+      <span class="scene-brand" data-i18n="universityName"><strong>มหาวิทยาลัยศิลปากร</strong></span>
 
       <div class="scene-tabs">
-        <button class="active">ทัวร์ปัจจุบัน</button>
-        <button>สำรวจวิทยาเขตอื่น</button>
+        <button class="active" data-i18n="currentTour">ทัวร์ปัจจุบัน</button>
+        <button data-i18n="exploreCampus">สำรวจวิทยาเขตอื่น</button>
 
         <!-- underline -->
         <div class="scene-tab-underline"></div>
@@ -156,15 +156,15 @@
     <div class="scene-list-body">
       <!-- ROW 2: CONTROLS -->
       <div class="scene-controls">
-        <span id="sceneCampusLabel" class="scene-campus">วิทยาเขต วังท่าพระ</span>
+        <span id="sceneCampusLabel" class="scene-campus" data-i18n="campusName">วิทยาเขต วังท่าพระ</span>
 
         <div class="scene-filter-pagination">
           <div class="scene-filters d-flex align-items-center gap-2">
-            <label for="sceneFilter" class="mb-0">แสดง:</label>
+            <label for="sceneFilter" class="mb-0" data-i18n="showLabel">แสดง:</label>
             <select id="sceneFilter" class="form-select form-select-sm w-auto rounded-40">
-              <option value="all">ทั้งหมด</option>
-              <option value="landmark">สถานที่สำคัญ</option>
-              <option value="faculty">คณะ</option>
+              <option value="all" data-i18n="all">ทั้งหมด</option>
+              <option value="landmark" data-i18n="landmarks">สถานที่สำคัญ</option>
+              <option value="faculty" data-i18n="faculty">คณะ</option>
             </select>
           </div>
 

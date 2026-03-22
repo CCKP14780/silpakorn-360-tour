@@ -696,31 +696,51 @@ var APP_DATA = {
 var CAMPUS_DATA = [
   {
     id: 'wangthapra',
-    name: 'วิทยาเขตวังท่าพระ',
+    name: {
+      "th": "วิทยาเขตวังท่าพระ",
+      "en": "Wang Tha Phra Campus",
+      "zh": "王他帕校区"
+    },
     image: '../Assets/campus/wangthapra.jpg',
     url: 'https://www.su.ac.th'
   },
   {
     id: 'sanamchandra',
-    name: 'วิทยาเขตสนามจันทร์',
+    name: {
+      "th": "วิทยาเขตพระราชวังสนามจันทร์",
+      "en": "Sanam Chandra Palace Campus",
+      "zh": "三湛宫校区"
+    },
     image: '../Assets/campus/sanamchandra.jpg',
     url: 'https://www.su.ac.th'
   },
   {
     id: 'phetchaburi',
-    name: 'วิทยาเขตสารสนเทศเพชรบุรี',
+    name: {
+      "th": "วิทยาเขตเพชรบุรี",
+      "en": "Phetchaburi Campus",
+      "zh": "碧武里信息技术校区"
+    },
     image: '../Assets/campus/phetchaburi.jpg',
     url: 'https://www.su.ac.th'
   },
   {
     id: 'muangthong',
-    name: 'วิทยาเขตเมืองทองธานี',
+    name: {
+      "th": "วิทยาเขตเมืองทองธานี",
+      "en": "City Campus (Muang Thong Thani)",
+      "zh": "蒙通他尼城市校区"
+    },
     image: '../Assets/campus/muangthong.jpg',
     url: 'https://www.su.ac.th'
   },
   {
     id: 'talingchan',
-    name: 'วิทยาเขตตลิ่งชัน',
+    name: {
+      "th": 'วิทยาเขตตลิ่งชัน',
+      "en": "Taling Chan Campus",
+      "zh": "达灵参"
+    },
     image: '../Assets/campus/talingchan.jpg',
     url: 'https://www.su.ac.th'
   }
@@ -730,3 +750,51 @@ var TAB_CONFIG = [
   { mode: 'scenes', label: 'วิทยาเขต วังท่าพระ' },
   { mode: 'campus', label: 'สำรวจวิทยาเขตอื่น' }
 ];
+
+window.UI_TEXT = {
+  universityName: {
+    th: "มหาวิทยาลัยศิลปากร",
+    en: "Silpakorn University",
+    zh: "艺术大学"
+  },
+  details: {
+    th: "รายละเอียดสถานที่",
+    en: "Location Details",
+    zh: "地点详情"
+  },
+  campusName: {
+    th: "วิทยาเขต วังท่าพระ",
+    en: "Wang Tha Phra Campus",
+    zh: "王他帕校区"
+  },
+  currentTour: {
+    th: "ทัวร์ปัจจุบัน",
+    en: "Current Tour",
+    zh: "当前导览"
+  },
+  exploreCampus: {
+    th: "สำรวจวิทยาเขตอื่น",
+    en: "Other Campuses",
+    zh: "探索其他校区"
+  },
+  showLabel: {
+    th: "แสดง:",
+    en: "Show:",
+    zh: "显示："
+  },
+  all: {
+    th: "ทั้งหมด",
+    en: "All",
+    zh: "全部"
+  },
+  landmarks: {
+    th: "สถานที่สำคัญ",
+    en: "Landmarks",
+    zh: "地标"
+  },
+  faculty: {
+    th: "คณะ",
+    en: "Faculties",
+    zh: "学院"
+  }
+};

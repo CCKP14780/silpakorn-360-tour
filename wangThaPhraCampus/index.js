@@ -22,7 +22,9 @@
   var data = window.APP_DATA;
   var campusData = window.CAMPUS_DATA || [];
   var TAB_CONFIG = window.TAB_CONFIG || [];
+  var UI_TEXT = window.UI_TEXT || {};
   var currentLanguage = 'th'; // default language
+  var currentFilter = 'all';
 
   // Grab elements from DOM.
   var panoElement = document.querySelector('#pano');
@@ -34,6 +36,12 @@
   var fullscreenToggleElement = document.querySelector('#fullscreenToggle');
   var prevSceneBtn = document.querySelector('#prevScene');
   var nextSceneBtn = document.querySelector('#nextScene');
+
+  document.getElementById('sceneFilter').addEventListener('change', function () {
+    currentFilter = this.value;
+    currentPage = 0; // reset page when filter changes
+    populateSceneListModal();
+  });
 
 
   // Detect desktop or mobile mode.
@@ -544,17 +552,29 @@
     }
   }
 
+  function updateUIText() {
+    var elements = document.querySelectorAll('[data-i18n]');
+
+    elements.forEach(function (el) {
+      var key = el.dataset.i18n;
+
+      if (UI_TEXT[key] && UI_TEXT[key][currentLanguage]) {
+        el.textContent = UI_TEXT[key][currentLanguage];
+      }
+    });
+  }
+
   function refreshLanguageUI() {
     // Update scene title
     updateSceneName(scenes[currentSceneIndex]);
 
     // Update scene list modal
     populateSceneListModal();
-
-    // ✅ ADD THIS
     updateAllHotspotTooltips();
 
-    // (Optional) update open modal
+    updateUIText();
+
+    // update open modal
     const modal = document.getElementById('infoHotspotModal');
     if (modal.classList.contains('show') && window.currentHotspot) {
       document.getElementById('infoHotspotTitle').innerText =
@@ -603,7 +623,15 @@
       var start = currentPage * SCENES_PER_PAGE;
       var end = start + SCENES_PER_PAGE;
 
-      scenes.slice(start, end).forEach(function (sceneObj) {
+      var filteredScenes = scenes.filter(function (sceneObj) {
+        if (currentFilter === 'all') return true;
+        return sceneObj.data.category === currentFilter;
+      });
+
+      var start = currentPage * SCENES_PER_PAGE;
+      var end = start + SCENES_PER_PAGE;
+
+      filteredScenes.slice(start, end).forEach(function (sceneObj) {
         var data = sceneObj.data;
 
         var card = document.createElement('div');
@@ -628,7 +656,7 @@
       });
     } else {
       // ===== Campus cards =====
-      let validCampusCards = ["วิทยาเขตวังท่าพระ"];
+      let validCampusCards = ["wang_tha_phra"]; ///////////////////////////
       campusData.forEach(function (campus) {
 
         var card = document.createElement('div');
@@ -644,7 +672,7 @@
 
         var title = document.createElement('div');
         title.className = 'scene-card-title';
-        title.textContent = campus.name;
+        title.textContent = campus.name[currentLanguage];
 
         // card.addEventListener('click', function () {
         //   if (campus.url && campus.url !== '#') {
@@ -713,7 +741,10 @@
 
     var totalItems =
       currentModalMode === 'scenes'
-        ? scenes.length
+        ? scenes.filter(function (sceneObj) {
+          if (currentFilter === 'all') return true;
+          return sceneObj.data.category === currentFilter;
+        }).length
         : campusData.length;
 
     var totalPages = Math.max(1, Math.ceil(totalItems / SCENES_PER_PAGE));
