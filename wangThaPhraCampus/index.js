@@ -22,7 +22,7 @@
   var data = window.APP_DATA;
   var campusData = window.CAMPUS_DATA || [];
   var TAB_CONFIG = window.TAB_CONFIG || [];
-  var currentLanguage = 'zh'; // default language
+  var currentLanguage = 'th'; // default language
 
   // Grab elements from DOM.
   var panoElement = document.querySelector('#pano');
@@ -358,7 +358,9 @@
   });
 
   function updateSceneName(scene) {
-    sceneNameElement.innerHTML = sanitize(scene.data.name);
+    sceneNameElement.innerHTML = sanitize(
+      scene.data.name[currentLanguage]
+    );
   }
 
   function updateSceneList(scene) {
@@ -422,8 +424,7 @@
 
     var transformProperties = ['-ms-transform', '-webkit-transform', 'transform'];
     for (var i = 0; i < transformProperties.length; i++) {
-      var property = transformProperties[i];
-      iconWrapper.style[property] = 'rotate(' + hotspot.rotation + 'rad)';
+      iconWrapper.style[transformProperties[i]] = 'rotate(' + hotspot.rotation + 'rad)';
     }
 
     iconWrapper.appendChild(icon);
@@ -431,15 +432,32 @@
 
     var tooltip = document.createElement('div');
     tooltip.classList.add('hotspot-tooltip', 'link-hotspot-tooltip');
-    tooltip.innerHTML = findSceneDataById(hotspot.target).name;
+
+    // store target id for later update
+    tooltip.dataset.target = hotspot.target;
+
+    tooltip.innerHTML = findSceneDataById(hotspot.target).name[currentLanguage];
     wrapper.appendChild(tooltip);
 
     wrapper.addEventListener('click', function () {
       switchScene(findSceneById(hotspot.target));
     });
-    stopTouchAndScrollEventPropagation(wrapper);
 
+    stopTouchAndScrollEventPropagation(wrapper);
     return wrapper;
+  }
+
+  function updateAllHotspotTooltips() {
+    var tooltips = document.querySelectorAll('.link-hotspot-tooltip');
+
+    tooltips.forEach(function (tooltip) {
+      var targetId = tooltip.dataset.target;
+      var sceneData = findSceneDataById(targetId);
+
+      if (sceneData && sceneData.name) {
+        tooltip.innerHTML = sceneData.name[currentLanguage];
+      }
+    });
   }
 
   function createInfoHotspotElement(hotspot) {
@@ -526,6 +544,49 @@
     }
   }
 
+  function refreshLanguageUI() {
+    // Update scene title
+    updateSceneName(scenes[currentSceneIndex]);
+
+    // Update scene list modal
+    populateSceneListModal();
+
+    // ✅ ADD THIS
+    updateAllHotspotTooltips();
+
+    // (Optional) update open modal
+    const modal = document.getElementById('infoHotspotModal');
+    if (modal.classList.contains('show') && window.currentHotspot) {
+      document.getElementById('infoHotspotTitle').innerText =
+        window.currentHotspot.title[currentLanguage];
+
+      document.getElementById('infoHotspotText').innerText =
+        window.currentHotspot.text[currentLanguage];
+    }
+  }
+
+  // language change
+  document.getElementById('btnradio1').addEventListener('change', function () {
+    if (this.checked) {
+      currentLanguage = 'th';
+      refreshLanguageUI();
+    }
+  });
+
+  document.getElementById('btnradio2').addEventListener('change', function () {
+    if (this.checked) {
+      currentLanguage = 'en';
+      refreshLanguageUI();
+    }
+  });
+
+  document.getElementById('btnradio3').addEventListener('change', function () {
+    if (this.checked) {
+      currentLanguage = 'zh';
+      refreshLanguageUI();
+    }
+  });
+
   function renderNewScenePage(container, direction) {
     container.innerHTML = '';
 
@@ -554,7 +615,7 @@
 
         var title = document.createElement('div');
         title.className = 'scene-card-title';
-        title.textContent = data.name;
+        title.textContent = data.name[currentLanguage];
 
         card.addEventListener('click', function () {
           switchScene(sceneObj);

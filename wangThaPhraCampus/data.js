@@ -2,7 +2,11 @@ var APP_DATA = {
   "scenes": [
     {
       "id": "0-map06_p360_wtp001",
-      "name": "ประตูวังท่าพระ",
+      "name": {
+        "th": "ประตูวังท่าพระ",
+        "en": "Wang Tha Phra Gate",
+        "zh": "王他帕宫门"
+      },
       "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/gate_wtp001.jpg",
       "levels": [
@@ -58,7 +62,11 @@ var APP_DATA = {
     },
     {
       "id": "1-map05_p360_wtp001",
-      "name": "หอศิลป์",
+      "name": {
+        "th": "หอศิลป์",
+        "en": "Art Gallery",
+        "zh": "美术馆"
+      },
       "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/artCenter_wtp001.jpg",
       "levels": [
@@ -171,7 +179,11 @@ var APP_DATA = {
     },
     {
       "id": "2-map04_p360_wtp001",
-      "name": "ตำหนักพรรณราย",
+      "name": {
+        "th": "ตำหนักพรรณราย",
+        "en": "Tamnak Phanray",
+        "zh": "帕纳莱宫殿"
+      },
       "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/yellowBuilding02_wtp001.jpg",
       "levels": [
@@ -217,7 +229,11 @@ var APP_DATA = {
     },
     {
       "id": "3-map03_p360_wtp001",
-      "name": "ต้นกร่าง",
+      "name": {
+        "th": "ต้นกร่าง",
+        "en": "Banyan Tree",
+        "zh": "格朗树"
+      },
       "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/tree_wtp001.jpg",
       "levels": [
@@ -279,7 +295,11 @@ var APP_DATA = {
     },
     {
       "id": "4-map02_p360_wtp001",
-      "name": "ลานสนามบาสเก็ตบอล",
+      "name": {
+        "th": "ลานสนามบาสเก็ตบอล",
+        "en": "Basketball Court",
+        "zh": "篮球场"
+      },
       "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/court_wtp001.jpg",
       "levels": [
@@ -392,7 +412,11 @@ var APP_DATA = {
     },
     {
       "id": "5-map01_p360_wtp001",
-      "name": "ศาลาแก้ว",
+      "name": {
+        "th": "ศาลาแก้ว",
+        "en": "Kaew Pavilion",
+        "zh": "玻璃亭"
+      },
       "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/palace_wtp001.jpg",
       "levels": [
@@ -454,7 +478,11 @@ var APP_DATA = {
     },
     {
       "id": "6-map07_p360_wtp001",
-      "name": "คณะสถาปัตยกรรมศาสตร์",
+      "name": {
+        "th": "คณะสถาปัตยกรรมศาสตร์",
+        "en": "Faculty of Architecture",
+        "zh": "建筑学院"
+      },
       "category": "faculty",
       "card_image": "../wangThaPhraCampus/img/stillImages/architecture_wtp001.jpg",
       "levels": [
@@ -516,7 +544,11 @@ var APP_DATA = {
     },
     {
       "id": "7-map08_p360_wtp001",
-      "name": "คณะมัณฑนศิลป์",
+      "name": {
+        "th": "คณะมัณฑนศิลป์",
+        "en": "Faculty of Decorative Arts",
+        "zh": "装饰艺术学院"
+      },
       "category": "faculty",
       "card_image": "../wangThaPhraCampus/img/stillImages/artGallery02_wtp001.jpg",
       "levels": [
@@ -578,7 +610,11 @@ var APP_DATA = {
     },
     {
       "id": "8-map09_p360_wtp001",
-      "name": "ลานอาจารย์ศิลป์",
+      "name": {
+        "th": "ลานอาจารย์ศิลป์",
+        "en": "Silpa Bhirasri Plaza",
+        "zh": "西尔帕·比拉西广场"
+      },
       "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/ferrociStatue_wtp001.jpg",
       "levels": [
