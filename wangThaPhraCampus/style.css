@@ -1475,6 +1475,25 @@ body.view-control-buttons .viewControlButton {
 
 /* Tablet & small laptop */
 @media (max-width: 1024px) {
+  .btn-group {
+      display: none;
+      position: absolute;
+      top: 4%;
+      right: 10%;
+  
+      width: 44px;
+      height: 44px;
+  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      font-size: 22px;
+      color: #63E6BE;
+      padding: 0;
+  
+      z-index: 100;
+    }
 
   /* ---------- PANORAMA CONTROLS ---------- */
   #fullscreenToggle,
@@ -1570,7 +1589,25 @@ body.view-control-buttons .viewControlButton {
 
 /* Mobile */
 @media (max-width: 768px) {
-
+  .btn-group {
+      display: none;
+      position: absolute;
+      top: 4%;
+      right: 11%;
+  
+      width: 44px;
+      height: 44px;
+  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      font-size: 22px;
+      color: #63E6BE;
+      padding: 0;
+  
+      z-index: 100;
+    }
   .scene-list-modal {
     left: 1vw;
     right: 1vw;
@@ -1628,6 +1665,25 @@ body.view-control-buttons .viewControlButton {
 
 /* Small mobile */
 @media (max-width: 480px) {
+  .btn-group {
+      display: none;
+      position: absolute;
+      top: 4%;
+      right: 15%;
+  
+      width: 44px;
+      height: 44px;
+  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      font-size: 22px;
+      color: #63E6BE;
+      padding: 0;
+  
+      z-index: 100;
+    }
 
   /* ---------- GENERAL ---------- */
   body {
@@ -1729,6 +1785,25 @@ body.view-control-buttons .viewControlButton {
   }
 
   @media (max-width: 375px) {
+    .btn-group {
+        display: none;
+        position: absolute;
+        top: 4%;
+        right: 15%;
+    
+        width: 44px;
+        height: 44px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        font-size: 22px;
+        color: #63E6BE;
+        padding: 0;
+    
+        z-index: 100;
+      }
     .info-hotspot-close {
       top: 290px;
       /* closing button size */
@@ -1740,6 +1815,25 @@ body.view-control-buttons .viewControlButton {
   }
 
   @media (max-width: 320px) {
+    .btn-group {
+        display: none;
+        position: absolute;
+        top: 4%;
+        right: 15%;
+    
+        width: 44px;
+        height: 44px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        font-size: 22px;
+        color: #63E6BE;
+        padding: 0;
+    
+        z-index: 100;
+      }
     .info-hotspot-close {
       top: 250px;
       /* closing button size */
