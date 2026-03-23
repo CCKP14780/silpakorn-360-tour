@@ -255,7 +255,7 @@
     const config = TAB_CONFIG[index];
 
     currentModalMode = config.mode;
-    sceneCampusLabel.textContent = config.label;
+    sceneCampusLabel.textContent = config.label[currentLanguage];
 
     updateTabUnderline();
   }
@@ -565,16 +565,11 @@
   }
 
   function refreshLanguageUI() {
-    // Update scene title
     updateSceneName(scenes[currentSceneIndex]);
-
-    // Update scene list modal
     populateSceneListModal();
     updateAllHotspotTooltips();
-
     updateUIText();
 
-    // update open modal
     const modal = document.getElementById('infoHotspotModal');
     if (modal.classList.contains('show') && window.currentHotspot) {
       document.getElementById('infoHotspotTitle').innerText =
@@ -582,6 +577,15 @@
 
       document.getElementById('infoHotspotText').innerText =
         window.currentHotspot.text[currentLanguage];
+    }
+    
+    const activeIndex = Array.from(tabButtons).findIndex(btn =>
+      btn.classList.contains('active')
+    );
+
+    if (activeIndex !== -1) {
+      sceneCampusLabel.textContent =
+        TAB_CONFIG[activeIndex].label[currentLanguage];
     }
   }
 

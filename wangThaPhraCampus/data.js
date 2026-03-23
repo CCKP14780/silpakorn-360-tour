@@ -747,8 +747,16 @@ var CAMPUS_DATA = [
 ];
 
 var TAB_CONFIG = [
-  { mode: 'scenes', label: 'วิทยาเขต วังท่าพระ' },
-  { mode: 'campus', label: 'สำรวจวิทยาเขตอื่น' }
+  { mode: 'scenes', label: {
+  th: 'วิทยาเขต วังท่าพระ',
+  en: 'Wang Tha Phra Campus',
+  zh: '王他帕校区'
+} },
+  { mode: 'campus', label: {
+  th: 'สำรวจวิทยาเขตอื่น',
+  en: 'Other Campuses',
+  zh: '探索其他校区'
+} }
 ];
 
 window.UI_TEXT = {
