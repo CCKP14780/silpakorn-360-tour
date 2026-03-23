@@ -22,7 +22,9 @@
   var data = window.APP_DATA;
   var campusData = window.CAMPUS_DATA || [];
   var TAB_CONFIG = window.TAB_CONFIG || [];
-  var currentLanguage = 'zh'; // default language
+  var UI_TEXT = window.UI_TEXT || {};
+  var currentLanguage = 'th'; // default language
+  var currentFilter = 'all';
 
   // Grab elements from DOM.
   var panoElement = document.querySelector('#pano');
@@ -34,6 +36,12 @@
   var fullscreenToggleElement = document.querySelector('#fullscreenToggle');
   var prevSceneBtn = document.querySelector('#prevScene');
   var nextSceneBtn = document.querySelector('#nextScene');
+
+  document.getElementById('sceneFilter').addEventListener('change', function () {
+    currentFilter = this.value;
+    currentPage = 0; // reset page when filter changes
+    populateSceneListModal();
+  });
 
 
   // Detect desktop or mobile mode.
@@ -358,7 +366,9 @@
   });
 
   function updateSceneName(scene) {
-    sceneNameElement.innerHTML = sanitize(scene.data.name);
+    sceneNameElement.innerHTML = sanitize(
+      scene.data.name[currentLanguage]
+    );
   }
 
   function updateSceneList(scene) {
@@ -422,8 +432,7 @@
 
     var transformProperties = ['-ms-transform', '-webkit-transform', 'transform'];
     for (var i = 0; i < transformProperties.length; i++) {
-      var property = transformProperties[i];
-      iconWrapper.style[property] = 'rotate(' + hotspot.rotation + 'rad)';
+      iconWrapper.style[transformProperties[i]] = 'rotate(' + hotspot.rotation + 'rad)';
     }
 
     iconWrapper.appendChild(icon);
@@ -431,15 +440,32 @@
 
     var tooltip = document.createElement('div');
     tooltip.classList.add('hotspot-tooltip', 'link-hotspot-tooltip');
-    tooltip.innerHTML = findSceneDataById(hotspot.target).name;
+
+    // store target id for later update
+    tooltip.dataset.target = hotspot.target;
+
+    tooltip.innerHTML = findSceneDataById(hotspot.target).name[currentLanguage];
     wrapper.appendChild(tooltip);
 
     wrapper.addEventListener('click', function () {
       switchScene(findSceneById(hotspot.target));
     });
-    stopTouchAndScrollEventPropagation(wrapper);
 
+    stopTouchAndScrollEventPropagation(wrapper);
     return wrapper;
+  }
+
+  function updateAllHotspotTooltips() {
+    var tooltips = document.querySelectorAll('.link-hotspot-tooltip');
+
+    tooltips.forEach(function (tooltip) {
+      var targetId = tooltip.dataset.target;
+      var sceneData = findSceneDataById(targetId);
+
+      if (sceneData && sceneData.name) {
+        tooltip.innerHTML = sceneData.name[currentLanguage];
+      }
+    });
   }
 
   function createInfoHotspotElement(hotspot) {
@@ -526,6 +552,61 @@
     }
   }
 
+  function updateUIText() {
+    var elements = document.querySelectorAll('[data-i18n]');
+
+    elements.forEach(function (el) {
+      var key = el.dataset.i18n;
+
+      if (UI_TEXT[key] && UI_TEXT[key][currentLanguage]) {
+        el.textContent = UI_TEXT[key][currentLanguage];
+      }
+    });
+  }
+
+  function refreshLanguageUI() {
+    // Update scene title
+    updateSceneName(scenes[currentSceneIndex]);
+
+    // Update scene list modal
+    populateSceneListModal();
+    updateAllHotspotTooltips();
+
+    updateUIText();
+
+    // update open modal
+    const modal = document.getElementById('infoHotspotModal');
+    if (modal.classList.contains('show') && window.currentHotspot) {
+      document.getElementById('infoHotspotTitle').innerText =
+        window.currentHotspot.title[currentLanguage];
+
+      document.getElementById('infoHotspotText').innerText =
+        window.currentHotspot.text[currentLanguage];
+    }
+  }
+
+  // language change
+  document.getElementById('btnradio1').addEventListener('change', function () {
+    if (this.checked) {
+      currentLanguage = 'th';
+      refreshLanguageUI();
+    }
+  });
+
+  document.getElementById('btnradio2').addEventListener('change', function () {
+    if (this.checked) {
+      currentLanguage = 'en';
+      refreshLanguageUI();
+    }
+  });
+
+  document.getElementById('btnradio3').addEventListener('change', function () {
+    if (this.checked) {
+      currentLanguage = 'zh';
+      refreshLanguageUI();
+    }
+  });
+
   function renderNewScenePage(container, direction) {
     container.innerHTML = '';
 
@@ -542,7 +623,15 @@
       var start = currentPage * SCENES_PER_PAGE;
       var end = start + SCENES_PER_PAGE;
 
-      scenes.slice(start, end).forEach(function (sceneObj) {
+      var filteredScenes = scenes.filter(function (sceneObj) {
+        if (currentFilter === 'all') return true;
+        return sceneObj.data.category === currentFilter;
+      });
+
+      var start = currentPage * SCENES_PER_PAGE;
+      var end = start + SCENES_PER_PAGE;
+
+      filteredScenes.slice(start, end).forEach(function (sceneObj) {
         var data = sceneObj.data;
 
         var card = document.createElement('div');
@@ -554,7 +643,7 @@
 
         var title = document.createElement('div');
         title.className = 'scene-card-title';
-        title.textContent = data.name;
+        title.textContent = data.name[currentLanguage];
 
         card.addEventListener('click', function () {
           switchScene(sceneObj);
@@ -567,11 +656,11 @@
       });
     } else {
       // ===== Campus cards =====
-      let validCampusCards = ["วิทยาเขตวังท่าพระ"];
+      let validCampusCards = ["wangthapra"]; ///////////////////////////
       campusData.forEach(function (campus) {
 
         var card = document.createElement('div');
-        if (validCampusCards.includes(campus.name)) {
+        if (validCampusCards.includes(campus.id)) {
           card.className = 'scene-card';
         } else {
           card.className = 'scene-card-coming-soon';
@@ -583,7 +672,7 @@
 
         var title = document.createElement('div');
         title.className = 'scene-card-title';
-        title.textContent = campus.name;
+        title.textContent = campus.name[currentLanguage];
 
         // card.addEventListener('click', function () {
         //   if (campus.url && campus.url !== '#') {
@@ -652,7 +741,10 @@
 
     var totalItems =
       currentModalMode === 'scenes'
-        ? scenes.length
+        ? scenes.filter(function (sceneObj) {
+          if (currentFilter === 'all') return true;
+          return sceneObj.data.category === currentFilter;
+        }).length
         : campusData.length;
 
     var totalPages = Math.max(1, Math.ceil(totalItems / SCENES_PER_PAGE));
