@@ -86,7 +86,7 @@
   function setLanguage(lang) {
     currentLanguage = lang;
 
-    // Save to localStorage (important for main site sync)
+    // Save to localStorage
     localStorage.setItem('lang', lang);
 
     // Update URL (?hl=)
