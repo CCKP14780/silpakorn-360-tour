@@ -219,6 +219,38 @@
   var viewOutElement = document.querySelector('#viewOut');
   var tabButtons = document.querySelectorAll('.scene-tabs button');
 
+  function getLanguageFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('hl');
+
+    if (lang && ['th', 'en', 'cn'].includes(lang)) {
+      return lang;
+    }
+
+    return null;
+  }
+
+  // Override default if URL has hl=
+  const urlLang = getLanguageFromURL();
+  if (urlLang) {
+    currentLanguage = urlLang;
+  }
+
+  function syncLanguageUI() {
+    const map = {
+      th: 'btnradio1',
+      en: 'btnradio2',
+      cn: 'btnradio3'
+    };
+
+    const id = map[currentLanguage];
+    if (id) {
+      document.getElementById(id).checked = true;
+    }
+  }
+
+syncLanguageUI();
+
   function updateTabUnderline() {
     const activeBtn = document.querySelector('.scene-tabs button.active');
     const underline = document.querySelector('.scene-tab-underline');
@@ -606,7 +638,7 @@
 
   document.getElementById('btnradio3').addEventListener('change', function () {
     if (this.checked) {
-      currentLanguage = 'zh';
+      currentLanguage = 'cn';
       refreshLanguageUI();
     }
   });

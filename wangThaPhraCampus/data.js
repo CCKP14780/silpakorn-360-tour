@@ -5,7 +5,7 @@ var APP_DATA = {
       "name": {
         "th": "ประตูวังท่าพระ",
         "en": "Wang Tha Phra Gate",
-        "zh": "王他帕宫门"
+        "cn": "王他帕宫门"
       },
       "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/gate_wtp001.jpg",
@@ -49,12 +49,12 @@ var APP_DATA = {
           "title": {
             "th": "ซุ้มประตูวังท่าพระ",
             "en": "Wang Tha Phra Gate",
-            "zh": "王他帕宫门"
+            "cn": "王他帕宫门"
           },
           "text": {
             "th": "ซุ้มประตูวังท่าพระ ฝีพระหัตถ์สมเด็จพระเจ้าบรมวงศ์เธอ เจ้าฟ้ากรมพระยานริศรานุวัดติวงศ์ทรงออกแบบ เป็นประตูหลักทางเข้าฝั่งถนนหน้าพระลาน ตั้งอยู่ตรงข้ามกับพระบรมมหาราชวังในพื้นที่เกาะรัตนโกสินทร์ชั้นใน และถือเป็นหนึ่งในสัญลักษณ์สำคัญของมหาวิทยาลัยศิลปากร วังท่าพระ",
             "en": "Wang Tha Phra Gate was designed by His Royal Highness Prince Narisara Nuwattiwong. It serves as the main entrance on Na Phra Lan Road, located directly opposite the Grand Palace in the inner Rattanakosin area. The gate is one of the most important symbols of Silpakorn University, Wang Tha Phra Campus.",
-            "zh": "王他帕宫门由纳里沙拉·努瓦提翁亲王殿下设计，位于那帕兰路一侧的主入口，正对大皇宫，坐落于拉达那哥信内城区域。该宫门是泰国艺术大学王他帕校区最重要的象征之一。"
+            "cn": "王他帕宫门由纳里沙拉·努瓦提翁亲王殿下设计，位于那帕兰路一侧的主入口，正对大皇宫，坐落于拉达那哥信内城区域。该宫门是泰国艺术大学王他帕校区最重要的象征之一。"
           },
           "image": "../wangThaPhraCampus/img/stillImages/gate_wtp001.jpg"
         }
@@ -65,7 +65,7 @@ var APP_DATA = {
       "name": {
         "th": "หอศิลป์",
         "en": "Art Gallery",
-        "zh": "美术馆"
+        "cn": "美术馆"
       },
       "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/artCenter_wtp001.jpg",
@@ -121,12 +121,12 @@ var APP_DATA = {
           "title": {
             "th": "หอสมุดวังท่าพระ",
             "en": "Wang Tha Phra Library",
-            "zh": "王他帕图书馆"
+            "cn": "王他帕图书馆"
           },
           "text": {
             "th": "พื้นที่เรียนรู้ไร้ขอบเขตที่ตอบโจทย์ไลฟ์สไตล์ของคนรุ่นใหม่ เป็นคลังองค์ความรู้และผลงานวิชาการของอาจารย์ นักวิจัย บุคลากร และนักศึกษา ดำเนินงานภายใต้สำนักหอสมุดกลาง มหาวิทยาลัยศิลปากร",
             "en": "A limitless learning space that supports modern lifestyles, the Wang Tha Phra Library serves as a knowledge repository for academic works by faculty members, researchers, staff, and students. It operates under the Central Library of Silpakorn University.",
-            "zh": "王他帕图书馆是一个无边界学习空间，满足新一代生活方式需求，收藏教师、研究人员、员工与学生的学术成果，隶属于泰国艺术大学中央图书馆。"
+            "cn": "王他帕图书馆是一个无边界学习空间，满足新一代生活方式需求，收藏教师、研究人员、员工与学生的学术成果，隶属于泰国艺术大学中央图书馆。"
           },
           "image": "../wangThaPhraCampus/img/stillImages/suLib_wtp001.jpg"
         },
@@ -136,12 +136,12 @@ var APP_DATA = {
           "title": {
             "th": "หอศิลป์",
             "en": "Art Gallery",
-            "zh": "艺术馆"
+            "cn": "艺术馆"
           },
           "text": {
             "th": "หอศิลป์หลักของมหาวิทยาลัยศิลปากร เป็นพื้นที่จัดแสดงนิทรรศการร่วมสมัย ประกอบด้วยอาคารท้องพระโรงและพระตำหนักกลาง ได้รับการขึ้นทะเบียนเป็นโบราณสถานในฐานะอาคารประวัติศาสตร์ของมหาวิทยาลัย",
             "en": "The main Art Gallery of Silpakorn University serves as a contemporary exhibition space. It comprises the Throne Hall and the Central Pavilion and has been officially registered as a historical monument of the university.",
-            "zh": "泰国艺术大学主要的艺术馆，是当代艺术展览空间，由王座大厅与中央宫殿建筑组成，并已被登记为大学的历史文物建筑。"
+            "cn": "泰国艺术大学主要的艺术馆，是当代艺术展览空间，由王座大厅与中央宫殿建筑组成，并已被登记为大学的历史文物建筑。"
           },
           "image": "../wangThaPhraCampus/img/stillImages/artCenter_wtp001.jpg"
         },
@@ -151,12 +151,12 @@ var APP_DATA = {
           "title": {
             "th": "พระพิฆเนศ",
             "en": "Ganesha",
-            "zh": "象神"
+            "cn": "象神"
           },
           "text": {
             "th": "พระพิฆเนศเป็นเทพแห่งศิลปะและปัญญา มีความเกี่ยวข้องอย่างลึกซึ้งกับมหาวิทยาลัยศิลปากรในฐานะสัญลักษณ์ประจำองค์กร สร้างขึ้นเนื่องในโอกาสครบรอบ 80 ปีแห่งการสถาปนามหาวิทยาลัยศิลปากร พ.ศ. 2566 เป็นเครื่องยึดเหนี่ยวจิตใจและเสริมสิริมงคลแก่ผู้ศรัทธาในงานศิลปะและวัฒนธรรม",
             "en": "Ganesha, the deity of arts and wisdom, holds deep significance for Silpakorn University as its institutional symbol. The statue was created to commemorate the university’s 80th anniversary in 2023 and serves as a source of inspiration and auspiciousness for those devoted to arts and culture.",
-            "zh": "象神是艺术与智慧之神，是泰国艺术大学的象征。该雕像为纪念大学建校80周年（2023年）而建，为热爱艺术与文化的人们带来精神寄托与吉祥祝福。"
+            "cn": "象神是艺术与智慧之神，是泰国艺术大学的象征。该雕像为纪念大学建校80周年（2023年）而建，为热爱艺术与文化的人们带来精神寄托与吉祥祝福。"
           },
           "image": "../wangThaPhraCampus/img/stillImages/ganesha_wtp001.jpg"
         },
@@ -166,12 +166,12 @@ var APP_DATA = {
           "title": {
             "th": "สำนักงานอธิการบดี",
             "en": "Office of the President",
-            "zh": "校长办公室"
+            "cn": "校长办公室"
           },
           "text": {
             "th": "สำนักงานส่วนกลางที่ประสานงานและดำเนินภารกิจตามยุทธศาสตร์ของมหาวิทยาลัย ร่วมกับหน่วยงานภายในระดับกอง",
             "en": "The Office of the President is the central administrative unit responsible for coordinating and implementing the university’s strategic missions in collaboration with internal departments.",
-            "zh": "校长办公室是大学的中央行政单位，负责协调并执行大学战略任务，与校内各部门协同运作。"
+            "cn": "校长办公室是大学的中央行政单位，负责协调并执行大学战略任务，与校内各部门协同运作。"
           },
           "image": "../wangThaPhraCampus/img/stillImages/faculty_wtp001.jpg"
         }
@@ -182,7 +182,7 @@ var APP_DATA = {
       "name": {
         "th": "ตำหนักพรรณราย",
         "en": "Tamnak Phanray",
-        "zh": "帕纳莱宫殿"
+        "cn": "帕纳莱宫殿"
       },
       "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/yellowBuilding02_wtp001.jpg",
@@ -232,7 +232,7 @@ var APP_DATA = {
       "name": {
         "th": "ต้นกร่าง",
         "en": "Banyan Tree",
-        "zh": "格朗树"
+        "cn": "格朗树"
       },
       "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/tree_wtp001.jpg",
@@ -282,12 +282,12 @@ var APP_DATA = {
           "title": {
             "th": "ต้นกร่าง",
             "en": "Banyan Tree",
-            "zh": "榕树"
+            "cn": "榕树"
           },
           "text": {
             "th": "ต้นกร่างยักษ์อายุกว่าร้อยปี ต้นไม้เก่าแก่คู่กับวังเก่า สะท้อนความกลมกลืนระหว่างธรรมชาติ มนุษย์ และศิลปะ",
             "en": "A century-old giant Banyan tree standing alongside the historic palace grounds, symbolizing harmony between nature, humanity, and art.",
-            "zh": "百年古弯枝榕树与古宫殿相伴而立，象征自然、人类与艺术之间的和谐共生。"
+            "cn": "百年古弯枝榕树与古宫殿相伴而立，象征自然、人类与艺术之间的和谐共生。"
           },
           "image": "../wangThaPhraCampus/img/stillImages/tree_wtp001.jpg"
         }
@@ -298,7 +298,7 @@ var APP_DATA = {
       "name": {
         "th": "ลานสนามบาสเก็ตบอล",
         "en": "Basketball Court",
-        "zh": "篮球场"
+        "cn": "篮球场"
       },
       "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/court_wtp001.jpg",
@@ -354,12 +354,12 @@ var APP_DATA = {
           "title": {
             "th": "คณะโบราณคดี",
             "en": "Faculty of Archaeology",
-            "zh": "考古学院"
+            "cn": "考古学院"
           },
           "text": {
             "th": "มุ่งผลิตนักโบราณคดีเพื่อดูแลและอนุรักษ์โบราณวัตถุและโบราณสถานอันเป็นมรดกวัฒนธรรมของชาติ พร้อมขยายการผลิตบัณฑิตในสาขาที่เกี่ยวข้อง",
             "en": "The Faculty of Archaeology focuses on producing professionals dedicated to the preservation and conservation of cultural heritage, including ancient artifacts and historical sites, while expanding related academic disciplines.",
-            "zh": "考古学院致力于培养保护与保存国家文化遗产（包括文物与历史遗址）的专业人才，并拓展相关学科领域。"
+            "cn": "考古学院致力于培养保护与保存国家文化遗产（包括文物与历史遗址）的专业人才，并拓展相关学科领域。"
           },
           "image": "../wangThaPhraCampus/img/stillImages/archaeology_wtp001.jpg"
         },
@@ -369,12 +369,12 @@ var APP_DATA = {
           "title": {
             "th": "หอประชุมวังท่าพระ",
             "en": "Wang Tha Phra Auditorium",
-            "zh": "王他帕礼堂"
+            "cn": "王他帕礼堂"
           },
           "text": {
             "th": "สถานที่จัดกิจกรรมทางวิชาการและศิลปวัฒนธรรม เช่น การเสวนา อบรม และการแสดงดนตรี",
             "en": "A venue for academic and cultural events, including seminars, workshops, and musical performances.",
-            "zh": "用于举办学术与文艺活动的场所，如研讨会、培训及音乐演出。"
+            "cn": "用于举办学术与文艺活动的场所，如研讨会、培训及音乐演出。"
           },
           "image": "../wangThaPhraCampus/img/stillImages/ferrociBuilding_wtp001.jpg"
         },
@@ -384,12 +384,12 @@ var APP_DATA = {
           "title": {
             "th": "ตำหนักพรรณราย",
             "en": "Tamnak Phanray",
-            "zh": "帕纳莱宫"
+            "cn": "帕纳莱宫"
           },
           "text": {
             "th": "ตำหนักพรรณราย อาคารสไตล์โคโลเนียลสีเหลือง เดิมเป็นอาคารเรียนของคณะโบราณคดี ปัจจุบันเป็นที่ตั้งของสำนักศิลปวัฒนธรรมและการสร้างสรรค์แห่งมหาวิทยาลัยศิลปากร",
             "en": "Tamnak Phanray, a yellow colonial-style building, was formerly used by the Faculty of Archaeology. Today, it houses the Office of Art Culture and Creative of Silpakorn University.",
-            "zh": "帕纳莱宫是一座黄色殖民风格建筑，原为考古学院教学楼，现为泰国艺术大学文艺及创意事务中心所在地。"
+            "cn": "帕纳莱宫是一座黄色殖民风格建筑，原为考古学院教学楼，现为泰国艺术大学文艺及创意事务中心所在地。"
           },
           "image": "../wangThaPhraCampus/img/stillImages/yellowBuilding02_wtp001.jpg"
         },
@@ -399,12 +399,12 @@ var APP_DATA = {
           "title": {
             "th": "ลานสนามบาสเก็ตบอล",
             "en": "Basketball Court",
-            "zh": "篮球场"
+            "cn": "篮球场"
           },
           "text": {
             "th": "ลานกลางแจ้งอเนกประสงค์สำหรับนักศึกษาใช้เล่นกีฬาและจัดกิจกรรมต่าง ๆ ภายในมหาวิทยาลัย",
             "en": "A multi-purpose outdoor court used by students for sports and various university activities.",
-            "zh": "多功能户外小操场，供学生进行体育运动及各类校内活动。"
+            "cn": "多功能户外小操场，供学生进行体育运动及各类校内活动。"
           },
           "image": "../wangThaPhraCampus/img/stillImages/court_wtp001.jpg"
         }
@@ -415,7 +415,7 @@ var APP_DATA = {
       "name": {
         "th": "ศาลาแก้ว",
         "en": "Kaew Pavilion",
-        "zh": "玻璃亭"
+        "cn": "玻璃亭"
       },
       "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/palace_wtp001.jpg",
@@ -465,12 +465,12 @@ var APP_DATA = {
           "title": {
             "th": "สวนแก้ว",
             "en": "Suan Kaew Sculpture Garden",
-            "zh": "雕塑花园"
+            "cn": "雕塑花园"
           },
           "text": {
             "th": "พิพิธภัณฑ์ศิลปะกลางแจ้งที่รวบรวมผลงานประติมากรรมอันทรงคุณค่าจากศิลปินชั้นครูจำนวนมาก",
             "en": "An open-air art museum showcasing valuable sculptures created by master artists.",
-            "zh": "室外艺术博物馆，汇集众多大师级艺术家的珍贵雕塑作品。"
+            "cn": "室外艺术博物馆，汇集众多大师级艺术家的珍贵雕塑作品。"
           },
           "image": "../wangThaPhraCampus/img/stillImages/palace_wtp001.jpg"
         }
@@ -481,7 +481,7 @@ var APP_DATA = {
       "name": {
         "th": "คณะสถาปัตยกรรมศาสตร์",
         "en": "Faculty of Architecture",
-        "zh": "建筑学院"
+        "cn": "建筑学院"
       },
       "category": "faculty",
       "card_image": "../wangThaPhraCampus/img/stillImages/architecture_wtp001.jpg",
@@ -531,12 +531,12 @@ var APP_DATA = {
           "title": {
             "th": "คณะสถาปัตยกรรมศาสตร์",
             "en": "Faculty of Architecture",
-            "zh": "建筑学院"
+            "cn": "建筑学院"
           },
           "text": {
             "th": "คณะลำดับที่สองของมหาวิทยาลัยศิลปากร ให้ความสำคัญทั้งสถาปัตยกรรมหลักและสถาปัตยกรรมไทย รวมถึงการออกแบบชุมชนเมือง สภาพแวดล้อม สถาปัตยกรรมพื้นถิ่น ภูมิสถาปัตยกรรม และการจัดการมรดกทางสถาปัตยกรรมกับการท่องเที่ยว",
             "en": "As the second faculty established at Silpakorn University, the Faculty of Architecture emphasizes both modern and traditional Thai architecture, urban and environmental design, vernacular architecture, landscape architecture, and architectural heritage management in relation to tourism.",
-            "zh": "建筑学院是泰国艺术大学第二个成立的学院，重视现代与泰式建筑、城市与环境设计、地域文化建筑、景观建筑以及建筑遗产与旅游管理。"
+            "cn": "建筑学院是泰国艺术大学第二个成立的学院，重视现代与泰式建筑、城市与环境设计、地域文化建筑、景观建筑以及建筑遗产与旅游管理。"
           },
           "image": "../wangThaPhraCampus/img/stillImages/architecture_wtp001.jpg"
         }
@@ -547,7 +547,7 @@ var APP_DATA = {
       "name": {
         "th": "คณะมัณฑนศิลป์",
         "en": "Faculty of Decorative Arts",
-        "zh": "装饰艺术学院"
+        "cn": "装饰艺术学院"
       },
       "category": "faculty",
       "card_image": "../wangThaPhraCampus/img/stillImages/artGallery02_wtp001.jpg",
@@ -597,12 +597,12 @@ var APP_DATA = {
           "title": {
             "th": "คณะมัณฑนศิลป์",
             "en": "Faculty of Decorative Arts",
-            "zh": "设计学院"
+            "cn": "设计学院"
           },
           "text": {
             "th": "ศึกษาด้านศิลปะและการออกแบบหลากหลายแขนง ได้แก่ การออกแบบภายใน นิเทศศิลป์ ออกแบบผลิตภัณฑ์ ประยุกต์ศิลป์ เครื่องเคลือบดินเผา การออกแบบเครื่องประดับ และการออกแบบเครื่องแต่งกาย",
             "en": "The Faculty of Decorative Arts offers diverse programs in art and design, including interior design, visual communication design, product design, applied arts, ceramics, jewelry design, and fashion design.",
-            "zh": "设计学院涵盖多元艺术与设计领域，包括室内设计、视觉传达设计、产品设计、应用艺术、陶瓷艺术、珠宝设计与服装设计。"
+            "cn": "设计学院涵盖多元艺术与设计领域，包括室内设计、视觉传达设计、产品设计、应用艺术、陶瓷艺术、珠宝设计与服装设计。"
           },
           "image": "../wangThaPhraCampus/img/stillImages/artGallery_wtp001.jpg"
         }
@@ -613,7 +613,7 @@ var APP_DATA = {
       "name": {
         "th": "ลานอาจารย์ศิลป์",
         "en": "Silpa Bhirasri Plaza",
-        "zh": "西尔帕·比拉西广场"
+        "cn": "西尔帕·比拉西广场"
       },
       "category": "landmark",
       "card_image": "../wangThaPhraCampus/img/stillImages/ferrociStatue_wtp001.jpg",
@@ -657,12 +657,12 @@ var APP_DATA = {
           "title": {
             "th": "ลานอาจารย์ศิลป์",
             "en": "Professor Silpa Bhirasri Plaza",
-            "zh": "席尔帕·比拉西里教授广场"
+            "cn": "席尔帕·比拉西里教授广场"
           },
           "text": {
             "th": "ลานอนุสาวรีย์รูปปั้นศาสตราจารย์ศิลป์ พีระศรี ผู้ก่อตั้งมหาวิทยาลัยศิลปากร",
             "en": "Professor Silpa Bhirasri Plaza features the statue of Professor Silpa Bhirasri, the founder of Silpakorn University.",
-            "zh": "席尔帕·比拉西里教授广场，泰国艺术大学创始人的雕像。"
+            "cn": "席尔帕·比拉西里教授广场，泰国艺术大学创始人的雕像。"
           },
           "image": "../wangThaPhraCampus/img/stillImages/ferrociStatue_wtp001.jpg"
         },
@@ -672,12 +672,12 @@ var APP_DATA = {
           "title": {
             "th": "คณะจิตรกรรม ประติมากรรมและภาพพิมพ์",
             "en": "Faculty of Painting, Sculpture and Graphic Arts",
-            "zh": "绘画、雕塑与版画学院"
+            "cn": "绘画、雕塑与版画学院"
           },
           "text": {
             "th": "คณะแรกของมหาวิทยาลัยศิลปากร และเป็นหลักสูตรศิลปะที่เก่าแก่ที่สุดในประเทศไทย มุ่งผลิตบัณฑิตด้านทัศนศิลป์หลากหลายแขนง และส่งเสริมความร่วมมือกับสถาบันระดับนานาชาติ",
             "en": "The Faculty of Painting, Sculpture and Graphic Arts is the first faculty of Silpakorn University and the oldest art program in Thailand. It offers diverse disciplines in visual arts and actively promotes international collaboration.",
-            "zh": "绘画、雕塑与版画学院是泰国艺术大学创立最早的学院，也是泰国历史最悠久的艺术课程，涵盖多元视觉艺术领域，并积极推动国际合作。"
+            "cn": "绘画、雕塑与版画学院是泰国艺术大学创立最早的学院，也是泰国历史最悠久的艺术课程，涵盖多元视觉艺术领域，并积极推动国际合作。"
           },
           "image": "../wangThaPhraCampus/img/stillImages/artGallery03_wtp001.jpg"
         }
@@ -699,7 +699,7 @@ var CAMPUS_DATA = [
     name: {
       "th": "วิทยาเขตวังท่าพระ",
       "en": "Wang Tha Phra Campus",
-      "zh": "王他帕校区"
+      "cn": "王他帕校区"
     },
     image: '../Assets/campus/wangthapra.jpg',
     url: 'https://www.su.ac.th'
@@ -709,7 +709,7 @@ var CAMPUS_DATA = [
     name: {
       "th": "วิทยาเขตพระราชวังสนามจันทร์",
       "en": "Sanam Chandra Palace Campus",
-      "zh": "三湛宫校区"
+      "cn": "三湛宫校区"
     },
     image: '../Assets/campus/sanamchandra.jpg',
     url: 'https://www.su.ac.th'
@@ -719,7 +719,7 @@ var CAMPUS_DATA = [
     name: {
       "th": "วิทยาเขตเพชรบุรี",
       "en": "Phetchaburi Campus",
-      "zh": "碧武里信息技术校区"
+      "cn": "碧武里信息技术校区"
     },
     image: '../Assets/campus/phetchaburi.jpg',
     url: 'https://www.su.ac.th'
@@ -729,7 +729,7 @@ var CAMPUS_DATA = [
     name: {
       "th": "วิทยาเขตเมืองทองธานี",
       "en": "City Campus (Muang Thong Thani)",
-      "zh": "蒙通他尼城市校区"
+      "cn": "蒙通他尼城市校区"
     },
     image: '../Assets/campus/muangthong.jpg',
     url: 'https://www.su.ac.th'
@@ -739,7 +739,7 @@ var CAMPUS_DATA = [
     name: {
       "th": 'วิทยาเขตตลิ่งชัน',
       "en": "Taling Chan Campus",
-      "zh": "达灵参"
+      "cn": "达灵参"
     },
     image: '../Assets/campus/talingchan.jpg',
     url: 'https://www.su.ac.th'
@@ -750,12 +750,12 @@ var TAB_CONFIG = [
   { mode: 'scenes', label: {
   th: 'วิทยาเขต วังท่าพระ',
   en: 'Wang Tha Phra Campus',
-  zh: '王他帕校区'
+  cn: '王他帕校区'
 } },
   { mode: 'campus', label: {
   th: 'สำรวจวิทยาเขตอื่น',
   en: 'Other Campuses',
-  zh: '探索其他校区'
+  cn: '探索其他校区'
 } }
 ];
 
@@ -763,46 +763,46 @@ window.UI_TEXT = {
   universityName: {
     th: "มหาวิทยาลัยศิลปากร",
     en: "Silpakorn University",
-    zh: "艺术大学"
+    cn: "艺术大学"
   },
   details: {
     th: "รายละเอียดสถานที่",
     en: "Location Details",
-    zh: "地点详情"
+    cn: "地点详情"
   },
   campusName: {
     th: "วิทยาเขต วังท่าพระ",
     en: "Wang Tha Phra Campus",
-    zh: "王他帕校区"
+    cn: "王他帕校区"
   },
   currentTour: {
     th: "ทัวร์ปัจจุบัน",
     en: "Current Tour",
-    zh: "当前导览"
+    cn: "当前导览"
   },
   exploreCampus: {
     th: "สำรวจวิทยาเขตอื่น",
     en: "Other Campuses",
-    zh: "探索其他校区"
+    cn: "探索其他校区"
   },
   showLabel: {
     th: "แสดง:",
     en: "Show:",
-    zh: "显示："
+    cn: "显示："
   },
   all: {
     th: "ทั้งหมด",
     en: "All",
-    zh: "全部"
+    cn: "全部"
   },
   landmarks: {
     th: "สถานที่สำคัญ",
     en: "Landmarks",
-    zh: "地标"
+    cn: "地标"
   },
   faculty: {
     th: "คณะ",
     en: "Faculties",
-    zh: "学院"
+    cn: "学院"
   }
 };
