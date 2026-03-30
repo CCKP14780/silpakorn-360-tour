@@ -23,8 +23,50 @@
   var campusData = window.CAMPUS_DATA || [];
   var TAB_CONFIG = window.TAB_CONFIG || [];
   var UI_TEXT = window.UI_TEXT || {};
-  var currentLanguage = 'th'; // default language
   var currentFilter = 'all';
+
+  function getLanguageFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('hl');
+
+    if (lang && ['th', 'en', 'cn'].includes(lang)) {
+      return lang;
+    }
+
+    return null;
+  }
+
+  function getInitialLanguage() {
+    const urlLang = getLanguageFromURL();
+    const storedLang = localStorage.getItem('lang');
+    const browserLang = navigator.language.slice(0, 2);
+
+    const supported = ['th', 'en', 'cn'];
+
+    if (urlLang && supported.includes(urlLang)) {
+      return urlLang;
+    }
+
+    if (storedLang && supported.includes(storedLang)) {
+      return storedLang;
+    }
+
+    if (supported.includes(browserLang)) {
+      return browserLang;
+    }
+
+    return 'th';
+  }
+
+  var currentLanguage = getInitialLanguage();
+  const url = new URL(window.location);
+
+  if (!url.searchParams.get('hl')) {
+    url.searchParams.set('hl', currentLanguage);
+    window.history.replaceState({}, '', url);
+  }
+  syncLanguageUI();
+  
 
   // Grab elements from DOM.
   var panoElement = document.querySelector('#pano');
@@ -36,6 +78,24 @@
   var fullscreenToggleElement = document.querySelector('#fullscreenToggle');
   var prevSceneBtn = document.querySelector('#prevScene');
   var nextSceneBtn = document.querySelector('#nextScene');
+
+  document.getElementById('btnradio1').addEventListener('change', () => setLanguage('th'));
+  document.getElementById('btnradio2').addEventListener('change', () => setLanguage('en'));
+  document.getElementById('btnradio3').addEventListener('change', () => setLanguage('cn'));
+
+  function setLanguage(lang) {
+    currentLanguage = lang;
+
+    // Save to localStorage (important for main site sync)
+    localStorage.setItem('lang', lang);
+
+    // Update URL (?hl=)
+    const url = new URL(window.location);
+    url.searchParams.set('hl', lang);
+    window.history.replaceState({}, '', url);
+
+    refreshLanguageUI();
+  }
 
   document.getElementById('sceneFilter').addEventListener('change', function () {
     currentFilter = this.value;
@@ -219,23 +279,6 @@
   var viewOutElement = document.querySelector('#viewOut');
   var tabButtons = document.querySelectorAll('.scene-tabs button');
 
-  function getLanguageFromURL() {
-    const params = new URLSearchParams(window.location.search);
-    const lang = params.get('hl');
-
-    if (lang && ['th', 'en', 'cn'].includes(lang)) {
-      return lang;
-    }
-
-    return null;
-  }
-
-  // Override default if URL has hl=
-  const urlLang = getLanguageFromURL();
-  if (urlLang) {
-    currentLanguage = urlLang;
-  }
-
   function syncLanguageUI() {
     const map = {
       th: 'btnradio1',
@@ -248,8 +291,6 @@
       document.getElementById(id).checked = true;
     }
   }
-
-syncLanguageUI();
 
   function updateTabUnderline() {
     const activeBtn = document.querySelector('.scene-tabs button.active');
@@ -399,7 +440,7 @@ syncLanguageUI();
 
   function updateSceneName(scene) {
     sceneNameElement.innerHTML = sanitize(
-      scene.data.name[currentLanguage]
+      scene.data.name[currentLanguage] || scene.data.name['th']
     );
   }
 
@@ -517,6 +558,8 @@ syncLanguageUI();
 
     // 3. Click Handler for the Modal
     header.addEventListener('click', function () {
+      window.currentHotspot = hotspot;
+
       document.getElementById('infoHotspotTitle').innerText = hotspot.title[currentLanguage];
       document.getElementById('infoHotspotText').innerText = hotspot.text[currentLanguage];
       var modalImg = document.getElementById('infoHotspotImage');
@@ -596,6 +639,7 @@ syncLanguageUI();
     });
   }
 
+
   function refreshLanguageUI() {
     updateSceneName(scenes[currentSceneIndex]);
     populateSceneListModal();
@@ -620,28 +664,6 @@ syncLanguageUI();
         TAB_CONFIG[activeIndex].label[currentLanguage];
     }
   }
-
-  // language change
-  document.getElementById('btnradio1').addEventListener('change', function () {
-    if (this.checked) {
-      currentLanguage = 'th';
-      refreshLanguageUI();
-    }
-  });
-
-  document.getElementById('btnradio2').addEventListener('change', function () {
-    if (this.checked) {
-      currentLanguage = 'en';
-      refreshLanguageUI();
-    }
-  });
-
-  document.getElementById('btnradio3').addEventListener('change', function () {
-    if (this.checked) {
-      currentLanguage = 'cn';
-      refreshLanguageUI();
-    }
-  });
 
   function renderNewScenePage(container, direction) {
     container.innerHTML = '';
@@ -819,4 +841,5 @@ syncLanguageUI();
   // Display the initial scene.
   switchScene(scenes[0]);
   populateSceneListModal();
+  updateUIText();
 })();
