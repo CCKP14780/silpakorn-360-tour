@@ -413,8 +413,8 @@ var APP_DATA = {
     {
       "id": "5-map01_p360_wtp001",
       "name": {
-        "th": "ศาลาแก้ว",
-        "en": "Kaew Pavilion",
+        "th": "สวนแก้ว",
+        "en": "Suan Kaew",
         "cn": "玻璃亭"
       },
       "category": "landmark",
@@ -747,16 +747,20 @@ var CAMPUS_DATA = [
 ];
 
 var TAB_CONFIG = [
-  { mode: 'scenes', label: {
-  th: 'วิทยาเขต วังท่าพระ',
-  en: 'Wang Tha Phra Campus',
-  cn: '王他帕校区'
-} },
-  { mode: 'campus', label: {
-  th: 'สำรวจวิทยาเขตอื่น',
-  en: 'Other Campuses',
-  cn: '探索其他校区'
-} }
+  {
+    mode: 'scenes', label: {
+      th: 'วิทยาเขต วังท่าพระ',
+      en: 'Wang Tha Phra Campus',
+      cn: '王他帕校区'
+    }
+  },
+  {
+    mode: 'campus', label: {
+      th: 'สำรวจวิทยาเขตอื่น',
+      en: 'Other Campuses',
+      cn: '探索其他校区'
+    }
+  }
 ];
 
 window.UI_TEXT = {
