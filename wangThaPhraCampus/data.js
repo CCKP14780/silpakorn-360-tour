@@ -702,7 +702,7 @@ var CAMPUS_DATA = [
       "cn": "王他帕校区"
     },
     image: '../Assets/campus/wangthapra.jpg',
-    url: 'https://www.su.ac.th'
+    url: '../wangThaPhraCampus/index.html'
   },
   {
     id: 'sanamchandra',
@@ -732,7 +732,7 @@ var CAMPUS_DATA = [
       "cn": "蒙通他尼城市校区"
     },
     image: '../Assets/campus/muangthong.jpg',
-    url: 'https://www.su.ac.th'
+    url: '../muangThongThaniCampus/index.html'
   },
   {
     id: 'talingchan',
