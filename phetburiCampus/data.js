@@ -2,11 +2,11 @@ var APP_DATA = {
   "scenes": [
     {
       "id": "0-map34_p360_pb001",
-      "name":{
+      "name": {
         "th": "MAP34_p360_pb001",
         "en": "MAP34_p360_pb001",
         "cn": "MAP34_p360_pb001"
-      }, // make three languages,
+      },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
@@ -174,7 +174,13 @@ var APP_DATA = {
     },
     {
       "id": "2-map01_p360_pb001",
-      "name": "MAP01_p360_pb001",
+      "name": {
+        "th": "MAP01_p360_pb001",
+        "en": "MAP01_p360_pb001",
+        "cn": "MAP01_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -228,7 +234,13 @@ var APP_DATA = {
     },
     {
       "id": "3-map02_p360_pb001",
-      "name": "MAP02_p360_pb001",
+      "name": {
+        "th": "MAP02_p360_pb001",
+        "en": "MAP02_p360_pb001",
+        "cn": "MAP02_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -295,7 +307,13 @@ var APP_DATA = {
     },
     {
       "id": "4-map03_p360_pb001",
-      "name": "MAP03_p360_pb001",
+      "name": {
+        "th": "MAP03_p360_pb001",
+        "en": "MAP03_p360_pb001",
+        "cn": "MAP03_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -433,7 +451,13 @@ var APP_DATA = {
     },
     {
       "id": "6-map05_p360_pb001",
-      "name": "MAP05_p360_pb001",
+      "name": {
+        "th": "MAP05_p360_pb001",
+        "en": "MAP05_p360_pb001",
+        "cn": "MAP05_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -502,7 +526,13 @@ var APP_DATA = {
     },
     {
       "id": "7-map06_p360_pb001",
-      "name": "MAP06_p360_pb001",
+      "name": {
+        "th": "MAP06_p360_pb001",
+        "en": "MAP06_p360_pb001",
+        "cn": "MAP06_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -552,7 +582,13 @@ var APP_DATA = {
     },
     {
       "id": "8-map07_p360_pb001",
-      "name": "MAP07_p360_pb001",
+      "name": {
+        "th": "MAP07_p360_pb001",
+        "en": "MAP07_p360_pb001",
+        "cn": "MAP07_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -639,7 +675,13 @@ var APP_DATA = {
     },
     {
       "id": "9-map08_p360_pb001",
-      "name": "MAP08_p360_pb001",
+      "name": {
+        "th": "MAP08_p360_pb001",
+        "en": "MAP08_p360_pb001",
+        "cn": "MAP08_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -699,7 +741,13 @@ var APP_DATA = {
     },
     {
       "id": "10-map09_p360_pb001",
-      "name": "MAP09_p360_pb001",
+      "name": {
+        "th": "MAP09_p360_pb001",
+        "en": "MAP09_p360_pb001",
+        "cn": "MAP09_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -765,7 +813,13 @@ var APP_DATA = {
     },
     {
       "id": "11-map10_p360_pb001",
-      "name": "MAP10_p360_pb001",
+      "name": {
+        "th": "MAP10_p360_pb001",
+        "en": "MAP10_p360_pb001",
+        "cn": "MAP10_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -831,7 +885,13 @@ var APP_DATA = {
     },
     {
       "id": "12-map11_p360_pb001",
-      "name": "MAP11_p360_pb001",
+      "name": {
+        "th": "MAP11_p360_pb001",
+        "en": "MAP11_p360_pb001",
+        "cn": "MAP11_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -881,7 +941,13 @@ var APP_DATA = {
     },
     {
       "id": "13-map12_p360_pb001",
-      "name": "MAP12_p360_pb001",
+      "name": {
+        "th": "MAP12_p360_pb001",
+        "en": "MAP12_p360_pb001",
+        "cn": "MAP12_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -977,7 +1043,13 @@ var APP_DATA = {
     },
     {
       "id": "14-map13_p360_pb001",
-      "name": "MAP13_p360_pb001",
+      "name": {
+        "th": "MAP13_p360_pb001",
+        "en": "MAP13_p360_pb001",
+        "cn": "MAP13_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1046,7 +1118,13 @@ var APP_DATA = {
     },
     {
       "id": "15-map14_p360_pb001",
-      "name": "MAP14_p360_pb001",
+      "name": {
+        "th": "MAP14_p360_pb001",
+        "en": "MAP14_p360_pb001",
+        "cn": "MAP14_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1106,7 +1184,13 @@ var APP_DATA = {
     },
     {
       "id": "16-map15_p360_pb001",
-      "name": "MAP15_p360_pb001",
+      "name": {
+        "th": "MAP15_p360_pb001",
+        "en": "MAP15_p360_pb001",
+        "cn": "MAP15_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1166,7 +1250,13 @@ var APP_DATA = {
     },
     {
       "id": "17-map18_p360_pb001",
-      "name": "MAP18_p360_pb001",
+      "name": {
+        "th": "MAP18_p360_pb001",
+        "en": "MAP18_p360_pb001",
+        "cn": "MAP18_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1262,7 +1352,13 @@ var APP_DATA = {
     },
     {
       "id": "18-map17_p360_pb001",
-      "name": "MAP17_p360_pb001",
+      "name": {
+        "th": "MAP17_p360_pb001",
+        "en": "MAP17_p360_pb001",
+        "cn": "MAP17_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1352,7 +1448,13 @@ var APP_DATA = {
     },
     {
       "id": "19-map19_p360_pb001",
-      "name": "MAP19_p360_pb001",
+      "name": {
+        "th": "MAP19_p360_pb001",
+        "en": "MAP19_p360_pb001",
+        "cn": "MAP19_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1418,7 +1520,13 @@ var APP_DATA = {
     },
     {
       "id": "20-map20_p360_pb001",
-      "name": "MAP20_p360_pb001",
+      "name": {
+        "th": "MAP20_p360_pb001",
+        "en": "MAP20_p360_pb001",
+        "cn": "MAP20_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1484,7 +1592,13 @@ var APP_DATA = {
     },
     {
       "id": "21-map21_p360_pb001",
-      "name": "MAP21_p360_pb001",
+      "name": {
+        "th": "MAP21_p360_pb001",
+        "en": "MAP21_p360_pb001",
+        "cn": "MAP21_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1534,7 +1648,13 @@ var APP_DATA = {
     },
     {
       "id": "22-map22_p360_pb001",
-      "name": "MAP22_p360_pb001",
+      "name": {
+        "th": "MAP22_p360_pb001",
+        "en": "MAP22_p360_pb001",
+        "cn": "MAP22_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1594,7 +1714,13 @@ var APP_DATA = {
     },
     {
       "id": "23-map24_p360_pb001",
-      "name": "MAP24_p360_pb001",
+      "name": {
+        "th": "MAP24_p360_pb001",
+        "en": "MAP24_p360_pb001",
+        "cn": "MAP24_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1654,7 +1780,13 @@ var APP_DATA = {
     },
     {
       "id": "24-map23_p360_pb001",
-      "name": "MAP23_p360_pb001",
+      "name": {
+        "th": "MAP23_p360_pb001",
+        "en": "MAP23_p360_pb001",
+        "cn": "MAP23_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1756,7 +1888,13 @@ var APP_DATA = {
     },
     {
       "id": "25-map26_p360_pb001",
-      "name": "MAP26_p360_pb001",
+      "name": {
+        "th": "MAP26_p360_pb001",
+        "en": "MAP26_p360_pb001",
+        "cn": "MAP26_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1816,7 +1954,13 @@ var APP_DATA = {
     },
     {
       "id": "26-map25_p360_pb001",
-      "name": "MAP25_p360_pb001",
+      "name": {
+        "th": "MAP25_p360_pb001",
+        "en": "MAP25_p360_pb001",
+        "cn": "MAP25_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1876,7 +2020,13 @@ var APP_DATA = {
     },
     {
       "id": "27-map27_p360_pb001",
-      "name": "MAP27_p360_pb001",
+      "name": {
+        "th": "MAP27_p360_pb001",
+        "en": "MAP27_p360_pb001",
+        "cn": "MAP27_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1920,7 +2070,13 @@ var APP_DATA = {
     },
     {
       "id": "28-map28_p360_pb001",
-      "name": "MAP28_p360_pb001",
+      "name": {
+        "th": "MAP28_p360_pb001",
+        "en": "MAP28_p360_pb001",
+        "cn": "MAP28_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -2025,7 +2181,13 @@ var APP_DATA = {
     },
     {
       "id": "29-map30_p360_pb001",
-      "name": "MAP30_p360_pb001",
+      "name": {
+        "th": "MAP30_p360_pb001",
+        "en": "MAP30_p360_pb001",
+        "cn": "MAP30_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -2075,7 +2237,13 @@ var APP_DATA = {
     },
     {
       "id": "30-map29_p360_pb001",
-      "name": "MAP29_p360_pb001",
+      "name": {
+        "th": "MAP29_p360_pb001",
+        "en": "MAP29_p360_pb001",
+        "cn": "MAP29_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -2135,7 +2303,13 @@ var APP_DATA = {
     },
     {
       "id": "31-map31_p360_pb001",
-      "name": "MAP31_p360_pb001",
+      "name": {
+        "th": "MAP31_p360_pb001",
+        "en": "MAP31_p360_pb001",
+        "cn": "MAP31_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -2210,7 +2384,13 @@ var APP_DATA = {
     },
     {
       "id": "32-map32_p360_pb001",
-      "name": "MAP32_p360_pb001",
+      "name": {
+        "th": "MAP32_p360_pb001",
+        "en": "MAP32_p360_pb001",
+        "cn": "MAP32_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
