@@ -66,7 +66,7 @@
     window.history.replaceState({}, '', url);
   }
   syncLanguageUI();
-  
+
 
   // Grab elements from DOM.
   var panoElement = document.querySelector('#pano');
@@ -654,7 +654,7 @@
       document.getElementById('infoHotspotText').innerText =
         window.currentHotspot.text[currentLanguage];
     }
-    
+
     const activeIndex = Array.from(tabButtons).findIndex(btn =>
       btn.classList.contains('active')
     );
@@ -714,44 +714,44 @@
       });
     } else {
       // ===== Campus cards =====
-      let validCampusCards = ["wangthapra", "muangthong"]; ///////////////////////////
+      let validCampusCards = ["wangthapra", "muangthong", "phetchaburi"]; ///////////////////////////
       campusData.forEach(function (campus) {
-      const enabled = validCampusCards.includes(campus.id);
+        const enabled = validCampusCards.includes(campus.id);
 
-      var card = document.createElement('div');
-      card.className = enabled
+        var card = document.createElement('div');
+        card.className = enabled
           ? 'scene-card'
           : 'scene-card-coming-soon';
 
-      var img = document.createElement('img');
-      img.src = campus.image;
+        var img = document.createElement('img');
+        img.src = campus.image;
 
-      var title = document.createElement('div');
-      title.className = 'scene-card-title';
-      title.textContent = campus.name[currentLanguage];
+        var title = document.createElement('div');
+        title.className = 'scene-card-title';
+        title.textContent = campus.name[currentLanguage];
 
-      if (enabled) {
+        if (enabled) {
 
-        card.style.cursor = "pointer";
+          card.style.cursor = "pointer";
 
-        card.addEventListener('click', function () {
+          card.addEventListener('click', function () {
 
-          const url =
-            campus.url +
-            (campus.url.includes("?") ? "&" : "?") +
-            "hl=" + currentLanguage;
+            const url =
+              campus.url +
+              (campus.url.includes("?") ? "&" : "?") +
+              "hl=" + currentLanguage;
 
-          window.location.href = url;
+            window.location.href = url;
 
-        });
+          });
 
-      }
+        }
 
-      card.appendChild(img);
-      card.appendChild(title);
-      row.appendChild(card);
+        card.appendChild(img);
+        card.appendChild(title);
+        row.appendChild(card);
 
-    });
+      });
     }
 
     container.appendChild(row);

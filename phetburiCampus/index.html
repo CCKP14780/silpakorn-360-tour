@@ -1,199 +1,209 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Project Title</title>
-<meta charset="utf-8">
-<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
-<style> @-ms-viewport { width: device-width; } </style>
-<link rel="stylesheet" href="vendor/reset.min.css">
-<link rel="stylesheet" href="style.css">
+  <title>phetburiTour</title>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+  <style>
+    @-ms-viewport {
+      width: device-width;
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="vendor/reset.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="multiple-scenes ">
 
-<div id="pano"></div>
+  <div id="pano"></div>
 
-<div id="sceneList">
-  <ul class="scenes">
-    
-      <a href="javascript:void(0)" class="scene" data-id="0-map34_p360_pb001">
-        <li class="text">MAP34_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="1-map33_p360_pb001">
-        <li class="text">MAP33_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="2-map01_p360_pb001">
-        <li class="text">MAP01_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="3-map02_p360_pb001">
-        <li class="text">MAP02_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="4-map03_p360_pb001">
-        <li class="text">MAP03_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="5-map04_p360_pb001">
-        <li class="text">MAP04_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="6-map05_p360_pb001">
-        <li class="text">MAP05_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="7-map06_p360_pb001">
-        <li class="text">MAP06_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="8-map07_p360_pb001">
-        <li class="text">MAP07_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="9-map08_p360_pb001">
-        <li class="text">MAP08_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="10-map09_p360_pb001">
-        <li class="text">MAP09_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="11-map10_p360_pb001">
-        <li class="text">MAP10_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="12-map11_p360_pb001">
-        <li class="text">MAP11_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="13-map12_p360_pb001">
-        <li class="text">MAP12_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="14-map13_p360_pb001">
-        <li class="text">MAP13_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="15-map14_p360_pb001">
-        <li class="text">MAP14_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="16-map15_p360_pb001">
-        <li class="text">MAP15_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="17-map18_p360_pb001">
-        <li class="text">MAP18_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="18-map17_p360_pb001">
-        <li class="text">MAP17_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="19-map19_p360_pb001">
-        <li class="text">MAP19_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="20-map20_p360_pb001">
-        <li class="text">MAP20_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="21-map21_p360_pb001">
-        <li class="text">MAP21_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="22-map22_p360_pb001">
-        <li class="text">MAP22_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="23-map24_p360_pb001">
-        <li class="text">MAP24_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="24-map23_p360_pb001">
-        <li class="text">MAP23_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="25-map26_p360_pb001">
-        <li class="text">MAP26_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="26-map25_p360_pb001">
-        <li class="text">MAP25_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="27-map27_p360_pb001">
-        <li class="text">MAP27_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="28-map28_p360_pb001">
-        <li class="text">MAP28_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="29-map30_p360_pb001">
-        <li class="text">MAP30_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="30-map29_p360_pb001">
-        <li class="text">MAP29_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="31-map31_p360_pb001">
-        <li class="text">MAP31_p360_pb001</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="32-map32_p360_pb001">
-        <li class="text">MAP32_p360_pb001</li>
-      </a>
-    
-  </ul>
-</div>
+  <div class="university-header">
+    <img src="../Assets/su_logo/suLogo.png" class="uni-logo" alt="Silpakorn Logo">
+    <!-- Empty Div For Future Development -->
+    <div></div>
+  </div>
 
-<div id="titleBar">
-  <h1 class="sceneName"></h1>
-</div>
+  <div id="sceneNavWrapper">
+    <div class="sceneNavLine left"></div>
 
-<a href="javascript:void(0)" id="autorotateToggle">
-  <img class="icon off" src="img/play.png">
-  <img class="icon on" src="img/pause.png">
-</a>
+    <div id="sceneNavigator">
+      <button id="prevScene" class="nav-btn">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
 
-<a href="javascript:void(0)" id="fullscreenToggle">
-  <img class="icon off" src="img/fullscreen.png">
-  <img class="icon on" src="img/windowed.png">
-</a>
+      <span id="sceneTitle"></span>
 
-<a href="javascript:void(0)" id="sceneListToggle">
-  <img class="icon off" src="img/expand.png">
-  <img class="icon on" src="img/collapse.png">
-</a>
+      <button id="nextScene" class="nav-btn">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
 
-<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
-  <img class="icon" src="img/up.png">
-</a>
-<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
-  <img class="icon" src="img/down.png">
-</a>
-<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
-  <img class="icon" src="img/left.png">
-</a>
-<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
-  <img class="icon" src="img/right.png">
-</a>
-<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
-  <img class="icon" src="img/plus.png">
-</a>
-<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
-  <img class="icon" src="img/minus.png">
-</a>
+    <div class="sceneNavLine right"></div>
+  </div>
 
-<script src="vendor/screenfull.min.js" ></script>
-<script src="vendor/bowser.min.js" ></script>
-<script src="vendor/marzipano.js" ></script>
+  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="btnradio1">TH</label>
 
-<script src="data.js"></script>
-<script src="index.js"></script>
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio2">EN</label>
+
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio3">CN</label>
+  </div>
+
+  <a href="javascript:void(0)" id="autorotateToggle">
+    <img class="icon off">
+    <img class="icon on">
+  </a>
+
+  <a href="javascript:void(0)" id="fullscreenToggle">
+    <i class="icon off fa-solid fa-expand"></i>
+    <i class="icon on fa-solid fa-compress"></i>
+  </a>
+
+  <a href="javascript:void(0)" id="sceneListToggle">
+    <i class="icon off fa-solid fa-bars"></i>
+    <i class="icon on fa-solid fa-bars"></i>
+  </a>
+
+  <a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+    <img class="icon">
+  </a>
+  <a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+    <img class="icon">
+  </a>
+  <a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+    <img class="icon">
+  </a>
+  <a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+    <img class="icon">
+  </a>
+  <a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+    <img class="icon">
+  </a>
+  <a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+    <img class="icon">
+  </a>
+
+  <!-- Info Hotspot Modal -->
+  <div class="modal fade info-hotspot-ui" id="infoHotspotModal" tabindex="-1">
+
+    <div class="modal-dialog modal-xl info-hotspot-wide modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content bg-dark text-light">
+
+        <!-- Custom Body Layout -->
+        <div class="modal-body info-hotspot-body">
+
+          <!-- LEFT SIDE: IMAGE -->
+          <div class="info-hotspot-left">
+            <img id="infoHotspotImage" alt="">
+          </div>
+
+          <!-- RIGHT SIDE: TEXT -->
+          <div class="info-hotspot-right">
+            <h2 class="info-hotspot-title">
+              <i class="fa-solid fa-circle-info"></i>
+              <span data-i18n="details">รายละเอียดสถานที่</span>
+            </h2>
+
+            <!-- Header: CLOSE BUTTON -->
+            <div class="modal-header border-0">
+              <button type="button" class="info-hotspot-close" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fa-solid fa-circle-xmark"></i>
+              </button>
+            </div>
+            <div class="info-hotspot-main-body">
+              <h3 class="info-hotspot-subtitle" id="infoHotspotTitle"></h3>
+              <div class="info-hotspot-text" id="infoHotspotText"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene List Bottom Modal -->
+  <div id="sceneListModal" class="scene-list-modal">
+    <!-- ROW 1: TOP NAV -->
+    <div class="scene-list-header">
+      <span class="scene-brand" data-i18n="universityName"><strong>มหาวิทยาลัยศิลปากร</strong></span>
+
+      <div class="scene-tabs">
+        <button class="active" data-i18n="currentTour">ทัวร์ปัจจุบัน</button>
+        <button data-i18n="exploreCampus">สำรวจวิทยาเขตอื่น</button>
+
+        <!-- underline -->
+        <div class="scene-tab-underline"></div>
+      </div>
+
+      <button id="sceneListClose" class="scene-list-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="scene-list-body">
+      <!-- ROW 2: CONTROLS -->
+      <div class="scene-controls">
+        <span id="sceneCampusLabel" class="scene-campus" data-i18n="campusName">วิทยาเขต วังท่าพระ</span>
+
+        <div class="scene-filter-pagination">
+          <div class="scene-filters d-flex align-items-center gap-2">
+            <label for="sceneFilter" class="mb-0" data-i18n="showLabel">แสดง:</label>
+            <select id="sceneFilter" class="form-select form-select-sm w-auto rounded-40">
+              <option value="all" data-i18n="all">ทั้งหมด</option>
+              <option value="landmark" data-i18n="landmarks">สถานที่สำคัญ</option>
+              <option value="faculty" data-i18n="faculty">คณะ</option>
+            </select>
+          </div>
+
+          <div class="scene-pagination">
+            <button id="scenePrevBtn">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <span id="scenePageIndicator">1 / 2</span>
+            <button id="sceneNextBtn">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 3: CARDS -->
+      <div class="scene-list-content" id="sceneListModalContent"></div>
+
+    </div>
+  </div>
+
+
+
+  <script src="https://kit.fontawesome.com/b538aabb45.js" crossorigin="anonymous"></script>
+  <script src="vendor/screenfull.min.js"></script>
+  <script src="vendor/bowser.min.js"></script>
+  <script src="vendor/marzipano.js"></script>
+
+  <!-- Vignette Overlay -->
+  <div class="vignette-overlay"></div>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script src="data.js"></script>
+  <script src="index.js"></script>
 
 </body>
+
 </html>
