@@ -722,7 +722,7 @@ var CAMPUS_DATA = [
       "cn": "碧武里信息技术校区"
     },
     image: '../Assets/campus/phetchaburi.jpg',
-    url: 'https://www.su.ac.th'
+    url: '../phetburiCampus/index.html'
   },
   {
     id: 'muangthong',

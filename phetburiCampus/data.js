@@ -3,8 +3,8 @@ var APP_DATA = {
     {
       "id": "0-map34_p360_pb001",
       "name": {
-        "th": "MAP34_p360_pb001",
-        "en": "MAP34_p360_pb001",
+        "th": "มุมมองฝั่งทิศตะวันตกเฉียงเหนือ",
+        "en": "Northwest Side Aerial View",
         "cn": "MAP34_p360_pb001"
       },
       "category": "landmark",
@@ -77,8 +77,8 @@ var APP_DATA = {
     {
       "id": "1-map33_p360_pb001",
       "name": {
-        "th": "MAP33_p360_pb001",
-        "en": "MAP33_p360_pb001",
+        "th": "มุมมองฝั่งทิศตะวันตกเฉียงใต้",
+        "en": "Southeast Side Aerial View",
         "cn": "MAP33_p360_pb001"
       },
       "category": "landmark",
@@ -175,9 +175,9 @@ var APP_DATA = {
     {
       "id": "2-map01_p360_pb001",
       "name": {
-        "th": "MAP01_p360_pb001",
-        "en": "MAP01_p360_pb001",
-        "cn": "MAP01_p360_pb001"
+        "th": "ประตูหน้ามหาวิทยาลัย",
+        "en": "University Front Gate",
+        "cn": "大学正门"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
@@ -235,9 +235,9 @@ var APP_DATA = {
     {
       "id": "3-map02_p360_pb001",
       "name": {
-        "th": "MAP02_p360_pb001",
-        "en": "MAP02_p360_pb001",
-        "cn": "MAP02_p360_pb001"
+        "th": "เทวาลัยพระคเณศ",
+        "en": "Ganesha Shrine",
+        "cn": "象神神坛"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
@@ -308,9 +308,9 @@ var APP_DATA = {
     {
       "id": "4-map03_p360_pb001",
       "name": {
-        "th": "MAP03_p360_pb001",
-        "en": "MAP03_p360_pb001",
-        "cn": "MAP03_p360_pb001"
+        "th": "สวนประติมากรรม",
+        "en": "Sculpture Garden",
+        "cn": "雕塑花园"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
@@ -372,14 +372,29 @@ var APP_DATA = {
         {
           "yaw": 0.5043837251848924,
           "pitch": -0.021713436044271006,
-          "title": "สวนประติมากรรม&nbsp;",
-          "text": "ลานกลางแจ้ง แหล่งรวมผลงานประติมากรรมจากการประกวดศิลปกรรมแห่งชาติ กลายเป็นจุดเช็คอินและใช้จัดกิจกรรมทางด้านศิลปะและบันเทิงของมหาวิทยาลัย"
+          "title": {
+            "th": "สวนประติมากรรม (ลานเทเลทับบี้)",
+            "en": "Sculpture Garden / Teletubby Lawn",
+            "cn": "雕塑花园（天线宝宝草坪）"
+          },
+          "text": {
+            "th": "ลานกลางแจ้ง แหล่งรวมผลงานประติมากรรมจากการประกวดศิลปกรรมแห่งชาติ กลายเป็นจุดเช็คอินและใช้จัดกิจกรรมทางด้านศิลปะและบันเทิงของมหาวิทยาลัย",
+            "en": "The Sculpture Garden, also known among students as the Teletubby Lawn, is an open-air space that displays sculptures from the National Exhibition of Art. It has become a popular check-in spot on campus and is also used as a venue for art, cultural, and entertainment activities.",
+            "cn": "雕塑花园在学生中也被称为“天线宝宝草坪”，是一个展示全国艺术展览会雕塑作品的露天场地。这里已成为校园内的热门打卡点，也是举办各类艺术、文化及娱乐活动的重要场所。"
+          },
+          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
         }
       ]
     },
     {
       "id": "5-map04_p360_pb001",
-      "name": "MAP04_p360_pb001",
+      "name": {
+        "th": "MAP04_p360_pb001",
+        "en": "MAP04_p360_pb001",
+        "cn": "MAP04_p360_pb001"
+      },
+      "category": "landmark",
+      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -2481,7 +2496,7 @@ var CAMPUS_DATA = [
       "cn": "碧武里信息技术校区"
     },
     image: '../Assets/campus/phetchaburi.jpg',
-    url: 'https://www.su.ac.th'
+    url: '../phetburiCampus/index.html'
   },
   {
     id: 'muangthong',
