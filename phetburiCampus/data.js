@@ -8,7 +8,7 @@ var APP_DATA = {
         "cn": "MAP34_p360_pb001"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -82,7 +82,7 @@ var APP_DATA = {
         "cn": "MAP33_p360_pb001"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -2506,7 +2506,7 @@ var CAMPUS_DATA = [
       "cn": "蒙通他尼城市校区"
     },
     image: '../Assets/campus/muangthong.jpg',
-    url: '../muangThongThaniCampus/index.html'
+    url: '../muangThongCampus/index.html'
   },
   {
     id: 'talingchan',

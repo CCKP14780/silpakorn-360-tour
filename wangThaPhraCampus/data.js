@@ -732,7 +732,7 @@ var CAMPUS_DATA = [
       "cn": "蒙通他尼城市校区"
     },
     image: '../Assets/campus/muangthong.jpg',
-    url: '../muangThongThaniCampus/index.html'
+    url: '../muangThongCampus/index.html'
   },
   {
     id: 'talingchan',
