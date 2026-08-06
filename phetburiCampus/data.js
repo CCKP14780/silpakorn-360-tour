@@ -467,9 +467,9 @@ var APP_DATA = {
     {
       "id": "6-map05_p360_pb001",
       "name": {
-        "th": "MAP05_p360_pb001",
-        "en": "MAP05_p360_pb001",
-        "cn": "MAP05_p360_pb001"
+        "th": "โรงคัดแยกและกำจัดด้วยเตาเผาไร้ผลพิษ และบ่อบำบัดน้ำเสีย ",
+        "en": "Waste Sorting, Pollution-Free Incineration Facility, and Wastewater Treatment Pond",
+        "cn": "垃圾分类、无污染焚烧设施及污水处理池"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
@@ -598,9 +598,9 @@ var APP_DATA = {
     {
       "id": "8-map07_p360_pb001",
       "name": {
-        "th": "MAP07_p360_pb001",
-        "en": "MAP07_p360_pb001",
-        "cn": "MAP07_p360_pb001"
+        "th": "ทางเข้าอาคารสถาบันศิลปะสถาปัตยกรรมไทยเฉลิมพระเกียรติ",
+        "en": "Entrance to the Royal Commemorative Institute of Thai Art and Architecture Building",
+        "cn": "庆祝国王陛下六十华诞泰族艺术与建筑研究所大楼入口"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
@@ -691,9 +691,9 @@ var APP_DATA = {
     {
       "id": "9-map08_p360_pb001",
       "name": {
-        "th": "MAP08_p360_pb001",
-        "en": "MAP08_p360_pb001",
-        "cn": "MAP08_p360_pb001"
+        "th": "อาคารสถาบันศิลปะสถาปัตยกรรมไทยเฉลิมพระเกียรติ",
+        "en": "Commemorative Institute of Thai Architecture Building",
+        "cn": "泰式建筑艺术纪念馆大楼"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
