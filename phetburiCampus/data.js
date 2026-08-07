@@ -240,7 +240,7 @@ var APP_DATA = {
         "cn": "象神神坛"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -313,7 +313,7 @@ var APP_DATA = {
         "cn": "雕塑花园"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/teletubby_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -389,12 +389,12 @@ var APP_DATA = {
     {
       "id": "5-map04_p360_pb001",
       "name": {
-        "th": "MAP04_p360_pb001",
-        "en": "MAP04_p360_pb001",
-        "cn": "MAP04_p360_pb001"
+        "th": "ถนนประติมากรรม",
+        "en": "Sculpture Road",
+        "cn": "雕塑大道"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/sculptureRoadCompile_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -472,7 +472,7 @@ var APP_DATA = {
         "cn": "垃圾分类、无污染焚烧设施及污水处理池"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/orgFertilizerProdDrone_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -542,9 +542,9 @@ var APP_DATA = {
     {
       "id": "7-map06_p360_pb001",
       "name": {
-        "th": "MAP06_p360_pb001",
-        "en": "MAP06_p360_pb001",
-        "cn": "MAP06_p360_pb001"
+        "th": "วงเวียนข้างอาคารเรียนรวม 2",
+        "en": "Roundabout beside Lecture Building 2",
+        "cn": "综合教学楼 2 旁环岛"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
@@ -598,12 +598,12 @@ var APP_DATA = {
     {
       "id": "8-map07_p360_pb001",
       "name": {
-        "th": "ทางเข้าอาคารสถาบันศิลปะสถาปัตยกรรมไทยเฉลิมพระเกียรติ",
-        "en": "Entrance to the Royal Commemorative Institute of Thai Art and Architecture Building",
-        "cn": "庆祝国王陛下六十华诞泰族艺术与建筑研究所大楼入口"
+        "th": "ถนนประติมากรรม",
+        "en": "Sculpture Road",
+        "cn": "雕塑大道"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/sculptureRoadCompile_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -696,7 +696,7 @@ var APP_DATA = {
         "cn": "泰式建筑艺术纪念馆大楼"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/architectureBuilding_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -757,12 +757,12 @@ var APP_DATA = {
     {
       "id": "10-map09_p360_pb001",
       "name": {
-        "th": "MAP09_p360_pb001",
-        "en": "MAP09_p360_pb001",
-        "cn": "MAP09_p360_pb001"
+        "th": "อาคารเรียนรวม 2",
+        "en": "Lecture Building 2",
+        "cn": "综合教学楼 2"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/lectureBuilding2Drone_pb002.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -829,12 +829,12 @@ var APP_DATA = {
     {
       "id": "11-map10_p360_pb001",
       "name": {
-        "th": "MAP10_p360_pb001",
-        "en": "MAP10_p360_pb001",
-        "cn": "MAP10_p360_pb001"
+        "th": "อาคารบริหาร",
+        "en": "Administration Building",
+        "cn": "行政大楼"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/adminBuilding_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -901,9 +901,9 @@ var APP_DATA = {
     {
       "id": "12-map11_p360_pb001",
       "name": {
-        "th": "MAP11_p360_pb001",
-        "en": "MAP11_p360_pb001",
-        "cn": "MAP11_p360_pb001"
+        "th": "ถนนหลังอาคารบริหาร",
+        "en": "Road Behind Administration Building",
+        "cn": "行政大楼后方道路"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
@@ -957,12 +957,12 @@ var APP_DATA = {
     {
       "id": "13-map12_p360_pb001",
       "name": {
-        "th": "MAP12_p360_pb001",
-        "en": "MAP12_p360_pb001",
-        "cn": "MAP12_p360_pb001"
+        "th": "อนุสาวรีย์ศาสตราจารย์ศิลป์ พีระศรี",
+        "en": "Monument of Professor Silpa Bhirasri",
+        "cn": "艺术·费罗齐教授纪念碑"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/SilBirasriStatueDrone_pb004.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1059,12 +1059,12 @@ var APP_DATA = {
     {
       "id": "14-map13_p360_pb001",
       "name": {
-        "th": "MAP13_p360_pb001",
-        "en": "MAP13_p360_pb001",
-        "cn": "MAP13_p360_pb001"
+        "th": "โรงอาหารกลาง",
+        "en": "Central Dining Hall",
+        "cn": "中央食堂"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/suCafe_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1134,12 +1134,12 @@ var APP_DATA = {
     {
       "id": "15-map14_p360_pb001",
       "name": {
-        "th": "MAP14_p360_pb001",
-        "en": "MAP14_p360_pb001",
-        "cn": "MAP14_p360_pb001"
+        "th": "อาคารเรียนรวม 1",
+        "en": "Lecture Building 1",
+        "cn": "综合教学楼 1"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/lectureBuilding1_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1200,12 +1200,12 @@ var APP_DATA = {
     {
       "id": "16-map15_p360_pb001",
       "name": {
-        "th": "MAP15_p360_pb001",
-        "en": "MAP15_p360_pb001",
-        "cn": "MAP15_p360_pb001"
+        "th": "อาคารผลิตน้ำประปา",
+        "en": "Water Treatment and Supply Building",
+        "cn": "自来水处理与供水楼"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/waterTreatmentBuilding_pb002.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1266,12 +1266,12 @@ var APP_DATA = {
     {
       "id": "17-map18_p360_pb001",
       "name": {
-        "th": "MAP18_p360_pb001",
-        "en": "MAP18_p360_pb001",
-        "cn": "MAP18_p360_pb001"
+        "th": "ศูนย์เศรษฐกิจพอเพียง",
+        "en": "Sufficiency Economy Center",
+        "cn": "自足经济中心"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/sufEcoCen_pb002.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1368,12 +1368,12 @@ var APP_DATA = {
     {
       "id": "18-map17_p360_pb001",
       "name": {
-        "th": "MAP17_p360_pb001",
-        "en": "MAP17_p360_pb001",
-        "cn": "MAP17_p360_pb001"
+        "th": "อาคารสหเวชศาสตร์และอาคารกายวิภาค",
+        "en": "Allied Health Sciences Building and Anatomy Building",
+        "cn": "联合医学楼及解剖学楼"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/alliedHealthSciDrone_pb003.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1464,12 +1464,12 @@ var APP_DATA = {
     {
       "id": "19-map19_p360_pb001",
       "name": {
-        "th": "MAP19_p360_pb001",
-        "en": "MAP19_p360_pb001",
-        "cn": "MAP19_p360_pb001"
+        "th": "ตึกยานยนต์",
+        "en": "Yarn-Yon Building",
+        "cn": "汽车工程楼（Yarn-Yon Building）"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/yarnyon_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1536,12 +1536,12 @@ var APP_DATA = {
     {
       "id": "20-map20_p360_pb001",
       "name": {
-        "th": "MAP20_p360_pb001",
-        "en": "MAP20_p360_pb001",
-        "cn": "MAP20_p360_pb001"
+        "th": "สระศิลป์เพชรภิรมย์ (บ่อปลาวาฬ)",
+        "en": "Silp Phet Phirom Pond / Whale Pond",
+        "cn": "艺术碧彩碧隆池（鲸鱼池）"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/whaleLakeDrone_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1608,12 +1608,12 @@ var APP_DATA = {
     {
       "id": "21-map21_p360_pb001",
       "name": {
-        "th": "MAP21_p360_pb001",
-        "en": "MAP21_p360_pb001",
-        "cn": "MAP21_p360_pb001"
+        "th": "เส้นทางจักรยาน",
+        "en": "Bicycle Path",
+        "cn": "自行车道"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/bicycleRoute_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1664,12 +1664,12 @@ var APP_DATA = {
     {
       "id": "22-map22_p360_pb001",
       "name": {
-        "th": "MAP22_p360_pb001",
-        "en": "MAP22_p360_pb001",
-        "cn": "MAP22_p360_pb001"
+        "th": "อาคารปฎิบัติการคณะสัตว์สาสตร์และเทคโนโลยีการเกษตร",
+        "en": "Laboratory Building of the Faculty of Animal Sciences and Agricultural Technology",
+        "cn": "动物科学与农业技术学院实验楼"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/animalSci_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1723,19 +1723,19 @@ var APP_DATA = {
             "en": "This four-storey laboratory building brings together science and agricultural technology laboratories.It supports both teaching and research in animal sciences and agricultural technology.",
             "cn": "这是一栋四层的实验大楼，集成了完整的科学与农业技术实验室，全方位支持动物科学与农业技术领域的教学和科研工作。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/animalSci_pb003.jpg"
         }
       ]
     },
     {
       "id": "23-map24_p360_pb001",
       "name": {
-        "th": "MAP24_p360_pb001",
-        "en": "MAP24_p360_pb001",
-        "cn": "MAP24_p360_pb001"
+        "th": "ลานจันทร์",
+        "en": "Lan Chan",
+        "cn": "月亮广场（Lan Chan）"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/lanChan_pb002.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1789,19 +1789,19 @@ var APP_DATA = {
             "en": "K Common is a co-working space for students and staff, supported by Kasikornbank. It provides a flexible environment for study, collaboration, meetings, and creative activities.",
             "cn": "K Common 是由开泰银行（Kasikornbank）支持建造的师生联合办公与交流空间，为学习、协作、开会和创意活动提供了灵活的场地。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/lanChan_pb002.jpg"
         }
       ]
     },
     {
       "id": "24-map23_p360_pb001",
       "name": {
-        "th": "MAP23_p360_pb001",
-        "en": "MAP23_p360_pb001",
-        "cn": "MAP23_p360_pb001"
+        "th": "อาคารกิจกรรมและนันทนาการ (ตึกนัน)",
+        "en": "Activities and Recreation Building",
+        "cn": "活动与康体大楼（康体楼）"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/activityBuildingDrone_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1904,12 +1904,12 @@ var APP_DATA = {
     {
       "id": "25-map26_p360_pb001",
       "name": {
-        "th": "MAP26_p360_pb001",
-        "en": "MAP26_p360_pb001",
-        "cn": "MAP26_p360_pb001"
+        "th": "กลุ่มอาคารหอพักนักศึกษา",
+        "en": "Student Dormitory Complex",
+        "cn": "学生宿舍群"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/studentHostelDrone_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
