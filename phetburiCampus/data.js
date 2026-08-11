@@ -5,7 +5,7 @@ var APP_DATA = {
       "name": {
         "th": "มุมมองฝั่งทิศตะวันตกเฉียงเหนือ",
         "en": "Northwest Side Aerial View",
-        "cn": "MAP34_p360_pb001"
+        "cn": "西北侧鸟瞰图"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -79,7 +79,7 @@ var APP_DATA = {
       "name": {
         "th": "มุมมองฝั่งทิศตะวันตกเฉียงใต้",
         "en": "Southeast Side Aerial View",
-        "cn": "MAP33_p360_pb001"
+        "cn": "西南侧鸟瞰图"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb001.jpg",
@@ -394,7 +394,7 @@ var APP_DATA = {
         "cn": "雕塑大道"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/sculptureRoadCompile_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/sculptureRoad_pb006.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -547,7 +547,7 @@ var APP_DATA = {
         "cn": "综合教学楼 2 旁环岛"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/roundaboutLectureBuilding2_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -603,7 +603,7 @@ var APP_DATA = {
         "cn": "雕塑大道"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/sculptureRoadCompile_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/sculptureRoad_pb007.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -915,7 +915,7 @@ var APP_DATA = {
         "cn": "行政大楼后方道路"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/roadAdminBuilding_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1436,7 +1436,7 @@ var APP_DATA = {
             "en": "Sculpture Road is a distinctive outdoor art space on campus. It displays ceramic sculptures created by both international and Thai artists. A key highlight is the Silpakorn Clay Works project, which has transformed the campus landscape into an artistic route where nature and creative works come together.",
             "cn": "雕塑大道是校园内独具特色的户外艺术空间，展出了来自国际和泰国艺术家的陶瓷雕塑作品。其中的亮点是“Silpakorn Clay Works”项目，它将校园景观重塑为一条将自然与艺术创作融为一体的艺术走廊。"
           },
-          "image": "../phetburiCampus/img/stillImages/sculptureRoadCompile_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/sculptureRoadCompile_pb002.jpg"
         },
         {
           "yaw": -2.4743015147659086,
@@ -1622,7 +1622,7 @@ var APP_DATA = {
         "cn": "自行车道"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/bicycleRoute_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/bicycleRoute_pb002.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1891,7 +1891,7 @@ var APP_DATA = {
             "en": "The Activities and Recreation Building, commonly known as the Recreation Building, is a central hub for student life and campus activities. Inside the building are the SU Refill eco-friendly shop, an authorized postal service, spaces for the Student Council, Student Union, student clubs, and the Silpa Wellness Center. The second floor includes the Student Development Office, reading rooms, activity rooms, and the Perm Suk Room, which provides psychological counseling services. The third and fourth floors support sports and recreational activities, including fitness, table tennis, taekwondo, yoga, music rehearsal rooms, dance rehearsal rooms, board game rooms, and study areas. Solar panels are installed on the rooftop to support sustainable energy use within the building.",
             "cn": "活动与康体大楼（通称康体楼）是学生校园生活的核心枢纽。楼内设有 SU Refill 环保商店、邮政代办点、学生议会、学生会、学生社团办公室及艺术健康中心。二楼包含学生发展办公室、自习室、活动室以及提供心理咨询服务的“增福室”（Perm Suk Room）。三至四楼用于体育与娱乐活动，包括健身房、乒乓球室、跆拳道室、瑜伽室、排练室、舞蹈室、棋牌室和自习区。大楼屋顶安装了太阳能电池板系统，以支持建筑内部的可持续能源使用。"
           },
-          "image": "../phetburiCampus/img/stillImages/sportComplexDrone_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/activityBuilding_pb001.jpg"
         },
         {
           "yaw": -1.005168765869394,
@@ -1906,7 +1906,7 @@ var APP_DATA = {
             "en": "The large parking area serves as a multipurpose space. In addition to parking, it is also used for various campus activities, including the Monday market.",
             "cn": "大型停车场作为一个多功能空间使用，除停车外，还用于举办校园各类活动，包括周一集市。"
           },
-          "image": "../phetburiCampus/img/stillImages/activityBuilding_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/parkingLot_pb001.jpg"
         }
       ]
     },
@@ -2050,7 +2050,7 @@ var APP_DATA = {
         "cn": "Ploen Silp 集市后街"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/roadMarket_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -2184,7 +2184,7 @@ var APP_DATA = {
             "en": "The gymnasium is a multipurpose activity center that supports both sports and entertainment events.",
             "cn": "体育馆是一个多功能活动中心，可全面支持体育赛事及各类娱乐大型活动。"
           },
-          "image": "../phetburiCampus/img/stillImages/sportComplexDrone_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/gym_pb001.jpg"
         },
         {
           "yaw": 2.889554119360916,
@@ -2199,7 +2199,7 @@ var APP_DATA = {
             "en": "The large parking area serves as a multipurpose space. In addition to parking, it is also used for various campus activities, including the Monday market.",
             "cn": "大型停车场作为一个多功能空间使用，除停车外，还用于举办校园各类活动，包括周一集市。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/parkingLot_pb001.jpg"
         }
       ]
     },
@@ -2211,7 +2211,7 @@ var APP_DATA = {
         "cn": "通往足球场的道路"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/roadFootballField_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
