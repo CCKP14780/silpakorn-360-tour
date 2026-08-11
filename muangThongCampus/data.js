@@ -113,7 +113,7 @@ var APP_DATA = {
         "en": "Silpakorn University, Muang Thong Thani Campus",
         "cn": "艺术大学蒙通他尼校区"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../muangThongCampus/img/stillImages/lawnStill_mt001.jpg",
       "levels": [
         {

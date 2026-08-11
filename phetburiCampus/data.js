@@ -240,7 +240,7 @@ var APP_DATA = {
         "cn": "象神神坛"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -301,7 +301,7 @@ var APP_DATA = {
             "en": "The Ganesha Shrine is one of the most important landmarks of Silpakorn University. Lord Ganesha is regarded as the deity of success and is also a key symbol of the university. The shrine was designed by Professor Praves Limpabandhu, a National Artist in Thai Architecture. Inside the shrine is the statue of Lord Ganesha, designed and sculpted by Ajarn Sawet Thesatham, a senior sculptor and a student of Professor Silpa Bhirasri. In front of the shrine, there is an exhibition and souvenir building. The exhibition presents the history of the university’s Ganesha statue and provides a space for worship and offerings.",
             "cn": "象神是成功之神，也是泰国艺术大学的重要象征。该神坛由泰国建筑领域国家艺术家普拉维斯·林巴班度教授设计。神坛内供奉的象神雕像是由资深雕塑家、费罗齐教授（Silpa Bhirasri）的弟子沙威·特萨坦老师设计并铸造的。神坛前方设有展览及纪念品馆，馆内展出大学象神雕像的铸造历史，并提供祈福与请供象神像的空间。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
         }
       ]
     },
@@ -313,7 +313,7 @@ var APP_DATA = {
         "cn": "雕塑花园"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/teletubby_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -367,7 +367,7 @@ var APP_DATA = {
             "en": "The Ganesha Shrine is one of the most important landmarks of Silpakorn University. Lord Ganesha is regarded as the deity of success and is also a key symbol of the university. The shrine was designed by Professor Praves Limpabandhu, a National Artist in Thai Architecture. Inside the shrine is the statue of Lord Ganesha, designed and sculpted by Ajarn Sawet Thesatham, a senior sculptor and a student of Professor Silpa Bhirasri. In front of the shrine, there is an exhibition and souvenir building. The exhibition presents the history of the university’s Ganesha statue and provides a space for worship and offerings.",
             "cn": "象神是成功之神，也是泰国艺术大学的重要象征。该神坛由泰国建筑领域国家艺术家普拉维斯·林巴班度教授设计。神坛内供奉的象神雕像是由资深雕塑家、费罗齐教授（Silpa Bhirasri）的弟子沙威·特萨坦老师设计并铸造的。神坛前方设有展览及纪念品馆，馆内展出大学象神雕像的铸造历史，并提供祈福与请供象神像的空间。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
         },
         {
           "yaw": 0.5043837251848924,
@@ -382,19 +382,19 @@ var APP_DATA = {
             "en": "The Sculpture Garden, also known among students as the Teletubby Lawn, is an open-air space that displays sculptures from the National Exhibition of Art. It has become a popular check-in spot on campus and is also used as a venue for art, cultural, and entertainment activities.",
             "cn": "雕塑花园在学生中也被称为“天线宝宝草坪”，是一个展示全国艺术展览会雕塑作品的露天场地。这里已成为校园内的热门打卡点，也是举办各类艺术、文化及娱乐活动的重要场所。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/teletubby_pb001.jpg"
         }
       ]
     },
     {
       "id": "5-map04_p360_pb001",
       "name": {
-        "th": "MAP04_p360_pb001",
-        "en": "MAP04_p360_pb001",
-        "cn": "MAP04_p360_pb001"
+        "th": "ถนนประติมากรรม",
+        "en": "Sculpture Road",
+        "cn": "雕塑大道"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/sculptureRoadCompile_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -460,7 +460,7 @@ var APP_DATA = {
             "en": "The Ganesha Shrine is one of the most important landmarks of Silpakorn University. Lord Ganesha is regarded as the deity of success and is also a key symbol of the university. The shrine was designed by Professor Praves Limpabandhu, a National Artist in Thai Architecture. Inside the shrine is the statue of Lord Ganesha, designed and sculpted by Ajarn Sawet Thesatham, a senior sculptor and a student of Professor Silpa Bhirasri. In front of the shrine, there is an exhibition and souvenir building. The exhibition presents the history of the university’s Ganesha statue and provides a space for worship and offerings.",
             "cn": "象神是成功之神，也是泰国艺术大学的重要象征。该神坛由泰国建筑领域国家艺术家普拉维斯·林巴班度教授设计。神坛内供奉的象神雕像是由资深雕塑家、费罗齐教授（Silpa Bhirasri）的弟子沙威·特萨坦老师设计并铸造的。神坛前方设有展览及纪念品馆，馆内展出大学象神雕像的铸造历史，并提供祈福与请供象神像的空间。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
         }
       ]
     },
@@ -472,7 +472,7 @@ var APP_DATA = {
         "cn": "垃圾分类、无污染焚烧设施及污水处理池"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/orgFertilizerProdDrone_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -520,7 +520,7 @@ var APP_DATA = {
             "en": "The Organic Fertilizer Production Facility produces fertilizer from leaves and cow manure. The process also uses biodegradable bioplastic cups that have been used within the campus. This project is carried out in collaboration with GC Bio Plastics, a company under PTT Global Chemical Public Company Limited. The production process follows a no-turn composting method based on knowledge from Maejo University.",
             "cn": "该有机肥生产设施利用树叶和牛粪制作肥料，同时加入了校内使用过的可降解生物塑料杯（该项目与PTT全球化学股份有限公司旗下生产可降解生物杯的公司合作）。生产过程采用了来自梅州大学（Maejo University）的不翻堆堆肥技术。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/orgFertilizerProd_pb001.jpg"
         },
         {
           "yaw": -1.3691106443579475,
@@ -535,16 +535,16 @@ var APP_DATA = {
             "en": "This area supports the campus’s waste and wastewater management system. Waste is managed through a pollution-free incineration process. The wastewater treatment system follows the concept of the Laem Phak Bia Royal Project. Wastewater from campus buildings flows through three drainage lines into a series of treatment ponds. The first pond functions as a sedimentation pond, the second as an oxidation pond, and the third as a water-conditioning pond.",
             "cn": "该区域负责校区的垃圾和污水管理。垃圾采用无污染焚烧方式处理；生活污水处理遵循“廉帕比亚”皇家计划理念，来自大楼的污水经由3条排水管线引入三级处理池：第一池为沉淀池，第二池为氧化稳定池，第三池为水质调节池。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/incinerationFacility_pb001.jpg"
         }
       ]
     },
     {
       "id": "7-map06_p360_pb001",
       "name": {
-        "th": "MAP06_p360_pb001",
-        "en": "MAP06_p360_pb001",
-        "cn": "MAP06_p360_pb001"
+        "th": "วงเวียนข้างอาคารเรียนรวม 2",
+        "en": "Roundabout beside Lecture Building 2",
+        "cn": "综合教学楼 2 旁环岛"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
@@ -598,12 +598,12 @@ var APP_DATA = {
     {
       "id": "8-map07_p360_pb001",
       "name": {
-        "th": "ทางเข้าอาคารสถาบันศิลปะสถาปัตยกรรมไทยเฉลิมพระเกียรติ",
-        "en": "Entrance to the Royal Commemorative Institute of Thai Art and Architecture Building",
-        "cn": "庆祝国王陛下六十华诞泰族艺术与建筑研究所大楼入口"
+        "th": "ถนนประติมากรรม",
+        "en": "Sculpture Road",
+        "cn": "雕塑大道"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/sculptureRoadCompile_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -669,7 +669,7 @@ var APP_DATA = {
             "en": "The Ganesha Shrine is one of the most important landmarks of Silpakorn University. Lord Ganesha is regarded as the deity of success and is also a key symbol of the university. The shrine was designed by Professor Praves Limpabandhu, a National Artist in Thai Architecture. Inside the shrine is the statue of Lord Ganesha, designed and sculpted by Ajarn Sawet Thesatham, a senior sculptor and a student of Professor Silpa Bhirasri. In front of the shrine, there is an exhibition and souvenir building. The exhibition presents the history of the university’s Ganesha statue and provides a space for worship and offerings.",
             "cn": "象神是成功之神，也是泰国艺术大学的重要象征。该神坛由泰国建筑领域国家艺术家普拉维斯·林巴班度教授设计。神坛内供奉的象神雕像是由资深雕塑家、费罗齐教授（Silpa Bhirasri）的弟子沙威·特萨坦老师设计并铸造的。神坛前方设有展览及纪念品馆，馆内展出大学象神雕像的铸造历史，并提供祈福与请供象神像的空间。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
         },
         {
           "yaw": 1.9289631799548443,
@@ -684,7 +684,7 @@ var APP_DATA = {
             "en": "The Sculpture Garden, also known among students as the Teletubby Lawn, is an open-air space that displays sculptures from the National Exhibition of Art. It has become a popular check-in spot on campus and is also used as a venue for art, cultural, and entertainment activities.",
             "cn": "雕塑花园在学生中也被称为“天线宝宝草坪”，是一个展示全国艺术展览会雕塑作品的露天场地。这里已成为校园内的热门打卡点，也是举办各类艺术、文化及娱乐活动的重要场所。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/teletubby_pb001.jpg"
         }
       ]
     },
@@ -696,7 +696,7 @@ var APP_DATA = {
         "cn": "泰式建筑艺术纪念馆大楼"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/architectureBuilding_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -744,25 +744,34 @@ var APP_DATA = {
             "en": "This building was formerly used by the Faculty of Architecture. It was designed by Ajarn Wanida Phuengsunthon, a National Artist. At present, the building is not in active use and is under the supervision of the Office of Art and Culture.",
             "cn": "该大楼原为建筑学院使用，由国家艺术家瓦妮达·彭顺通老师设计。目前该建筑暂未投入使用，由艺术与文化局管理。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/architectureBuilding_pb001.jpg"
         },
         {
           "yaw": -0.13102583806423418,
           "pitch": -0.03547383930997938,
-          "title": "อาคารโอทอป",
-          "text": "หนึ่งในพื้นที่สำหรับเตรียมงานกิจกรรมนักศึกษา"
+          "title": {
+            "th": "อาคารโอทอป",
+            "en": "OTOP Building",
+            "cn": "OTOP 大楼"
+          },
+          "text": {
+            "th": "หนึ่งในพื้นที่สำหรับเตรียมงานกิจกรรมนักศึกษา",
+            "en": "The OTOP Building serves as one of the supporting spaces for student activities and event preparation on campus.",
+            "cn": "OTOP大楼是校园内用于筹备学生活动和准备工作的场地之一。"
+          },
+          "image": "../phetburiCampus/img/stillImages/otop01_pb001.jpg"
         }
       ]
     },
     {
       "id": "10-map09_p360_pb001",
       "name": {
-        "th": "MAP09_p360_pb001",
-        "en": "MAP09_p360_pb001",
-        "cn": "MAP09_p360_pb001"
+        "th": "อาคารเรียนรวม 2",
+        "en": "Lecture Building 2",
+        "cn": "综合教学楼 2"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/lectureBuilding2Drone_pb002.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -822,19 +831,19 @@ var APP_DATA = {
             "en": "Lecture Building 2 is used for teaching and learning activities. Inside the building, there is a sculpture exhibition room called the “Silpa Sangsan Room.” The building also houses a large lecture hall of the campus, commonly known as the Slope Room, with a seating capacity of approximately 250 people.",
             "cn": "综合教学楼2用于日常教学活动。楼内设有名为“创意艺术室”（Silpa Sangsan Room）的雕塑展厅，并拥有一个可容纳约250人的校区大型阶梯演讲厅。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/lectureBuilding2_pb001.jpg"
         }
       ]
     },
     {
       "id": "11-map10_p360_pb001",
       "name": {
-        "th": "MAP10_p360_pb001",
-        "en": "MAP10_p360_pb001",
-        "cn": "MAP10_p360_pb001"
+        "th": "อาคารบริหาร",
+        "en": "Administration Building",
+        "cn": "行政大楼"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/adminBuilding_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -894,16 +903,16 @@ var APP_DATA = {
             "en": "The Administration Building houses the main offices of the campus and several faculties. These include the Campus Administrative Office, the Faculty of Animal Sciences and Agricultural Technology, the Faculty of Information and Communication Technology, and the Faculty of Allied Health Sciences.",
             "cn": "行政大楼设有校区主要行政办公室及多个学院，包括校区办事处、动物科学与农业技术学院、信息与通信技术学院以及联合医学学院。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/adminBuilding_pb001.jpg"
         }
       ]
     },
     {
       "id": "12-map11_p360_pb001",
       "name": {
-        "th": "MAP11_p360_pb001",
-        "en": "MAP11_p360_pb001",
-        "cn": "MAP11_p360_pb001"
+        "th": "ถนนหลังอาคารบริหาร",
+        "en": "Road Behind Administration Building",
+        "cn": "行政大楼后方道路"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
@@ -957,12 +966,12 @@ var APP_DATA = {
     {
       "id": "13-map12_p360_pb001",
       "name": {
-        "th": "MAP12_p360_pb001",
-        "en": "MAP12_p360_pb001",
-        "cn": "MAP12_p360_pb001"
+        "th": "อนุสาวรีย์ศาสตราจารย์ศิลป์ พีระศรี",
+        "en": "Monument of Professor Silpa Bhirasri",
+        "cn": "艺术·费罗齐教授纪念碑"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/SilBirasriStatueDrone_pb004.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1022,7 +1031,7 @@ var APP_DATA = {
             "en": "The Administration Building houses the main offices of the campus and several faculties. These include the Campus Administrative Office, the Faculty of Animal Sciences and Agricultural Technology, the Faculty of Information and Communication Technology, and the Faculty of Allied Health Sciences.",
             "cn": "行政大楼设有校区主要行政办公室及多个学院，包括校区办事处、动物科学与农业技术学院、信息与通信技术学院以及联合医学学院。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/adminBuilding_pb001.jpg"
         },
         {
           "yaw": 1.779061130173985,
@@ -1037,7 +1046,7 @@ var APP_DATA = {
             "en": "The Monument of Professor Silpa Bhirasri is located behind the Administration Building. Professor Silpa Bhirasri is recognized as the father of modern art in Thailand and the founder of Silpakorn University. The monument was established to honor his legacy and to inspire appreciation and respect for the person who played a vital role in Thai art education.",
             "cn": "艺术·费罗齐教授（Silpa Bhirasri）纪念碑位于行政大楼后方。费罗齐教授被尊称为“泰国现代艺术之父”，同时也是泰国艺术大学的创办人。设立此纪念碑旨在铭记其丰功伟绩，并激发大家对这位为泰国艺术教育做出卓越贡献者的敬仰与爱戴。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/silPirasriStatue_pb006.jpg"
         },
         {
           "yaw": -1.9816106145686074,
@@ -1052,19 +1061,19 @@ var APP_DATA = {
             "en": "The Creative Art Garden is a relaxing green space for students and staff. It provides an open area for rest, informal activities, and campus life.",
             "cn": "创意艺术花园是供师生放松身心的绿化场地，为休息、日常活动和校园生活提供了开放空间。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/creativeArtGarden_pb001.jpg"
         }
       ]
     },
     {
       "id": "14-map13_p360_pb001",
       "name": {
-        "th": "MAP13_p360_pb001",
-        "en": "MAP13_p360_pb001",
-        "cn": "MAP13_p360_pb001"
+        "th": "โรงอาหารกลาง",
+        "en": "Central Dining Hall",
+        "cn": "中央食堂"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/suCafe_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1112,7 +1121,7 @@ var APP_DATA = {
             "en": "The OTOP Building serves as one of the supporting spaces for student activities and event preparation on campus.",
             "cn": "OTOP大楼是校园内用于筹备学生活动和准备工作的场地之一。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/otop01_pb001.jpg"
         },
         {
           "yaw": 2.5640130623665467,
@@ -1127,19 +1136,19 @@ var APP_DATA = {
             "en": "The main dining hall on campus, offering a variety of affordable food and beverage options, serving as a central meeting and relaxing space for students and staff.",
             "cn": "校内的 الرئيسي 餐饮中心，提供种类丰富且价格实惠的餐食与饮料，是师生用餐、休息与交流的主要场所。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/suCafe_pb001.jpg"
         }
       ]
     },
     {
       "id": "15-map14_p360_pb001",
       "name": {
-        "th": "MAP14_p360_pb001",
-        "en": "MAP14_p360_pb001",
-        "cn": "MAP14_p360_pb001"
+        "th": "อาคารเรียนรวม 1",
+        "en": "Lecture Building 1",
+        "cn": "综合教学楼 1"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/lectureBuilding1_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1193,19 +1202,19 @@ var APP_DATA = {
             "en": "Lecture Building 1 houses the office of the Faculty of Management Science, as well as classrooms and various laboratories used for teaching and learning.",
             "cn": "综合教学楼1设有管理科学学院办公室，以及用于教学和科研的各类教室与实验室。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/lectureBuilding1_pb001.jpg"
         }
       ]
     },
     {
       "id": "16-map15_p360_pb001",
       "name": {
-        "th": "MAP15_p360_pb001",
-        "en": "MAP15_p360_pb001",
-        "cn": "MAP15_p360_pb001"
+        "th": "อาคารผลิตน้ำประปา",
+        "en": "Water Treatment and Supply Building",
+        "cn": "自来水处理与供水楼"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/waterTreatmentBuilding_pb002.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1259,19 +1268,19 @@ var APP_DATA = {
             "en": "The Water Treatment and Supply Building produces water for use within the university. It helps ensure that the campus has sufficient water supply and supports sustainable resource management.",
             "cn": "自来水处理与供水楼负责生产供校内使用的自来水，旨在保障校园充足的水资源供应并支持可持续资源管理。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/waterTreatmentBuilding_pb002.jpg"
         }
       ]
     },
     {
       "id": "17-map18_p360_pb001",
       "name": {
-        "th": "MAP18_p360_pb001",
-        "en": "MAP18_p360_pb001",
-        "cn": "MAP18_p360_pb001"
+        "th": "ศูนย์เศรษฐกิจพอเพียง",
+        "en": "Sufficiency Economy Center",
+        "cn": "自足经济中心"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/sufEcoCen_pb002.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1346,7 +1355,7 @@ var APP_DATA = {
             "en": "Dormitory 1 is currently closed.",
             "cn": "1号宿舍楼目前暂停开放。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/dorm1_pb001.jpg"
         },
         {
           "yaw": -0.05955174954831399,
@@ -1361,19 +1370,19 @@ var APP_DATA = {
             "en": "The Academic Resources Building includes the Phetchaburi Campus Library, digital service units, classrooms, and lecture rooms used for teaching and learning.",
             "cn": "学术资源楼包含碧差汶里校区图书馆、数字服务部门以及用于教学活动的多间教室和演讲厅。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/academicResBuilding_pb001.jpg"
         }
       ]
     },
     {
       "id": "18-map17_p360_pb001",
       "name": {
-        "th": "MAP17_p360_pb001",
-        "en": "MAP17_p360_pb001",
-        "cn": "MAP17_p360_pb001"
+        "th": "อาคารสหเวชศาสตร์และอาคารกายวิภาค",
+        "en": "Allied Health Sciences Building and Anatomy Building",
+        "cn": "联合医学楼及解剖学楼"
       },
-      "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "category": "faculty",
+      "card_image": "../phetburiCampus/img/stillImages/alliedHealthSciDrone_pb003.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1427,7 +1436,7 @@ var APP_DATA = {
             "en": "Sculpture Road is a distinctive outdoor art space on campus. It displays ceramic sculptures created by both international and Thai artists. A key highlight is the Silpakorn Clay Works project, which has transformed the campus landscape into an artistic route where nature and creative works come together.",
             "cn": "雕塑大道是校园内独具特色的户外艺术空间，展出了来自国际和泰国艺术家的陶瓷雕塑作品。其中的亮点是“Silpakorn Clay Works”项目，它将校园景观重塑为一条将自然与艺术创作融为一体的艺术走廊。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/sculptureRoadCompile_pb001.jpg"
         },
         {
           "yaw": -2.4743015147659086,
@@ -1442,7 +1451,7 @@ var APP_DATA = {
             "en": "The Allied Health Sciences Building and Anatomy Building are currently under renovation. These buildings were formerly used by the Faculty of Archaeology.",
             "cn": "联合医学楼及解剖学楼目前正在翻修中（原为考古学院使用建筑）。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/alliedHealthSciDrone_pb002.jpg"
         },
         {
           "yaw": -0.0026372261662981344,
@@ -1457,19 +1466,19 @@ var APP_DATA = {
             "en": "Residential accommodation and welfare facility for university faculty and staff, located within a quiet, shady, and private environment.",
             "cn": "为大学教职工 offered 的福利 residential 宿舍，坐落于宁静、绿树成荫且具备私密性的校园环境之中。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/staffDorm_pb001.jpg"
         }
       ]
     },
     {
       "id": "19-map19_p360_pb001",
       "name": {
-        "th": "MAP19_p360_pb001",
-        "en": "MAP19_p360_pb001",
-        "cn": "MAP19_p360_pb001"
+        "th": "ตึกยานยนต์",
+        "en": "Yarn-Yon Building",
+        "cn": "汽车工程楼（Yarn-Yon Building）"
       },
-      "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "category": "faculty",
+      "card_image": "../phetburiCampus/img/stillImages/yarnyon_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1529,19 +1538,19 @@ var APP_DATA = {
             "en": "Yarn-Yon Building is used for teaching, learning, and activities of the Faculty of Information and Communication Technology.",
             "cn": "汽车工程楼主要用于信息与通信技术学院的日常教学及各类活动。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/yarnyon_pb001.jpg"
         }
       ]
     },
     {
       "id": "20-map20_p360_pb001",
       "name": {
-        "th": "MAP20_p360_pb001",
-        "en": "MAP20_p360_pb001",
-        "cn": "MAP20_p360_pb001"
+        "th": "สระศิลป์เพชรภิรมย์ (บ่อปลาวาฬ)",
+        "en": "Silp Phet Phirom Pond / Whale Pond",
+        "cn": "艺术碧彩碧隆池（鲸鱼池）"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/whaleLakeDrone_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1601,19 +1610,19 @@ var APP_DATA = {
             "en": "Silp Phet Phirom Pond, also known as the Whale Pond, functions as a water retention area. It is also a peaceful recreational space for students and staff.",
             "cn": "艺术碧彩碧隆池（俗称“鲸鱼池”）具备蓄水功能，同时也是供师生休闲放松的宁静场所。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/whaleLakeDrone_pb001.jpg"
         }
       ]
     },
     {
       "id": "21-map21_p360_pb001",
       "name": {
-        "th": "MAP21_p360_pb001",
-        "en": "MAP21_p360_pb001",
-        "cn": "MAP21_p360_pb001"
+        "th": "เส้นทางจักรยาน",
+        "en": "Bicycle Path",
+        "cn": "自行车道"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/bicycleRoute_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1664,12 +1673,12 @@ var APP_DATA = {
     {
       "id": "22-map22_p360_pb001",
       "name": {
-        "th": "MAP22_p360_pb001",
-        "en": "MAP22_p360_pb001",
-        "cn": "MAP22_p360_pb001"
+        "th": "อาคารปฎิบัติการคณะสัตว์สาสตร์และเทคโนโลยีการเกษตร",
+        "en": "Laboratory Building of the Faculty of Animal Sciences and Agricultural Technology",
+        "cn": "动物科学与农业技术学院实验楼"
       },
-      "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "category": "faculty",
+      "card_image": "../phetburiCampus/img/stillImages/animalSciDrone_pb002.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1723,19 +1732,19 @@ var APP_DATA = {
             "en": "This four-storey laboratory building brings together science and agricultural technology laboratories.It supports both teaching and research in animal sciences and agricultural technology.",
             "cn": "这是一栋四层的实验大楼，集成了完整的科学与农业技术实验室，全方位支持动物科学与农业技术领域的教学和科研工作。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/animalSci_pb003.jpg"
         }
       ]
     },
     {
       "id": "23-map24_p360_pb001",
       "name": {
-        "th": "MAP24_p360_pb001",
-        "en": "MAP24_p360_pb001",
-        "cn": "MAP24_p360_pb001"
+        "th": "ลานจันทร์",
+        "en": "Lan Chan",
+        "cn": "月亮广场（Lan Chan）"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/lanChan_pb002.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1789,19 +1798,19 @@ var APP_DATA = {
             "en": "K Common is a co-working space for students and staff, supported by Kasikornbank. It provides a flexible environment for study, collaboration, meetings, and creative activities.",
             "cn": "K Common 是由开泰银行（Kasikornbank）支持建造的师生联合办公与交流空间，为学习、协作、开会和创意活动提供了灵活的场地。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/lanChan_pb002.jpg"
         }
       ]
     },
     {
       "id": "24-map23_p360_pb001",
       "name": {
-        "th": "MAP23_p360_pb001",
-        "en": "MAP23_p360_pb001",
-        "cn": "MAP23_p360_pb001"
+        "th": "อาคารกิจกรรมและนันทนาการ (ตึกนัน)",
+        "en": "Activities and Recreation Building",
+        "cn": "活动与康体大楼（康体楼）"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/activityBuildingDrone_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1867,7 +1876,7 @@ var APP_DATA = {
             "en": "Lan Chan is the main outdoor activity space of the Phetchaburi Information Technology Campus. It is used for student gatherings, dormitory activities, traditional events, and merit-making ceremonies, which are held regularly on Wednesdays and Buddhist holy days.",
             "cn": "月亮广场是碧差汶里信息技术校区的主要户外活动场地，常用于学生集会、宿舍活动、传统节日庆典，以及在每周三和佛日定期举行布施做功德活动。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/lanChan_pb001.jpg"
         },
         {
           "yaw": -2.6171965046027346,
@@ -1882,7 +1891,7 @@ var APP_DATA = {
             "en": "The Activities and Recreation Building, commonly known as the Recreation Building, is a central hub for student life and campus activities. Inside the building are the SU Refill eco-friendly shop, an authorized postal service, spaces for the Student Council, Student Union, student clubs, and the Silpa Wellness Center. The second floor includes the Student Development Office, reading rooms, activity rooms, and the Perm Suk Room, which provides psychological counseling services. The third and fourth floors support sports and recreational activities, including fitness, table tennis, taekwondo, yoga, music rehearsal rooms, dance rehearsal rooms, board game rooms, and study areas. Solar panels are installed on the rooftop to support sustainable energy use within the building.",
             "cn": "活动与康体大楼（通称康体楼）是学生校园生活的核心枢纽。楼内设有 SU Refill 环保商店、邮政代办点、学生议会、学生会、学生社团办公室及艺术健康中心。二楼包含学生发展办公室、自习室、活动室以及提供心理咨询服务的“增福室”（Perm Suk Room）。三至四楼用于体育与娱乐活动，包括健身房、乒乓球室、跆拳道室、瑜伽室、排练室、舞蹈室、棋牌室和自习区。大楼屋顶安装了太阳能电池板系统，以支持建筑内部的可持续能源使用。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/sportComplexDrone_pb001.jpg"
         },
         {
           "yaw": -1.005168765869394,
@@ -1897,19 +1906,19 @@ var APP_DATA = {
             "en": "The large parking area serves as a multipurpose space. In addition to parking, it is also used for various campus activities, including the Monday market.",
             "cn": "大型停车场作为一个多功能空间使用，除停车外，还用于举办校园各类活动，包括周一集市。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/activityBuilding_pb001.jpg"
         }
       ]
     },
     {
       "id": "25-map26_p360_pb001",
       "name": {
-        "th": "MAP26_p360_pb001",
-        "en": "MAP26_p360_pb001",
-        "cn": "MAP26_p360_pb001"
+        "th": "กลุ่มอาคารหอพักนักศึกษา",
+        "en": "Student Dormitory Complex",
+        "cn": "学生宿舍群"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/studentHostelDrone_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1963,19 +1972,19 @@ var APP_DATA = {
             "en": "The student dormitory complex consists of five residential buildings and a medical room. It provides essential living and health support for students on campus.",
             "cn": "学生宿舍群由5栋宿舍楼和1间医务室组成，为在校学生提供基本的生活与医疗健康保障。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/studentHostelDrone_pb001.jpg"
         }
       ]
     },
     {
       "id": "26-map25_p360_pb001",
       "name": {
-        "th": "MAP25_p360_pb001",
-        "en": "MAP25_p360_pb001",
-        "cn": "MAP25_p360_pb001"
+        "th": "ตลาดเพลินศิลป์",
+        "en": "Ploen Silp Market",
+        "cn": "Ploen Silp 集市"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/ploenSilpMarket_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -2029,16 +2038,16 @@ var APP_DATA = {
             "en": "Ploen Silp Market, also known among students as Jimmot Market, is located behind Student Dormitories 5 and 6. The market opens from 3:30 p.m., except on Mondays. It is a popular food market offering a wide range of affordable meals for students.",
             "cn": "Ploen Silp 集市（学生常称 Jimmot 集市）位于5号和6号学生宿舍后方。除周一外，集市每天下午3:30开始营业，是深受学生喜爱的各类实惠美食聚集地。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/ploenSilpMarket_pb001.jpg"
         }
       ]
     },
     {
       "id": "27-map27_p360_pb001",
       "name": {
-        "th": "MAP27_p360_pb001",
-        "en": "MAP27_p360_pb001",
-        "cn": "MAP27_p360_pb001"
+        "th": "ถนนหลังตลาดเพลินศิลป์",
+        "en": "Street Behind Ploen Silp Market",
+        "cn": "Ploen Silp 集市后街"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
@@ -2086,12 +2095,12 @@ var APP_DATA = {
     {
       "id": "28-map28_p360_pb001",
       "name": {
-        "th": "MAP28_p360_pb001",
-        "en": "MAP28_p360_pb001",
-        "cn": "MAP28_p360_pb001"
+        "th": "ลานกีฬากลางแจ้ง",
+        "en": "Outdoor Sports Ground",
+        "cn": "室外运动场"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/sportComplexDrone_pb002.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -2145,7 +2154,7 @@ var APP_DATA = {
             "en": "The Activities and Recreation Building, commonly known as the Recreation Building, is a central hub for student life and campus activities. Inside the building are the SU Refill eco-friendly shop, an authorized postal service, spaces for the Student Council, Student Union, student clubs, and the Silpa Wellness Center. The second floor includes the Student Development Office, reading rooms, activity rooms, and the Perm Suk Room, which provides psychological counseling services. The third and fourth floors support sports and recreational activities, including fitness, table tennis, taekwondo, yoga, music rehearsal rooms, dance rehearsal rooms, board game rooms, and study areas. Solar panels are installed on the rooftop to support sustainable energy use within the building.",
             "cn": "活动与康体大楼（通称康体楼）是学生校园生活的核心枢纽。楼内设有 SU Refill 环保商店、邮政代办点、学生议会、学生会、学生社团办公室及艺术健康中心。二楼包含学生发展办公室、自习室、活动室以及提供心理咨询服务的“增福室”（Perm Suk Room）。三至四楼用于体育与娱乐活动，包括健身房、乒乓球室、跆拳道室、瑜伽室、排练室、舞蹈室、棋牌室和自习区。大楼屋顶安装了太阳能电池板系统，以支持建筑内部的可持续能源使用。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/activityBuilding_pb001.jpg"
         },
         {
           "yaw": 1.4164761221516873,
@@ -2160,7 +2169,7 @@ var APP_DATA = {
             "en": "An outdoor sports area supporting various athletic activities such as basketball, volleyball, and badminton, designed to promote health and recreational activities for students.",
             "cn": "用于户外体育锻炼与运动的场地，支持篮球、排球和羽毛球等多种体育项目，旨在促进学生的身体健康与课外活动。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/sportComplexDrone_pb001.jpg"
         },
         {
           "yaw": 0.9667918350597482,
@@ -2175,7 +2184,7 @@ var APP_DATA = {
             "en": "The gymnasium is a multipurpose activity center that supports both sports and entertainment events.",
             "cn": "体育馆是一个多功能活动中心，可全面支持体育赛事及各类娱乐大型活动。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/sportComplexDrone_pb001.jpg"
         },
         {
           "yaw": 2.889554119360916,
@@ -2197,9 +2206,9 @@ var APP_DATA = {
     {
       "id": "29-map30_p360_pb001",
       "name": {
-        "th": "MAP30_p360_pb001",
-        "en": "MAP30_p360_pb001",
-        "cn": "MAP30_p360_pb001"
+        "th": "เส้นทางไปสนามฟุตบอล",
+        "en": "Path to Football Field",
+        "cn": "通往足球场的道路"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
@@ -2253,12 +2262,12 @@ var APP_DATA = {
     {
       "id": "30-map29_p360_pb001",
       "name": {
-        "th": "MAP29_p360_pb001",
-        "en": "MAP29_p360_pb001",
-        "cn": "MAP29_p360_pb001"
+        "th": "สนามฟุตบอล",
+        "en": "Football Field",
+        "cn": "足球场"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/footballFieldDrone_pb003.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -2312,19 +2321,19 @@ var APP_DATA = {
             "en": "A full-sized football pitch used for matches, practice, and university sports events, surrounded by an open-air environment suitable for exercise and outdoor activities.",
             "cn": "用于日常训练、比赛及校级体育活动的标准足球场，环境开阔，非常适合户外锻炼与各类大型活动。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/footballFieldDrone_pb003.jpg"
         }
       ]
     },
     {
       "id": "31-map31_p360_pb001",
       "name": {
-        "th": "MAP31_p360_pb001",
-        "en": "MAP31_p360_pb001",
-        "cn": "MAP31_p360_pb001"
+        "th": "เส้นทางจักรยาน",
+        "en": "Bicycle Route",
+        "cn": "自行车道"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/bicycleRoute_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -2378,7 +2387,7 @@ var APP_DATA = {
             "en": "A dedicated blue cycling route connecting academic buildings, dormitories, and activity areas across the campus, promoting eco-friendly transportation and safe travel for students.",
             "cn": "连接教学楼、宿舍及各类活动区域的校内蓝色自行车专用通道，旨在倡导绿色环保出行并保障学生的交通安全。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/bicycleRoute_pb001.jpg"
         },
         {
           "yaw": 2.604174641627563,
@@ -2393,19 +2402,19 @@ var APP_DATA = {
             "en": "The back gate is an important connection point between the campus and external transportation services. This area includes Cha-am Police Station, a passenger van stop, an electric tram station, motorcycle parking, and a GOGO Bike electric bicycle station.",
             "cn": "后门是连接校外交通与校内交通系统的重要枢纽。该区域设有七岩警察局便民点、面包车乘车点、有轨电动游览车站、摩托车停放点以及 GOGO Bike 电动自行车停放点。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/backGate_pb001.jpg"
         }
       ]
     },
     {
       "id": "32-map32_p360_pb001",
       "name": {
-        "th": "MAP32_p360_pb001",
-        "en": "MAP32_p360_pb001",
-        "cn": "MAP32_p360_pb001"
+        "th": "ประตูหลัง",
+        "en": "Back Gate",
+        "cn": "后门"
       },
       "category": "landmark",
-      "card_image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg",
+      "card_image": "../phetburiCampus/img/stillImages/backGate_pb001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -2453,7 +2462,7 @@ var APP_DATA = {
             "en": "The back gate is an important connection point between the campus and external transportation services. This area includes Cha-am Police Station, a passenger van stop, an electric tram station, motorcycle parking, and a GOGO Bike electric bicycle station.",
             "cn": "后门是连接校外交通与校内交通系统的重要枢纽。该区域设有七岩警察局便民点、面包车乘车点、有轨电动游览车站、摩托车停放点以及 GOGO Bike 电动自行车停放点。"
           },
-          "image": "../phetburiCampus/img/stillImages/suFrontGate_pb001.jpg"
+          "image": "../phetburiCampus/img/stillImages/backGate_pb001.jpg"
         }
       ]
     }
