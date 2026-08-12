@@ -742,7 +742,7 @@ var CAMPUS_DATA = [
       "cn": "达灵参"
     },
     image: '../Assets/campus/talingchan.jpg',
-    url: 'https://www.su.ac.th'
+    url: '../talingChanCampus/index.html'
   }
 ];
 
