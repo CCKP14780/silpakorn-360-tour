@@ -712,7 +712,7 @@ var CAMPUS_DATA = [
       "cn": "三湛宫校区"
     },
     image: '../Assets/campus/sanamchandra.jpg',
-    url: 'https://www.su.ac.th'
+    url: '../sanamchandraCampus/index.html'
   },
   {
     id: 'phetchaburi',

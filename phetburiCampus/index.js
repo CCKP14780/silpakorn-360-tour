@@ -714,7 +714,7 @@
       });
     } else {
       // ===== Campus cards =====
-      let validCampusCards = ["wangthapra", "muangthong", "phetchaburi", "talingchan"]; ///////////////////////////
+      let validCampusCards = ["wangthapra", "muangthong", "phetchaburi", "talingchan", "sanamchandra"]; ///////////////////////////
       campusData.forEach(function (campus) {
         const enabled = validCampusCards.includes(campus.id);
 

@@ -306,7 +306,7 @@ var APP_DATA = {
                     "en": "This is the starting point for visitors who come to Silpakorn University, Taling Chan Area. It serves as an information point and connects visitors to various units inside the Office of the President Building, which are related to the university’s overall administrative support system.",
                     "cn": "这是来访者前往泰国艺术大学大林江校区的起始点。此处提供咨询服务，并引导来访者前往校长办公室大楼内涉及大学整体行政支持系统的各个部门。"
                     },
-                    "image": "../talingchanCampus/img/stillImages/officeEntrance_tlc001.jpg"
+                    "image": "../talingchanCampus/img/stillImages/officeEntrance_tlc004.jpg"
         },
         {
           "yaw": -1.7108421160479494,
@@ -321,7 +321,7 @@ var APP_DATA = {
                     "en": "The Faculty of Music Building is one of the important spaces that reflects the university’s role in driving education and creativity in music, performing arts, and the contemporary entertainment industry. Within the atmosphere of the Taling Chan Area, this building functions as both a “learning space” and a “creative space.” It provides opportunities for students to develop their potential in academic knowledge, professional skills, and collaboration with the real industry. The Faculty of Music offers programs from the undergraduate level to the graduate level. It emphasizes the integration of knowledge in music with technology, innovation, and modern creative processes. Students can develop skills in music performance, music composition, audio production, music business management, as well as work in the entertainment industry that connects with the creative economy at both national and international levels.",
                     "cn": "音乐学院大楼是彰显大学在推动音乐、表演艺术及当代娱乐产业教育与创作方面重要作用的核心场所之一。在大林江校区的氛围下，该大楼兼具“学习空间”与“创意空间”双重功能，为学生提供了提升学术知识、专业技能以及与实际产业合作潜能的机会。音乐学院开设有涵盖学士至硕士/博士研究生的完整课程体系，重点将音乐知识与现代科技、创新及创意流程相结合。学生可在音乐表演、作曲、音频制作、音乐商务管理以及对接国内外创意经济的娱乐产业实务等多个领域全面提升技能。"
                     },
-                    "image": "../talingchanCampus/img/stillImages/deptOfMusic_tlc002.jpg"
+                    "image": "../talingchanCampus/img/stillImages/deptOfMusic_tlc003.jpg"
         }
       ]
     }
@@ -354,7 +354,7 @@ var CAMPUS_DATA = [
       "cn": "三湛宫校区"
     },
     image: '../Assets/campus/sanamchandra.jpg',
-    url: 'https://www.su.ac.th'
+    url: '../sanamchandraCampus/index.html'
   },
   {
     id: 'phetchaburi',
