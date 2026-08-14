@@ -1,0 +1,860 @@
+[
+  {
+    "title": {
+      "th": "ประตูสาธิต",
+      "en": "Satit Gate",
+      "cn": "示范学校门"
+    },
+    "text": {
+      "th": "เป็นประตูทางเข้ามหาวิทยาลัยศิลปากร วิทยาเขตพระราชวังสนามจันทร์ จากบริเวณสี่แยกสนามจันทร์",
+      "en": "This is an entrance gate to Silpakorn University, Sanam Chandra Palace Campus, from the Sanam Chandra intersection area.",
+      "cn": "这是从沙南庄交叉口区域进入泰国艺术大学沙南庄宫校区的入口大门。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "สถาบันวัฒนธรรมภูมิภาคตะวันตก (ทับเจริญ)",
+      "en": "Western Regional Cultural Institute (Tub Charoen)",
+      "cn": "西部地区文化研究所（Tub Charoen）"
+    },
+    "text": {
+      "th": "อาคารประวัติศาสตร์ซึ่งเคยเป็นบ้านพักของเจ้าพระยารามราฆพ (สมุหราชองครักษ์ในรัชกาลที่ 6) ต่อมาใช้เป็นจวนผู้ว่าราชการจังหวัดนครปฐม ปัจจุบันอยู่ในความดูแลของมหาวิทยาลัยศิลปากร และใช้เป็นที่ตั้งของสถาบันวัฒนธรรมภูมิภาคตะวันตก",
+      "en": "This historic building was formerly the residence of Chao Phraya Ram Rakop, who served as Chief Aide-de-Camp during the reign of King Rama VI. It was later used as the official residence of the Governor of Nakhon Pathom Province. Today, the building is under the care of Silpakorn University and serves as the location of the Western Regional Cultural Institute.",
+      "cn": "这座历史建筑曾是拉玛六世国王统治时期的首席副官Chao Phraya Ram Rakop的官邸，后来用作佛统府府尹官邸。如今，该建筑由泰国艺术大学管理，并作为西部地区文化研究所的所在地。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "เทวาลัยพระพิฆเนศ (โรงเรียนสาธิต)",
+      "en": "Ganesha Shrine (Demonstration School)",
+      "cn": "象神神坛（示范学校）"
+    },
+    "text": {
+      "th": "ตั้งอยู่บริเวณประตูทางเข้าโรงเรียนสาธิตมหาวิทยาลัยศิลปากร (มัธยมศึกษา)",
+      "en": "This shrine is located near the entrance gate of Silpakorn University Demonstration School, secondary level.",
+      "cn": "该神坛位于泰国艺术大学附属中学（中学部）入口大门附近。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "โรงเรียนสาธิต มหาวิทยาลัยศิลปากร (มัธยมศึกษา)",
+      "en": "Silpakorn University Demonstration School (Secondary Level)",
+      "cn": "泰国艺术大学附属中学（中学部）"
+    },
+    "text": {
+      "th": "มีฐานะเป็นหน่วยงานของ คณะศึกษาศาสตร์ มุ่งพัฒนาผู้เรียนให้มีความรู้ ทักษะการคิดวิเคราะห์ และความคิดสร้างสรรค์ ผ่านการเรียนรู้ที่เชื่อมโยงกับองค์ความรู้ทางวิชาการ เทคโนโลยี และศิลปวัฒนธรรม",
+      "en": "Silpakorn University Demonstration School is a unit under the Faculty of Education. It aims to develop students’ knowledge, analytical thinking skills, and creativity through learning that connects academic knowledge, technology, and arts and culture.",
+      "cn": "泰国艺术大学附属中学是教育学院下属单位，旨在通过结合学术知识、科技与艺术文化的学习，培养学生的知识、批判性思维能力和创造力。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "โรงเรียนสาธิต มหาวิทยาลัยศิลปากร (ปฐมวัยและประถมศึกษา)",
+      "en": "Silpakorn University Demonstration School (Early Childhood and Primary Level)",
+      "cn": "泰国艺术大学附属学校（幼儿与小学部）"
+    },
+    "text": {
+      "th": "จัดการเรียนการสอนในระดับปฐมวัยและประถมศึกษา โดยเน้นการพัฒนาพื้นฐานการเรียนรู้ของเด็กผ่านกิจกรรมสร้างสรรค์ การเรียนรู้แบบบูรณาการ และการพัฒนาทักษะที่จำเป็นสำหรับการศึกษาต่อในระดับที่สูงขึ้น",
+      "en": "This school provides education at the early childhood and primary levels. It emphasizes the development of children’s basic learning foundations through creative activities, integrated learning, and the development of essential skills for further education at higher levels.",
+      "cn": "该校提供幼儿及小学阶段的教育，注重通过创意活动、综合学习以及培养升学所需的基本技能来奠定儿童的学习基础。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "ศูนย์ศิลปวัฒนธรรมเฉลิมพระเกียรติ (หอประชุมใหญ่)",
+      "en": "Chalerm Phrakiat Cultural Center (Main Auditorium)",
+      "cn": "皇诞纪念艺术文化中心（大礼堂）"
+    },
+    "text": {
+      "th": "ก่อตั้งขึ้นเนื่องในโอกาสพระราชพิธีมหามงคลเฉลิมพระชนมพรรษา 6 รอบ วันที่ 5 ธันวาคม พ.ศ. 2542 ของพระบาทสมเด็จพระเจ้าอยู่หัว รัชกาลที่ 9 อาคารหลักเป็นห้องประชุมใหญ่ขนาดจุ 1,500 คน มีอาคารรองเป็นเรือนไม้จำนวน 4 หลัง สร้างจากแบบเรือนพักข้าราชบริหารในรัชกาลที่ 6",
+      "en": "The Chalerm Phrakiat Cultural Center was established on the occasion of the royal celebration of the 6th cycle birthday anniversary of His Majesty King Rama IX on December 5, 1999. The main building is a large auditorium with a capacity of 1,500 seats. The secondary buildings consist of four wooden houses, built based on the design of official residences during the reign of King Rama VI.",
+      "cn": "皇诞纪念艺术文化中心建于1999年12月5日，旨在纪念拉玛九世国王六旬寿辰。主楼为一个容纳1,500个座位的公共大礼堂，副楼由四座木屋组成，仿照拉玛六世时期的官员住宅设计。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "ประตูทับแก้ว",
+      "en": "Tub Kaew Gate",
+      "cn": "Tub Kaew 大门"
+    },
+    "text": {
+      "th": "เดิมเคยเป็นประตูใหญ่ของฝั่ง ศิลปากร–ทับแก้ว ซึ่งเป็นชื่อที่ใช้เรียกวิทยาเขตแห่งนี้ ปัจจุบันบริเวณประตูทับแก้วเป็นอีกจุดหนึ่งที่ใช้สำหรับการเข้า–ออกมหาวิทยาลัย และเป็นพื้นที่ที่สะท้อนความทรงจำทางประวัติศาสตร์ของนักศึกษาและศิษย์เก่าที่ใช้เรียกวิทยาเขตสนามจันทร์ของมหาวิทยาลัยศิลปากร",
+      "en": "Tub Kaew Gate was formerly the main gate of the Silpakorn–Tub Kaew side, which was the name used to refer to this campus. Today, the Tub Kaew Gate area is another entrance and exit point of the university. It is also a space that reflects the historical memory of students and alumni, who used the name “Tub Kaew” to refer to Silpakorn University’s Sanam Chandra Campus.",
+      "cn": "Tub Kaew大门曾是“艺术大学–Tub Kaew”侧的主门，这也是过去对该校区的称呼。如今，Tub Kaew大门是大学的另一个出入口，也是承载学生和校友历史记忆的空间，他们曾用“Tub Kaew”来指代泰国艺术大学沙南庄宫校区。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "หอศิลป์สนามจันทร์",
+      "en": "Sanam Chandra Art Gallery",
+      "cn": "沙南庄艺术馆"
+    },
+    "text": {
+      "th": "พื้นที่จัดแสดงผลงานศิลปกรรมจากการประกวดศิลปกรรมระดับชาติ ภายใต้การดูแลของหอศิลป์มหาวิทยาลัยศิลปากร โดยจัดแสดงในรูปแบบ “คลังสะสมแบบเปิด” ให้ผู้ชมสามารถเข้าชมผลงานได้อย่างใกล้ชิด",
+      "en": "This is an exhibition space for artworks from national art competitions under the supervision of Silpakorn University Art Gallery. The works are displayed in the form of an “open collection,” allowing visitors to view the artworks closely.",
+      "cn": "该艺术馆由泰国艺术大学艺术馆管理，是展示全国艺术比赛获奖作品的展厅，采用“开放式馆藏”的形式展出，方便观众近距离欣赏艺术品。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "คณะศึกษาศาสตร์ อาคารโสมสวลี",
+      "en": "Faculty of Education, Somsawali Building",
+      "cn": "教育学院 Somsawali 大楼"
+    },
+    "text": {
+      "th": "ประกอบด้วย โรงอาหาร ศูนย์ออกกำลังกาย SU.ED. Fitness Center และห้องประชุม ‘ไทยประกันชีวิต’",
+      "en": "This building includes the cafeteria, SU.ED. Fitness Center, and the Thai Life Insurance Meeting Room.",
+      "cn": "该大楼包含食堂、SU.ED.健身中心以及“Thai Life Insurance”会议室。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารศึกษาศาสตร์ 1",
+      "en": "Faculty of Education Building 1",
+      "cn": "教育学院1号楼"
+    },
+    "text": {
+      "th": "ประกอบด้วย ภาควิชาการบริหารการศึกษา ภาควิชาการศึกษาตลอดชีวิต ภาควิชาพื้นฐานทางการศึกษา ภาควิชาหลักสูตรและวิธีสอน ภาควิชาการสอนภาษานานาชาติ และภาควิชาศิลปศึกษา",
+      "en": "This building consists of the Department of Educational Administration, the Department of Lifelong Education, the Department of Educational Foundations, the Department of Curriculum and Instruction, the Department of International Language Teaching, and the Department of Art Education.",
+      "cn": "该大楼设有教育管理学系、终身教育学系、教育基础学系、课程与教学法学系、国际语言教学系和艺术教育学系。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารศึกษาศาสตร์ 2",
+      "en": "Faculty of Education Building 2",
+      "cn": "教育学院2号楼"
+    },
+    "text": {
+      "th": "ประกอบด้วย ภาควิชาจิตวิทยาและการแนะแนว ภาควิชาเทคโนโลยีการศึกษาและสตูดิโอ",
+      "en": "This building consists of the Department of Psychology and Guidance, the Department of Educational Technology, and studio spaces.",
+      "cn": "该大楼设有心理学与辅导学系、教育技术学系及工作室空间。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารศึกษาศาสตร์ 3",
+      "en": "Faculty of Education Building 3",
+      "cn": "教育学院3号楼"
+    },
+    "text": {
+      "th": "อาคารหลักของคณะศึกษาศาสตร์ ภายในประกอบด้วยสำนักงานคณบดี ศูนย์ความเป็นเลิศด้านการเรียนการสอน (CTLE) ศูนย์วิจัย นวัตกรรม และพัฒนาวิชาชีพ หม่อมหลวงปิ่น มาลากุล รวมถึง Co-Working Space with AI และห้องประชุมหลวงพ่อวัดไร่ขิงอุปถัมภ์ ซึ่งเป็นพื้นที่สำคัญสำหรับการเรียนรู้ วิจัย และพัฒนาวิชาชีพครู",
+      "en": "This is the main building of the Faculty of Education. It includes the Dean’s Office, the Center of Teaching and Learning Excellence, or CTLE, the Mom Luang Pin Malakul Research, Innovation, and Professional Development Center, as well as a Co-Working Space with AI and the Luang Por Wat Rai Khing Meeting Room. These are important spaces for learning, research, and the professional development of teachers.",
+      "cn": "这是教育学院的主楼，内设院长办公室、卓越教学中心（CTLE）、Mom Luang Pin Malakul研究、创新与职业发展中心，以及AI共享办公空间和Luang Por Wat Rai Khing会议室。这些 headquarters 都是进行学习、研究和教师职业发展的重要场所。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "ลานเทวาลัยพระพิฆเนศวร 50 ปี คณะศึกษาศาสตร์",
+      "en": "Ganesha Shrine Courtyard, 50th Anniversary of the Faculty of Education",
+      "cn": "教育学院50周年象神神坛广场"
+    },
+    "text": {
+      "th": "ลานเทวาลัยที่สร้างขึ้นในโอกาสครบรอบ 50 ปี คณะศึกษาศาสตร์ มหาวิทยาลัยศิลปากร เป็นสถานที่สักการะเทพแห่งศิลปวิทยาและความสำเร็จ และเป็นศูนย์รวมจิตใจของชาวศึกษาศาสตร์และศิลปากร",
+      "en": "This shrine courtyard was built on the occasion of the 50th anniversary of the Faculty of Education, Silpakorn University. It is a place to pay respect to the deity of arts, knowledge, and success, and serves as a spiritual center for the Faculty of Education and the Silpakorn community.",
+      "cn": "该神坛广场建于泰国艺术大学教育学院成立50周年之际，是参拜艺术、智慧与成功之神的场所，也是教育学院及艺术大学师生的精神中心。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "หอพักทับแก้ว 1 (หอชาย)",
+      "en": "Tub Kaew 1 Dormitory (Male Dormitory)",
+      "cn": "Tub Kaew 1 号宿舍（男生宿舍）"
+    },
+    "text": {
+      "th": "จัดสร้างขึ้นเพื่อรองรับนักศึกษาชายในช่วงที่มหาวิทยาลัยขยายการเรียนการสอนมายังวิทยาเขตสนามจันทร์ โดยตั้งชื่อตามคำว่า “ทับแก้ว” ซึ่งเป็นชื่อที่ใช้เรียกพื้นที่ของวิทยาเขตสนามจันทร์ในช่วงเริ่มพัฒนามหาวิทยาลัย",
+      "en": "This dormitory was built to accommodate male students during the period when the university expanded its teaching and learning to Sanam Chandra Campus. It was named after “Tub Kaew,” the name used to refer to the Sanam Chandra Campus area during the early development of the university.",
+      "cn": "该宿舍建于大学向沙南庄宫校区扩展教学期间，用于容纳男学生。其名称来源于“Tub Kaew”，即大学早期建设阶段对沙南庄宫校区区域的称呼。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "หอพักทับแก้ว 2 (หอชาย)",
+      "en": "Tub Kaew 2 Dormitory (Male Dormitory)",
+      "cn": "Tub Kaew 2 号宿舍（男生宿舍）"
+    },
+    "text": {
+      "th": "สร้างขึ้นเพื่อรองรับการขยายตัวของจำนวนนักศึกษาชายในช่วงที่มหาวิทยาลัยพัฒนาพื้นที่วิทยาเขตแห่งนี้",
+      "en": "This dormitory was built to accommodate the growing number of male students during the development of this campus area.",
+      "cn": "该宿舍建于校区建设发展期间，用于满足日益增长的男学生住宿需求。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "โรงผลิตน้ำ",
+      "en": "Water Production Plant",
+      "cn": "自来水厂"
+    },
+    "text": {
+      "th": "เป็นส่วนหนึ่งของระบบสาธารณูปโภคพื้นฐานของมหาวิทยาลัยศิลปากร วิทยาเขตพระราชวังสนามจันทร์ ประกอบด้วยหอถังเก็บน้ำสูงที่ใช้สำหรับกักเก็บและจ่ายน้ำให้กับอาคารเรียน หอพัก และหน่วยงานต่าง ๆ ภายในมหาวิทยาลัย",
+      "en": "This is part of the basic utility system of Silpakorn University, Sanam Chandra Palace Campus. It includes an elevated water storage tank used to store and distribute water to academic buildings, dormitories, and various units within the university.",
+      "cn": "这是泰国艺术大学沙南庄宫校区基础公用事业系统的一部分，包含高空水塔，用于储存并向校内的教学楼、宿舍及各个部门供水。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "ศูนย์รักษาความปลอดภัย",
+      "en": "Security Center",
+      "cn": "安保中心"
+    },
+    "text": {
+      "th": "ศูนย์ควบคุมและประสานงานด้านความปลอดภัยของมหาวิทยาลัยศิลปากร วิทยาเขตพระราชวังสนามจันทร์ ตั้งอยู่ตรงข้ามโรงผลิตน้ำ ทำหน้าที่ดูแลความปลอดภัยและความเรียบร้อยภายในมหาวิทยาลัย",
+      "en": "This is the center for controlling and coordinating campus safety at Silpakorn University, Sanam Chandra Palace Campus. It is located opposite the water production plant and is responsible for maintaining safety and order within the university.",
+      "cn": "这是泰国艺术大学沙南庄宫校区的安全监控与协调中心，位于水处理厂对面，负责维护校园内的安全与秩序。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "สะพานสระแก้ว",
+      "en": "Sra Kaew Bridge",
+      "cn": "Sra Kaew 木 bridge"
+    },
+    "text": {
+      "th": "สะพานไม้สำหรับคนเดินข้าม สระแก้ว บ่อน้ำขนาดใหญ่ที่ตั้งอยู่ใจกลางมหาวิทยาลัยศิลปากร วิทยาเขตพระราชวังสนามจันทร์ สะพานแห่งนี้ถือเป็นหนึ่งในพื้นที่แห่งความทรงจำของชาวศิลปากร และบริเวณสระแก้วยังเป็นที่อยู่อาศัยของ ตัวเงินตัวทอง ซึ่งชาวศิลปากรมักเรียกกันอย่างคุ้นเคยว่า “ตุ๊ดตู่”",
+      "en": "This is a wooden pedestrian bridge crossing Sra Kaew, a large pond located at the center of Silpakorn University, Sanam Chandra Palace Campus. The bridge is considered one of the memorable spaces for the Silpakorn community. The Sra Kaew area is also home to monitor lizards, which Silpakorn people affectionately call “Tudtu.”",
+      "cn": "这是一座跨越 Sra Kaew（位于泰国艺术大学沙南庄宫校区中心的大型池塘）的人行木桥。该桥被认为是艺术大学师生具有纪念意义的场所之一。Sra Kaew 池塘区域也是水巨蜥的栖息地，艺术大学的人们亲切地称它们为“Tudtu”。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "โรงละครวัชรนาฏยสภา (A4)",
+      "en": "Watcharanatyasapha Theatre (A4)",
+      "cn": "Watcharanatyasapha 剧场（A4）"
+    },
+    "text": {
+      "th": "โรงละครแห่งแรกของคณะอักษรศาสตร์สำหรับสาขาวิชาการละครและจัดกิจกรรมที่เกี่ยวข้องกับการแสดง อาคารแห่งนี้มีสถาปัตยกรรมที่เรียบง่ายแต่สง่างามด้วยรูปทรงแปดเหลี่ยม สะท้อนบรรยากาศของพื้นที่การเรียนรู้ด้านศิลปวัฒนธรรมของมหาวิทยาลัย",
+      "en": "This was the first theatre of the Faculty of Arts for the Drama Program and activities related to performing arts. The building has simple yet elegant architecture with an octagonal form, reflecting the atmosphere of a learning space for arts and culture within the university.",
+      "cn": "这是文学院戏剧专业及表演艺术相关活动的首个剧场。该建筑外观呈八角形，结构简约而典雅，体现了大学艺术与文化学习氛围。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "ลานทรงพล",
+      "en": "Songphon Courtyard",
+      "cn": "Songphon 广场"
+    },
+    "text": {
+      "th": "พื้นที่จัดกิจกรรมสำหรับอาจารย์ เจ้าหน้าที่ นักศึกษา ศิษย์เก่าของคณะอักษรศาสตร์และเป็นที่พักผ่อนหย่อนใจ",
+      "en": "This is an activity space for lecturers, staff, students, and alumni of the Faculty of Arts. It is also used as a place for relaxation.",
+      "cn": "这是文学院教师、职工、学生和校友举办活动的场所，也是休闲放松的区域。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "ศาลปู่ไชยมงคลเทพหัสดิน (ศาลขาว)",
+      "en": "Pu Chai Mongkol Thep Hatsadin Shrine (White Shrine)",
+      "cn": "Pu Chai Mongkol Thep Hatsadin 神坛（白神坛）"
+    },
+    "text": {
+      "th": "ศาลแห่งแรกของมหาวิทยาลัย อยู่หน้าตึกคณะอักษรศาสตร์",
+      "en": "This is the first shrine of the university. It is located in front of the Faculty of Arts building.",
+      "cn": "这是大学建立的第一座神坛，位于文学院大楼前。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อนุสาวรีย์ อาจารย์ศิลป์ พีระศรี",
+      "en": "Professor Silpa Bhirasri Monument",
+      "cn": "费罗齐教授纪念碑（Silpa Bhirasri 纪念碑）"
+    },
+    "text": {
+      "th": "ผู้ก่อตั้งมหาวิทยาลัยศิลปากรโปรดเพลง Santa Lucia เป็นอย่างยิ่ง จึงกำหนดให้เพลงดังกล่าวเป็นเพลงประจำมหาวิทยาลัย ทั้งนี้ วันที่ 15 กันยายนของทุกปีถือเป็นวันศิลป์ พีระศรี เพื่อรำลึกถึงผู้ก่อตั้งมหาวิทยาลัยศิลปากรและคุณูปการที่มีต่อวงการศิลปะของประเทศไทย",
+      "en": "Professor Silpa Bhirasri, the founder of Silpakorn University, greatly loved the song “Santa Lucia.” The song was therefore designated as the university’s official song. September 15 of every year is observed as Silpa Bhirasri Day, in remembrance of the founder of Silpakorn University and his contributions to the art community of Thailand.",
+      "cn": "泰国艺术大学创始人费罗齐教授（Silpa Bhirasri）非常喜爱歌曲《桑塔·露琪亚》，因此该曲被指定为大学校歌。每年的9月15日被定为“Silpa Bhirasri日”，以纪念这位大学创始人及其对泰国艺术界做出的杰出贡献。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อนุสาวรีย์หม่อมหลวงปิ่นมาลากุล",
+      "en": "Mom Luang Pin Malakul Monument",
+      "cn": "Mom Luang Pin Malakul 纪念碑"
+    },
+    "text": {
+      "th": "ศาสตราจารย์ หม่อมหลวงปิ่น มาลากุล ผู้สถาปนามหาวิทยาลัยศิลปากร วิทยาเขตพระราชวังสนามจันทร์ อนุสาวรีย์ปั้นเเละหล่อด้วยทองเเดงขนาดเท่าครึ่งของคนจริง โดยประติมากร อ. ศราวุธ ดวงจำปา ศิลปินแห่งชาติ สาขาทัศนศิลป์",
+      "en": "Professor Mom Luang Pin Malakul was the founder of Silpakorn University, Sanam Chandra Palace Campus. The monument is a bronze sculpture one and a half times larger than life size. It was created by Professor Sarawut Duangjumpa, National Artist in Visual Arts.",
+      "cn": "Mom Luang Pin Malakul 教授是泰国艺术大学沙南庄宫校区的创办者。该纪念碑是一座1.5倍于真人大小的青铜雕塑，由视觉艺术领域国家艺术家 Sarawut Duangjumpa 教授创作。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "สำนักอธิการบดี",
+      "en": "Office of the President",
+      "cn": "校长办公室"
+    },
+    "text": {
+      "th": "ประกอบด้วยหน่วยงานหลักที่ทำหน้าที่บริหารจัดการวิทยาเขต ได้แก่ กองงานวิทยาเขตพระราชวังสนามจันทร์ กองกิจการนักศึกษา กองบริหารงานวิชาการ และกองบริการอาคาร สถานที่และยานพาหนะ เพื่อสนับสนุนการเรียนการสอนและอำนวยความสะดวกในวิทยาเขต",
+      "en": "This building consists of key units responsible for campus administration, including the Sanam Chandra Palace Campus Division, the Division of Student Affairs, the Division of Academic Administration, and the Division of Building, Facilities, and Vehicle Services. These units support teaching and learning and provide convenience within the campus.",
+      "cn": "该大楼包含负责校区行政管理的主要部门，包括沙南庄宫校区事务处、学生事务处、教务管理处以及建筑设施与车辆服务处，旨在支持教学工作并为校区提供便利服务。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "ศูนย์บริการสุขภาพ",
+      "en": "Health Service Center",
+      "cn": "健康服务中心"
+    },
+    "text": {
+      "th": "เดิมชื่อ “สถานปฏิบัติการเภสัชกรรมชุมชน เภสัชศาลา” หรือเรียกสั้นๆ ว่า “เภสัชศาลา” ปัจจุบันได้ปรับเปลี่ยนชื่อเป็น ศูนย์บริการสุขภาพ ประกอบด้วย 1) คลินิกเวชกรรมชุมชนอบอุ่น ให้บริการตรวจรักษาโรคโดยแพทย์ และพยาบาล 2) เภสัชศาลา ให้บริการจำหน่ายยาและเวชภัณฑ์ สำหรับบุคคลทั่วไป และ 3) บริการแพทย์แผนไทย ให้บริการนวดเพื่อสุขภาพ และการแพทย์แผนไทย ให้บริการด้านสุขภาพกับนักศึกษา บุคลากรภายในมหาวิทยาลัยและบุคคลทั่วไป สามารถเข้าใช้บริการได้ มีการให้บริการโดยบุคลากรทางการแพทย์ อาจารย์เภสัชกร และเจ้าหน้าที่ทางสุขภาพที่พร้อมให้คำปรึกษาในเรื่องของสุขภาพ และการดูแลรักษาต่างๆ",
+      "en": "This center was formerly known as the Community Pharmacy Practice Unit, or “Phetsatsala.” It has now been renamed the Health Service Center. It consists of three main services: first, a warm community medical clinic providing medical treatment by doctors and nurses; second, Phetsatsala, which provides medicines and medical supplies for the general public; and third, Thai traditional medicine services, including health massage and Thai traditional medical care. The center provides health services to students, university personnel, and the general public. Services are provided by medical personnel, pharmacy lecturers, and health staff who are ready to give advice on health and healthcare.",
+      "cn": "该中心前身为“社区药房实习诊所（Phetsatsala）”，现已更名为健康服务中心。主要提供三项服务：1) 社区诊所，由医生和护士提供诊疗；2) 药房，面向公众出售药品及医疗用品；3) 泰医服务，提供保健按摩及传统泰式医疗。该中心面向学生、教职工及社会公众开放，由医疗人员、药学教师和健康专业人员提供健康咨询与护理服务。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารอเนกประสงค์",
+      "en": "Multipurpose Building",
+      "cn": "多功能大楼"
+    },
+    "text": {
+      "th": "เขตที่พักและบ้านพักของบุคลากร",
+      "en": "This area is used for residences and housing for university personnel.",
+      "cn": "该区域用作教职工住宅及宿舍区。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "สนามฟุตบอล",
+      "en": "Football Field",
+      "cn": "足球场"
+    },
+    "text": {
+      "th": "ตั้งอยู่บริเวณด้านหน้าทางเข้าหลักของมหาวิทยาลัย ใช้สำหรับการออกกำลังกาย รวมถึงการแข่งขันกีฬาและกิจกรรมของนักศึกษา",
+      "en": "The football field is located near the main entrance of the university. It is used for exercise, sports competitions, and student activities.",
+      "cn": "足球场位于大学主入口附近，用于体育锻炼、体育比赛以及学生活动。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "ตึกอักษรศาสตร์",
+      "en": "Faculty of Arts Building",
+      "cn": "文学院大楼"
+    },
+    "text": {
+      "th": "เป็นที่ตั้งของสำนักงานคณะอักษรศาสตร์ ซึ่งทำหน้าที่บริหารจัดการด้านวิชาการ การเรียนการสอน และการดำเนินงานของคณะ นอกจากนี้ยังเป็นพื้นที่สำหรับการติดต่อประสานงานของคณาจารย์ นักศึกษา และบุคลากรของคณะอักษรศาสตร์",
+      "en": "This building houses the office of the Faculty of Arts, which is responsible for academic administration, teaching and learning, and the operations of the faculty. It is also a space for coordination among lecturers, students, and staff of the Faculty of Arts.",
+      "cn": "该大楼为文学院办公室所在地，负责学院的学术管理、教学及日常运营，同时也是教师、学生和职工沟通协调的场所。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารทรงพล คณะอักษรศาสตร์",
+      "en": "Songphon Building, Faculty of Arts",
+      "cn": "文学院 Songphon 大楼"
+    },
+    "text": {
+      "th": "หนึ่งในอาคารเรียนยุคแรกของวิทยาเขตพระราชวังสนามจันทร์ สร้างขึ้นในช่วงเริ่มพัฒนาวิทยาเขต และยังคงใช้สำหรับการเรียนการสอนของคณะอักษรศาสตร์มาจนถึงปัจจุบัน",
+      "en": "This is one of the early academic buildings of Sanam Chandra Palace Campus. It was built during the early development of the campus and continues to be used for teaching and learning by the Faculty of Arts today.",
+      "cn": "这是沙南庄宫校区早期的教学楼之一，建于校区开发初期，至今仍用于文学院的教学活动。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "คณะอักษรศาสตร์ อาคาร 50 ปี",
+      "en": "Faculty of Arts, 50th Anniversary Building",
+      "cn": "文学院50周年纪念楼"
+    },
+    "text": {
+      "th": "หนึ่งในอาคารเรียนหลักของคณะอักษรศาสตร์ เป็นอาคารหลังแรกบริเวณสี่แยกของถนนหลักหากเข้า-ออกทางประตูทรงพล",
+      "en": "This is one of the main academic buildings of the Faculty of Arts. It is the first building located near the intersection of the main campus road when entering or exiting through Songphon Gate.",
+      "cn": "这是文学院的主要教学楼之一，是从 Songphon 大门进出时位于主干道交叉口的第一座建筑。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "คณะอักษรศาสตร์ อาคาร 36 ปี",
+      "en": "Faculty of Arts, 36th Anniversary Building",
+      "cn": "文学院36周年纪念楼"
+    },
+    "text": {
+      "th": "หนึ่งในอาคารเรียนของคณะอักษรศาสตร์ มีห้องประชุม ‘หม่อมหลวงบุญเหลือ เทพยสุวรรณ’ ตามชื่อของคณบดีคนแรกของคณะ",
+      "en": "This is one of the academic buildings of the Faculty of Arts. It houses the Mom Luang Boonlua Debyasuvarn Meeting Room, named after the first dean of the faculty.",
+      "cn": "这是文学院的教学楼之一，内设以学院首任院长名字命名的“Mom Luang Boonlua Debyasuvarn”会议室。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารวชิรมงกุฎ",
+      "en": "Vajiramongkut Building",
+      "cn": "Vajiramongkut 大楼"
+    },
+    "text": {
+      "th": "พื้นที่เดิมเป็นที่ตั้งของโรงละครทรงพล ต่อมามีการรื้อถอนและก่อสร้างอาคารใหม่สูง 7 ชั้น พร้อมชั้นจอดรถใต้ดิน โดยออกแบบให้ภายในอาคารมีพื้นที่สำหรับ ‘โรงละครทรงพล’ ของสาขาวิชาการละคร คณะอักษรศาสตร์เพื่อเพิ่มศักยภาพการใช้พื้นที่และรองรับการจัดกิจกรรมทางวิชาการและศิลปวัฒนธรรมได้อย่างเหมาะสม",
+      "en": "This area was formerly the location of Songphon Theatre. The old building was later demolished and replaced by a new seven-storey building with underground parking. The building was designed to include a space for “Songphon Theatre” of the Drama Program, Faculty of Arts, in order to increase the potential use of the area and appropriately support academic, artistic, and cultural activities.",
+      "cn": "该区域原为 Songphon 剧场所在地。旧建筑拆除后新建了一座带有地下停车场的7层大楼，楼内规划了文学院戏剧专业的“Songphon 剧场”，提升了空间利用率，并更好地承载学术及艺术文化活动。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "โรงอาหารสระแก้ว",
+      "en": "Sra Kaew Cafeteria",
+      "cn": "Sra Kaew 食堂"
+    },
+    "text": {
+      "th": "โรงอาหารหลักของมหาวิทยาลัยศิลปากร วิทยาเขตพระราชวังสนามจันทร์ ตั้งอยู่ใกล้สระแก้ว บ่อน้ำขนาดใหญ่ใจกลางมหาวิทยาลัย",
+      "en": "This is the main cafeteria of Silpakorn University, Sanam Chandra Palace Campus. It is located near Sra Kaew, a large pond at the center of the university.",
+      "cn": "这是泰国艺术大学沙南庄宫校区的主食堂，位于校园中心的大型池塘 Sra Kaew 附近。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "ศาลาสระแก้ว",
+      "en": "Sra Kaew Pavilion",
+      "cn": "Sra Kaew 凉亭"
+    },
+    "text": {
+      "th": "ศาลาทรงแปดเหลี่ยมที่มีลักษณะเป็นศาลาสวนแบบดั้งเดิมของพื้นที่พระราชวัง ตั้งอยู่บริเวณริมสระแก้ว ปัจจุบันศาลาแห่งนี้เป็นหนึ่งในแลนด์มาร์กสำคัญของมหาวิทยาลัยศิลปากร และใช้เป็นพื้นที่สำหรับกิจกรรมและการพักผ่อนของนักศึกษา",
+      "en": "This octagonal pavilion is a traditional garden pavilion from the palace area. It is located beside Sra Kaew. Today, this pavilion is one of the important landmarks of Silpakorn University and is used as a space for student activities and relaxation.",
+      "cn": "这座八角亭是原王宫区域的传统园林凉亭，位于 Sra Kaew 池塘边。如今，该凉亭是泰国艺术大学的重要地标之一，用作学生活动和休息的场地。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารศูนย์เรียนรวม 2",
+      "en": "Central Classroom Building 2",
+      "cn": "2号公共教学楼"
+    },
+    "text": {
+      "th": "อาคารเรียนส่วนกลางของมหาวิทยาลัยศิลปากร",
+      "en": "This is a central classroom building of Silpakorn University.",
+      "cn": "这是泰国艺术大学的公共教学楼。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารเทคโนโลยีเภสัชกรรม คณะเภสัชศาสตร์",
+      "en": "Pharmaceutical Technology Building, Faculty of Pharmacy",
+      "cn": "药学院制药技术楼"
+    },
+    "text": {
+      "th": "อาคารที่ตั้งของสำนักงานคณบดีและห้องปฏิบัติการด้านเภสัชกรรมของคณะเภสัชศาสตร์",
+      "en": "This building houses the Dean’s Office and pharmaceutical laboratories of the Faculty of Pharmacy.",
+      "cn": "该大楼为药学院院长办公室及药学实验室所在地。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารส่วนปาฐอาศรม ‘ประโชติ เปล่งวิทยา’ (ตึกดาว)",
+      "en": "Prachote Plengwittaya Auditorium and Lecture Halls (Dao Building)",
+      "cn": "Prachote Plengwittaya 演讲厅与报告厅（星楼 / Dao Building）"
+    },
+    "text": {
+      "th": "อาคารเรียนรวมของคณะเภสัชศาสตร์ ใช้สำหรับการบรรยายในชั้นเรียนขนาดใหญ่ และกิจกรรมทางวิชาการต่างๆ ของคณะเภสัชศาสตร์ ตั้งชื่อตาม รศ. ดร. ภก. ประโชติ เปล่งวิทยา ผู้ก่อตั้งและคณบดีคนแรกของคณะเภสัชศาสตร์ มหาวิทยาลัยศิลปากร",
+      "en": "This is a shared academic building of the Faculty of Pharmacy. It is used for large lectures and various academic activities of the faculty. The building is named after Associate Professor Dr. Pharmacist Prachote Plengwittaya, the founder and first dean of the Faculty of Pharmacy, Silpakorn University.",
+      "cn": "这是药学院的共享教学楼，用于大型讲座及各类学术活动。该大楼以泰国艺术大学药学院创办人兼首任院长 Prachote Plengwittaya 副教授兼药剂师的名字命名。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารปฏิบัติการควบคุมและประเมินคุณภาพทางเภสัชศาสตร์และวิทยาศาสตร์เทคโนโลยี (ตึก 6 ชั้น)",
+      "en": "R&D, Quality Control and Evaluation in Pharmacy and Scientific Technology Building (Six-Storey Building)",
+      "cn": "药学与科技研发及质量控制评估实验楼（6层楼）"
+    },
+    "text": {
+      "th": "ด้วยตำแหน่งที่ตั้งและการใช้งานที่เชื่อมต่อกับอาคารส่วนปาฐอาศรม “ประโชติ เปล่งวิทยา” อาคารเปรียบเสมือนอีกหนึ่งศูนย์กลางการเรียนรู้ และเป็นสถานที่ทำการวิจัยของนักศึกษาระดับบัณฑิตศึกษา และอาจารย์ในคณะเภสัชศาสตร์",
+      "en": "Due to its location and use connected with the Prachote Plengwittaya Auditorium and Lecture Halls, this building serves as another learning center. It is also a research venue for graduate students and lecturers of the Faculty of Pharmacy.",
+      "cn": "由于其位置与 Prachote Plengwittaya 演讲厅连通，该大楼充当了另一个学习中心，同时也是药学院研究生和教师的科研场所。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารปฏิบัติการเทคโนโลยีเภสัชกรรม (ตึกฟาร์เทค)",
+      "en": "Pharmaceutical Technology Laboratory Building (Phar Tech Building)",
+      "cn": "制药技术实验楼（Phar Tech 大楼）"
+    },
+    "text": {
+      "th": "อาคารปฏิบัติการ 2 ชั้นของคณะเภสัชศาสตร์ ใช้สำหรับการเรียนการสอนภาคปฏิบัติทางเภสัชศาสตร์ และการวิจัยด้านเทคโนโลยีเภสัชกรรมและการวิจัยและพัฒนาผลิตภัณฑ์ยา",
+      "en": "This two-storey laboratory building of the Faculty of Pharmacy is used for practical teaching in pharmacy. It also supports research in pharmaceutical technology and the research and development of pharmaceutical products.",
+      "cn": "这是药学院的两层实验楼，用于药学实践教学，并支持制药技术研究及药物研发。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารนำร่องศูนย์ภูมิปัญญาและเทคโนโลยีทางเภสัชศาสตร์และสุขภาพ",
+      "en": "Pilot Building for the Center of Wisdom and Technology in Pharmacy and Health",
+      "cn": "药学与健康智慧与技术中心试点楼"
+    },
+    "text": {
+      "th": "อาคารของคณะเภสัชศาสตร์ที่ใช้เป็นที่ตั้งของหน่วยธุรกรรมเชิงวิชาชีพ ให้บริการตรวจวิเคราะห์ผลิตภัณฑ์สุขภาพ แหล่งจำหน่ายผลิตภัณฑ์ที่พัฒนาขึ้นใหม่ และเป็นหน่วยสนับสนุนงานวิจัย การให้บริการทางวิชาการ และการพัฒนานวัตกรรมด้านเภสัชศาสตร์และสุขภาพ",
+      "en": "This building of the Faculty of Pharmacy houses a professional service unit. It provides health product analysis services, serves as a distribution source for newly developed products, and supports research, academic services, and the development of innovations in pharmacy and health.",
+      "cn": "该大楼属于药学院，设专业服务部门，提供健康产品检测分析服务，销售新研发的产品，并支持药学与健康领域的科研、学术服务及创新研发。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารปฎิบัติการเภสัชพฤกษศาสตร์ (เรือนเพาะชำ)",
+      "en": "Pharmaceutical Botany Laboratory Building (Nursery House)",
+      "cn": "药用植物学实验楼（育苗温室）"
+    },
+    "text": {
+      "th": "พื้นที่ปฏิบัติการของคณะเภสัชศาสตร์สำหรับการศึกษาและวิจัยด้านเภสัชพฤกษศาสตร์ ประกอบด้วยเรือนเพาะชำและแปลงปลูกพืชสมุนไพร แหล่งการเรียนรู้ที่ใช้ในการเรียนการสอน การประชุมกลุ่มย่อย และการศึกษาพืชที่มีคุณค่าทางยา",
+      "en": "This is a laboratory space of the Faculty of Pharmacy for study and research in pharmaceutical botany. It consists of a nursery house and medicinal plant plots, serving as a learning resource for teaching, small group meetings, and the study of plants with medicinal value.",
+      "cn": "这是药学院用于药用植物学研究的实验场地，由育苗温室和草药种植园组成，用作教学、小组会议及药用植物研究的学习资源。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "บ่อบำบัดน้ำเสีย",
+      "en": "Wastewater Treatment Pond",
+      "cn": "污水处理池"
+    },
+    "text": {
+      "th": "พื้นที่สำหรับบำบัดน้ำเสียของมหาวิทยาลัยศิลปากร ก่อนปล่อยกลับสู่ธรรมชาติ เพื่อสนับสนุนการจัดการสิ่งแวดล้อมอย่างยั่งยืนภายในวิทยาเขต",
+      "en": "This area is used for treating wastewater from Silpakorn University before releasing it back into nature. It supports sustainable environmental management within the campus.",
+      "cn": "该区域用于在将泰国艺术大学的污水排放回自然界之前进行处理，以支持校内可持续的环境管理。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารหม่อมหลวงปิ่น มาลากุล",
+      "en": "Mom Luang Pin Malakul Building",
+      "cn": "Mom Luang Pin Malakul 大楼"
+    },
+    "text": {
+      "th": "อาคารส่วนต่อขยายของหอสมุดมหาวิทยาลัยศิลปากร ที่พัฒนาขึ้นเพื่อรองรับรูปแบบการเรียนรู้สมัยใหม่ เป็นพื้นที่สำหรับการค้นคว้า การอ่าน การทำงานร่วมกัน และการเรียนรู้แบบบูรณาการของนักศึกษา ภายใต้สภาพแวดล้อมที่เอื้อต่อการสร้างสรรค์องค์ความรู้และการเรียนรู้ตลอดชีวิต",
+      "en": "This building is an extension of Silpakorn University Library. It was developed to support modern forms of learning and serves as a space for research, reading, collaborative work, and integrated learning for students. The environment supports knowledge creation and lifelong learning.",
+      "cn": "该大楼是泰国艺术大学图书馆的扩建部分，旨在支持现代学习模式，为学生提供研究、阅读、团队协作和综合学习的空间，营造有利于知识创造和终身学习的环境。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "สำนักหอสมุดกลาง หอสมุดพระราชวังสนามจันทร์",
+      "en": "Central Library, Sanam Chandra Palace Campus",
+      "cn": "中央图书馆（沙南庄宫校区）"
+    },
+    "text": {
+      "th": "ศูนย์กลางทรัพยากรสารสนเทศและการเรียนรู้ของมหาวิทยาลัยศิลปากร ประกอบด้วยอาคารหอสมุดหลักและอาคารหม่อมหลวงปิ่น มาลากุล ให้บริการหนังสือ ฐานข้อมูลดิจิทัล และพื้นที่การเรียนรู้ที่สนับสนุนการศึกษา การวิจัย และการสร้างองค์ความรู้ของนักศึกษาและบุคลากรของมหาวิทยาลัย",
+      "en": "The Central Library, Sanam Chandra Palace Campus, is the center of information resources and learning at Silpakorn University. It consists of the main library building and the Mom Luang Pin Malakul Building. It provides books, digital databases, and learning spaces that support education, research, and knowledge creation for students and university personnel.",
+      "cn": "沙南庄宫校区中央图书馆是泰国艺术大学的信息资源与学习中心，由主图书馆楼和 Mom Luang Pin Malakul 大楼组成，提供图书、数字数据库及学习空间，支持学生和教职工的学习、研究与知识创新。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "สำนักดิจิทัลเทคโนโลยี",
+      "en": "Bureau of Digital Technology, Silpakorn University",
+      "cn": "泰国艺术大学数字技术处"
+    },
+    "text": {
+      "th": "หน่วยงานกลางที่พัฒนาและให้บริการระบบเทคโนโลยีสารสนเทศและโครงสร้างพื้นฐานดิจิทัลของมหาวิทยาลัย สนับสนุนการเรียนการสอน การวิจัย และการบริหารจัดการของมหาวิทยาลัยศิลปากรในยุคดิจิทัล",
+      "en": "The Bureau of Digital Technology is a central unit that develops and provides information technology systems and digital infrastructure for the university. It supports teaching and learning, research, and university administration in the digital era.",
+      "cn": "数字技术处是开发并提供大学信息技术系统和数字基础设施的中央部门，支持数字时代泰国艺术大学的教学、科研及行政管理。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "สำนักงานบริหารการวิจัย นวัตกรรมและการสร้างสรรค์ (สวนส.)",
+      "en": "Office of Research, Innovation and Creativity Administration",
+      "cn": "科研、创新与创意管理办公室"
+    },
+    "text": {
+      "th": "หน่วยงานภายใต้สำนักงานอธิการบดี มหาวิทยาลัยศิลปากร ทำหน้าที่สนับสนุนและบริหารจัดการงานวิจัยของมหาวิทยาลัย ตั้งแต่การพัฒนานักวิจัย การบริหารทุนวิจัย และการเผยแพร่ผลงานวิจัย โดยมุ่งส่งเสริมงานวิจัยที่มีคุณภาพและสามารถนำไปใช้ประโยชน์ต่อสังคมและประเทศ",
+      "en": "This unit is under the Office of the President, Silpakorn University. It supports and manages university research, including researcher development, research fund administration, and research dissemination. It aims to promote high-quality research that can be applied for the benefit of society and the country.",
+      "cn": "该部门隶属于泰国艺术大学校长办公室，负责支持和管理大学的科研工作，包括科研人员培养、科研基金管理及科研成果推广，旨在促进高质量、能为社会和国家带来实益的研究。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารนิทรรศการธรรมชาติวิทยา",
+      "en": "Natural History Exhibition Building",
+      "cn": "自然历史展览楼"
+    },
+    "text": {
+      "th": "เป็นแหล่งรวบรวมตัวอย่างทรัพยากรธรรมชาติและเป็นแหล่งเรียนรู้ทางด้านวิทยาศาสตร์และสิ่งแวดล้อม",
+      "en": "This building is a collection site for natural resource specimens and serves as a learning resource in science and the environment.",
+      "cn": "该大楼是自然资源标本的收集地，也是科学与环境领域的学习资源中心。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "ลานทดลองอบแห้งพลังงานแสงอาทิตย์",
+      "en": "Solar Drying Experimental Site",
+      "cn": "太阳能干燥实验场"
+    },
+    "text": {
+      "th": "พื้นที่ทดลองของภาควิชาฟิสิกส์ คณะวิทยาศาสตร์ สำหรับการใช้เครื่องอบแห้งพลังงานแสงอาทิตย์แบบอุโมงค์ลมร้อน เพื่ออบแห้งผลิตผลทางการเกษตร โดยเป็นความร่วมมือระหว่างมหาวิทยาลัยศิลปากรและสถาบันจากประเทศเยอรมนี",
+      "en": "This is an experimental area of the Department of Physics, Faculty of Science. It is used for testing solar tunnel dryers with hot air systems for drying agricultural products. The project is a collaboration between Silpakorn University and institutions from Germany.",
+      "cn": "这是理学院物理系用于测试热风式太阳能隧道干燥机烘干农产品的实验场地，该项目由泰国艺术大学与德国相关机构合作开展。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารเรือนกระจก คณะวิทยาศาสตร์",
+      "en": "Greenhouse Building, Faculty of Science",
+      "cn": "理学院温室大楼"
+    },
+    "text": {
+      "th": "พื้นที่ปฏิบัติการสำหรับการทดลองและศึกษาวิจัยด้านพืชและสิ่งแวดล้อม โดยสามารถควบคุมสภาพแวดล้อม เช่น แสง อุณหภูมิ และความชื้น เพื่อใช้ในการเรียนการสอนและงานวิจัยของนักศึกษาคณะวิทยาศาสตร์",
+      "en": "This is a laboratory space for experiments and research in plants and the environment. Environmental conditions such as light, temperature, and humidity can be controlled for teaching and research by students of the Faculty of Science.",
+      "cn": "这是用于植物与环境实验及研究的实验室空间，可控制光照、温度和湿度等环境条件，供理学院学生开展教学和科研。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "คณะวิทยาศาสตร์ อาคารวิทยาศาสตร์ 1",
+      "en": "Faculty of Science, Science Building 1",
+      "cn": "理学院1号理学楼"
+    },
+    "text": {
+      "th": "อาคารหลักที่เป็นศูนย์กลางการบริหารงานของคณะ ประกอบด้วยสำนักงานคณบดี ภาควิชาจุลชีววิทยา ภาควิชาชีววิทยา ภาควิชาวิทยาการคอมพิวเตอร์ ภาควิชาคณิตศาสตร์และภาควิชาสถิติ",
+      "en": "This is the main building and administrative center of the faculty. It includes the Dean’s Office, the Department of Microbiology, the Department of Biology, the Department of Computer Science, the Department of Mathematics, and the Department of Statistics.",
+      "cn": "这是理学院的主楼兼行政中心，包含院长办公室、微生物学系、生物学系、计算机科学系、数学系及统计学系。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "คณะวิทยาศาสตร์ อาคารวิทยาศาสตร์ 2",
+      "en": "Faculty of Science, Science Building 2",
+      "cn": "理学院2号理学楼"
+    },
+    "text": {
+      "th": "ประกอบด้วยหอประชุม พิพิธภัณฑ์ และห้องเรียนขนาดเล็ก",
+      "en": "It consists of an auditorium, a museum, and small classrooms.",
+      "cn": "包含礼堂、博物馆及小型教室。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "คณะวิทยาศาสตร์ อาคารวิทยาศาสตร์ 3",
+      "en": "Faculty of Science, Science Building 3",
+      "cn": "理学院3号理学楼"
+    },
+    "text": {
+      "th": "ประกอบด้วยห้องบรรยาย ห้องสัมมนา ภาควิชาเคมีและภาควิชาฟิสิกส์",
+      "en": "This building consists of lecture rooms, seminar rooms, the Department of Chemistry, and the Department of Physics.",
+      "cn": "该大楼包含阶梯教室、研讨室、化学系及物理系。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "คณะวิทยาศาสตร์ อาคารวิทยาศาสตร์ 4",
+      "en": "Faculty of Science, Science Building 4",
+      "cn": "理学院4号理学楼"
+    },
+    "text": {
+      "th": "ประกอบด้วยภาควิชาวิทยาศาสตร์สิ่งแวดล้อม ห้องปฎิบัติการรวมและเครื่องมือวิทยาศาสตร์",
+      "en": "This building consists of the Department of Environmental Science, shared laboratories, and scientific instruments.",
+      "cn": "该大楼包含环境科学系、公共实验室及科学仪器设备。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "คณะวิทยาศาสตร์ อาคาร 55 ปี",
+      "en": "Faculty of Science, 55th Anniversary Building",
+      "cn": "理学院55周年纪念楼"
+    },
+    "text": {
+      "th": "อาคารเรียนหลังใหม่ของคณะวิทยาศาสตร์ ใช้เป็นห้องเรียน ห้องสัมมนา ห้องประชุมวิชาการ ห้องฝึกอบรมสำหรับงานบริการวิชาการและงานค่ายต่าง ๆ",
+      "en": "This is a new academic building of the Faculty of Science. It is used for classrooms, seminar rooms, academic conference rooms, training rooms for academic services, and various camp activities.",
+      "cn": "这是理学院的新教学楼，用作教室、研讨室、学术会议室、学术服务培训室及各类营地活动场地。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "คณะวิทยาศาสตร์ อาคารเรียนรวม",
+      "en": "Faculty of Science, Central Classroom Building",
+      "cn": "理学院公共教学楼"
+    },
+    "text": {
+      "th": "พื้นที่สำคัญสำหรับการเรียนรู้ร่วมกันของนักศึกษาคณะวิทยาศาสตร์ ภายในอาคารประกอบด้วยห้องบรรยายและห้องเรียนขนาดต่าง ๆ ที่รองรับการเรียนการสอนของนักศึกษาจำนวนมาก รวมถึงการจัดกิจกรรมทางวิชาการ การสัมมนา และโครงการพัฒนาศักยภาพด้านวิทยาศาสตร์ของนักศึกษาและเยาวชน",
+      "en": "This is an important space for shared learning among students of the Faculty of Science. The building includes lecture rooms and classrooms of various sizes that support teaching and learning for a large number of students, as well as academic activities, seminars, and science development projects for students and youth.",
+      "cn": "这是理学院学生共同学习的重要场所。楼内设有不同规格的讲堂和教室，可满足大量学生的教学需求，并举办学术活动、研讨会及青少年科学潜能开发项目。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "เรือนพระสุรภี",
+      "en": "Ruean Phra Surabhi",
+      "cn": "Ruean Phra Surabhi 泰式木屋"
+    },
+    "text": {
+      "th": "อาคารไม้แบบเรือนไทยประยุกต์ที่สะท้อนลักษณะสถาปัตยกรรมของที่พักข้าราชบริพารในเขตพระราชวัง เมื่อพื้นที่พระราชวังสนามจันทร์ถูกใช้เป็นที่ตั้งของมหาวิทยาลัย เรือนจึงถูกปรับใช้ตามความเหมาะสม โดยเคยถูกใช้เป็นร้านซ่อมจักรยานของนักศึกษาและบุคลากร ทำให้มักเรียกกันอย่างไม่เป็นทางการว่า “บ้านจักรยาน” ปัจจุบันเรือนพระสุรภียังคงเป็นหนึ่งในอาคารประวัติศาสตร์ที่สะท้อนความเป็นมาของพื้นที่พระราชวังสนามจันทร์ และความต่อเนื่องของการใช้พื้นที่จากเขตพระราชฐานในอดีตสู่การเป็นพื้นที่การศึกษาในปัจจุบัน",
+      "en": "Ruean Phra Surabhi is an applied Thai-style wooden house that reflects the architectural style of residences for royal attendants within the palace area. When Sanam Chandra Palace was used as the location of the university, this house was adapted for appropriate use. It was once used as a bicycle repair shop for students and staff, and was therefore informally known as “Bicycle House.” Today, Ruean Phra Surabhi remains one of the historic buildings that reflects the history of the Sanam Chandra Palace area and the continuity of space use from a former royal area to an educational space today.",
+      "cn": "Ruean Phra Surabhi 是一座改良式泰式木屋，反映了王宫内侍臣住宅的建筑风格。当沙南庄宫场地被用作大学校园时，该房屋进行了适当改编，曾用作师生的自行车维修店，因此俗称“自行车之屋”。如今，它依然是反映沙南庄宫历史以及从皇家禁地演变为现代教育场地延续性的历史建筑之一。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "คณะวิศวกรรมศาสตร์และเทคโนโลยีอุตสาหกรรม",
+      "en": "Faculty of Engineering and Industrial Technology",
+      "cn": "工程与工业技术学院"
+    },
+    "text": {
+      "th": "คณะวิชาลำดับที่ 9 ของมหาวิทยาลัยศิลปากร เดิมชื่อคณะเทคโนโลยีอุตสาหกรรม มุ่งพัฒนาวิศวกรและนวัตกรภายใต้แนวคิด Creative Engineering เพื่อขับเคลื่อนอุตสาหกรรมและเทคโนโลยีอย่างยั่งยืน",
+      "en": "This is the ninth faculty of Silpakorn University. It was formerly named the Faculty of Industrial Technology. The faculty aims to develop engineers and innovators under the concept of Creative Engineering, in order to drive industry and technology sustainably.",
+      "cn": "这是泰国艺术大学建立的第九个学院，原名工业技术学院。学院旨在以“创意工程”为理念培养工程师和创新人才，可持续地推动工业与科技发展。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "ศูนย์เรียนรวมเฉลิมพระเกียรติ (15ชั้น)",
+      "en": "Chalerm Phrakiat Central Learning Center (15-Storey Building)",
+      "cn": "皇诞纪念公共学习中心（15层大楼）"
+    },
+    "text": {
+      "th": "อาคารเรียนรวมของมหาวิทยาลัยศิลปากร ใช้สำหรับการเรียนการสอนรายวิชาศึกษาทั่วไป และเป็นที่ตั้งของศูนย์บริหารจัดการวิชาศึกษาทั่วไป ศูนย์พัฒนาการเรียนรู้ภาษาอังกฤษ และศูนย์นวัตกรรมการศึกษา",
+      "en": "This is a central classroom building of Silpakorn University. It is used for teaching general education courses and is the location of the General Education Administration Center, the English Language Learning Development Center, and the Educational Innovation Center.",
+      "cn": "这是泰国艺术大学的公共教学楼，用于通识教育课程教学，也是通识教育管理中心、英语学习发展中心和教育创新中心所在地。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "ประตูวิศวกรรมศาสตร์ (ประตูมาลัยแมน)",
+      "en": "Engineering Gate (Malaiman Gate)",
+      "cn": "工程学门（Malaiman 门）"
+    },
+    "text": {
+      "th": "ประตูทางเข้าของมหาวิทยาลัยศิลปากรที่ตั้งอยู่ติดถนนมาลัยแมน ใกล้กับคณะวิศวกรรมศาสตร์และเทคโนโลยีอุตสาหกรรม เป็นจุดเชื่อมต่อสำคัญระหว่างมหาวิทยาลัยกับพื้นที่โดยรอบ (ปิดวันเสาร์- อาทิตย์และวันหยุดนักขตฤกษ์)",
+      "en": "This entrance gate of Silpakorn University is located next to Malaiman Road, near the Faculty of Engineering and Industrial Technology. It is an important connection point between the university and the surrounding area. The gate is closed on Saturdays, Sundays, and public holidays.",
+      "cn": "这是泰国艺术大学位于 Malaiman 路旁的入口大门，紧邻工程与工业技术学院，是连接大学与周边区域的重要节点（周六、周日及法定节假日关闭）。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "โรงอาหารเพชรรัตน์",
+      "en": "Phetcharat Cafeteria",
+      "cn": "Phetcharat 食堂"
+    },
+    "text": {
+      "th": "โรงอาหารของมหาวิทยาลัยศิลปากร ตั้งอยู่ตรงข้ามหอพักเพชรรัตน์และใกล้หอพักทับแก้ว 3 เพื่ออำนวยความสะดวกด้านอาหารและพื้นที่พักผ่อนแก่นักศึกษาในบริเวณหอพัก",
+      "en": "This university cafeteria is located opposite Phetcharat Dormitory and near Tub Kaew 3 Dormitory. It provides food services and a relaxation area for students living in the dormitory area.",
+      "cn": "该大学食堂位于 Phetcharat 宿舍对面，毗邻 Tub Kaew 3 宿舍，为宿舍区的学生提供餐饮服务和休息场地。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "หอพักเพชรรัตน์ 1-7 (หอหญิง)",
+      "en": "Phetcharat Dormitories 1–7 (Female Dormitories)",
+      "cn": "Phetcharat 1-7 号宿舍（女生宿舍）"
+    },
+    "text": {
+      "th": "พื้นที่ที่พักอาศัยของนักศึกษาหญิงภายในมหาวิทยาลัยศิลปากร ประกอบด้วยอาคารหอพักหลายหลังและพื้นที่ส่วนกลางสำหรับการใช้ชีวิตประจำวัน",
+      "en": "These are residential areas for female students within Silpakorn University. They consist of several dormitory buildings and common areas for daily student life.",
+      "cn": "这是泰国艺术大学女生的住宿区，由多栋宿舍楼及日常生活公共区域组成。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "หอพักทับแก้ว 3 (หอชาย)",
+      "en": "Tub Kaew 3 Dormitory (Male Dormitory)",
+      "cn": "Tub Kaew 3 号宿舍（男生宿舍）"
+    },
+    "text": {
+      "th": "ใช้เป็นที่พักอาศัยสำหรับนักศึกษาชายที่พักภายในมหาวิทยาลัย ภายในอาคารมีห้องพักและพื้นที่ส่วนกลางสำหรับการใช้ชีวิตประจำวันของนักศึกษา ตั้งอยู่ใกล้กับโรงอาหารเพชรรัตน์และพื้นที่บริการต่าง ๆ เพื่ออำนวยความสะดวกในการดำเนินชีวิต",
+      "en": "This dormitory is used as on-campus accommodation for male students. The building includes rooms and common areas for students’ daily life. It is located near Phetcharat Cafeteria and other service areas for convenience.",
+      "cn": "该宿舍用作校内男生的宿舍，楼内设有房间和日常生活公共区域，靠近 Phetcharat 食堂及各项服务设施，极大地方便了生活。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารเพชรรัตน์-สุวัทนา (อาคารปฎิบัติการกีฬาใหม่)",
+      "en": "Phetcharat–Suwattana Building (New Sports Operation Building), Division of Student Affairs",
+      "cn": "Phetcharat-Suwattana 大楼（新体育场馆楼）/ 学生事务处"
+    },
+    "text": {
+      "th": "เป็นอาคารปฏิบัติการด้านกีฬาและกิจกรรมนักศึกษาของมหาวิทยาลัยศิลปากร และเป็นที่ตั้งของ กองกิจการนักศึกษา ซึ่งดูแลกิจกรรมนันทนาการและการพัฒนานักศึกษา โดยภายในมีพื้นที่ออกกำลังกายและจัดกิจกรรมต่าง ๆ ของนักศึกษา",
+      "en": "This building is used for sports operations and student activities at Silpakorn University. It is also the location of the Division of Student Affairs, which oversees recreational activities and student development. The building includes exercise spaces and areas for various student activities.",
+      "cn": "该大楼用于泰国艺术大学的体育和学生活动，也是负责娱乐活动和学生发展的学生事务处的所在地，内部设有健身场地和各类学生活动区。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "Sport Complex",
+      "en": "Sport Complex",
+      "cn": "综合体育中心"
+    },
+    "text": {
+      "th": "พื้นที่สำหรับการออกกำลังกายและกิจกรรมกีฬาของนักศึกษาและบุคลากร นอกจากนี้บริเวณใกล้เคียงยังมี ตลาดนัดช่วงเย็น ที่จำหน่ายอาหารและของว่างหลากหลายประเภท ซึ่งเป็นพื้นที่ยอดนิยมสำหรับการพักผ่อนและพบปะสังสรรค์ของนักศึกษาหลังเลิกเรียนและการออกกำลังกาย",
+      "en": "This is a space for exercise and sports activities for students and staff. Nearby, there is also an evening market that sells various kinds of food and snacks. It is a popular space for students to relax and meet after classes and exercise.",
+      "cn": "这是供师生进行体育锻炼和运动活动的场所。此外，附近还有一个夜市，售卖各种美食和小吃，是学生课后和运动后休息聚会的热门场地。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารศิลป์ พีระศรี 3",
+      "en": "Silpa Bhirasri 3 Building",
+      "cn": "Silpa Bhirasri 3 号楼"
+    },
+    "text": {
+      "th": "คณะมัณฑนศิลป์ คณะทางศิลปะและการออกแบบที่มีเอกลักษณ์เฉพาะตัว และเป็นคณะเดียวในประเทศไทยที่ใช้ชื่อ “มัณฑนศิลป์” ซึ่งสะท้อนแนวคิดด้านการสร้างสรรค์งานศิลปะเพื่อการใช้สอยและการออกแบบเพื่อคุณค่าทางสุนทรียะและสังคม",
+      "en": "This building belongs to the Faculty of Decorative Arts, a distinctive faculty of art and design. It is the only faculty in Thailand that uses the name “Decorative Arts,” reflecting the idea of creating art for practical use and design for aesthetic and social value.",
+      "cn": "该大楼属于装饰艺术学院，这是一个独具特色的艺术与设计学院，也是泰国唯一使用“装饰艺术”名称的学院，体现了为实用功能创作艺术以及为美学和社会价值进行设计的理念。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  },
+  {
+    "title": {
+      "th": "อาคารศิลป์ พีระศรี 2",
+      "en": "Silpa Bhirasri 2 Building",
+      "cn": "Silpa Bhirasri 2 号楼"
+    },
+    "text": {
+      "th": "ที่ตั้งของคณะจิตรกรรม ประติมากรรมและภาพพิมพ์ ดำเนินการสอนเพื่อผลิตบัณฑิตสาขาทัศนศิลป์แขนงต่าง ๆ โดยมุ่งเน้นการเผยแพร่ส่งเสริมงานศิลปวัฒนธรรมทั้งในและต่างประเทศ และเป็นที่ตั้งของหอศิลป์บรมราชกุมารี",
+      "en": "This building houses the Faculty of Painting, Sculpture and Graphic Arts. It educates graduates in various fields of visual arts, focusing on promoting art and culture domestically and internationally. It is also the location of the Princess Maha Chakri Sirindhorn Art Gallery.",
+      "cn": "该大楼为绘画、雕塑与版画学院所在地，旨在培养各类视觉艺术领域的毕业生，重点推广和弘扬国内外艺术文化，同时也是诗琳通公主殿下艺术馆的所在地。"
+    },
+    "image": "../phetburiCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+  }
+]
