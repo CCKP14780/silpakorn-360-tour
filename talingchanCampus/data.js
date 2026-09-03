@@ -192,7 +192,7 @@ var APP_DATA = {
         "cn": "校长办公室大楼"
       },
       "category": "landmark",
-      "card_image": "../talingchanCampus/img/stillImages/officeOfPred_tlc003.jpg",
+      "card_image": "../talingchanCampus/img/stillImages/officeOfPred_tlc001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -246,7 +246,7 @@ var APP_DATA = {
                     "en": "The Office of the President Building is considered the main center of university administration at Silpakorn University. It houses central administrative units that support the university’s operations, including policy administration, development planning, human resource management, finance, procurement, information technology, as well as services and support for the missions of faculties and units across the university. This building can therefore be seen as a central hub that helps connect the university’s working systems and enables them to operate efficiently and systematically.",
                     "cn": "校长办公室大楼被视为泰国艺术大学行政管理的核心。这里集中了支持大学日常运营的中央行政部门，职责涵盖政策管理、发展规划、人力资源管理、财务、采购、信息技术，以及为全校各学院和部门的任务提供便利与支持。因此，该大楼堪称帮助协调大学运作系统、保障其高效有序运行的核心枢纽。"
                     },
-                    "image": "../talingchanCampus/img/stillImages/officeOfPred_tlc003.jpg"
+                    "image": "../talingchanCampus/img/stillImages/officeOfPred_tlc001.jpg"
         }
       ]
     },
