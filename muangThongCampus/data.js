@@ -240,7 +240,7 @@ var CAMPUS_DATA = [
       "cn": "达灵参"
     },
     image: '../Assets/campus/talingchan.jpg',
-    url: '../talingChanCampus/index.html'
+    url: '../talingchanCampus/index.html'
   }
 ];
 
