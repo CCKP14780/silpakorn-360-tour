@@ -3,9 +3,9 @@ var APP_DATA = {
     {
       "id": "0-map66_p360_snc001",
       "name": {
-        "th": "MAP66_p360_snc001",
-        "en": "MAP66_p360_snc001",
-        "cn": "MAP66_p360_snc001"
+        "th": "ภาพมุมสูง",
+        "en": "Overhead View",
+        "cn": "俯视图"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -59,9 +59,9 @@ var APP_DATA = {
     {
       "id": "1-map01_p360_snc002",
       "name": {
-        "th": "MAP01_p360_snc002",
-        "en": "MAP01_p360_snc002",
-        "cn": "MAP01_p360_snc002"
+        "th": "ประตูทรงพล",
+        "en": "Songphon Gate",
+        "cn": "松蓬门"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -125,9 +125,9 @@ var APP_DATA = {
     {
       "id": "2-map25_p360_snc002",
       "name": {
-        "th": "MAP25_p360_snc002",
-        "en": "MAP25_p360_snc002",
-        "cn": "MAP25_p360_snc002"
+        "th": "ศูนย์บริการสุขภาพ",
+        "en": "Health Service Center",
+        "cn": "健康服务中心"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -191,9 +191,9 @@ var APP_DATA = {
     {
       "id": "3-map32_p360_snc002",
       "name": {
-        "th": "MAP32_p360_snc002",
-        "en": "MAP32_p360_snc002",
-        "cn": "MAP32_p360_snc002"
+        "th": "ประตูสาธิต",
+        "en": "Satit Gate",
+        "cn": "示范学校门"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -284,9 +284,9 @@ var APP_DATA = {
     {
       "id": "4-map57_p360_snc002",
       "name": {
-        "th": "MAP57_p360_snc002",
-        "en": "MAP57_p360_snc002",
-        "cn": "MAP57_p360_snc002"
+        "th": "สถาบันวัฒนธรรมภูมิภาคตะวันตก",
+        "en": "Western Region Cultural Institute",
+        "cn": "泰国西部文化研究所"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -350,9 +350,9 @@ var APP_DATA = {
     {
       "id": "5-map56_p360_snc002",
       "name": {
-        "th": "MAP56_p360_snc002",
-        "en": "MAP56_p360_snc002",
-        "cn": "MAP56_p360_snc002"
+        "th": "ประตูทับแก้ว",
+        "en": "Thap Kaeo Gate",
+        "cn": "榻水晶门"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -467,11 +467,11 @@ var APP_DATA = {
     {
       "id": "6-map31_p360_snc002",
       "name": {
-        "th": "MAP31_p360_snc002",
-        "en": "MAP31_p360_snc002",
-        "cn": "MAP31_p360_snc002"
+        "th": "อาคารศึกษาศาสตร์ 1",
+        "en": "Faculty of Education Building 1",
+        "cn": "教育学院1号楼"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -528,11 +528,11 @@ var APP_DATA = {
     {
       "id": "7-map55_p360_snc002",
       "name": {
-        "th": "MAP55_p360_snc002",
-        "en": "MAP55_p360_snc002",
-        "cn": "MAP55_p360_snc002"
+        "th": "อาคารศึกษาศาสตร์ 3",
+        "en": "Faculty of Education Building 3",
+        "cn": "教育学院3号楼"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -607,9 +607,9 @@ var APP_DATA = {
     {
       "id": "8-map29_p360_snc002",
       "name": {
-        "th": "MAP29_p360_snc002",
-        "en": "MAP29_p360_snc002",
-        "cn": "MAP29_p360_snc002"
+        "th": "หอพักทับแก้ว 2 (หอชาย)",
+        "en": "Tub Kaew 2 Dormitory (Male Dormitory)",
+        "cn": "Tub Kaew 2 号宿舍（男生宿舍）"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -680,9 +680,9 @@ var APP_DATA = {
     {
       "id": "9-map30_p360_snc002",
       "name": {
-        "th": "MAP30_p360_snc002",
-        "en": "MAP30_p360_snc002",
-        "cn": "MAP30_p360_snc002"
+        "th": "ลานเทวาลัยพระพิฆเนศวร 50 ปี คณะศึกษาศาสตร์",
+        "en": "Ganesha Shrine Courtyard, 50th Anniversary of the Faculty of Education",
+        "cn": "教育学院50周年象神神坛广场"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -747,11 +747,11 @@ var APP_DATA = {
     {
       "id": "10-map48_p360_snc002",
       "name": {
-        "th": "MAP48_p360_snc002",
-        "en": "MAP48_p360_snc002",
-        "cn": "MAP48_p360_snc002"
+        "th": "อาคารศึกษาศาสตร์ 2",
+        "en": "Faculty of Education Building 2",
+        "cn": "教育学院2号楼"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -820,9 +820,9 @@ var APP_DATA = {
     {
       "id": "11-map28_p360_snc002",
       "name": {
-        "th": "MAP28_p360_snc002",
-        "en": "MAP28_p360_snc002",
-        "cn": "MAP28_p360_snc002"
+        "th": "ทางเดินสวนประติมากรรมข้างหอพักทับแก้ว",
+        "en": "Tubkaew Dormitory Sculpture Garden Walkway",
+        "cn": "塔考宿舍雕塑公园小径"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -870,9 +870,9 @@ var APP_DATA = {
     {
       "id": "12-map54_p360_snc002",
       "name": {
-        "th": "MAP54_p360_snc002",
-        "en": "MAP54_p360_snc002",
-        "cn": "MAP54_p360_snc002"
+        "th": "อนุสาวรีย์หม่อมหลวงปิ่นมาลากุล",
+        "en": "Mom Luang Pin Malakul Monument",
+        "cn": "Mom Luang Pin Malakul 纪念碑"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -943,9 +943,9 @@ var APP_DATA = {
     {
       "id": "13-map47_p360_snc002",
       "name": {
-        "th": "MAP47_p360_snc002",
-        "en": "MAP47_p360_snc002",
-        "cn": "MAP47_p360_snc002"
+        "th": "โรงเรียนสาธิต มหาวิทยาลัยศิลปากร",
+        "en": "Silpakorn University Demonstration School",
+        "cn": "泰国艺术大学附属中学"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -1033,9 +1033,9 @@ var APP_DATA = {
       "id": "14-map60_p360_snc002",
       "category": "landmark",
       "name": {
-        "th": "MAP60_p360_snc002",
-        "en": "MAP60_p360_snc002",
-        "cn": "MAP60_p360_snc002"
+        "th": "ศูนย์ศิลปวัฒนธรรมเฉลิมพระเกียรติ",
+        "en": "Chalerm Phrakiat Cultural Center",
+        "cn": "皇诞纪念艺术文化中心"
       },
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
@@ -1093,9 +1093,9 @@ var APP_DATA = {
     {
       "id": "15-map59_p360_snc002",
       "name": {
-        "th": "MAP59_p360_snc002",
-        "en": "MAP59_p360_snc002",
-        "cn": "MAP59_p360_snc002"
+        "th": "ทางเข้าหอศิลป์สนามจันทร์",
+        "en": "Sanam Chandra Art Gallery Entrance",
+        "cn": "沙南庄艺术馆入口"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -1149,9 +1149,9 @@ var APP_DATA = {
     {
       "id": "16-map58_p360_snc002",
       "name": {
-        "th": "MAP58_p360_snc002",
-        "en": "MAP58_p360_snc002",
-        "cn": "MAP58_p360_snc002"
+        "th": "หอศิลป์สนามจันทร์",
+        "en": "Sanam Chandra Art Gallery",
+        "cn": "沙南庄艺术馆"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -1210,11 +1210,11 @@ var APP_DATA = {
     {
       "id": "17-map03_p360_snc002",
       "name": {
-        "th": "MAP03_p360_snc002",
-        "en": "MAP03_p360_snc002",
-        "cn": "MAP03_p360_snc002"
+        "th": "คณะอักษรศาสตร์ อาคาร 50 ปี",
+        "en": "Faculty of Arts, 50th Anniversary Building",
+        "cn": "文学院50周年纪念楼"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -1295,9 +1295,9 @@ var APP_DATA = {
     {
       "id": "18-map11_p360_snc002",
       "name": {
-        "th": "MAP11_p360_snc002",
-        "en": "MAP11_p360_snc002",
-        "cn": "MAP11_p360_snc002"
+        "th": "อาคารอเนกประสงค์",
+        "en": "Multipurpose Building",
+        "cn": "多功能大楼"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -1378,11 +1378,11 @@ var APP_DATA = {
     {
       "id": "19-map12_p360_snc002",
       "name": {
-        "th": "MAP12_p360_snc002",
-        "en": "MAP12_p360_snc002",
-        "cn": "MAP12_p360_snc002"
+        "th": "อาคารปฏิบัติการควบคุมและประเมินคุณภาพทางเภสัชศาสตร์และวิทยาศาสตร์เทคโนโลยี",
+        "en": "R&D, Quality Control and Evaluation in Pharmacy and Scientific Technology Building",
+        "cn": "药学与科技研发及质量控制评估实验楼"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -1477,11 +1477,11 @@ var APP_DATA = {
     {
       "id": "20-map13_p360_snc002",
       "name": {
-        "th": "MAP13_p360_snc002",
-        "en": "MAP13_p360_snc002",
-        "cn": "MAP13_p360_snc002"
+        "th": "อาคารปฏิบัติการเทคโนโลยีเภสัชกรรม",
+        "en": "Pharmaceutical Technology Laboratory Building",
+        "cn": "制药技术实验楼"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -1560,11 +1560,11 @@ var APP_DATA = {
     {
       "id": "21-map14_p360_snc002",
       "name": {
-        "th": "MAP14_p360_snc002",
-        "en": "MAP14_p360_snc002",
-        "cn": "MAP14_p360_snc002"
+        "th": "อาคารนำร่องศูนย์ภูมิปัญญาและเทคโนโลยีทางเภสัชศาสตร์และสุขภาพ",
+        "en": "Pilot Building for the Center of Wisdom and Technology in Pharmacy and Health",
+        "cn": "药学与健康智慧与技术中心试点楼"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -1633,9 +1633,9 @@ var APP_DATA = {
     {
       "id": "22-map02_p360_snc002",
       "name": {
-        "th": "MAP02_p360_snc002",
-        "en": "MAP02_p360_snc002",
-        "cn": "MAP02_p360_snc002"
+        "th": "สนามฟุตบอล",
+        "en": "Football Field",
+        "cn": "足球场"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -1700,9 +1700,9 @@ var APP_DATA = {
     {
       "id": "23-map26_p360_snc002",
       "name": {
-        "th": "MAP26_p360_snc002",
-        "en": "MAP26_p360_snc002",
-        "cn": "MAP26_p360_snc002"
+        "th": "โรงผลิตน้ำ",
+        "en": "Water Production Plant",
+        "cn": "自来水厂"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -1789,9 +1789,9 @@ var APP_DATA = {
     {
       "id": "24-map49_p360_snc002",
       "name": {
-        "th": "MAP49_p360_snc002",
-        "en": "MAP49_p360_snc002",
-        "cn": "MAP49_p360_snc002"
+        "th": "ทางไปโรงเรียนสาธิต มหาวิทยาลัยศิลปากร",
+        "en": "Entrance to Silpakorn University Demonstration School",
+        "cn": "通往泰国艺术大学附属实验学校的入口"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -1845,9 +1845,9 @@ var APP_DATA = {
     {
       "id": "25-map50_p360_snc002",
       "name": {
-        "th": "MAP50_p360_snc002",
-        "en": "MAP50_p360_snc002",
-        "cn": "MAP50_p360_snc002"
+        "th": "ทางลัดเข้าลานจอดรถและอาคารเรียนคณะอักษรศาสตร์",
+        "en": "Shortcut to the Parking Lot and Arts and Sciences Building",
+        "cn": "通往停车场和文理学院大楼的捷径"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -1901,9 +1901,9 @@ var APP_DATA = {
     {
       "id": "26-map51_p360_snc002",
       "name": {
-        "th": "MAP51_p360_snc002",
-        "en": "MAP51_p360_snc002",
-        "cn": "MAP51_p360_snc002"
+        "th": "สำนักอธิการบดี",
+        "en": "Office of the President",
+        "cn": "校长办公室"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -1990,9 +1990,9 @@ var APP_DATA = {
     {
       "id": "27-map09_p360_snc002",
       "name": {
-        "th": "MAP09_p360_snc002",
-        "en": "MAP09_p360_snc002",
-        "cn": "MAP09_p360_snc002"
+        "th": "ลานทรงพล",
+      "en": "Songphon Courtyard",
+      "cn": "松蓬广场"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -2057,9 +2057,9 @@ var APP_DATA = {
     {
       "id": "28-map08_p360_snc002",
       "name": {
-        "th": "MAP08_p360_snc002",
-        "en": "MAP08_p360_snc002",
-        "cn": "MAP08_p360_snc002"
+        "th": "อาคารวชิรมงกุฎ",
+        "en": "Vajiramongkut Building",
+        "cn": "瓦吉拉蒙库大楼"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -2117,11 +2117,11 @@ var APP_DATA = {
     {
       "id": "29-map10_p360_snc002",
       "name": {
-        "th": "MAP10_p360_snc002",
-        "en": "MAP10_p360_snc002",
-        "cn": "MAP10_p360_snc002"
+        "th": "ตึกอักษรศาสตร์",
+        "en": "Faculty of Arts Building",
+        "cn": "文学院大楼"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -2199,9 +2199,9 @@ var APP_DATA = {
     {
       "id": "30-map22_p360_snc002",
       "name": {
-        "th": "MAP22_p360_snc002",
-        "en": "MAP22_p360_snc002",
-        "cn": "MAP22_p360_snc002"
+        "th": "โรงอาหารสระแก้ว",
+        "en": "Sra Kaew Cafeteria",
+        "cn": "水晶池食堂"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -2277,9 +2277,9 @@ var APP_DATA = {
     {
       "id": "31-map07_p360_snc002",
       "name": {
-        "th": "MAP07_p360_snc002",
-        "en": "MAP07_p360_snc002",
-        "cn": "MAP07_p360_snc002"
+        "th": "ศาลาสระแก้ว",
+        "en": "Sra Kaew Pavilion",
+        "cn": "水晶池亭"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -2352,9 +2352,9 @@ var APP_DATA = {
     {
       "id": "32-map53_p360_snc002",
       "name": {
-        "th": "MAP53_p360_snc002",
-        "en": "MAP53_p360_snc002",
-        "cn": "MAP53_p360_snc002"
+        "th": "สะพานสระแก้ว",
+        "en": "Sra Kaew Bridge",
+        "cn": "水晶池桥"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -2418,9 +2418,9 @@ var APP_DATA = {
     {
       "id": "33-map52_p360_snc002",
       "name": {
-        "th": "MAP52_p360_snc002",
-        "en": "MAP52_p360_snc002",
-        "cn": "MAP52_p360_snc002"
+        "th": "อนุสาวรีย์ อาจารย์ศิลป์ พีระศรี",
+        "en": "Professor Silpa Bhirasri Monument",
+        "cn": "艺术·费罗齐教授纪念碑"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -2484,11 +2484,11 @@ var APP_DATA = {
     {
       "id": "34-map27_p360_snc002",
       "name": {
-        "th": "MAP27_p360_snc002",
-        "en": "MAP27_p360_snc002",
-        "cn": "MAP27_p360_snc002"
+        "th": "คณะวิทยาศาสตร์ อาคาร 55 ปี",
+        "en": "Faculty of Science, 55th Anniversary Building",
+        "cn": "理学院55周年纪念楼"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -2566,11 +2566,11 @@ var APP_DATA = {
     {
       "id": "35-map36_p360_snc002",
       "name": {
-        "th": "MAP36_p360_snc002",
-        "en": "MAP36_p360_snc002",
-        "cn": "MAP36_p360_snc002"
+        "th": "อาคารเรือนกระจก คณะวิทยาศาสตร์",
+        "en": "Greenhouse Building, Faculty of Science",
+        "cn": "理学院温室大楼"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -2661,11 +2661,11 @@ var APP_DATA = {
     {
       "id": "36-map20_p360_snc002",
       "name": {
-        "th": "MAP20_p360_snc002",
-        "en": "MAP20_p360_snc002",
-        "cn": "MAP20_p360_snc002"
+        "th": "คณะวิทยาศาสตร์ อาคารวิทยาศาสตร์ 1",
+        "en": "Faculty of Science, Science Building 1",
+        "cn": "理学院1号理学楼"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -2756,11 +2756,11 @@ var APP_DATA = {
     {
       "id": "37-map35_p360_snc002",
       "name": {
-        "th": "MAP35_p360_snc002",
-        "en": "MAP35_p360_snc002",
-        "cn": "MAP35_p360_snc002"
+        "th": "คณะวิทยาศาสตร์ อาคารวิทยาศาสตร์ 3",
+        "en": "Faculty of Science, Science Building 3",
+        "cn": "理学院3号理学楼"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -2823,11 +2823,11 @@ var APP_DATA = {
     {
       "id": "38-map34_p360_snc002",
       "name": {
-        "th": "MAP34_p360_snc002",
-        "en": "MAP34_p360_snc002",
-        "cn": "MAP34_p360_snc002"
+        "th": "คณะวิทยาศาสตร์ อาคารวิทยาศาสตร์ 4",
+        "en": "Faculty of Science, Science Building 4",
+        "cn": "理学院4号理学楼"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -2906,9 +2906,9 @@ var APP_DATA = {
     {
       "id": "39-map33_p360_snc002",
       "name": {
-        "th": "MAP33_p360_snc002",
-        "en": "MAP33_p360_snc002",
-        "cn": "MAP33_p360_snc002"
+        "th": "ทางเข้าคณะวิทยาศาสตร์",
+        "en": "Entrance to Faculty of Science",
+        "cn": "理学院入口"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -2968,9 +2968,9 @@ var APP_DATA = {
     {
       "id": "40-map37_p360_snc002",
       "name": {
-        "th": "MAP37_p360_snc002",
-        "en": "MAP37_p360_snc002",
-        "cn": "MAP37_p360_snc002"
+        "th": "อาคารศูนย์เรียนรวม 2",
+        "en": "Central Classroom Building 2",
+        "cn": "第2综合教学楼"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -3067,9 +3067,9 @@ var APP_DATA = {
     {
       "id": "41-map38_p360_snc002",
       "name": {
-        "th": "MAP38_p360_snc002",
-        "en": "MAP38_p360_snc002",
-        "cn": "MAP38_p360_snc002"
+        "th": "สำนักดิจิทัลเทคโนโลยี",
+        "en": "Bureau of Digital Technology, Silpakorn University",
+        "cn": "泰国艺术大学数字技术处"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -3156,9 +3156,9 @@ var APP_DATA = {
     {
       "id": "42-map39_p360_snc002",
       "name": {
-        "th": "MAP39_p360_snc002",
-        "en": "MAP39_p360_snc002",
-        "cn": "MAP39_p360_snc002"
+        "th": "อาคารหม่อมหลวงปิ่น มาลากุล",
+        "en": "Mom Luang Pin Malakul Building",
+        "cn": "蒙銮平·玛拉库大楼"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -3238,9 +3238,9 @@ var APP_DATA = {
     {
       "id": "43-map40_p360_snc002",
       "name": {
-        "th": "MAP40_p360_snc002",
-        "en": "MAP40_p360_snc002",
-        "cn": "MAP40_p360_snc002"
+        "th": "สำนักงานบริหารการวิจัย นวัตกรรมและการสร้างสรรค์",
+        "en": "Office of Research, Innovation and Creativity Administration",
+        "cn": "科研、创新与创意管理办公室"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -3326,9 +3326,9 @@ var APP_DATA = {
     {
       "id": "44-map15_p360_snc002",
       "name": {
-        "th": "MAP15_p360_snc002",
-        "en": "MAP15_p360_snc002",
-        "cn": "MAP15_p360_snc002"
+        "th": "โรงอาหารเพชรรัตน์",
+        "en": "Phetcharat Cafeteria",
+        "cn": "佩查拉食堂"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -3404,9 +3404,9 @@ var APP_DATA = {
     {
       "id": "45-map41_p360_snc002",
       "name": {
-        "th": "MAP41_p360_snc002",
-        "en": "MAP41_p360_snc002",
-        "cn": "MAP41_p360_snc002"
+        "th": "ทางเข้าอาคารเรียนรวมเฉลิมพระเกียรติ",
+        "en": "Entrance to the Combined Learning Building of Royal Grandeur",
+        "cn": "通往皇家威严综合教学楼的入口"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -3454,9 +3454,9 @@ var APP_DATA = {
     {
       "id": "46-map43_p360_snc002",
       "name": {
-        "th": "MAP43_p360_snc002",
-        "en": "MAP43_p360_snc002",
-        "cn": "MAP43_p360_snc002"
+        "th": "ศูนย์เรียนรวมเฉลิมพระเกียรติ",
+        "en": "Chalerm Phrakiat Central Learning Center",
+        "cn": "皇诞纪念公共学习中心"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -3527,11 +3527,11 @@ var APP_DATA = {
     {
       "id": "47-map42_p360_snc002",
       "name": {
-        "th": "MAP42_p360_snc002",
-        "en": "MAP42_p360_snc002",
-        "cn": "MAP42_p360_snc002"
+        "th": "คณะวิศวกรรมศาสตร์และเทคโนโลยีอุตสาหกรรม",
+        "en": "Faculty of Engineering and Industrial Technology",
+        "cn": "工程与工业技术学院"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -3631,9 +3631,9 @@ var APP_DATA = {
     {
       "id": "48-map65_p360_snc002",
       "name": {
-        "th": "MAP65_p360_snc002",
-        "en": "MAP65_p360_snc002",
-        "cn": "MAP65_p360_snc002"
+        "th": "ประตูวิศวกรรมศาสตร์",
+        "en": "Engineering Gate",
+        "cn": "工程学院门"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -3691,9 +3691,9 @@ var APP_DATA = {
     {
       "id": "49-map23_p360_snc002",
       "name": {
-        "th": "MAP23_p360_snc002",
-        "en": "MAP23_p360_snc002",
-        "cn": "MAP23_p360_snc002"
+        "th": "เรือนพระกรรมสักขี",
+        "en": "Ruean Phra Kammasakshi",
+        "cn": "帕甘玛萨吉楼"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -3757,9 +3757,9 @@ var APP_DATA = {
     {
       "id": "50-map21_p360_snc002",
       "name": {
-        "th": "MAP21_p360_snc002",
-        "en": "MAP21_p360_snc002",
-        "cn": "MAP21_p360_snc002"
+        "th": "หอพักทับแก้ว 3 (หอชาย)",
+        "en": "Tub Kaew 3 Dormitory (Male Dormitory)",
+        "cn": "榻水晶3号宿舍（男宿）"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -3844,9 +3844,9 @@ var APP_DATA = {
     {
       "id": "51-map45_p360_snc002",
       "name": {
-        "th": "MAP45_p360_snc002",
-        "en": "MAP45_p360_snc002",
-        "cn": "MAP45_p360_snc002"
+        "th": "อาคารเพชรรัตน์-สุวัทนา",
+        "en": "Phetcharat–Suwattana Building",
+        "cn": "佩查拉-苏瓦丹娜大楼"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -3926,9 +3926,9 @@ var APP_DATA = {
     {
       "id": "52-map44_p360_snc002",
       "name": {
-        "th": "MAP44_p360_snc002",
-        "en": "MAP44_p360_snc002",
-        "cn": "MAP44_p360_snc002"
+        "th": "ทางเข้าคณะจิตรกรรม ประติมากรรมและภาพพิมพ์",
+        "en": "Entrance to the Faculty of Painting, Sculpture and Graphic Arts",
+        "cn": "通往绘画、雕塑与版画学院的入口"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -3982,11 +3982,11 @@ var APP_DATA = {
     {
       "id": "53-map46_p360_snc002",
       "name": {
-        "th": "MAP46_p360_snc002",
-        "en": "MAP46_p360_snc002",
-        "cn": "MAP46_p360_snc002"
+        "th": "อาคารศิลป์ พีระศรี 2",
+        "en": "Silpa Bhirasri 2 Building",
+        "cn": "艺术·费罗齐2号楼"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -4048,11 +4048,11 @@ var APP_DATA = {
     {
       "id": "54-map06_p360_snc002",
       "name": {
-        "th": "MAP06_p360_snc002",
-        "en": "MAP06_p360_snc002",
-        "cn": "MAP06_p360_snc002"
+        "th": "อาคารศิลป์ พีระศรี 3",
+        "en": "Silpa Bhirasri 3 Building",
+        "cn": "艺术·费罗齐3号楼"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -4114,11 +4114,11 @@ var APP_DATA = {
     {
       "id": "55-map04_p360_snc002",
       "name": {
-        "th": "MAP04_p360_snc002",
-        "en": "MAP04_p360_snc002",
-        "cn": "MAP04_p360_snc002"
+        "th": "อาคารศิลป์พีระศรี 1",
+        "en": "Silpa Bhirasri 1 Building",
+        "cn": "艺术·费罗齐1号楼"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -4180,9 +4180,9 @@ var APP_DATA = {
     {
       "id": "56-map05_p360_snc002",
       "name": {
-        "th": "MAP05_p360_snc002",
-        "en": "MAP05_p360_snc002",
-        "cn": "MAP05_p360_snc002"
+        "th": "โครงการบ้านประหยัดพลังงาน",
+        "en": "Energy-Saving House Project",
+        "cn": "节能住宅项目"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -4246,11 +4246,11 @@ var APP_DATA = {
     {
       "id": "57-map18_p360_snc002",
       "name": {
-        "th": "MAP18_p360_snc002",
-        "en": "MAP18_p360_snc002",
-        "cn": "MAP18_p360_snc002"
+        "th": "กลุ่มอาคารปฏิบัติงานคณะมัณฑนศิลป์",
+        "en": "Faculty of Decorative Arts Workshop Building Group",
+        "cn": "装潢艺术学院实训大楼群"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -4306,11 +4306,11 @@ var APP_DATA = {
     {
       "id": "58-map19_p360_snc002",
       "name": {
-        "th": "MAP19_p360_snc002",
-        "en": "MAP19_p360_snc002",
-        "cn": "MAP19_p360_snc002"
+        "th": "ภาควิชาเครื่องปั้นดินเผา คณะมัณฑนศิลป์",
+        "en": "Department of Ceramics, Faculty of Decorative Arts",
+        "cn": "装潢艺术学院陶瓷系"
       },
-      "category": "landmark",
+      "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
       "levels": [
         {
@@ -4387,9 +4387,9 @@ var APP_DATA = {
     {
       "id": "59-map17_p360_snc002",
       "name": {
-        "th": "MAP17_p360_snc002",
-        "en": "MAP17_p360_snc002",
-        "cn": "MAP17_p360_snc002"
+        "th": "โรงพิมพ์มหาวิทยาลัยศิลปากร",
+        "en": "Silpakorn University Printing House",
+        "cn": "泰国艺术大学印刷厂"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -4480,9 +4480,9 @@ var APP_DATA = {
     {
       "id": "60-map24_p360_snc002",
       "name": {
-        "th": "MAP24_p360_snc002",
-        "en": "MAP24_p360_snc002",
-        "cn": "MAP24_p360_snc002"
+        "th": "ตลาดสวัสดิการนักศึกษา",
+        "en": "Student Welfare Market",
+        "cn": "学生福利夜市"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",
@@ -4552,9 +4552,9 @@ var APP_DATA = {
     {
       "id": "61-map16_p360_snc002",
       "name": {
-        "th": "MAP16_p360_snc002",
-        "en": "MAP16_p360_snc002",
-        "cn": "MAP16_p360_snc002"
+        "th": "ประตูเหนือวัง",
+        "en": "Northern Palace Gate",
+        "cn": "宫北门"
       },
       "category": "landmark",
       "card_image": "../phetburiCampus/img/stillImages/stillDronePano_pb002.jpg",

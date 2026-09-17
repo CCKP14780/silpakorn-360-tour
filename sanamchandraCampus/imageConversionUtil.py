@@ -1,6 +1,6 @@
 from pathlib import Path
 
-folder_path = Path('sanamchandraCampus/img/stillImages')
+folder_path = Path(r'D:\Dji\IMG\sanamchan\stillImages\TEST\photo-20260501T090241Z-3-003\photo')
 file_extension = ['*.690Z','*.691Z']
 
 def convert_files_to_jpg(folder_path, file_extension):
@@ -28,3 +28,6 @@ def remove_files_with_extension(folder_path, file_extension):
 def main():
     convert_files_to_jpg(folder_path, file_extension)
     remove_files_with_extension(folder_path, file_extension)
+
+
+main()
