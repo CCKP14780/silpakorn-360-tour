@@ -1215,7 +1215,7 @@ var APP_DATA = {
         "cn": "文学院50周年纪念楼"
       },
       "category": "faculty",
-      "card_image": "../sanamchandraCampus/img/stillImages/stillDronePano_pb002.jpg",
+      "card_image": "../sanamchandraCampus/img/stillImages/facultyOfArts50AnnBuilding_snc002.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1287,7 +1287,7 @@ var APP_DATA = {
       "en": "This is one of the main academic buildings of the Faculty of Arts. It is the first building located near the intersection of the main campus road when entering or exiting through Songphon Gate.",
       "cn": "这是文学院的主要教学楼之一，是从 Songphon 大门进出时位于主干道交叉口的第一座建筑。"
     },
-    "image": "../sanamchandraCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+    "image": "../sanamchandraCampus/img/stillImages/facultyOfArts50AnnBuilding_snc002.jpg"
 
         }
       ]
@@ -1300,7 +1300,7 @@ var APP_DATA = {
         "cn": "多功能大楼"
       },
       "category": "landmark",
-      "card_image": "../sanamchandraCampus/img/stillImages/stillDronePano_pb002.jpg",
+      "card_image": "../sanamchandraCampus/img/stillImages/multipurposeBuilding_snc001.jpg",
       "levels": [
         {
           "tileSize": 256,
@@ -1354,7 +1354,7 @@ var APP_DATA = {
       "en": "This area is used for residences and housing for university personnel.",
       "cn": "该区域用作教职工住宅及宿舍区。"
     },
-    "image": "../sanamchandraCampus/img/stillImages/ganeshaShrine_pb001.jpg"
+    "image": "../sanamchandraCampus/img/stillImages/multipurposeBuilding_snc001.jpg"
 
         },
         {
