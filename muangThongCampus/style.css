@@ -647,7 +647,7 @@ body.single-scene #sceneListToggle {
   position: absolute;
   inset: 0;
   border-radius: 100%;
-  background: linear-gradient(to right, #007468, #00DAC3);
+  background: linear-gradient(to right, #ffffff, #E6F8F5);
   -webkit-mask: radial-gradient(transparent 21px, #000 21px);
   mask: radial-gradient(transparent 21px, #000 21px);
   z-index: 1;
@@ -660,7 +660,7 @@ body.single-scene #sceneListToggle {
   position: absolute;
   display: block;
 
-  background: linear-gradient(to right, #007468, #00DAC3);
+  background: linear-gradient(to right, #ffffff, #E6F8F5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -679,12 +679,12 @@ body.single-scene #sceneListToggle {
 
 .info-hotspot-static:hover .info-hotspot-icon-wrapper::before {
   transform: scale(1.04);
-  box-shadow: 0 0 15px rgba(0, 218, 195, 0.4);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
 .info-hotspot-static:hover .info-hotspot-fa {
   transform: scale(1.04);
-  filter: drop-shadow(0 0 5px rgba(0, 218, 195, 0.5));
+  filter: drop-shadow(0 0 5px rgba(253, 253, 253, 0.5));
 }
 
 
