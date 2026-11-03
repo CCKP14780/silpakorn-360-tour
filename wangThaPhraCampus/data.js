@@ -411,6 +411,123 @@ var APP_DATA = {
       ]
     },
     {
+      "id": "4-map02_p360_wtp001",
+      "name": {
+          "th": "คณะโบราณคดี",
+          "en": "Faculty of Archaeology",
+          "cn": "考古学院"
+        },
+      "category": "faculty",
+      "card_image": "../wangThaPhraCampus/img/stillImages/court_wtp001.jpg",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1944,
+      "initialViewParameters": {
+        "yaw": 1.236880539162165,
+        "pitch": 0,
+        "fov": 1.2752188746020257
+      },
+      "linkHotspots": [
+        {
+          "yaw": -1.518690072520938,
+          "pitch": -0.03860035005146223,
+          "rotation": 0,
+          "target": "3-map03_p360_wtp001"
+        },
+        {
+          "yaw": 2.6376967660568393,
+          "pitch": -0.0033703093952333063,
+          "rotation": 0,
+          "target": "5-map01_p360_wtp001"
+        },
+        {
+          "yaw": 1.2339943444136185,
+          "pitch": -0.0235607536426663,
+          "rotation": 0,
+          "target": "6-map07_p360_wtp001"
+        }
+      ],
+      "infoHotspots": [
+        {
+          "yaw": -0.8217198215874362,
+          "pitch": -0.04735456385126291,
+          "title": {
+            "th": "คณะโบราณคดี",
+            "en": "Faculty of Archaeology",
+            "cn": "考古学院"
+          },
+          "text": {
+            "th": "มุ่งผลิตนักโบราณคดีเพื่อดูแลและอนุรักษ์โบราณวัตถุและโบราณสถานอันเป็นมรดกวัฒนธรรมของชาติ พร้อมขยายการผลิตบัณฑิตในสาขาที่เกี่ยวข้อง",
+            "en": "The Faculty of Archaeology focuses on producing professionals dedicated to the preservation and conservation of cultural heritage, including ancient artifacts and historical sites, while expanding related academic disciplines.",
+            "cn": "考古学院致力于培养保护与保存国家文化遗产（包括文物与历史遗址）的专业人才，并拓展相关学科领域。"
+          },
+          "image": "../wangThaPhraCampus/img/stillImages/archaeology_wtp001.jpg"
+        },
+        {
+          "yaw": -2.5276089181528185,
+          "pitch": -0.3730744146991327,
+          "title": {
+            "th": "หอประชุมวังท่าพระ",
+            "en": "Wang Tha Phra Auditorium",
+            "cn": "王他帕礼堂"
+          },
+          "text": {
+            "th": "สถานที่จัดกิจกรรมทางวิชาการและศิลปวัฒนธรรม เช่น การเสวนา อบรม และการแสดงดนตรี",
+            "en": "A venue for academic and cultural events, including seminars, workshops, and musical performances.",
+            "cn": "用于举办学术与文艺活动的场所，如研讨会、培训及音乐演出。"
+          },
+          "image": "../wangThaPhraCampus/img/stillImages/ferrociBuilding_wtp001.jpg"
+        },
+        {
+          "yaw": -2.8235549634121444,
+          "pitch": -0.03961531611583169,
+          "title": {
+            "th": "ตำหนักพรรณราย",
+            "en": "Tamnak Phanray",
+            "cn": "帕纳莱宫"
+          },
+          "text": {
+            "th": "ตำหนักพรรณราย อาคารสไตล์โคโลเนียลสีเหลือง เดิมเป็นอาคารเรียนของคณะโบราณคดี ปัจจุบันเป็นที่ตั้งของสำนักศิลปวัฒนธรรมและการสร้างสรรค์แห่งมหาวิทยาลัยศิลปากร",
+            "en": "Tamnak Phanray, a yellow colonial-style building, was formerly used by the Faculty of Archaeology. Today, it houses the Office of Art Culture and Creative of Silpakorn University.",
+            "cn": "帕纳莱宫是一座黄色殖民风格建筑，原为考古学院教学楼，现为泰国艺术大学文艺及创意事务中心所在地。"
+          },
+          "image": "../wangThaPhraCampus/img/stillImages/yellowBuilding02_wtp001.jpg"
+        },
+        {
+          "yaw": -3.2235549634121444,
+          "pitch": 0.09651531611583169,
+          "title": {
+            "th": "ลานสนามบาสเก็ตบอล",
+            "en": "Basketball Court",
+            "cn": "篮球场"
+          },
+          "text": {
+            "th": "ลานกลางแจ้งอเนกประสงค์สำหรับนักศึกษาใช้เล่นกีฬาและจัดกิจกรรมต่าง ๆ ภายในมหาวิทยาลัย",
+            "en": "A multi-purpose outdoor court used by students for sports and various university activities.",
+            "cn": "多功能户外小操场，供学生进行体育运动及各类校内活动。"
+          },
+          "image": "../wangThaPhraCampus/img/stillImages/court_wtp001.jpg"
+        }
+      ]
+    },
+    {
       "id": "5-map01_p360_wtp001",
       "name": {
         "th": "สวนแก้ว",
@@ -616,6 +733,81 @@ var APP_DATA = {
         "cn": "西尔帕·比拉西广场"
       },
       "category": "landmark",
+      "card_image": "../wangThaPhraCampus/img/stillImages/ferrociStatue_wtp001.jpg",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1944,
+      "initialViewParameters": {
+        "yaw": -1.6706915465703318,
+        "pitch": 0,
+        "fov": 1.2752188746020257
+      },
+      "linkHotspots": [
+        {
+          "yaw": -1.1735968020855552,
+          "pitch": -0.010422205889653924,
+          "rotation": 0,
+          "target": "7-map08_p360_wtp001"
+        }
+      ],
+      "infoHotspots": [
+        {
+          "yaw": -1.4842067228141254,
+          "pitch": -0.21832527795245227,
+          "title": {
+            "th": "ลานอาจารย์ศิลป์",
+            "en": "Professor Silpa Bhirasri Plaza",
+            "cn": "席尔帕·比拉西里教授广场"
+          },
+          "text": {
+            "th": "ลานอนุสาวรีย์รูปปั้นศาสตราจารย์ศิลป์ พีระศรี ผู้ก่อตั้งมหาวิทยาลัยศิลปากร",
+            "en": "Professor Silpa Bhirasri Plaza features the statue of Professor Silpa Bhirasri, the founder of Silpakorn University.",
+            "cn": "席尔帕·比拉西里教授广场，泰国艺术大学创始人的雕像。"
+          },
+          "image": "../wangThaPhraCampus/img/stillImages/ferrociStatue_wtp001.jpg"
+        },
+        {
+          "yaw": 0.18577932006859044,
+          "pitch": 0.01472081176187956,
+          "title": {
+            "th": "คณะจิตรกรรม ประติมากรรมและภาพพิมพ์",
+            "en": "Faculty of Painting, Sculpture and Graphic Arts",
+            "cn": "绘画、雕塑与版画学院"
+          },
+          "text": {
+            "th": "คณะแรกของมหาวิทยาลัยศิลปากร และเป็นหลักสูตรศิลปะที่เก่าแก่ที่สุดในประเทศไทย มุ่งผลิตบัณฑิตด้านทัศนศิลป์หลากหลายแขนง และส่งเสริมความร่วมมือกับสถาบันระดับนานาชาติ",
+            "en": "The Faculty of Painting, Sculpture and Graphic Arts is the first faculty of Silpakorn University and the oldest art program in Thailand. It offers diverse disciplines in visual arts and actively promotes international collaboration.",
+            "cn": "绘画、雕塑与版画学院是泰国艺术大学创立最早的学院，也是泰国历史最悠久的艺术课程，涵盖多元视觉艺术领域，并积极推动国际合作。"
+          },
+          "image": "../wangThaPhraCampus/img/stillImages/artGallery03_wtp001.jpg"
+        }
+      ]
+    },
+    {
+      "id": "8-map09_p360_wtp001",
+      "name": {
+        "th": "คณะจิตรกรรม ประติมากรรมและภาพพิมพ์",
+        "en": "Faculty of Painting, Sculpture and Graphic Arts",
+        "cn": "绘画、雕塑与印刷艺术学院"
+      },
+      "category": "faculty",
       "card_image": "../wangThaPhraCampus/img/stillImages/ferrociStatue_wtp001.jpg",
       "levels": [
         {

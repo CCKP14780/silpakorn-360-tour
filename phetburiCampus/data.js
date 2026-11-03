@@ -1142,6 +1142,72 @@ var APP_DATA = {
     {
       "id": "15-map14_p360_pb001",
       "name": {
+                "th": "คณะวิทยาการจัดการ",
+                "en": "Faculty of Management Sciences",
+                "cn": "管理科学学院"
+              },
+      "category": "faculty",
+      "card_image": "../phetburiCampus/img/stillImages/lectureBuilding1_pb001.jpg",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1944,
+      "initialViewParameters": {
+        "yaw": 2.593525800690802,
+        "pitch": -0.12328264163359215,
+        "fov": 1.38217411905719
+      },
+      "linkHotspots": [
+        {
+          "yaw": -1.104956775077195,
+          "pitch": -0.011658380665750201,
+          "rotation": 0,
+          "target": "11-map10_p360_pb001"
+        },
+        {
+          "yaw": 2.021547728825599,
+          "pitch": 0.004528729084379179,
+          "rotation": 0,
+          "target": "16-map15_p360_pb001"
+        }
+      ],
+      "infoHotspots": [
+        {
+          "yaw": -2.6855534904360034,
+          "pitch": 0.04351998256531253,
+          "title": {
+            "th": "อาคารเรียนรวม 1",
+            "en": "Lecture Building 1",
+            "cn": "综合教学楼 1"
+          },
+          "text": {
+            "th": "ที่ตั้งของสำนักงานคณะวิทยาการจัดการ ห้องเรียนและห้องปฎิบัติการต่าง ๆ",
+            "en": "Lecture Building 1 houses the office of the Faculty of Management Science, as well as classrooms and various laboratories used for teaching and learning.",
+            "cn": "综合教学楼1设有管理科学学院办公室，以及用于教学和科研的各类教室与实验室。"
+          },
+          "image": "../phetburiCampus/img/stillImages/lectureBuilding1_pb001.jpg"
+        }
+      ]
+    },
+    {
+      "id": "15-map14_p360_pb001",
+      "name": {
         "th": "อาคารเรียนรวม 1",
         "en": "Lecture Building 1",
         "cn": "综合教学楼 1"
@@ -1472,10 +1538,10 @@ var APP_DATA = {
     {
       "id": "19-map19_p360_pb001",
       "name": {
-        "th": "ตึกยานยนต์",
-        "en": "Yarn-Yon Building",
-        "cn": "汽车工程楼（Yarn-Yon Building）"
-      },
+          "th": "คณะเทคโนโลยีสารสนเทศและการสื่อสาร",
+          "en": "Faculty of Information and Communication Technology",
+          "cn": "信息与通信技术学院"
+              },
       "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/yarnyon_pb001.jpg",
       "levels": [
@@ -1672,10 +1738,10 @@ var APP_DATA = {
     {
       "id": "22-map22_p360_pb001",
       "name": {
-        "th": "อาคารปฎิบัติการคณะสัตว์สาสตร์และเทคโนโลยีการเกษตร",
-        "en": "Laboratory Building of the Faculty of Animal Sciences and Agricultural Technology",
-        "cn": "动物科学与农业技术学院实验楼"
-      },
+          "th": "คณะสัตวศาสตร์และเทคโนโลยีการเกษตร",
+          "en": "Faculty of Animal Science and Agricultural Technology",
+          "cn": "动物科学与农业技术学院"
+        },
       "category": "faculty",
       "card_image": "../phetburiCampus/img/stillImages/animalSciDrone_pb002.jpg",
       "levels": [
