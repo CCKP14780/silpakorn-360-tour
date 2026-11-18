@@ -142,6 +142,27 @@
     }
   };
 
+  // Ambient Sound Ctrl
+  const ambientSound = new Audio('../Assets/audio/santalucia_promusica.mp3');
+  // audio loop
+  ambientSound.loop = true;
+  // init sound state
+  let SoundOn = false;
+  function toggleAmbientSound() {
+    if (SoundOn) {
+      ambientSound.pause();
+      SoundOn = false;
+      console.log('Ambient sound paused');
+    } else {
+      ambientSound.play();
+      SoundOn = true;
+      console.log('Ambient sound playing');
+    }
+  }
+  // Ambient Sound Toggle
+  const ambientBtn = document.getElementById('ambientSoundToggle');
+  ambientBtn.addEventListener('click', toggleAmbientSound);
+
   // Initialize viewer.
   var viewer = new Marzipano.Viewer(panoElement, viewerOpts);
 
