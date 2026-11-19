@@ -154,11 +154,23 @@ const ambientBtn = document.getElementById('ambientSoundToggle');
 const volumeSlider = document.getElementById('ambientVolume');
 
 // Sound state
-let soundOn = false;
+let soundOn = true;
 let lastVolume = Number(volumeSlider.value) / 100;
 
 // Initial volume (20%)
 ambientSound.volume = lastVolume;
+
+// Attempt autoplay
+ambientSound.play()
+    .then(() => {
+        soundOn = true;
+        updateSoundIcon();
+    })
+    .catch(error => {
+        soundOn = false;
+        updateSoundIcon();
+        console.log('Autoplay blocked by browser:', error);
+    });
 
 // ===============================
 // UPDATE SOUND ICON

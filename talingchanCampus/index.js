@@ -142,6 +142,107 @@
     }
   };
 
+// ===============================
+// AMBIENT SOUND CONTROL
+// ===============================
+// Audio setup
+const ambientSound = new Audio('../Assets/audio/santalucia_promusica.mp3');
+ambientSound.loop = true;
+
+// HTML elements
+const ambientBtn = document.getElementById('ambientSoundToggle');
+const volumeSlider = document.getElementById('ambientVolume');
+
+// Sound state
+let soundOn = true;
+let lastVolume = Number(volumeSlider.value) / 100;
+
+// Initial volume (20%)
+ambientSound.volume = lastVolume;
+
+// Attempt autoplay
+ambientSound.play()
+    .then(() => {
+        soundOn = true;
+        updateSoundIcon();
+    })
+    .catch(error => {
+        soundOn = false;
+        updateSoundIcon();
+        console.log('Autoplay blocked by browser:', error);
+    });
+
+// ===============================
+// UPDATE SOUND ICON
+// ===============================
+function updateSoundIcon() {
+    const icon = ambientBtn.querySelector('i');
+    if (!soundOn || ambientSound.volume === 0) {
+        icon.className = 'fa-solid fa-volume-xmark';
+    } else if (ambientSound.volume <= 0.5) {
+        icon.className = 'fa-solid fa-volume-low';
+    } else {
+        icon.className = 'fa-solid fa-volume-high';
+    }
+    // Accessibility
+    ambientBtn.setAttribute(
+        'aria-pressed',
+        soundOn.toString()
+    );
+    ambientBtn.setAttribute(
+        'aria-label',
+        soundOn ? 'Pause sound' : 'Play sound'
+    );
+}
+
+// ===============================
+// TOGGLE SOUND
+// ===============================
+function toggleAmbientSound() {
+    if (soundOn) {
+        // Pause music
+        ambientSound.pause();
+        soundOn = false;
+        console.log('Ambient sound paused');
+    } else {
+        // Restore previous volume if currently zero
+        if (ambientSound.volume === 0) {
+            ambientSound.volume = lastVolume;
+            volumeSlider.value = lastVolume * 100;
+        }
+        // Play music
+        ambientSound.play()
+            .then(() => {
+                soundOn = true;
+                console.log('Ambient sound playing');
+                updateSoundIcon();
+            })
+            .catch(error => {
+                console.error('Audio playback failed:', error);
+            });
+    }
+    updateSoundIcon();
+}
+// ===============================
+// VOLUME SLIDER
+// ===============================
+volumeSlider.addEventListener('input', function () {
+    // Convert 0-100 into 0-1
+    const volume = Number(this.value) / 100;
+    ambientSound.volume = volume;
+    // Remember last non-zero volume
+    if (volume > 0) {
+        lastVolume = volume;
+    }
+    updateSoundIcon();
+});
+// ===============================
+// BUTTON EVENT
+// ===============================
+ambientBtn.addEventListener('click', toggleAmbientSound);
+// Initial icon
+updateSoundIcon();
+
   // Initialize viewer.
   var viewer = new Marzipano.Viewer(panoElement, viewerOpts);
 

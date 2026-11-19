@@ -51,6 +51,31 @@
     <div class="sceneNavLine right"></div>
   </div>
 
+  <div id="soundControl" class="sound-control">
+    <!-- Sound toggle button -->
+    <button id="ambientSoundToggle"
+            class="sound-toggle"
+            type="button"
+            aria-label="Turn sound on"
+            aria-pressed="false">
+
+        <i class="fa-solid fa-volume-xmark"></i>
+    </button>
+    <!-- Volume slider -->
+    <div class="volume-container">
+        <input
+            type="range"
+            id="ambientVolume"
+            class="volume-slider"
+            min="0"
+            max="100"
+            value="20"
+            step="1"
+            aria-label="Background music volume"
+        >
+    </div>
+  </div>
+
   <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
     <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
     <label class="btn btn-outline-primary" for="btnradio1">TH</label>

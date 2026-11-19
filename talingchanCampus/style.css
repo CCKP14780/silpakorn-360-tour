@@ -88,6 +88,111 @@ body {
   color: #fff;
 }
 
+/* ===============================
+   AMBIENT SOUND CONTROL
+   =============================== */
+.sound-control {
+  position: absolute;
+  top: 4.5%;
+  left: 5%;
+  z-index: 200;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Sound toggle button */
+.sound-toggle {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: white;
+  border: 1px solid #007468;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Button hover - mouse/trackpad devices only */
+@media (hover: hover) and (pointer: fine) {
+  .sound-toggle:hover {
+    background: #00DAC3;
+    border-color: #007468;
+    border-radius: 5px;
+  }
+}
+
+/* Volume slider container */
+.volume-container {
+  width: 0;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  opacity: 0;
+
+  background: #00CDB5;
+  border: 1px solid #007468;
+  border-radius: 5px;
+
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+/* Expand slider when hovering over sound control */
+.sound-control:hover .volume-container,
+.sound-control:focus-within .volume-container {
+  width: 220px;
+  opacity: 1;
+}
+
+/* Actual range input */
+.volume-slider {
+  width: 85%;
+  height: 6px;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  background: white;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+/* Slider thumb - Chrome, Edge, Safari */
+.volume-slider::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 18px;
+  height: 18px;
+
+  background: #007468;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+/* Slider thumb - Firefox */
+.volume-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+
+  background: #007468;
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
 .btn-outline-primary {
   --bs-btn-color:#fff;
   --bs-btn-border-color: #007468;
@@ -1454,6 +1559,27 @@ body.view-control-buttons .viewControlButton {
 
 /* Tablet & small laptop */
 @media (max-width: 1024px) {
+  .sound-control {
+    top: 4.25%;
+    left: 6%;
+    gap: 8px;
+  }
+
+  .sound-toggle {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .volume-container {
+    height: 38px;
+  }
+
+  .sound-control:hover .volume-container,
+  .sound-control:focus-within .volume-container {
+    width: 180px;
+    opacity: 1;
+  }
   .btn-group {
       display: none;
       position: absolute;
@@ -1568,6 +1694,23 @@ body.view-control-buttons .viewControlButton {
 
 /* Mobile */
 @media (max-width: 768px) {
+  .sound-control {
+    top: 4.25%;
+    left: 5.5%;
+    gap: 6px;
+  }
+
+  .sound-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  /* Hide volume slider on mobile */
+  .volume-container {
+    display: none;
+  }
+
   .btn-group {
       display: none;
       position: absolute;
@@ -1644,6 +1787,20 @@ body.view-control-buttons .viewControlButton {
 
 /* Small mobile */
 @media (max-width: 480px) {
+
+  .sound-control {
+    top: 4.5%;
+    left: 5%;
+    gap: 5px;
+  }
+
+  .sound-toggle {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+    border-width: 1px;
+  }
+
   .btn-group {
       display: none;
       position: absolute;
