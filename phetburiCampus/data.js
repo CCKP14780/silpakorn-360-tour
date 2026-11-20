@@ -2597,7 +2597,7 @@ var CAMPUS_DATA = [
 var TAB_CONFIG = [
   {
     mode: 'scenes', label: {
-      th: 'วิทยาเขต เพชรบุรี',
+      th: 'วิทยาเขตเพชรบุรี',
       en: 'Phetburi Campus',
       cn: '佩特布里校区'
     }
@@ -2623,7 +2623,7 @@ window.UI_TEXT = {
     cn: "地点详情"
   },
   campusName: {
-    th: 'วิทยาเขต เพชรบุรี',
+    th: 'วิทยาเขตเพชรบุรี',
     en: 'Phetburi Campus',
     cn: '佩特布里校区'
   },

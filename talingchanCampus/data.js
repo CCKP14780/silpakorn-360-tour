@@ -391,7 +391,7 @@ var CAMPUS_DATA = [
 var TAB_CONFIG = [
   {
     mode: 'scenes', label: {
-      th: 'วิทยาเขต ตลิ่งชัน',
+      th: 'วิทยาเขตตลิ่งชัน',
       en: 'Taling Chan Campus',
       cn: '达灵参校区'
     }
@@ -417,7 +417,7 @@ window.UI_TEXT = {
     cn: "地点详情"
   },
   campusName: {
-    th: 'วิทยาเขต ตลิ่งชัน',
+    th: 'วิทยาเขตตลิ่งชัน',
     en: 'Taling Chan Campus',
     cn: '达灵参校区'
   },

@@ -247,7 +247,7 @@ var CAMPUS_DATA = [
 var TAB_CONFIG = [
   {
     mode: 'scenes', label: {
-      th: 'วิทยาเขต เมืองทองธานี',
+      th: 'วิทยาเขตเมืองทองธานี',
       en: 'City Campus (Muang Thong Thani)',
       cn: '蒙通他尼城市校区'
     }
@@ -273,7 +273,7 @@ window.UI_TEXT = {
     cn: "地点详情"
   },
   campusName: {
-    th: 'วิทยาเขต เมืองทองธานี',
+    th: 'วิทยาเขตเมืองทองธานี',
     en: 'City Campus (Muang Thong Thani)',
     cn: '蒙通他尼城市校区'
   },
