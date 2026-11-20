@@ -4676,9 +4676,9 @@ var CAMPUS_DATA = [
 var TAB_CONFIG = [
   {
     mode: 'scenes', label: {
-      th: "วิทยาเขตเพชรบุรี",
-      en: "Phetchaburi Campus",
-      cn: "碧武里信息技术校区"
+      th: "วิทยาเขตพระราชวังสนามจันทร์",
+      en: "Sanam Chandra Palace Campus",
+      cn: "三湛宫校区"
     }
   },
   {
@@ -4702,9 +4702,9 @@ window.UI_TEXT = {
     cn: "地点详情"
   },
   campusName: {
-    th: "วิทยาเขตเพชรบุรี",
-      en: "Phetchaburi Campus",
-      cn: "碧武里信息技术校区"
+    th: "วิทยาเขตพระราชวังสนามจันทร์",
+      en: "Sanam Chandra Palace Campus",
+      cn: "三湛宫校区"
   },
   currentTour: {
     th: "ทัวร์ปัจจุบัน",

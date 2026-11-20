@@ -247,9 +247,9 @@ var CAMPUS_DATA = [
 var TAB_CONFIG = [
   {
     mode: 'scenes', label: {
-      th: 'วิทยาเขต วังท่าพระ',
-      en: 'Wang Tha Phra Campus',
-      cn: '王他帕校区'
+      th: 'วิทยาเขต เมืองทองธานี',
+      en: 'City Campus (Muang Thong Thani)',
+      cn: '蒙通他尼城市校区'
     }
   },
   {
@@ -273,9 +273,9 @@ window.UI_TEXT = {
     cn: "地点详情"
   },
   campusName: {
-    th: "วิทยาเขต วังท่าพระ",
-    en: "Wang Tha Phra Campus",
-    cn: "王他帕校区"
+    th: 'วิทยาเขต เมืองทองธานี',
+    en: 'City Campus (Muang Thong Thani)',
+    cn: '蒙通他尼城市校区'
   },
   currentTour: {
     th: "ทัวร์ปัจจุบัน",
