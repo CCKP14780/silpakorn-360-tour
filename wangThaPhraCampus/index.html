@@ -27,79 +27,85 @@
 
   <div id="pano"></div>
 
-  <div class="university-header">
+  <div class="container university-header">
     <img src="../Assets/su_logo/suLogo.png" class="uni-logo" alt="Silpakorn Logo">
     <!-- Empty Div For Future Development -->
-    <div></div>
+    <div class="gradient-line"></div>
   </div>
 
   <div id="sceneNavWrapper">
-    <div class="sceneNavLine left"></div>
+    <div class="container bottom-screen-btn-control">
+      <a href="javascript:void(0)" id="fullscreenToggle">
+        <i class="icon off fa-solid fa-expand"></i>
+        <i class="icon on fa-solid fa-compress"></i>
+      </a>
 
-    <div id="sceneNavigator">
-      <button id="prevScene" class="nav-btn">
-        <i class="fa-solid fa-chevron-left"></i>
-      </button>
-
-      <span id="sceneTitle"></span>
-
-      <button id="nextScene" class="nav-btn">
-        <i class="fa-solid fa-chevron-right"></i>
-      </button>
+      <a href="javascript:void(0)" id="sceneListToggle">
+        <i class="icon off fa-solid fa-bars"></i>
+        <i class="icon on fa-solid fa-bars"></i>
+      </a>
     </div>
 
-    <div class="sceneNavLine right"></div>
-  </div>
+    <div class="container scene-nav-inner">
+      <div class="sceneNavLine left"></div>
 
-  <div id="soundControl" class="sound-control">
-    <!-- Sound toggle button -->
-    <button id="ambientSoundToggle"
-            class="sound-toggle"
-            type="button"
-            aria-label="Turn sound on"
-            aria-pressed="false">
+      <div id="sceneNavigator">
+        <button id="prevScene" class="nav-btn">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
 
-        <i class="fa-solid fa-volume-xmark"></i>
-    </button>
-    <!-- Volume slider -->
-    <div class="volume-container">
-        <input
-            type="range"
-            id="ambientVolume"
-            class="volume-slider"
-            min="0"
-            max="100"
-            value="20"
-            step="1"
-            aria-label="Background music volume"
-        >
+        <span id="sceneTitle"></span>
+
+        <button id="nextScene" class="nav-btn">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="sceneNavLine right"></div>
     </div>
   </div>
+  
+  <div class="container top-screen-btn-control">
+    <div id="soundControl" class="sound-control col-6">
+      <!-- Sound toggle button -->
+      <button id="ambientSoundToggle"
+              class="sound-toggle"
+              type="button"
+              aria-label="Turn sound on"
+              aria-pressed="false">
 
-  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-    <label class="btn btn-outline-primary" for="btnradio1">TH</label>
-  
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-    <label class="btn btn-outline-primary" for="btnradio2">EN</label>
-  
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-    <label class="btn btn-outline-primary" for="btnradio3">CN</label>
+          <i class="fa-solid fa-volume-xmark"></i>
+      </button>
+      <!-- Volume slider -->
+      <div class="volume-container">
+          <input
+              type="range"
+              id="ambientVolume"
+              class="volume-slider"
+              min="0"
+              max="100"
+              value="20"
+              step="1"
+              aria-label="Background music volume"
+          >
+      </div>
+    </div>
+
+    <div class="btn-group col-6" role="group" aria-label="Basic radio toggle button group">
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+      <label class="btn btn-outline-primary" for="btnradio1">TH</label>
+    
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio2">EN</label>
+    
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio3">CN</label>
+    </div>
   </div>
 
   <a href="javascript:void(0)" id="autorotateToggle">
     <img class="icon off">
     <img class="icon on">
-  </a>
-
-  <a href="javascript:void(0)" id="fullscreenToggle">
-    <i class="icon off fa-solid fa-expand"></i>
-    <i class="icon on fa-solid fa-compress"></i>
-  </a>
-
-  <a href="javascript:void(0)" id="sceneListToggle">
-    <i class="icon off fa-solid fa-bars"></i>
-    <i class="icon on fa-solid fa-bars"></i>
   </a>
 
   <a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
